@@ -50,6 +50,16 @@ Míralo en el canal de youtube de LatinR
 
 
 
+Modera:
+Andrea Gómez Vargas - LatinR & Rladies Buenos Aires co-organizadora
+Participan:
+DALAT - Desarrollo Accesible Latinoamericano
+Abe y Coi - Transistemas Argentina
+Joselyn Chávez - R-Ladies Cuernavaca & R-Ladies México
+Milagros Villavicencio - R-Ladies Natal - Brasil
+Fernanda Kelly - R-Ladies Goiânia - Brasil
+Lupe Canaviri Maydana - Laboratoria & PyLadies El Alto - Bolivia
+
 
 
 
