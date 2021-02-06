@@ -5,7 +5,7 @@ image:
   caption: 
   focal_point: Smart
 
-summary: Ponencia presentada en las XIII Jornadas de Sociología  UBA Sociales 2019 y en las X jornadas de jóvenes investigadores de Gino Germani2019. Con la autoria de Abril Troche (UBA Sociales) y Andrea Gomez Vargas (UBA Sociales)
+summary: Ponencia presentada en las XIII Jornadas de Sociología  UBA Sociales 2019 y en las X jornadas de jóvenes investigadores de Gino Germani 2019. Con la autoria de Abril Troche (UBA Sociales) y Andrea Gomez Vargas (UBA Sociales)
 
 tags:
 - Ponencias
