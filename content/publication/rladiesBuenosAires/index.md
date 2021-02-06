@@ -1,6 +1,6 @@
 ---
-abstract: R-Ladies Buenos Aires es parte de una organización mundial para promover la Diversidad de Género en la comunidad R. No importa si nunca usaste R o si tenés R como herramienta principal de trabajo. El objetivo es promover R, intercambiar conocimiento y crear una red de contactos a nivel local y global.
-Conocé lo que hicimos a nivel nacional en [**RLadies en Argentina durante 2020**](https://rladiesenargentina.github.io/Resumen_meetups_2020/index.html).
+abstract: R-Ladies Buenos Aires es parte de una organización mundial para promover la Diversidad de Género en la comunidad R. Desde 2019 me sumé como colaboradora y en 2020 como co-organizadora del capítulo, entre la presencialidad y la virtualidad hermos organizando variados encuentros con diferentes temáticas y participantes de distintas profesiones. Siendo un espacio interdisciplinario, horizontal y colectivo. No importa si nunca usaste R o si tenés R como herramienta principal de trabajo. El objetivo es promover R, intercambiar conocimiento y crear una red de contactos a nivel local y global. Sumate a nuestras redes y te invito a conocer lo que hicimos a nivel nacional desde [**RLadies en Argentina durante 2020**](https://rladiesenargentina.github.io/Resumen_meetups_2020/index.html).
+
 authors:
 - admin
 date: "2021-01-31T00:00:00Z"
