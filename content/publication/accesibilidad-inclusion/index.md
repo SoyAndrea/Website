@@ -1,6 +1,6 @@
 ---
-abstract: ¿De qué hablamos cuando hablamos de inclusión y accesibilidad en el mundo de la tecnología? Este fue el nombre del Panel de cierre de LatinR 2020, en donde reunimos a integrantes de diferentes comunidades Latinoamericanas que promueven y trabajan por la inclusión y accesibilidad en el mundo de la tecnología donde dieron a conocer su trabajo, sus objetivos, logros y desafíos a la hora de lograr una inclusión y accesibilidad real.  
-  MÍRALO EN EL CANAL DE YOUTUBE de LatinR https://youtu.be/xkRFGbZocIU
+abstract: Este fue el nombre del Panel de cierre de LatinR 2020, en donde reunimos a integrantes de diferentes comunidades Latinoamericanas que promueven y trabajan por la inclusión y accesibilidad en el mundo de la tecnología donde dieron a conocer su trabajo, sus objetivos, logros y desafíos a la hora de lograr una inclusión y accesibilidad real.  
+  
 
 author_notes:
 - Moderadora y co-organizadora
@@ -37,5 +37,19 @@ url_slides: ""
 url_source: ""
 url_video: "https://www.youtube.com/watch?v=xkRFGbZocIU&t=284s"
 ---
+
+
+## ¿De qué hablamos cuando hablamos de inclusión y accesibilidad en el mundo de la tecnología?
+
+
+Míralo en el canal de youtube de LatinR 
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xkRFGbZocIU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
 
 
