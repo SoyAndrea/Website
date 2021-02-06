@@ -27,7 +27,7 @@ publication: ""
 publication_short: ""
 
 publishDate: "2021-01-31T00:00:00Z"
-summary: R-Ladies Buenos Aires es parte de una organización mundial para promover la Diversidad de Género en la comunidad R.
+summary: Co-organizadora del capítulo en Buenos Aires para promover la diversidad de Género(s) en la comunidad R.
 tags:
 - R
 - RLadies BA
