@@ -4,7 +4,7 @@ baseurl: ''
 copyright: ''
 enableGitInfo: no
 defaultContentLanguage: es
-languages: es
+#languages: es
 hasCJKLanguage: no
 defaultContentLanguageInSubdir: no
 removePathAccents: yes
