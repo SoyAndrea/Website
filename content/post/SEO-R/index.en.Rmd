@@ -1,37 +1,88 @@
 ---
-title: "SEO & R: webscraping para tu lista de medios"
+title: 'SEO & R: webscraping para linkbuilding'
 author: "Andrea"
-date: 2020-12-01T21:13:14-05:00
-categories: ["R"]
-tags: ["R", "SEO", "webscraping"]
+date: '2020-12-01T21:13:14-05:00'
+categories: R
+tags:
+- R
+- SEO
+- webscraping
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(collapse = TRUE)
+### ¿Por qué linkbuilding?
+
+Parte del desarrollo de estrategias SEO offpage es la generación 
+
+
+
+
+#### Librerias a utilizar
+instalar: Rvest,tidyverse y xm12 
+
+```{r}
+install.packages("tidyverse")
+install.packages("rvest")
+install.packages("xm12")
 ```
 
-# Webscraping
+y luego activa las librerias correspondientes
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-fit <- lm(dist ~ speed, data = cars)
-fit
+```{r}
+library(tidyverse)
+library(rvest)
+library(xml2)
 ```
 
-# Including Plots
-
-You can also embed plots. See Figure \@ref(fig:pie) for example:
-
-```{r pie, fig.cap='A fancy pie chart.', tidy=FALSE}
-par(mar = c(0, 1, 0, 1))
-pie(
-  c(280, 60, 20),
-  c('Sky', 'Sunny side of pyramid', 'Shady side of pyramid'),
-  col = c('#0292D8', '#F7EA39', '#C4B632'),
-  init.angle = -50, border = NA
-)
+# Agregar sitio a scrapear3
+```{r}
+#LECTURA HTML DEL SITIO
+sitioscolombia <- read_html("https://www.mediosmedios.com.ar/A.%20Colombia.htm")
 ```
+
+
+
+```{r}
+#PARA SCRAPEAR LAS URLS QUE QUEREMOS
+listasitioscolombiaurl <- sitioscolombia %>% html_nodes("li") %>% html_nodes('a') %>% html_attr('href')
+```
+
+
+```{r}
+#ACÁ VAS A ENCONTRAR EL LISTADO DE URLS
+view(listasitioscolombiaurl)
+```
+
+
+```{r}
+#PARA SCRAPEAR LOS NOMBRES DE LOS SITIOS
+listasitiosnombre <- sitioscolombia %>% html_nodes("li") %>% html_nodes('a') %>% html_text() %>% str_remove_all('\\n') %>% str_remove_all('\\r') %>% str_replace_all("\\s*", " ")
+```
+
+
+
+#Armamos DataFrame para recopilar nombre de medios y URL 
+```{r}
+df_sitios <- data.frame(listasitiosnombre, listasitioscolombiaurl)
+```
+
+
+
+
+Exportamos información en CSV
+```{r}
+write.csv(df_sitios, file = "sitioscolombia.csv", row.names = FALSE)
+```
+
+
+
+copyright_license = {enable = true, allow_derivatives = false, share_alike = true, allow_commercial = false, notice = "Está web está bajo la licencia {license}"}
+
+
+
+
+
+
+
+
+
+
