@@ -14,68 +14,54 @@ tags:
 Parte del desarrollo de estrategias SEO offpage es la generación 
 
 
-
-
 #### Librerias a utilizar
 instalar: Rvest,tidyverse y xm12 
 
-```{r}
-install.packages("tidyverse")
-install.packages("rvest")
-install.packages("xm12")
-```
 
-y luego activa las librerias correspondientes
 
 ```{r}
 library(tidyverse)
 library(rvest)
 library(xml2)
 ```
-
-# Agregar sitio a scrapear3
+##### Agregar sitio a scrapear
 ```{r}
 #LECTURA HTML DEL SITIO
 sitioscolombia <- read_html("https://www.mediosmedios.com.ar/A.%20Colombia.htm")
 ```
-
-
-
 ```{r}
 #PARA SCRAPEAR LAS URLS QUE QUEREMOS
 listasitioscolombiaurl <- sitioscolombia %>% html_nodes("li") %>% html_nodes('a') %>% html_attr('href')
 ```
-
-
 ```{r}
 #ACÁ VAS A ENCONTRAR EL LISTADO DE URLS
 view(listasitioscolombiaurl)
 ```
 
-
 ```{r}
 #PARA SCRAPEAR LOS NOMBRES DE LOS SITIOS
 listasitiosnombre <- sitioscolombia %>% html_nodes("li") %>% html_nodes('a') %>% html_text() %>% str_remove_all('\\n') %>% str_remove_all('\\r') %>% str_replace_all("\\s*", " ")
+
 ```
 
-
-
-#Armamos DataFrame para recopilar nombre de medios y URL 
+##### Armamos DataFrame para recopilar nombre de medios y URL 
 ```{r}
 df_sitios <- data.frame(listasitiosnombre, listasitioscolombiaurl)
 ```
 
-
-
-
-Exportamos información en CSV
+##### Exportamos información en CSV
 ```{r}
 write.csv(df_sitios, file = "sitioscolombia.csv", row.names = FALSE)
 ```
 
 
 
-copyright_license = {enable = true, allow_derivatives = false, share_alike = true, allow_commercial = false, notice = "Está web está bajo la licencia {license}"}
+
+
+>copyright_license = {enable = true, allow_derivatives = false, share_alike = true, allow_commercial = false, notice = "Está web está bajo la licencia {license}"}
+
+
+
 
 
 
