@@ -11,12 +11,17 @@ tags:
 
 
 
+<div class="figure">
+<img src="images/linkbuilding.jpg" alt="" />
+<p class="caption">LB</p>
+</div>
 <div id="por-qué-linkbuilding" class="section level3">
 <h3>¿Por qué linkbuilding?</h3>
-<p>Parte del desarrollo de estrategias SEO offpage es la generación</p>
+<p>Parte del desarrollo de estrategias SEO offpage es la generación de enlaces externos conocidos como backlinks. Para esto, es necesario contar con un listado de sitios disponibles para generarlos y es indispensable actualizarlo constantemente.</p>
+<p>¿cómo buscarlos? Hay diferentes formas pero depende principalmente de tu objetivo de búsqueda o target. Una de ellas es a través de webscraping si quieres un listado masivo de sitios, en este caso: directorios de prensa.</p>
 <div id="librerias-a-utilizar" class="section level4">
 <h4>Librerias a utilizar</h4>
-<p>instalar: Rvest,tidyverse y xm12</p>
+<p>Antes de iniciar es necesario que cuentes con los siguientes paquetes de R, sino los tienes los instalas con install.packages(“nombre de paquete”): <strong>Rvest,tidyverse y xm12</strong>. Una vez instalados, los activás con la función de library:</p>
 <pre class="r"><code>library(tidyverse)</code></pre>
 <pre><code>## Warning: package &#39;tidyverse&#39; was built under R version 4.0.3</code></pre>
 <pre><code>## -- Attaching packages ------------------------------------------- tidyverse 1.3.0 --</code></pre>
@@ -39,27 +44,60 @@ tags:
 ## 
 ##     guess_encoding</code></pre>
 <pre class="r"><code>library(xml2)</code></pre>
+<p>Por otro lado contamos con el sitios web a scrapear que en este caso es un directorio de prensa de destintos paises a nivel regional. Para probar el código elegimos un país: Colombia.</p>
 <div id="agregar-sitio-a-scrapear" class="section level5">
 <h5>Agregar sitio a scrapear</h5>
+<p>Copiamos la URL completa para leer y filtrar la información que necesitamos: Nombre del sitio + URL</p>
 <pre class="r"><code>#LECTURA HTML DEL SITIO
 sitioscolombia &lt;- read_html(&quot;https://www.mediosmedios.com.ar/A.%20Colombia.htm&quot;)</code></pre>
+<p>Ahora, queremos ver en detalle la URL de los sitios que nos detalla el listado del directorio y guardarla como primer lista que llamaré lista_sitios_colombia_url</p>
 <pre class="r"><code>#PARA SCRAPEAR LAS URLS QUE QUEREMOS
 listasitioscolombiaurl &lt;- sitioscolombia %&gt;% html_nodes(&quot;li&quot;) %&gt;% html_nodes(&#39;a&#39;) %&gt;% html_attr(&#39;href&#39;)</code></pre>
+<p>Con esta opción lograremos ver el primer listado</p>
 <pre class="r"><code>#ACÁ VAS A ENCONTRAR EL LISTADO DE URLS
 view(listasitioscolombiaurl)</code></pre>
+<div class="figure">
+<img src="images/image.png" alt="" />
+<p class="caption">view(listasitioscolombiaurl)</p>
+</div>
+<p>Ahora queremos sumarle el nombre del sitio donde estaba anclada la URL del sitio</p>
 <pre class="r"><code>#PARA SCRAPEAR LOS NOMBRES DE LOS SITIOS
 listasitiosnombre &lt;- sitioscolombia %&gt;% html_nodes(&quot;li&quot;) %&gt;% html_nodes(&#39;a&#39;) %&gt;% html_text() %&gt;% str_remove_all(&#39;\\n&#39;) %&gt;% str_remove_all(&#39;\\r&#39;) %&gt;% str_replace_all(&quot;\\s*&quot;, &quot; &quot;)</code></pre>
+<p>Y si queremos desplegar el listado ejecutamos la misma función de <em>view</em></p>
+<pre class="r"><code>View(listasitiosnombre)</code></pre>
+<div class="figure">
+<img src="images/image%20(2).png" alt="" />
+<p class="caption">View(listasitiosnombre)</p>
 </div>
-<div id="armamos-dataframe-para-recopilar-nombre-de-medios-y-url" class="section level5">
-<h5>Armamos DataFrame para recopilar nombre de medios y URL</h5>
-<pre class="r"><code>df_sitios &lt;- data.frame(listasitiosnombre, listasitioscolombiaurl)</code></pre>
+</div>
+<div id="dataframe-para-recopilar-nombre-de-medios-y-url" class="section level5">
+<h5>DataFrame para recopilar nombre de medios y URL</h5>
+<p>Ahora queremos unificar los listados obtenidos para tener nuestra lista de medios completa</p>
+<pre class="r"><code>df_sitios &lt;- data.frame(listasitiosnombre, listasitioscolombiaurl)
+View(df_sitios)</code></pre>
+<div class="figure">
+<img src="images/image%20(3).png" alt="" />
+<p class="caption">Dataframe</p>
+</div>
+<p>Es hora de exportar nuestro listado para poder trabajarlo en otras herramientas ya sea google sheets, screaming fog u otras APIs</p>
 </div>
 <div id="exportamos-información-en-csv" class="section level5">
 <h5>Exportamos información en CSV</h5>
+<p>El formato CSV es el mas recomendado pero puedes optar por otras opciones que ofrece la opción <em>write.</em> y le asignas el nombre de archivo en la opción <em>file = nombre de tu archivo</em></p>
 <pre class="r"><code>write.csv(df_sitios, file = &quot;sitioscolombia.csv&quot;, row.names = FALSE)</code></pre>
-<blockquote>
-<p>copyright_license = {enable = true, allow_derivatives = false, share_alike = true, allow_commercial = false, notice = “Está web está bajo la licencia {license}”}</p>
-</blockquote>
+<p>El documento estará en la carpeta donde trabajes el proyecto o RMD actual</p>
+<div class="figure">
+<img src="images/image%20(4).png" alt="" />
+<p class="caption">CSV descargado</p>
 </div>
+</div>
+<div id="qué-sigue" class="section level5">
+<h5>¿Qué sigue?</h5>
+<p>APIs</p>
+</div>
+</div>
+<div id="fuentes-y-recursos" class="section level4">
+<h4>Fuentes y recursos</h4>
+<p>Biblio</p>
 </div>
 </div>
