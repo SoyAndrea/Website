@@ -1,12 +1,12 @@
 ---
-title: 'SEO & R: webscraping para linkbuilding'
+title: 'SEO & R: web scraping para linkbuilding'
 author: "Andrea"
 date: '2020-12-01T21:13:14-05:00'
 categories: R
 tags:
 - R
 - SEO
-- webscraping
+- web scraping
 ---
 
 ![LB](images/linkbuilding.jpg)
@@ -21,12 +21,11 @@ Parte del desarrollo de estrategias SEO offpage es la generación de enlaces ext
 #### Librerias a utilizar
 Antes de iniciar es necesario que cuentes con los siguientes paquetes de R, sino los tienes los instalas con install.packages("nombre de paquete"): **Rvest,tidyverse y xm12**. Una vez instalados, los activás con la función de library:
 
-```{r message = FALSE}
+```{r message = FALSE, warning=FALSE}
 library(tidyverse)
 library(rvest)
 library(xml2)
 ```
-
 Por otro lado contamos con el sitios  web a scrapear que en este caso es un directorio de prensa de destintos paises a nivel regional. Para probar el código elegimos un país: Colombia.
 
 ##### Agregar sitio a scrapear
@@ -98,7 +97,10 @@ APIs
 
 
 #### Fuentes y recursos
-Biblio
+[**rvest**](https://rvest.tidyverse.org/articles/harvesting-the-web.html)
+[**rvest: easy web scraping with R**](https://blog.rstudio.com/2014/11/24/rvest-easy-web-scraping-with-r/)
+[**Stackoverflow**](https://stackoverflow.com/questions/35247033/using-rvest-to-extract-links)
+
 
 
 
