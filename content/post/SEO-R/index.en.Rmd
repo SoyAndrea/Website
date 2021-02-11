@@ -96,14 +96,7 @@ APIs
 
 
 #### Fuentes y recursos
-
-rvest 
-https://rvest.tidyverse.org/articles/harvesting-the-web.html
-
-rvest: easy web scraping with R https://blog.rstudio.com/2014/11/24/rvest-easy-web-scraping-with-r/
-
-Stackoverflow
-https://stackoverflow.com/questions/35247033/using-rvest-to-extract-links
+hola hola
 
 
 
