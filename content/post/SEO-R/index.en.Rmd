@@ -9,7 +9,7 @@ tags:
 - web scraping
 ---
 
-![LB](images/linkbuilding.jpg)
+![__imagen ilustrativa Link building_](images/linkbuilding.jpg)
 
 ### ¿Por qué linkbuilding?
 
@@ -50,7 +50,7 @@ Con esta opción lograremos ver el primer listado
 view(listasitioscolombiaurl)
 ```
 
-![view(listasitioscolombiaurl)](images/image.png)
+![_view(listasitioscolombiaurl_)](images/image.png)
 
 Ahora queremos sumarle el nombre del sitio donde estaba anclada la URL del sitio 
 
@@ -66,7 +66,7 @@ Y si queremos desplegar el listado ejecutamos la misma función de _view_
 View(listasitiosnombre)
 ```
 
-![View(listasitiosnombre)](images/image (2).png)
+![_View(listasitiosnombre)_](images/image (2).png)
 
 ##### DataFrame para recopilar nombre de medios y URL 
 Ahora queremos unificar los listados obtenidos para tener nuestra lista de medios completa
@@ -75,7 +75,7 @@ df_sitios <- data.frame(listasitiosnombre, listasitioscolombiaurl)
 View(df_sitios)
 ```
 
-![Dataframe](images/image (3).png)
+![_imagen ilustrativa Dataframe_](images/image (3).png)
 
 Es hora de exportar nuestro listado para poder trabajarlo en otras herramientas ya sea google sheets, screaming fog u otras APIs
 
@@ -88,11 +88,7 @@ write.csv(df_sitios, file = "sitioscolombia.csv", row.names = FALSE)
 
 El documento estará en la carpeta donde trabajes el proyecto o RMD actual
 
-![CSV descargado](images/image (4).png)
-
-##### ¿Qué sigue?
-
-APIs
+![_imagen ilustrativa CSV descargado_](images/image (4).png)
 
 
 #### Fuentes y recursos
