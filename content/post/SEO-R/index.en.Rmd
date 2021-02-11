@@ -50,7 +50,7 @@ Con esta opción lograremos ver el primer listado
 view(listasitioscolombiaurl)
 ```
 
-![_view(listasitioscolombiaurl_)](images/image.png)
+![_imagen ilustrativa view(listasitioscolombiaurl_)](images/image.png)
 
 Ahora queremos sumarle el nombre del sitio donde estaba anclada la URL del sitio 
 
