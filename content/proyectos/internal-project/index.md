@@ -9,6 +9,8 @@ summary: Ponencia presentada en las XIII Jornadas de Sociología  UBA Sociales 2
 
 tags:
 - Ponencias
+- Género(s)
+- Investigación
 title: Mujeres afroargentinas, afrodescendiendes y de la diáspora africana
 
 
