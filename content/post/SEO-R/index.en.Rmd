@@ -21,7 +21,7 @@ Parte del desarrollo de estrategias SEO offpage es la generación de enlaces ext
 #### Librerias a utilizar
 Antes de iniciar es necesario que cuentes con los siguientes paquetes de R, sino los tienes los instalas con install.packages("nombre de paquete"): **Rvest,tidyverse y xm12**. Una vez instalados, los activás con la función de library:
 
-```{r}
+```{r message = FALSE}
 library(tidyverse)
 library(rvest)
 library(xml2)
