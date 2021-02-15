@@ -10,7 +10,7 @@ image:
 summary: Estudio de caso - Organizaciones de la sociedad civil y la violencia hacia   niños,
   niñas y adolescentes
 tags:
-- Proyectos de investigación
+- Proyectos de Investigación
 - Género(s)
 - Investigación social
 - Feminismo(s)
@@ -22,7 +22,11 @@ external_link: ''
 ### Organizaciones de la sociedad civil y la violencia hacia niños, niñas y adolescentes: Un estudio de casos
 
 
+##### Seminario de investigación maltrato infantil y violencia de género
+##### Cátedra Biagini - Sanchez
+##### 2018
 
+_Autoria de Sofia Isola (UBA Sociales) y Andrea Gomez Vargas (UBA Sociales)_
 
 El presente análisis se inscribe en el marco del proyecto de investigación de violencia contra niños/niñas en el ámbito familiar: políticas y dispositivos de atención y orientación (2012 - 2019), que integra la línea de investigación sociedad civil y salud a cargo de la Dra. Graciela Biagini con la finalidad de generar información relevante para el diseño e implementación de protocolos de detección precoz y atención de la violencia contra los niños/as en el ámbito de las organizaciones familiares que contribuya a mejorar el proceso de salud-enfermedad-atención de la infancia desde un abordaje de derechos según lo establecen normativas en vigencia.
 
@@ -41,7 +45,7 @@ El objetivo general del trabajo consiste en caracterizar la forma de abordaje y 
 En este sentido nos resulta pertinente preguntarnos: ¿Qué indicadores las OSC seleccionadas tienen en cuenta a la hora de abordar la problemática de MI? ¿De qué modo la concepción que las mismas poseen de MI/VG enmarca los parámetros de su accionar y moldea sus objetivos respectivos? ¿Qué relación existe entre las OSC y el Estado para articular la problemática de MI?
 
 
-_Autoria de Sofia Isola (UBA Sociales) y Andrea Gomez Vargas (UBA Sociales)_
+
 
 
 
