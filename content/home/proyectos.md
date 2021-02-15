@@ -31,6 +31,9 @@ content:
     tag: Proyectos de Investigación
   - name: Ponencias
     tag: Ponencias
+  - name: Docencia
+    tag: Docencia
+
 
 design:
   # Choose how many columns the section has. Valid values: '1' or '2'.
