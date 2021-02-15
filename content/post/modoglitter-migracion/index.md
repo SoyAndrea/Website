@@ -20,7 +20,8 @@ tags:
 - Radio
 - Migración
 - Género(s)
-- Feminismo
+- Feminismo(s)
+- Investigación
 abstract: Este fue el nombre del Panel de cierre de LatinR 2020, en donde reunimos
   a integrantes de diferentes comunidades Latinoamericanas que promueven y trabajan
   por la inclusión y accesibilidad en el mundo de la tecnología donde dieron a conocer

@@ -23,7 +23,7 @@ Este trabajo se propuso dar cuenta de la creación del área de género que se f
 
 
 
-Ponencia presentada en las XIII Jornadas de Sociología  UBA Sociales 2019 y en las X jornadas de jóvenes investigadores de Gino Germani 2019.
+**Ponencia presentada en las XIII Jornadas de Sociología  UBA Sociales 2019 y en las X jornadas de jóvenes investigadores de Gino Germani 2019.**
 
 ![XIII Jornadas de Sociología  UBA Sociales 2019](images/3.png)
 
