@@ -1,28 +1,28 @@
 ---
-date: "2019-12-01T00:00:00Z"
-external_link: ""
-image:
-  caption:
-  focal_point: Smart
+title: "Taller anual de investigación sobre cambio social"
+external_link: ''
+date: '2019-12-01T00:00:00Z'
 links:
-
-summary: Proyecto de investigación Posición frente al Derecho al aborto y sus condicionante en la Argentina actual
-
+- name: Cátedra
+  url: https://tallercambiosocial.wordpress.com/
+summary: _Proyecto de investigación Posición frente al Derecho al aborto y sus condicionantes en la Argentina actual_
 tags:
 - Proyectos de Investigación
 - Investigación social
 - Sociología
 - Cambio Social
 - Género(s)
-title: Taller anual de investigación sobre cambio social
-url_code: ""
-url_pdf: ""
-url_slides: ""
-url_video: ""
+image:
+  caption: null
+  focal_point: Smart
+url_code: ''
+url_pdf: ''
+url_slides: ''
+url_video: ''
 ---
 
 
-### Posición frente al Derecho al aborto y sus condicionante en la Argentina actual: un análisis de quienes se movilizan
+## Posición frente al Derecho al aborto y sus condicionante en la Argentina actual: un análisis de quienes se movilizan
 
 ##### TALLER DE INVESTIGACIÓN SOBRE CAMBIO SOCIAL 
 ##### CÁTEDRA REBÓN
