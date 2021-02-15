@@ -21,12 +21,8 @@ tags:
 - Migración
 - Género(s)
 - Feminismo(s)
-- Investigación
-abstract: Este fue el nombre del Panel de cierre de LatinR 2020, en donde reunimos
-  a integrantes de diferentes comunidades Latinoamericanas que promueven y trabajan
-  por la inclusión y accesibilidad en el mundo de la tecnología donde dieron a conocer
-  su trabajo, sus objetivos, logros y desafíos a la hora de lograr una inclusión y
-  accesibilidad real.
+- Investigación social
+
 url_code: ''
 url_dataset: ''
 url_pdf: ''
@@ -48,7 +44,7 @@ Escúchalo en el canal de youtube de Modo Glitter
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rB-KFkpzXkE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-Migración: un proceso complejo y estigmatizado. Se estima que en el año 2019 migraron 272 millones de personas en todo el mundo. Pero ¿qué significa migrar? ¿migran de la misma forma los hombres y las mujeres
+Migración: un proceso complejo y estigmatizado. Se estima que en el año 2019 migraron 272 millones de personas en todo el mundo. Pero ¿qué significa migrar? ¿migran de la misma forma los hombres y las mujeres?
 
 
 
