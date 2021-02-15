@@ -3,10 +3,12 @@ bio: La estoy pensando
 
 education:
   courses:
-  - course: Lic en Sociología
+  - course: Licenciatura en Sociología
     institution: Universidad de Buenos Aires
     year: 2020
-
+  - course: Técnica en Asesoria Comercial y Operativa de Entidades Financieras
+    institution: Servicio Nacional de Aprendizaje - SENA
+    year: 2010
 
 highlight_name: false
 interests:
