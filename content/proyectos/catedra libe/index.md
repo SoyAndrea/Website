@@ -3,8 +3,7 @@ title: "Cátedra libre en UBA sociales"
 external_link: ''
 date: '2020-10-03T00:00:00Z'
 links:
-- name: 
-  url: 
+
 summary: CATEDRA LIBRE VIRTUAL DE LA CAMPAÑA NACIONAL POR EL DERECHO AL ABORTO LEGAL, SEGURO Y GRATUITO EN LA FACULTAD DE CIENCIAS SOCIALES DE LA UBA 
 tags:
 - Docencia
@@ -48,10 +47,18 @@ por el Derecho al Aborto Legal Seguro y Gratuito en el campo de la salud.
 **Encuentro 4** La Comunicación en la lucha por el derecho al aborto legal
 
 
+
 ##### EQUIPO DOCENTE
 
+![](images/equipo2020.png)
 
 
+##### COHORTE 2020
 
-![](images/CÁTEDRA LIBRE 2020.png)
+![](images/cohorte2020.jpg)
+
+##### COHORTE 2019
+
+![](images/cohorte2019.jpg)
+
 
