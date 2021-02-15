@@ -18,6 +18,9 @@ tags:
 external_link: ''
 ---
 
+### Mujeres afroargentinas, afrodescendiendes y de la diáspora africana: luchas y resistencias en la Argentina del siglo XXI
+
+_Autoria de Abril Troche (UBA Sociales) y Andrea Gomez Vargas (UBA Sociales)_
 
 Este trabajo se propuso dar cuenta de la creación del área de género que se formó dentro de la Comisión Organizadora 8 de Noviembre. Integrada por la diáspora africana que residen en el territorio argentino y que consagra un proceso de reivindicación, de búsquedas, de reparación y organización histórica, que parte de la construcción del Estado-Nación como proceso colonial, eurocéntrico, blanqueado y negacionista ante la identidad negra en Argentina. Por consiguiente, pretendemos exponer las experiencias colectivas de las mujeres afroargentinas, afrodescendientes y de la diáspora africana que lo componen y la intersección de opresiones que se ven atravesadas dentro del sistema capitalista patriarcal racialmente estructurado.
 
@@ -29,7 +32,7 @@ Este trabajo se propuso dar cuenta de la creación del área de género que se f
 
 ![X jornadas de jóvenes investigadores de Gino Germani 2019.](images/2.png)
 
-_Autoria de Abril Troche (UBA Sociales) y Andrea Gomez Vargas (UBA Sociales)_
+
 
 
 

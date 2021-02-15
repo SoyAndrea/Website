@@ -1,5 +1,5 @@
 ---
-bio: La estoy pensando
+bio: 
 
 education:
   courses:
@@ -20,7 +20,7 @@ interests:
 organizations:
 - name: Universidad de Buenos Aires  
   url: http://www.sociales.uba.ar/
-role: Socióloga, docente e investigadora
+role: Socióloga
 
 social:
 - display:
@@ -39,6 +39,9 @@ superuser: true
 title: Andrea
 ---
 
-Acá cuento cosas de mi - pendiente
+Socióloga, docente e investigadora con orientación en estudios de género(s) y Derechos Humanos. 
 
 
+Acá encontraras todos los trabajos y proyectos que he realizado de manera voluntaria y colaborativa. 
+
+Soy organizadora de Rladies Buenos Aires, organización dedicada a promover la diversidad de género y minorías en la comunidad R y miembro del equipo organizador de LatinR: Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo.
