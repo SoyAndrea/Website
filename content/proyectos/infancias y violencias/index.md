@@ -16,6 +16,7 @@ tags:
 - Feminismo(s)
 - Salud
 - Sociología
+- UBA sociales
 external_link: ''
 ---
 

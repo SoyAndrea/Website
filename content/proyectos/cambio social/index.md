@@ -12,6 +12,7 @@ tags:
 - Sociología
 - Cambio Social
 - Género(s)
+- UBA sociales
 image:
   caption: null
   focal_point: Smart
