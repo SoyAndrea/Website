@@ -39,7 +39,10 @@ superuser: true
 title: Andrea
 ---
 
-Soy Socióloga, docente e investigadora con orientación en estudios de género(s) y Derechos Humanos. Acá encontrarás todos mis colaboraciones y proyectos que he realizado en el ámbito académico, investigativo y de marketing digital. 
+Soy Socióloga, docente e investigadora con orientación en estudios de género(s) y Derechos Humanos. Cuento con formación y experiencia en áreas de marketing digital, ciencias sociales y banca financiera. Actualmente me desempeño como linkbuilder en puntorojo y docente adhonorem en UBA sociales, mi curriculum completo lo podrás visualizar [aquí](https://andreagv.netlify.app/media/AndreaGomezVargas2021.pdf)
+
+En esta web encontrarás todas mis colaboraciones y proyectos que han sido realizados en ámbitos insterdisciplinarios de áreas académicas, investigativas y de marketing digital. 
 
 
 Participo activamente en espacios colaborativos de aprendizaje en ciencia de datos, en particular en la Comunidad de R en Argentina. Formo parte del equipo organizafor de [**Rladies Buenos Aires**](https://twitter.com/RLadiesBA), organización dedicada a promover la diversidad de género y minorías en la comunidad R. Y también integro el equipo organizador de [**LatinR**](https://latin-r.com/): Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo.
+
