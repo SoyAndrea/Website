@@ -39,9 +39,7 @@ superuser: true
 title: Andrea
 ---
 
-Socióloga, docente e investigadora con orientación en estudios de género(s) y Derechos Humanos. 
+Soy Socióloga, docente e investigadora con orientación en estudios de género(s) y Derechos Humanos. Acá encontrarás todos mis colaboraciones y proyectos que he realizado en el ámbito académico, investigativo y de marketing digital. 
 
 
-Acá encontraras todos los trabajos y proyectos que he realizado de manera voluntaria y colaborativa. 
-
-Soy organizadora de Rladies Buenos Aires, organización dedicada a promover la diversidad de género y minorías en la comunidad R y miembro del equipo organizador de LatinR: Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo.
+Participo activamente en espacios colaborativos de aprendizaje en ciencia de datos, en particular en la Comunidad de R en Argentina. Formo parte del equipo organizafor de Rladies Buenos Aires, organización dedicada a promover la diversidad de género y minorías en la comunidad R. Y también integro el equipo organizador de LatinR: Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo.
