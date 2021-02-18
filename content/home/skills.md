@@ -10,24 +10,53 @@ headless: true
 weight: 70
 
 title: Skills
-subtitle:
+subtitle: habilidades y herramientas
 
 # Showcase personal skills or business features.
 # - Add/remove as many `feature` blocks below as you like.
 # - For available icons, see: https://wowchemy.com/docs/page-builder/#icons
 feature:
-- description: 90%
+
+- description: 
+  icon: search-plus
+  icon_pack: fas
+  name: investigación
+- description: 
+  icon: chalkboard-teacher
+  icon_pack: fas
+  name: docencia
+- description: 
+  icon: chart-bar
+  icon_pack: fas
+  name: análisis
+- description: 
+  icon: file-invoice-dollar
+  icon_pack: fas
+  name: gestión administrativa
+- description: 
+  icon: project-diagram
+  icon_pack: fas
+  name: gestión de proyectos
+- description: 
+  icon: instagram
+  icon_pack: fab
+  name: social media
+- description: 
+  icon: github
+  icon_pack: fab
+  name: github
+- description: 
+  icon: wordpress
+  icon_pack: fab
+  name: wordpress 
+- description: 
+  icon: mailchimp
+  icon_pack: fab
+  name: email marketing 
+- description: 
   icon: r-project
   icon_pack: fab
   name: R
-- description: 100%
-  icon: chart-line
-  icon_pack: fas
-  name: Statistics
-- description: 10%
-  icon: camera-retro
-  icon_pack: fas
-  name: Photography
 
 # Uncomment to use emoji icons.
 #- icon = ":smile:"
