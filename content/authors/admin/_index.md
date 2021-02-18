@@ -45,5 +45,5 @@ Soy Socióloga, docente e investigadora con orientación en estudios de género(
 En esta web encontrarás todas mis colaboraciones y proyectos que han sido realizados en ámbitos insterdisciplinarios, mi curriculum lo podrás visualizar [aquí](https://andreagv.netlify.app/media/AndreaGomezVargas2021.pdf)
 
 
-Actualmente participo en espacios colaborativos de aprendizaje en ciencia de datos, en particular en la Comunidad de R en Argentina. Formo parte del equipo organizafor de [**Rladies Buenos Aires**](https://twitter.com/RLadiesBA), organización dedicada a promover la diversidad de género y minorías en la comunidad R. Y también integro el equipo organizador de [**LatinR**](https://latin-r.com/): Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo.
+Actualmente participo en espacios colaborativos de aprendizaje en ciencia de datos, en particular en la Comunidad de R en Argentina. Formo parte del equipo organizafor de [Rladies Buenos Aires](https://twitter.com/RLadiesBA), organización dedicada a promover la diversidad de género y minorías en la comunidad R. Y también integro el equipo organizador de [LatinR](https://latin-r.com/): Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo.
 
