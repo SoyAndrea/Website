@@ -41,12 +41,3 @@ Cabe destacar que respecto de las/os estudiantes de Trabajo Social, muchas se in
 Por tal motivo, que las estudiantes puedan adentrarse en el análisis de la problemática del aborto, su contexto socio-histórico, su aspecto legal y epidemiológico, resulta central para avanzar hacia la apropiación de herramientas que les permitan no solo reflexionar acerca del rol profesional sino también fundar sólidamente sus acciones a fin de desarrollar un ejercicio profesional que cotidianamente se pronuncie a través de sus prácticas en la defensa de los derechos de las personas gestantes. Esto permitirá encarar en mejores condiciones las tensiones y confrontaciones que se dan en los espacios institucionales en los que nos insertamos, así como los procesos de intervención con las personas en situación de aborto.
 
 
-### Cohorte 2020
-
-
-
-![](images/UNIDAD 1.png)
-
-
-
-![](images/UNIDAD 2.png)
