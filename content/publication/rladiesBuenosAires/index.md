@@ -29,8 +29,8 @@ publication_short: ""
 publishDate: "2021-01-31T00:00:00Z"
 summary: Co-organizadora del capítulo en Buenos Aires para promover la diversidad de Género(s) en la comunidad R.
 tags:
-- R
 - RLadies BA
+- R
 title: RLadies Buenos Aires
 url_code: ""
 url_dataset: ""
