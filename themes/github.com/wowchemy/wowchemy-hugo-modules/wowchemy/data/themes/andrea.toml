@@ -1,0 +1,18 @@
+# Theme metadata
+name = "andrea"
+
+# Is theme light or dark?
+light = true
+
+# Primary
+primary = "#440553"
+
+# Menu
+menu_primary = "#440553"
+menu_text = "#ffffff"
+menu_text_active = "#60c4ac"
+menu_title = "#fff"
+
+# Home sections
+home_section_odd = "#fff"
+home_section_even = "#fff"
