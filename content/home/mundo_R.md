@@ -10,7 +10,7 @@ headless: true
 weight: 50
 
 title: Mundo R
-subtitle: 'Participación en la Comunidad R'
+subtitle: 'Participación en la Comunidad R en Argentina'
 
 content:
   # Page type to display. E.g. project.

@@ -23,11 +23,8 @@ organizations:
 role: Socióloga
 
 social:
-- display:
-    header: true
-  icon: twitter
+- icon: twitter
   icon_pack: fab
-  label: Follow me on Twitter
   link: https://twitter.com/me_andre
 - icon: github
   icon_pack: fab
