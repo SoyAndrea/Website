@@ -1,0 +1,56 @@
+---
+title: "#BAenDatos ¿Qué sabemos de la línea 144 en CABA?"
+author: "Andrea Gomez"
+date: "8/4/2021"
+output: html_document
+publishDate: '2021-03-29T00:00:00Z'
+summary: Participación del desafío BA en Datos con una serie de visualizaciones sobre género.
+tags:
+- R
+- Sociología
+- Género(s)
+- Feminismo(s)
+- Investigación social
+---
+
+
+
+<p>Me sume al <a href="https://www.buenosaires.gob.ar/agendadetransparencia/datos-abiertos/baendatos"><strong>desafío de #BAenDatos</strong></a> con un serie de visualizaciones sobre género y encontré información interesante para compartir sobre la línea nacional para la atención, contención y asesoramiento en situaciones de violencia por razones de género</p>
+<p>Para esto usea dos datasets: <a href="https://data.buenosaires.gob.ar/dataset/llamadas-linea-144/archivo/72a45383-d48d-468a-a39b-051cc3ec239c"><strong>Llamadas linea 144</strong></a> y <a href="https://data.buenosaires.gob.ar/dataset/servicios-asistencia-victimas-violencia-genero/archivo/598323e9-4df6-4465-9785-b9591bc32a77"><strong>Conocimiento de dispositivos de asistencia</strong></a>, ambos en formato CSV</p>
+<p>Las librerias a usar fueron tidyverse y plotly</p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## Warning: package &#39;tidyverse&#39; was built under R version 4.0.3</code></pre>
+<pre><code>## -- Attaching packages -------------------------------------------------------------- tidyverse 1.3.0 --</code></pre>
+<pre><code>## v ggplot2 3.3.2     v purrr   0.3.4
+## v tibble  3.0.3     v dplyr   1.0.2
+## v tidyr   1.1.2     v stringr 1.4.0
+## v readr   1.3.1     v forcats 0.5.0</code></pre>
+<pre><code>## -- Conflicts ----------------------------------------------------------------- tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+<p><strong>La línea 144 es el segundo dispositivo de asistencia más conocido en CABA</strong> por las mujeres al momento de buscar atención, contención y asesoramiento ante situaciones de violencia por razones de género. ¿Cómo es esto posible?</p>
+<p><img src="images/3.png" /></p>
+<p>La <a href="https://www.argentina.gob.ar/generos/linea-144"><strong>línea 144</strong></a> fue creada para cumplir los objetivos establecidos por la Ley 26.485 sobre protección integral para prevenir, sancionar y erradicar la violencia contra las mujeres en los ámbitos en que desarrollen sus relaciones interpersonales (artículo 9), sancionada en 2009 por el Congreso de la Nación Argentina.</p>
+<p>Desde 2010 a la fecha, la línea 144 cumple la función de atender situaciones de violencia por razones de género las 24hrs, los 365 días en todo el país. En CABA hay un promedio de 12.900 llamadas anuales, aunque desde 2017 el total de llamadas recibidas ha incrementado un 100% de su promedio.</p>
+<div id="qué-pasó-en-esos-años" class="section level3">
+<h3>¿Qué pasó en esos años?</h3>
+<p><img src="images/4.png" /></p>
+<p>De la mano del <a href="http://niunamenos.org.ar/"><strong>#NiUnaMenos</strong></a>, la políticas públicas para la erradicación de la violencia hacia las mujeres fue ampliando el acceso a sus vías de comunicación.</p>
+<p>Ya desde 2015 se impulsó una campaña para que los medios de comunicación informaran sobre la existencia de la línea 144, para 2016 se presenta el <a href="https://www.argentina.gob.ar/noticias/el-presidente-macri-presento-el-plan-nacional-para-la-erradicacion-de-la-violencia-de"><strong>Plan Nacional</strong></a> de Acción para la Prevención, Asistencia y Erradicación de la Violencia contra las Mujeres 2017-2019 en el que se incluyeron campañas de difusión y concientización sobre la violencia de género.</p>
+<p>Entre 2017 y 2018 el Ministerio de Desarrollo Social lanzó diversas campañas para el día de los enamorados para alertar sobre noviazgos violentos como “noviazgos sin violencia” y “¿Te Ama?”. Desde el GCBA lanzaron el test online para detectar noviazgos violentos. Entre tanto la línea 144 para 2017 fue habilitada por las empresas de telefonía celular como <a href="https://www.lanacion.com.ar/tecnologia/llamar-a-la-linea-144-para-hacer-denuncias-por-violencia-de-genero-sera-gratis-nid2091409/"><strong>línea gratuita</strong></a> y para 2018 fue lanzada la <a href="https://www.telam.com.ar/notas/201803/262749-presentaron-la-aplicacion-para-celulares-del-144-para-asistir-a-la-mujeres-las-24-horas.html"><strong>aplicación móvil gratuita</strong></a> de la misma línea para IOS y android. Esto implicó que para comunicarse con la línea 144 ya no fuera necesario contar con saldo o datos móviles.</p>
+<p>Así mismo, no hay que dejar de lado los hechos sociales que acompañaron a la sociedad Argentina en 2018 que tuvieron gran repercusión a nivel nacional e internacional en los que se encuentran el debate por la interrupción voluntaria del embarazo y la <a href="https://www.telam.com.ar/notas/201812/313986-tras-la-denuncia-aumentaron-las-consultas-en-la-linea-de-violencia-de-genero.html"><strong>denuncia de Thelma Fardin</strong></a>.</p>
+<p>2018 ha sido el año con mayor cantidad de llamados a la línea llegando a un total de 25.197. Dentro de las estadísticas está contemplado que los hechos de público conocimiento o movilizaciones referidas a la misma temática intensifican la comunicación con la línea.</p>
+<p>Las comunicaciones al 144 se han distribuido en 3 líneas de ayuda de CABA que permiten orientar el tipo de consultas o asistencias a realiziar. Cabe destacar que la línea que más volumen de llamadas ha tenido es la Línea de Información General y Salud Integral, es clara la <strong>demanda por información.</strong></p>
+<p><img src="images/5.png" /></p>
+<p>Cada línea cuenta con un <strong>enfoque de atención: salud, vida familiar y adolescencia.</strong> En términos generales en cada ámbito se comunican para solicitar información y para buscar asesoría y contención en situaciones de violencia. Es importante recordar que la línea 144 no se trata de una línea de emergencia.</p>
+<p><img src="images/6.png" /></p>
+<p>Para 2020 con el impacto del ASPO la atención de la línea 144 se extendió a whatsapp y mail.</p>
+<p><strong>Recuerda que podés comunicarte de manera gratuita las 24 hs., los 365 días, a través de un llamado al 144, por WhatsApp al 1127716463, por mail a <a href="mailto:linea144@mingeneros.gob.ar" class="email">linea144@mingeneros.gob.ar</a> y descargando la app.</strong></p>
+<blockquote class="twitter-tweet">
+<p lang="es" dir="ltr">
+<a href="https://twitter.com/hashtag/BAenDatos?src=hash&amp;ref_src=twsrc%5Etfw">#BAenDatos</a> ¿Qué sabemos de la Línea 144 en CABA?<br>Me sumé al desafío de <a href="https://twitter.com/BAGobAbierto?ref_src=twsrc%5Etfw"><span class="citation">@BAGobAbierto</span></a> &amp; <a href="https://twitter.com/BAinnovacion?ref_src=twsrc%5Etfw"><span class="citation">@BAinnovacion</span></a>, y encontré información interesante sobre la línea 144 para compartir.<br><br>Mirá el análisis completo en <a href="https://t.co/9wEvCQHDlT">https://t.co/9wEvCQHDlT</a><a href="https://twitter.com/hashtag/rladies?src=hash&amp;ref_src=twsrc%5Etfw">#rladies</a> <a href="https://t.co/eAnJZFO8Ls">pic.twitter.com/eAnJZFO8Ls</a>
+</p>
+— andrea (<span class="citation">@me_andre</span>) <a href="https://twitter.com/me_andre/status/1376404024342278144?ref_src=twsrc%5Etfw">March 29, 2021</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
