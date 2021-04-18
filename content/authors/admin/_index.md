@@ -32,6 +32,9 @@ social:
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/andreasociologa/
+- icon: r-project
+  icon_pack: fab
+  link: https://soyandrea.netlify.app/publication/rladiesbuenosaires/ 
 superuser: true
 title: Andrea
 ---

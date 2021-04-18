@@ -43,7 +43,7 @@ url_video: ""
 ---
 
 
-## Buenos Aires
+## Capítulo Buenos Aires
 
 Desde 2019 me sumé como colaboradora y en 2020 como co-organizadora del capítulo en Buenos Aires, entre la presencialidad y la virtualidad hermos organizando variados encuentros con diferentes temáticas y participantes de distintas profesiones. Siendo un espacio interdisciplinario, horizontal y colectivo. 
 
