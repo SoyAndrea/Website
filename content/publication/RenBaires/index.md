@@ -36,7 +36,6 @@ url_video: ''
 
 ## Capítulo 2: Una presentación a toda marcha de R
 
-![](images/Una presentación a toda marcha de.png)
 
 Siguiendo con el club de lectura de [**Ciencia de Datos para Gente Sociable de Antonio Vazquez Brust**](https://bitsandbricks.github.io/ciencia_de_datos_gente_sociable/) introducí el segundo capitulo donde ya comenzamos a conocer la interfaz de R studio y armamos nuestro primer proyecto. 
 
