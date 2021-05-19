@@ -43,11 +43,11 @@ Siguiendo con el club de lectura de [**Ciencia de Datos para Gente Sociable de A
 
 Acá conté los primeros 5  pasos que el autor nos invita a conocer y navegar en R: 
 
+![](images/RPRIMERO.png)
 
 
 
-
-
+Quedan muchos capitulos por charlar, sumate a los próximos en [**R en Baires**](https://www.meetup.com/es/renbaires/)
 
 
 
