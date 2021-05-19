@@ -1,6 +1,7 @@
 ---
 title: "R en Buenos Aires"
-authors: admin
+authors: 
+- admin
 date: '2021-05-14T00:00:00Z'
 doi: ''
 featured: no
@@ -43,7 +44,7 @@ Siguiendo con el club de lectura de [**Ciencia de Datos para Gente Sociable de A
 Acá conté los primeros 5  pasos que el autor nos invita a conocer y navegar en R: 
 
 
-![5 puntos claves](images/Una presentación a toda marcha de (1).png)
+
 
 
 
