@@ -6,7 +6,7 @@ author_notes:
 date: '2020-09-16T00:00:00Z'
 authors:
 - Andrea
-- Lala Rothberg
+- Laura Rothberg
 doi: ''
 featured: no
 image:
