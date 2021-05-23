@@ -9,7 +9,6 @@ tags:
 - web scraping
 ---
 
-![_imagen ilustrativa linkbuilding_](images/linkbuilding.jpg)
 
 ### ¿Por qué linkbuilding?
 
