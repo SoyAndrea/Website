@@ -13,23 +13,58 @@ tags:
 - Investigación social
 ---
 
+<script src="{{< blogdown/postref >}}index_files/htmlwidgets/htmlwidgets.js"></script>
+<script src="{{< blogdown/postref >}}index_files/plotly-binding/plotly.js"></script>
+<script src="{{< blogdown/postref >}}index_files/typedarray/typedarray.min.js"></script>
+<script src="{{< blogdown/postref >}}index_files/jquery/jquery.min.js"></script>
+<link href="{{< blogdown/postref >}}index_files/crosstalk/css/crosstalk.css" rel="stylesheet" />
+<script src="{{< blogdown/postref >}}index_files/crosstalk/js/crosstalk.min.js"></script>
+<link href="{{< blogdown/postref >}}index_files/plotly-htmlwidgets-css/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="{{< blogdown/postref >}}index_files/plotly-main/plotly-latest.min.js"></script>
 
 
 <p>Me sume al <a href="https://www.buenosaires.gob.ar/agendadetransparencia/datos-abiertos/baendatos"><strong>desafío de #BAenDatos</strong></a> con un serie de visualizaciones sobre género y encontré información interesante para compartir sobre la línea nacional para la atención, contención y asesoramiento en situaciones de violencia por razones de género</p>
-<p>Para esto usea dos datasets: <a href="https://data.buenosaires.gob.ar/dataset/llamadas-linea-144/archivo/72a45383-d48d-468a-a39b-051cc3ec239c"><strong>Llamadas linea 144</strong></a> y <a href="https://data.buenosaires.gob.ar/dataset/servicios-asistencia-victimas-violencia-genero/archivo/598323e9-4df6-4465-9785-b9591bc32a77"><strong>Conocimiento de dispositivos de asistencia</strong></a>, ambos en formato CSV</p>
-<p>Las librerias a usar fueron tidyverse y plotly</p>
-<pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## Warning: package &#39;tidyverse&#39; was built under R version 4.0.3</code></pre>
-<pre><code>## -- Attaching packages -------------------------------------------------------------- tidyverse 1.3.0 --</code></pre>
-<pre><code>## v ggplot2 3.3.2     v purrr   0.3.4
-## v tibble  3.0.3     v dplyr   1.0.2
-## v tidyr   1.1.2     v stringr 1.4.0
-## v readr   1.3.1     v forcats 0.5.0</code></pre>
-<pre><code>## -- Conflicts ----------------------------------------------------------------- tidyverse_conflicts() --
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()</code></pre>
+<p>Para esto usé dos datasets: <a href="https://data.buenosaires.gob.ar/dataset/llamadas-linea-144/archivo/72a45383-d48d-468a-a39b-051cc3ec239c"><strong>Llamadas linea 144</strong></a> y <a href="https://data.buenosaires.gob.ar/dataset/servicios-asistencia-victimas-violencia-genero/archivo/598323e9-4df6-4465-9785-b9591bc32a77"><strong>Conocimiento de dispositivos de asistencia</strong></a>, ambos en formato CSV</p>
+<pre class="r"><code>#Las librerias a usar fueron tidyverse y plotly, acá te comparto el script usado para las visualizaciones.
+library(tidyverse)
+library(plotly)</code></pre>
 <p><strong>La línea 144 es el segundo dispositivo de asistencia más conocido en CABA</strong> por las mujeres al momento de buscar atención, contención y asesoramiento ante situaciones de violencia por razones de género. ¿Cómo es esto posible?</p>
-<p><img src="images/3.png" /></p>
+<pre class="r"><code>df_dispositivos &lt;- read.csv(&quot;lin_tel_ayu_annio__ser_asist_limpio.csv&quot;, sep = &quot;;&quot;, encoding = &quot;latin1&quot;)
+df_dispositivos[,-1]</code></pre>
+<pre><code>##   porc_mujeres                                   servicios_asistencia
+## 1         55.7                   Centros Integrales de la Mujer (CIM)
+## 2         59.0 Ley 26.485 sobre protección integral hacia las mujeres
+## 3         59.9              Servicios de Patrocinio Jurídico Gratuito
+## 4         63.9                               Organismos de la policía
+## 5         78.7                          Organismos del poder judicial
+## 6         81.9          Botones de pánico - dispositivo de emergencia
+## 7         84.0                            Líneas telefónicas de ayuda
+## 8         88.5                           Campañas contra la violencia
+## 9           NA</code></pre>
+<pre class="r"><code>df_dispositivos &lt;- df_dispositivos[order(df_dispositivos$porc_mujeres),]
+
+df_dispositivos$porc_fact &lt;- factor(df_dispositivos$porc_mujeres, levels =df_dispositivos[[&quot;porc_mujeres&quot;]])
+
+yform &lt;- list(categoryorder = &quot;array&quot;,
+              categoryarray = df_dispositivos$porc_fact,
+              title = &quot;&quot;)
+
+fig &lt;- plot_ly(df_dispositivos, x = ~porc_fact, y = ~servicios_asistencia ,  type = &#39;bar&#39;, orientation = &#39;h&#39;, marker = list(color = c(
+                                &#39;rgba(39,127,142,1)&#39;,
+                                &#39;rgba(39,127,142,1)&#39;,
+                                &#39;rgba(39,127,142,1)&#39;, 
+                                &#39;rgba(39,127,142,1)&#39;,
+                                &#39;rgba(39,127,142,1)&#39;,
+                                &#39;rgba(39,127,142,1)&#39;,
+                                &#39;rgba(70,51,126,1)&#39;,
+                                &#39;rgba(39,127,142,1)&#39;))) %&gt;% 
+  layout(xaxis = list(title = &#39;Porcentaje de conocimiento&#39;),
+         title = &quot;Conocimiento de dispositivos de asistencia&quot;,
+         yaxis = yform)
+
+fig</code></pre>
+<div id="htmlwidget-1" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"visdat":{"2ab474943aa":["function () ","plotlyVisDat"]},"cur_data":"2ab474943aa","attrs":{"2ab474943aa":{"x":{},"y":{},"orientation":"h","marker":{"color":["rgba(39,127,142,1)","rgba(39,127,142,1)","rgba(39,127,142,1)","rgba(39,127,142,1)","rgba(39,127,142,1)","rgba(39,127,142,1)","rgba(70,51,126,1)","rgba(39,127,142,1)"]},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"Porcentaje de conocimiento","type":"category","categoryorder":"array","categoryarray":["55.7","59","59.9","63.9","78.7","81.9","84","88.5"]},"title":"Conocimiento de dispositivos de asistencia","yaxis":{"domain":[0,1],"automargin":true,"categoryorder":"array","categoryarray":["55.7","59","59.9","63.9","78.7","81.9","84","88.5",null],"title":"","type":"category"},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"x":["55.7","59","59.9","63.9","78.7","81.9","84","88.5"],"y":["Centros Integrales de la Mujer (CIM)","Ley 26.485 sobre protección integral hacia las mujeres","Servicios de Patrocinio Jurídico Gratuito","Organismos de la policía","Organismos del poder judicial","Botones de pánico - dispositivo de emergencia","Líneas telefónicas de ayuda","Campañas contra la violencia"],"orientation":"h","marker":{"color":["rgba(39,127,142,1)","rgba(39,127,142,1)","rgba(39,127,142,1)","rgba(39,127,142,1)","rgba(39,127,142,1)","rgba(39,127,142,1)","rgba(70,51,126,1)","rgba(39,127,142,1)"],"line":{"color":"rgba(31,119,180,1)"}},"type":"bar","error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 <p>La <a href="https://www.argentina.gob.ar/generos/linea-144"><strong>línea 144</strong></a> fue creada para cumplir los objetivos establecidos por la Ley 26.485 sobre protección integral para prevenir, sancionar y erradicar la violencia contra las mujeres en los ámbitos en que desarrollen sus relaciones interpersonales (artículo 9), sancionada en 2009 por el Congreso de la Nación Argentina.</p>
 <p>Desde 2010 a la fecha, la línea 144 cumple la función de atender situaciones de violencia por razones de género las 24hrs, los 365 días en todo el país. En CABA hay un promedio de 12.900 llamadas anuales, aunque desde 2017 el total de llamadas recibidas ha incrementado un 100% de su promedio.</p>
 <div id="qué-pasó-en-esos-años" class="section level3">
@@ -53,4 +88,5 @@ tags:
 — andrea (<span class="citation">@me_andre</span>) <a href="https://twitter.com/me_andre/status/1376404024342278144?ref_src=twsrc%5Etfw">March 29, 2021</a>
 </blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p><img src="images/3.png" /></p>
 </div>

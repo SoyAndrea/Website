@@ -3233,7 +3233,7 @@ input.btn-block[type="button"] {
     display: none; }
 
 .navbar-light .navbar-brand {
-  color: #fff; }
+  color: #288c8e; }
   .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
     color: #370a43; }
 

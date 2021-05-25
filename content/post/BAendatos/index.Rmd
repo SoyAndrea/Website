@@ -17,23 +17,44 @@ tags:
 Me sume al [**desafío de #BAenDatos**](https://www.buenosaires.gob.ar/agendadetransparencia/datos-abiertos/baendatos) con un serie de visualizaciones sobre género y encontré información interesante  para compartir sobre la línea nacional para la atención, contención y asesoramiento en situaciones de violencia por razones de género
 
 
-Para esto usea dos datasets: [**Llamadas linea 144**](https://data.buenosaires.gob.ar/dataset/llamadas-linea-144/archivo/72a45383-d48d-468a-a39b-051cc3ec239c) y [**Conocimiento de dispositivos de asistencia**](https://data.buenosaires.gob.ar/dataset/servicios-asistencia-victimas-violencia-genero/archivo/598323e9-4df6-4465-9785-b9591bc32a77), ambos en formato CSV
+Para esto usé dos datasets: [**Llamadas linea 144**](https://data.buenosaires.gob.ar/dataset/llamadas-linea-144/archivo/72a45383-d48d-468a-a39b-051cc3ec239c) y [**Conocimiento de dispositivos de asistencia**](https://data.buenosaires.gob.ar/dataset/servicios-asistencia-victimas-violencia-genero/archivo/598323e9-4df6-4465-9785-b9591bc32a77), ambos en formato CSV
 
-
-
-Las librerias a usar fueron tidyverse y plotly 
-
-```{r}
+```{r message=FALSE, warning=FALSE}
+#Las librerias a usar fueron tidyverse y plotly, acá te comparto el script usado para las visualizaciones.
 library(tidyverse)
+library(plotly)
 ```
-
-
-
 
 **La línea 144 es el segundo dispositivo de asistencia más conocido en CABA** por las mujeres al momento de buscar atención, contención y asesoramiento ante situaciones de violencia por razones de género. ¿Cómo es esto posible?
 
+```{r message=FALSE, warning=FALSE, paged.print=FALSE}
+df_dispositivos <- read.csv("lin_tel_ayu_annio__ser_asist_limpio.csv", sep = ";", encoding = "latin1")
+df_dispositivos[,-1]
 
-![](images/3.png)
+df_dispositivos <- df_dispositivos[order(df_dispositivos$porc_mujeres),]
+
+df_dispositivos$porc_fact <- factor(df_dispositivos$porc_mujeres, levels =df_dispositivos[["porc_mujeres"]])
+
+yform <- list(categoryorder = "array",
+              categoryarray = df_dispositivos$porc_fact,
+              title = "")
+
+fig <- plot_ly(df_dispositivos, x = ~porc_fact, y = ~servicios_asistencia ,  type = 'bar', orientation = 'h', marker = list(color = c(
+                                'rgba(39,127,142,1)',
+                                'rgba(39,127,142,1)',
+                                'rgba(39,127,142,1)', 
+                                'rgba(39,127,142,1)',
+                                'rgba(39,127,142,1)',
+                                'rgba(39,127,142,1)',
+                                'rgba(70,51,126,1)',
+                                'rgba(39,127,142,1)'))) %>% 
+  layout(xaxis = list(title = 'Porcentaje de conocimiento'),
+         title = "Conocimiento de dispositivos de asistencia",
+         yaxis = yform)
+
+fig
+```
+
 
 La [**línea 144**](https://www.argentina.gob.ar/generos/linea-144) fue creada para cumplir los objetivos establecidos por la Ley 26.485 sobre protección integral para prevenir, sancionar y erradicar la violencia contra las mujeres en los ámbitos en que desarrollen sus relaciones interpersonales (artículo 9), sancionada en 2009 por el Congreso de la Nación Argentina. 
 
@@ -73,3 +94,5 @@ Para 2020 con el impacto del ASPO la atención de la línea 144 se extendió a w
 
 <blockquote class="twitter-tweet"><p lang="es" dir="ltr"><a href="https://twitter.com/hashtag/BAenDatos?src=hash&amp;ref_src=twsrc%5Etfw">#BAenDatos</a> ¿Qué sabemos de la Línea 144 en CABA?<br>Me sumé al desafío de <a href="https://twitter.com/BAGobAbierto?ref_src=twsrc%5Etfw">@BAGobAbierto</a> &amp; <a href="https://twitter.com/BAinnovacion?ref_src=twsrc%5Etfw">@BAinnovacion</a>, y encontré información interesante sobre la línea 144 para compartir.<br><br>Mirá el análisis completo en <a href="https://t.co/9wEvCQHDlT">https://t.co/9wEvCQHDlT</a><a href="https://twitter.com/hashtag/rladies?src=hash&amp;ref_src=twsrc%5Etfw">#rladies</a> <a href="https://t.co/eAnJZFO8Ls">pic.twitter.com/eAnJZFO8Ls</a></p>&mdash; andrea (@me_andre) <a href="https://twitter.com/me_andre/status/1376404024342278144?ref_src=twsrc%5Etfw">March 29, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+
+![](images/3.png)
