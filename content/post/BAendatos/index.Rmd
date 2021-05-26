@@ -56,13 +56,38 @@ fig
 ```
 
 
+
+
 La [**línea 144**](https://www.argentina.gob.ar/generos/linea-144) fue creada para cumplir los objetivos establecidos por la Ley 26.485 sobre protección integral para prevenir, sancionar y erradicar la violencia contra las mujeres en los ámbitos en que desarrollen sus relaciones interpersonales (artículo 9), sancionada en 2009 por el Congreso de la Nación Argentina. 
 
 Desde 2010 a la fecha, la línea 144 cumple la función de atender situaciones de violencia por razones de género las 24hrs, los 365 días en todo el país. En CABA hay un promedio de 12.900 llamadas anuales, aunque desde 2017 el total de llamadas recibidas ha incrementado un 100% de su promedio. 
 
-### ¿Qué pasó en esos años? 
 
-![](images/4.png)
+```{r}
+library(readxl)
+linea144 <- read_excel("llamadas_linea_144.xlsx")
+
+df_llamadasanuales144 <- linea144 %>% select(año,total_llamadas_servicios_telefónicos)
+df_llamadasanuales144 = df_llamadasanuales144[-11,]
+df_llamadasanuales144$anio<-as.character(df_llamadasanuales144$año)
+
+#Promedio anual entre 2010 - 2019
+mean(df_llamadasanuales144$total_llamadas_servicios_telefónicos)
+
+totalanual <- plot_ly(df_llamadasanuales144, x =~anio)%>%
+  add_lines(y = ~total_llamadas_servicios_telefónicos, fill = 'tozeroy', fillcolor = 'rgba(68, 5, 83, 0.5)', line = list(shape = "spline", color = "#440553")) %>%
+  layout(
+        yaxis = list(title = 'Cantidad llamados',
+                    rangemode = "tozero",
+                    linecolor = "black"),
+        xaxis = list(title = 'Año'),
+        title = "Cantidad de llamadas recibidas en CABA (2010 -2019)"
+  )
+totalanual
+```
+
+
+### ¿Qué pasó en esos años? 
 
 De la mano del [**#NiUnaMenos**](http://niunamenos.org.ar/),  la políticas públicas para la erradicación de la violencia hacia las mujeres fue ampliando el acceso a sus vías de comunicación. 
 
@@ -96,3 +121,4 @@ Para 2020 con el impacto del ASPO la atención de la línea 144 se extendió a w
 
 
 ![](images/3.png)
+![](images/4.png)
