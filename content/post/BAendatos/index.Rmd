@@ -120,18 +120,19 @@ df_lineasdeayuda<- df_lineasdeayuda%>%mutate(
 )
 
 totallineas <- ggplot(df_lineasdeayuda, aes(fill=linea, y=count, x=anio)) + 
-    geom_bar(position="stack", stat="identity") +
+    geom_bar(position="stack", stat="identity") + scale_fill_manual(values = c( "#FDE614","#277f91","#440154")) +
     ggtitle("Porcentaje de llamados a las líneas de ayuda del 144 (CABA, 2010-1019)") +
     xlab("Año") +
     ylab("Porcentaje")
 
 ggplotly(totallineas)
-
 ```
+
 
 ```{r}
 totalporcentual <- ggplot(df_lineasdeayuda, aes(fill=linea, y=count, x=anio)) + 
     geom_bar(position="fill", stat="identity") +
+    scale_fill_manual(values = c( "#FDE614","#277f91","#440154")) +
     ggtitle("Porcentaje de llamados a las líneas de ayuda del 144 (CABA, 2010-1019)") +
     xlab("Año") +
     ylab("Porcentaje")
