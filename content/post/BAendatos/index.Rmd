@@ -104,7 +104,42 @@ Así mismo, no hay que dejar de lado los hechos sociales que acompañaron a la s
 
 Las comunicaciones al 144 se han distribuido en 3 líneas de ayuda de CABA que permiten orientar el  tipo de consultas o asistencias a realiziar. Cabe destacar que la línea que más volumen de llamadas ha tenido es la Línea de Información General y Salud Integral, es clara la **demanda por información.**  
 
-![](images/5.png) 
+```{r}
+df_lineasdeayuda <- linea144 %>% select(año,total_linea_violencia_familiar, total_linea_te_ayudo, total_linea_de_informacion_general_y_salud_integral)
+df_lineasdeayuda = df_lineasdeayuda[-11,]
+df_lineasdeayuda$anio<-as.character(df_lineasdeayuda$año)
+df_lineasdeayuda$año<-NULL
+
+df_lineasdeayuda <- df_lineasdeayuda%>% pivot_longer(!anio,names_to = "linea", values_to = "count")
+df_lineasdeayuda<- df_lineasdeayuda%>%mutate(
+  linea=case_when(
+    linea=="total_linea_te_ayudo"~"Línea Te Ayudo",
+    linea=="total_linea_de_informacion_general_y_salud_integral"~"Línea de Información \n General y Salud Integral",
+    linea=="total_linea_violencia_familiar"~"Línea Violencia Familiar"
+  )
+)
+
+totallineas <- ggplot(df_lineasdeayuda, aes(fill=linea, y=count, x=anio)) + 
+    geom_bar(position="stack", stat="identity") +
+    ggtitle("Porcentaje de llamados a las líneas de ayuda del 144 (CABA, 2010-1019)") +
+    xlab("Año") +
+    ylab("Porcentaje")
+
+ggplotly(totallineas)
+
+```
+
+```{r}
+totalporcentual <- ggplot(df_lineasdeayuda, aes(fill=linea, y=count, x=anio)) + 
+    geom_bar(position="fill", stat="identity") +
+    ggtitle("Porcentaje de llamados a las líneas de ayuda del 144 (CABA, 2010-1019)") +
+    xlab("Año") +
+    ylab("Porcentaje")
+    
+ggplotly(totalporcentual)
+```
+
+
 
 
 Cada línea cuenta con un **enfoque de atención: salud, vida familiar y adolescencia.** En términos generales en cada ámbito se comunican para solicitar información y para buscar asesoría y contención en situaciones de violencia. Es importante recordar que la línea 144  no se trata de una línea de emergencia.
@@ -116,9 +151,12 @@ Para 2020 con el impacto del ASPO la atención de la línea 144 se extendió a w
 
 **Recuerda que podés comunicarte de manera gratuita las 24 hs., los 365 días, a través de un llamado al 144, por WhatsApp al 1127716463, por mail a linea144@mingeneros.gob.ar y descargando la app.**
 
+#### Participación en concurso
 
 <blockquote class="twitter-tweet"><p lang="es" dir="ltr"><a href="https://twitter.com/hashtag/BAenDatos?src=hash&amp;ref_src=twsrc%5Etfw">#BAenDatos</a> ¿Qué sabemos de la Línea 144 en CABA?<br>Me sumé al desafío de <a href="https://twitter.com/BAGobAbierto?ref_src=twsrc%5Etfw">@BAGobAbierto</a> &amp; <a href="https://twitter.com/BAinnovacion?ref_src=twsrc%5Etfw">@BAinnovacion</a>, y encontré información interesante sobre la línea 144 para compartir.<br><br>Mirá el análisis completo en <a href="https://t.co/9wEvCQHDlT">https://t.co/9wEvCQHDlT</a><a href="https://twitter.com/hashtag/rladies?src=hash&amp;ref_src=twsrc%5Etfw">#rladies</a> <a href="https://t.co/eAnJZFO8Ls">pic.twitter.com/eAnJZFO8Ls</a></p>&mdash; andrea (@me_andre) <a href="https://twitter.com/me_andre/status/1376404024342278144?ref_src=twsrc%5Etfw">March 29, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+#### Presentación elaborada
 
 ![](images/3.png)
 ![](images/4.png)
+![](images/5.png) 
