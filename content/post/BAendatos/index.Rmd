@@ -19,8 +19,9 @@ Me sume al [**desafío de #BAenDatos**](https://www.buenosaires.gob.ar/agendadet
 
 Para esto usé dos datasets: [**Llamadas linea 144**](https://data.buenosaires.gob.ar/dataset/llamadas-linea-144/archivo/72a45383-d48d-468a-a39b-051cc3ec239c) y [**Conocimiento de dispositivos de asistencia**](https://data.buenosaires.gob.ar/dataset/servicios-asistencia-victimas-violencia-genero/archivo/598323e9-4df6-4465-9785-b9591bc32a77), ambos en formato CSV
 
+**Las librerias a usar fueron tidyverse y plotly, acá te comparto el script usado para las visualizaciones.**
+
 ```{r message=FALSE, warning=FALSE}
-#Las librerias a usar fueron tidyverse y plotly, acá te comparto el script usado para las visualizaciones.
 library(tidyverse)
 library(plotly)
 ```
@@ -142,10 +143,27 @@ ggplotly(totalporcentual)
 
 
 
-
 Cada línea cuenta con un **enfoque de atención: salud, vida familiar y adolescencia.** En términos generales en cada ámbito se comunican para solicitar información y para buscar asesoría y contención en situaciones de violencia. Es importante recordar que la línea 144  no se trata de una línea de emergencia.
 
-![](images/6.png)
+```{r}
+fig <- plot_ly(
+    labels = c("Linea 144","Linea Violencia Familiar","Informacion General \ny Violencia Familiar","Casos Maltrato \nFisico Emocional","Emergencia \nViolencia Familiar","Linea Te Ayudo","Asesoramiento","Casos Maltrato \nJuvenil y Abuso Sexual","Adolescente Violento","Noviazgo Violento","Emergencia Te Ayudo","Linea de Informacion General \ny Salud Integral", "Informacion \nSalud", "PAP", "Otros"),
+    parents = c("","Linea 144","Linea Violencia Familiar","Linea Violencia Familiar","Linea Violencia Familiar","Linea 144","Linea Te Ayudo","Linea Te Ayudo","Linea Te Ayudo","Linea Te Ayudo","Linea Te Ayudo","Linea 144","Linea de Informacion General \ny Salud Integral","Linea de Informacion General \ny Salud Integral","Linea de Informacion General \ny Salud Integral"),
+    values = c(129659, 64560, 16302, 47567, 601,10361, 2162, 7014, 576,571, 38,54738, 10752, 6890, 37096),
+    type = 'sunburst',
+    branchvalues = 'total',
+    insidetextorientation='tangencial'
+    ) %>%
+  
+      layout(
+      title="Llamadas a línea de asistencia 2010-2019",
+      colorway = c(
+        "#277f91",'rgb(253, 231, 37)','rgb(68, 1, 84)'
+      )
+    )
+
+fig
+```
 
 
 Para 2020 con el impacto del ASPO la atención de la línea 144 se extendió a whatsapp y mail.
@@ -161,3 +179,4 @@ Para 2020 con el impacto del ASPO la atención de la línea 144 se extendió a w
 ![](images/3.png)
 ![](images/4.png)
 ![](images/5.png) 
+![](images/6.png) 
