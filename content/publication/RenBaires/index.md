@@ -46,8 +46,12 @@ Acá conté los primeros 5  pasos que el autor nos invita a conocer y navegar en
 ![](images/RPRIMERO.png)
 
 
+Quedan muchos capitulos por charlar, sumate a los próximos en [**R en Baires**](https://www.meetup.com/es/renbaires/). Si no puedes asistir, quedan grabados en el canal de youtube. 
 
-Quedan muchos capitulos por charlar, sumate a los próximos en [**R en Baires**](https://www.meetup.com/es/renbaires/)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YZT2hX800yg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
 
 
 
