@@ -35,7 +35,7 @@ url_video: ''
 
 ## NIDO INFORMES: COLOMBIA
 
-Participe en el informe de NIDO MEDIA, acá intentamos explicarte qué pasó y porqué en al Paro Nacional que sucede en Colombia desde el 28 de abril. 
+Participé en el informe de NIDO MEDIA, acá intentamos explicarte qué pasó y porqué en al Paro Nacional que sucede en Colombia desde el 28 de abril. 
 
 Escúchalo también en el canal de youtube de [**Nido MEDIA**](https://www.youtube.com/channel/UC96_HTGS5JhAChVwMhFiRtw) 
 

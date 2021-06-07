@@ -45,7 +45,7 @@ title: Andrea
 Soy Socióloga, docente e investigadora con orientación en estudios de género(s) y Derechos Humanos. Actualmente me desempeño como consultora independiente, auxiliar docente - ayudante primera en [**UBA Sociales**](https://soyandrea.netlify.app/proyectos/materia-optativa/) y tutora en [**FLACSO**](https://www.flacso.org.ar/formacion-academica/big-data-e-inteligencia-territorial/). 
 
 
-En esta web encontrarás todas mis colaboraciones y proyectos que han sido realizados en ámbitos insterdisciplinarios, mi curriculum lo podrás visualizar [**_aquí_**](https://andreagv.netlify.app/media/AndreaGomezVargas2021.pdf).
+En esta web encontrarás todas mis colaboraciones y proyectos que han sido realizados en ámbitos insterdisciplinarios, mi curriculum lo podrás visualizar [**_aquí_**](https://soyandrea.netlify.app/media/AndreaGomezVargas2021.pdf).
 
 
 Actualmente participo en espacios colaborativos de aprendizaje en ciencias de datos y docencia. Desde la Comunidad de R en Argentina formo parte del equipo organizafor de [**Rladies Buenos Aires**](https://twitter.com/RLadiesBA), organización dedicada a promover la diversidad de género y minorías en la comunidad R e integro el equipo organizador de [**LatinR**](https://latin-r.com/): Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo. 
