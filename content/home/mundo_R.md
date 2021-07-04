@@ -7,7 +7,7 @@ widget: portfolio
 headless: true
 
 # Order that this section appears on the page.
-weight: 50
+weight: 20
 
 title: Mundo R
 subtitle: 'Participación en la Comunidad R en Argentina'
@@ -24,13 +24,13 @@ content:
   # To show all items, set `tag` to "*".
   # To filter by a specific tag, set `tag` to an existing tag name.
   # To remove the toolbar, delete the entire `filter_button` block.
-  filter_button:
-  - name: Todas
-    tag: '*'
-  - name: LatinR
-    tag: LatinR
-  - name: Rladies BA
-    tag: Rladies BA
+  # filter_button:
+  # - name: Todas
+  #   tag: '*'
+  # - name: LatinR
+  #   tag: LatinR
+  # - name: Rladies BA
+  #   tag: Rladies BA
 
 
 design:
@@ -45,7 +45,7 @@ design:
   view: 5
 
   # For Showcase view, flip alternate rows?
-  flip_alt_rows: false
+  flip_alt_rows: true
 ---
 
 
