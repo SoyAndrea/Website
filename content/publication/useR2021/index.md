@@ -2,7 +2,7 @@
 title: "useR 2021: uso de R en latinoamérica"
 authors: 
 - admin
-date: '2021-07-04T00:00:00Z'
+date: '2021-07-01T00:00:00Z'
 doi: ''
 featured: no
 image:
@@ -15,7 +15,7 @@ links:
 projects: []
 publication: ''
 publication_short: ''
-publishDate: '2021-07-09T00:00:00Z'
+publishDate: '2021-07-01T00:00:00Z'
 summary: Compartimos los primeros resultados de la encuesta realizada en 2020 sobre el uso de R en Latinoamérica
 tags:
 - R
