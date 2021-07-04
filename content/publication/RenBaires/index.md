@@ -23,6 +23,7 @@ tags:
 - R
 - Sociología
 - Ciencia de datos
+- Argentina
 abstract: null
 url_code: ''
 url_dataset: ''

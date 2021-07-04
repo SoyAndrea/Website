@@ -21,6 +21,7 @@ tags:
 - R
 - Sociología
 - Charlas
+- Global
 abstract: null
 url_code: ''
 url_dataset: ''

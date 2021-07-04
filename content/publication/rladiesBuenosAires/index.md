@@ -31,6 +31,7 @@ summary: Co-organizadora del capítulo en Buenos Aires para promover la diversid
 tags:
 - RLadies BA
 - R
+- Argentina
 title: RLadies Buenos Aires
 url_code: ""
 url_dataset: ""

@@ -27,6 +27,7 @@ tags:
 - R
 - Accesibilidad e inclusión
 - LatinR 2020
+- Global
 title: LatinR 2020 - panel accesibilidad e inclusión
 url_code: ""
 url_dataset: ""

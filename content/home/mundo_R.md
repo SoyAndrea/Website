@@ -10,7 +10,7 @@ headless: true
 weight: 20
 
 title: Mundo R
-subtitle: 'Participación en la Comunidad R en Argentina'
+subtitle: 'Participación en la comunidad de usuarios de R en Argentina y el mundo'
 
 content:
   # Page type to display. E.g. project.
@@ -24,13 +24,13 @@ content:
   # To show all items, set `tag` to "*".
   # To filter by a specific tag, set `tag` to an existing tag name.
   # To remove the toolbar, delete the entire `filter_button` block.
-  # filter_button:
-  # - name: Todas
-  #   tag: '*'
-  # - name: LatinR
-  #   tag: LatinR
-  # - name: Rladies BA
-  #   tag: Rladies BA
+  filter_button:
+  - name: Todas
+    tag: '*'
+  - name: Argentina
+    tag: Argentina
+  - name: Global
+    tag: Global
 
 
 design:
