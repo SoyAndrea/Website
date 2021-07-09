@@ -24,16 +24,17 @@ content:
   # To show all items, set `tag` to "*".
   # To filter by a specific tag, set `tag` to an existing tag name.
   # To remove the toolbar, delete the entire `filter_button` block.
-  # filter_button:
-  # - name: Todas
-  #   tag: '*'
-  # - name: Proyectos de Investigación
-  #   tag: Proyectos de Investigación
-  # - name: Ponencias
-  #   tag: Ponencias
-  # - name: Docencia
-  #   tag: Docencia
-
+  filter_button:
+  - name: Todas
+    tag: '*'
+  - name: Investigación social
+    tag: Investigación social
+  - name: Docencia
+    tag: Docencia
+  - name: Radio
+    tag: Radio
+  - name: R
+    tag: R
 
 design:
   # Choose how many columns the section has. Valid values: '1' or '2'.
