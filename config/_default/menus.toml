@@ -7,30 +7,36 @@
   name = "Hola"
   url = "#hola"
   weight = 10
-
-[[main]]
-  name = "Posts"
-  url = "#posts"
-  weight = 40
-
-[[main]]
-  name = "Proyectos"
-  url = "#proyectos"
-  weight = 30
-
+  
 [[main]]
   name = "Mundo R"
   url = "#mundo_R"
   weight = 20
 
-# Link to a PDF of your resume/CV from the menu.
-# To enable, copy your resume/CV to `static/media/resume.pdf` and uncomment the lines below.
 [[main]]
-  name = "CV"
-  url = "media/AndreaGomezVargas2021.pdf"
+  name = "Posts"
+  url = "#posts"
+  weight = 30
+
+[[main]]
+  name = "Proyectos"
+  url = "#proyectos"
+  weight = 40
+  
+[[main]]
+  name = "Skills"
+  url = "#skills"
   weight = 50
 
 [[main]]
   name = "Media"
   url = "#media"
   weight = 60
+
+# Link to a PDF of your resume/CV from the menu.
+# To enable, copy your resume/CV to `static/media/resume.pdf` and uncomment the lines below.
+[[main]]
+  name = "CV"
+  url = "media/AndreaGomezVargas2021.pdf"
+  weight = 70
+

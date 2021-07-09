@@ -7,7 +7,7 @@ widget: portfolio
 headless: true
 
 # Order that this section appears on the page.
-weight: 20
+weight: 30
 
 title: Mundo R
 subtitle: 'Participación en la comunidad de usuarios de R en Argentina y el mundo'
@@ -42,7 +42,7 @@ design:
   #   2 = Compact
   #   3 = Card
   #   5 = Showcase
-  view: 3
+  view: 5
 
   # For Showcase view, flip alternate rows?
   flip_alt_rows: false
