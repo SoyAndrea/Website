@@ -50,8 +50,10 @@ Pero además pasó a ser un proyecto de R-Forwards, el grupo de trabajo de la R 
 Slides en [**español**](https://encuesta-user2021-es.netlify.app/#1) e  [**inglés**](https://encuesta-user2021-en.netlify.app/#1)
 
 
-**Equipo**:
-Paola Corrales (CIMA, FCEN, UBA), 
+### **Equipo**:
+
+
+[Paola Corrales](https://paocorrales.github.io/) (CIMA, FCEN, UBA), 
 Claudia A. Huaylla (IRNAD-CONICET-UNRN),
 Virginia A. García Alonso (IBBEA-CONICET-UBA),
 Joselyn Chávez (IBt-UNAM),
@@ -62,6 +64,13 @@ Andrea Gómez Vargas (FSOC, UBA).
 
 <img src="images/equipo.jpg" alt="" width="80%"/>
 
+### **Accessibility Awards**
 
 
+<img src="images/awards.png" alt="" width="80%"/>
+
+La presentación del trabajo fue reconocida  por useR! al ser elaborada en dos idiomas y con parámetros de accesibilidad.
+
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Awards time 🏆<br>Our Accessibility Mentions: Natalia Morandeira, Virginia Alonso and colleagues, and Lluís Revilla. Great job, thank you for making your presentations accessible!</p>&mdash; useR! 2021 (@_useRconf) <a href="https://twitter.com/_useRconf/status/1413617667500556291?ref_src=twsrc%5Etfw">July 9, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
