@@ -40,7 +40,7 @@ url_video: ''
 
 #### ReinventarTEC 2021 - taller 
 
-Taller organizado por los capítulos de Rladies Buenos Aires, Ushuaia y Resistencia-Corientes para la segunda edición de ReinventarTEC. Un ciclo de talleres con el fin de inspirar a mujeres de todas las edades y profesiones a reinventarse y crear un mejor futuro laboral en la era digital. 
+Taller organizado por los capítulos de Rladies Buenos Aires, Ushuaia y Resistencia-Corientes, dirigido por Patricia Loto y Andrea Gomez Vargas para la segunda edición de ReinventarTEC. Un ciclo de talleres con el fin de inspirar a mujeres de todas las edades y profesiones a reinventarse y crear un mejor futuro laboral en la era digital. 
 
 En esta ocasión quisimos brindar tips y materiales iniciales, gratuitos y accesibles para empezar a hacer análisis de datos con una pequeña introducción para aprender a usar R y tidyverse.
 
@@ -57,11 +57,17 @@ Para que no quedara solo conceptos, realizamos un ejercicio práctico con un dat
 
 
 
+**Repositorio en GitHub** https://github.com/PatriLoto/reinventarTEC_2021 
+
++ info: https://mincyt.cba.gov.ar/reinventartec/
+
+
+**Míralo en el canal de Youtube del Ministerio**
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Q8kKAnB3Xf8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 
-+ info: https://mincyt.cba.gov.ar/reinventartec/
 
 **Difusión**
 
