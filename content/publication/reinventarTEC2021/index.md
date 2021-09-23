@@ -23,7 +23,7 @@ tags:
 - Sociología
 - Ciencia de datos
 - Argentina
-- Charla
+- Charlas
 abstract: null
 url_code: ''
 url_dataset: ''

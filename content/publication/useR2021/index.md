@@ -74,3 +74,8 @@ La presentación del trabajo fue reconocida  por useR! al ser elaborada en dos i
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Awards time 🏆<br>Our Accessibility Mentions: Natalia Morandeira, Virginia Alonso and colleagues, and Lluís Revilla. Great job, thank you for making your presentations accessible!</p>&mdash; useR! 2021 (@_useRconf) <a href="https://twitter.com/_useRconf/status/1413617667500556291?ref_src=twsrc%5Etfw">July 9, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
+
+### Reviví la presentación en Youtube
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LyBLJlN6dqo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

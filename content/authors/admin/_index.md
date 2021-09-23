@@ -40,7 +40,7 @@ superuser: true
 title: Andrea
 ---
 
-Soy Socióloga, docente e investigadora con orientación en estudios de género(s) y Derechos Humanos. Actualmente me desempeño como Analista Técnica en la Dirección de Estadísticas Sectoriales en [INDEC](https://www.indec.gob.ar/indec/web/Institucional-Indec-Organigrama) y soy tutora en el curso de posgrado de Big Data e Inteligencia Teritorrial en [FLACSO](https://www.flacso.org.ar/formacion-academica/big-data-e-inteligencia-territorial/). 
+Soy Socióloga, docente e investigadora con orientación en estudios de género(s) y Derechos Humanos. Actualmente me desempeño como Analista Técnica en la Dirección de Estadísticas Sectoriales en [INDEC](https://www.indec.gob.ar/indec/web/Institucional-Indec-Organigrama) y soy tutora en el curso de posgrado de Big Data e Inteligencia Territorial en [FLACSO](https://www.flacso.org.ar/formacion-academica/big-data-e-inteligencia-territorial/). 
 
 
 En esta web encontrarás todas mis colaboraciones y proyectos que han sido realizados en ámbitos insterdisciplinarios, y mi curriculum lo podrás visualizar [**_aquí_**](https://soyandrea.netlify.app/media/CVAndreaGomezVargas.pdf).
