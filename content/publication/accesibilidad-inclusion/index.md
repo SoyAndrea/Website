@@ -1,5 +1,5 @@
 ---
-abstract: Este fue el nombre del Panel de cierre de LatinR 2020, en donde reunimos a integrantes de diferentes comunidades Latinoamericanas que promueven y trabajan por la inclusión y accesibilidad en el mundo de la tecnología donde dieron a conocer su trabajo, sus objetivos, logros y desafíos a la hora de lograr una inclusión y accesibilidad real.  
+abstract: Panel de cierre de LatinR 2020  
   
 
 author_notes:
@@ -26,7 +26,7 @@ tags:
 - Charlas
 - R
 - Accesibilidad e inclusión
-- LatinR 2020
+- LatinR
 - Global
 title: LatinR 2020 - panel accesibilidad e inclusión
 url_code: ""
@@ -42,24 +42,27 @@ url_video: "https://www.youtube.com/watch?v=xkRFGbZocIU&t=284s"
 
 ## ¿De qué hablamos cuando hablamos de inclusión y accesibilidad en el mundo de la tecnología?
 
-
-Míralo en el canal de youtube de LatinR 
-
+En esta ocasión reunimos a integrantes de diferentes comunidades en latinoamérica que promueven y trabajan por la inclusión y accesibilidad en el mundo de la tecnología para que den a conocer su trabajo, sus objetivos, logros y desafíos a la hora de lograr una inclusión y accesibilidad real. Queremos generar un espacio de reflexión, donde podamos pensar en conjunto sobre la importancia de que la tecnología sea más inclusiva y accesible a todes y pensar a las comunidades como actores principales para llevar a cabo este objetivo.
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xkRFGbZocIU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Míralo en el canal de youtube de LatinR https://youtu.be/xkRFGbZocIU
 
 
 
-Modera:
-Andrea Gómez Vargas - LatinR & Rladies Buenos Aires co-organizadora
-Participan:
-DALAT - Desarrollo Accesible Latinoamericano
-Abe y Coi - Transistemas Argentina
-Joselyn Chávez - R-Ladies Cuernavaca & R-Ladies México
-Milagros Villavicencio - R-Ladies Natal - Brasil
-Fernanda Kelly - R-Ladies Goiânia - Brasil
-Lupe Canaviri Maydana - Laboratoria & PyLadies El Alto - Bolivia
+**Modera:**
+- Andrea Gómez Vargas (LatinR - miembro comité organizador)
+
+
+
+**Participan:**
+- Merary Alvarado (DALAT Desarrollo Accesible Latinoamericano)
+- Martín Baldasarre (DALAT Desarrollo Accesible Latinoamericano)
+- Abe Quiroga (Transistemas Argentina)
+- Coi Bressan (Transistemas Argentina)
+- Joselyn Chávez (R-Ladies Cuernavaca & R-Ladies México)
+- Milagros Villavicencio (R-Ladies Natal - Brasil)
+- Fernanda Kelly (R-Ladies Goiânia - Brasil)
+- Lupe Canaviri Maydana (Laboratoria & PyLadies El Alto - Bolivia)
 
 
 
