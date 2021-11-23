@@ -62,6 +62,8 @@ Para que no quedara solo conceptos, realizamos un ejercicio práctico con un dat
 + info: https://mincyt.cba.gov.ar/reinventartec/
 
 
+<blockquote class="twitter-tweet"><p lang="pt" dir="ltr">Terminando! <a href="https://twitter.com/hashtag/ReinventarTEC?src=hash&amp;ref_src=twsrc%5Etfw">#ReinventarTEC</a> <a href="https://twitter.com/hashtag/rladies?src=hash&amp;ref_src=twsrc%5Etfw">#rladies</a><a href="https://twitter.com/RLadies_rciacte?ref_src=twsrc%5Etfw">@RLadies_rciacte</a><br> YouTube: <a href="https://t.co/3Pk31zNKZK">https://t.co/3Pk31zNKZK</a> <a href="https://t.co/csMK1Bj4Rc">pic.twitter.com/csMK1Bj4Rc</a></p>&mdash; R-Ladies BuenosAires (@RLadiesBA) <a href="https://twitter.com/RLadiesBA/status/1415446571676745728?ref_src=twsrc%5Etfw">July 14, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
 **Míralo en el canal de Youtube del Ministerio**
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Q8kKAnB3Xf8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -74,6 +76,8 @@ Para que no quedara solo conceptos, realizamos un ejercicio práctico con un dat
 <img src="images/Difusion.jpg" alt="" width="80%"/>
 
 
+**Prensa**
+[**Finalizó la 2° edición del programa ReinventarTEC**](https://prensa.cba.gov.ar/ciencia-y-tecnologia/ciencia-con-perspectiva-de-genero-finaliza-la-2-edicion-del-programa-reinventartec/)
 
 
 

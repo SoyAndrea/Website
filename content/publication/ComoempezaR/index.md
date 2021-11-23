@@ -48,3 +48,5 @@ Betsy Cohen (@betsy_ar) - Socióloga
 ### Revive la charla en el canal de Rladies Buenos Aires
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/isoSCXA2gqo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<blockquote class="twitter-tweet"><p lang="es" dir="ltr">Ahora <a href="https://twitter.com/me_andre?ref_src=twsrc%5Etfw">@me_andre</a> contando que “no siempre se llega directamente a la carrera de datos...&quot; y cuál fue su camino desde la sociología a trabajar en el INDEC! <a href="https://t.co/wNcO92mou3">pic.twitter.com/wNcO92mou3</a></p>&mdash; R-Ladies BuenosAires (@RLadiesBA) <a href="https://twitter.com/RLadiesBA/status/1440795986222215170?ref_src=twsrc%5Etfw">September 22, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
