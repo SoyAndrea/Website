@@ -1,5 +1,5 @@
 ---
-bio: 
+bio: Socióloga & analista de datos
 
 education:
   courses:
@@ -16,7 +16,7 @@ interests:
 - Investigación Social
 - Estudios de Género(s)
 - Políticas Públicas y Políticas Sociales
-- Datos
+- Ciencia de Datos
 
 organizations:
 - name: Universidad de Buenos Aires  
