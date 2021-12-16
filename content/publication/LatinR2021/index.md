@@ -41,7 +41,7 @@ En esta charla presentaremos el análisis y los resultados de las preguntas ante
 
 
 
-### **Equipo**:
+### **Equipo**
 
 
 [Paola Corrales](https://paocorrales.github.io/) (CIMA, FCEN, UBA),
