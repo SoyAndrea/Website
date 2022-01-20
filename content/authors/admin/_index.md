@@ -21,7 +21,7 @@ interests:
 organizations:
 - name: Universidad de Buenos Aires  
   url: http://www.sociales.uba.ar/
-role: Socióloga
+role: Socióloga & analista de datos
 
 social:
 - icon: twitter
@@ -40,11 +40,16 @@ superuser: true
 title: Andrea
 ---
 
-Soy Socióloga, docente e investigadora con orientación en estudios de género(s) y Derechos Humanos. Actualmente me desempeño como Analista Técnica en la Dirección de Estadísticas Sectoriales en [INDEC](https://www.indec.gob.ar/indec/web/Institucional-Indec-Organigrama) y soy tutora en el curso de posgrado de Big Data e Inteligencia Territorial en [FLACSO](https://www.flacso.org.ar/formacion-academica/big-data-e-inteligencia-territorial/). 
+### Bienvenide a mi web profesional
 
 
-En esta web encontrarás todas mis colaboraciones y proyectos que han sido realizados en ámbitos insterdisciplinarios, y mi curriculum lo podrás visualizar [**_aquí_**](https://soyandrea.netlify.app/media/CVAndrea.pdf).
+Soy Socióloga con orientación en estudios de Género(s) y Derechos Humanos. Actualmente me desempeño como Analista de Estadísticas Poblacionales en la Dirección de Estadísticas Sectoriales en [INDEC](https://www.indec.gob.ar/indec/web/Institucional-Indec-Organigrama) y soy docente universitaria en [teoría feminista](http://aborto.sociales.uba.ar/) y ciencia de datos. 
 
 
-Actualmente participo en espacios colaborativos de aprendizaje en ciencias de datos desde la Comunidad de R en Argentina, formo parte del equipo organizafor de [Rladies Buenos Aires](https://twitter.com/RLadiesBA), organización dedicada a promover la diversidad de género y minorías en la comunidad R e integro el equipo organizador de [LatinR](https://latin-r.com/): Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo. 
+
+Además participo en espacios colaborativos de aprendizaje en ciencia de datos desde las comunidades de usuaries de R en Argentina, formo parte del equipo organizador de [Rladies Buenos Aires](https://twitter.com/RLadiesBA): organización dedicada a promover la diversidad de género y minorías en la comunidad R y de [LatinR](https://latin-r.com/): Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo. 
+
+
+
+En esta web encontrarás todas mis colaboraciones y proyectos que han sido realizados en ámbitos insterdisciplinarios, y mi curriculum lo podrás visualizar [**aquí**](https://soyandrea.netlify.app/media/CVAndrea.pdf).
 
