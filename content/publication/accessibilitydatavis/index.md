@@ -50,7 +50,7 @@ url_video: ""
 ---
 
 
-## R-Ladies East Lansing bloghosting a virtual Accessible DataViz Meetup
+## R-Ladies East Lansing hosting a virtual Accessible DataViz Meetup
 
 
 _Come learn how to make your data visualizations & presentations accessible to everyone._
