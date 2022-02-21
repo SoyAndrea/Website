@@ -70,3 +70,9 @@ On this occasion I will tell you a little about our experience while preparing a
 Thank you very much Rladies from East Lansing for this invitation and for allowing us to share our experience! This presentation was also done as a group. 
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The presentation material (<a href="https://twitter.com/kekewu728?ref_src=twsrc%5Etfw">@kekewu728</a> <a href="https://twitter.com/me_andre?ref_src=twsrc%5Etfw">@me_andre</a>) is now available on GitHub: <a href="https://t.co/APLLqtj7M1">https://t.co/APLLqtj7M1</a> Looking forward to learning more about Accessible DataViz tonight! See you all there! 🙌</p>&mdash; R-Ladies East Lansing (@RLadiesELansing) <a href="https://twitter.com/RLadiesELansing/status/1488157260719087616?ref_src=twsrc%5Etfw">January 31, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+### Watch on youtube 
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RrKB1xLPXY8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
