@@ -18,9 +18,11 @@ publishDate: '2021-05-19T00:00:00Z'
 summary: Participación en Nido Media en el informe especial sobre la protesta social en Colombia desde el 28 de abril.
 tags:
 - Radio
+- Prensa
 - Colombia
 - Sociología
 - Investigación social
+- Cambio Social
 
 url_code: ''
 url_dataset: ''

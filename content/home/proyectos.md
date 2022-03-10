@@ -31,8 +31,8 @@ content:
     tag: Investigación social
   - name: Docencia
     tag: Docencia
-  - name: Radio
-    tag: Radio
+  - name: Prensa
+    tag: Prensa
   - name: R
     tag: R
 
