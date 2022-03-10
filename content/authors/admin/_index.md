@@ -17,6 +17,7 @@ interests:
 - Estudios de Género(s)
 - Políticas Públicas y Políticas Sociales
 - Ciencia de Datos
+- Datos abiertos
 
 organizations:
 - name: Universidad de Buenos Aires  
@@ -35,12 +36,12 @@ social:
   link: https://www.linkedin.com/in/andreasociologa/
 - icon: r-project
   icon_pack: fab
-  link: https://soyandrea.netlify.app/publication/rladiesbuenosaires/ 
+  link: https://rladies.org/ladies-complete-list/name/andrea-gomez-vargas/ 
 superuser: true
 title: Andrea
 ---
 
-### Bienvenide a mi web profesional
+### Bienvenid@ a mi web profesional
 
 
 Soy Socióloga con orientación en estudios de Género(s) y Derechos Humanos. Actualmente me desempeño como Analista de Estadísticas Poblacionales en la Dirección de Estadísticas Sectoriales en [INDEC](https://www.indec.gob.ar/indec/web/Institucional-Indec-Organigrama) y soy docente universitaria en [teoría feminista](http://aborto.sociales.uba.ar/) y ciencia de datos. 
