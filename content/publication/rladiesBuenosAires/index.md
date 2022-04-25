@@ -11,15 +11,18 @@ image:
   focal_point: ""
   preview_only: false
 links:
-- name: Meetup
-  url: https://www.meetup.com/es/rladies-buenos-aires/
-- name: Youtube
-  url: https://www.youtube.com/channel/UCztAJhENVqsqv0cvyxs4sgg
-- name: Twitter
-  url: https://twitter.com/RLadiesBA
-- name: Instagram
-  url: https://www.instagram.com/rladiesba/
-- name: RLadies Global
+
+- icon: github
+  icon_pack: fab
+  name: GitHub BA
+  url: https://github.com/RLadies-BA
+- icon: r-project
+  icon_pack: fab
+  name: web RLadies BA
+  link: https://rladiesba.netlify.app/
+- icon: r-project
+  icon_pack: fab
+  name: web RLadies Global
   url: https://rladies.org/
 projects: []
 
@@ -54,6 +57,9 @@ No importa si nunca usaste R o si tenés R como herramienta principal de trabajo
 
 Encuentra en nuestro canal de youtube los encuentros virtuales que realizamos en 2020 desde Buenos Aires. Y conoce lo realizado a nivel nacional en [**RLadies en Argentina durante 2020**](https://rladiesenargentina.github.io/Resumen_meetups_2020/index.html).
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BN1j2TReP2Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+En 2022 cumplimos 5 años, festejamos con un (Re)encuentro presencial y con el lanzamiento de la página web [**rladiesba.netlify.app**](https://rladiesba.netlify.app/) 
+
+<blockquote class="twitter-tweet"><p lang="es" dir="ltr">Hay comunidad <a href="https://twitter.com/hashtag/Rladies?src=hash&amp;ref_src=twsrc%5Etfw">#Rladies</a> 🥳💜💜💜 <a href="https://t.co/DCtqAeqsD6">pic.twitter.com/DCtqAeqsD6</a></p>&mdash; R-Ladies BuenosAires (@RLadiesBA) <a href="https://twitter.com/RLadiesBA/status/1502763807000735759?ref_src=twsrc%5Etfw">March 12, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 

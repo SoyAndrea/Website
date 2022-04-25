@@ -25,15 +25,15 @@ organizations:
 role: Socióloga & analista de datos
 
 social:
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/me_andre
 - icon: github
   icon_pack: fab
   link: https://github.com/SoyAndrea
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/andreasociologa/
+- icon: twitter
+  icon_pack: fab
+  link: https://twitter.com/me_andre
 - icon: r-project
   icon_pack: fab
   link: https://rladies.org/ladies-complete-list/name/andrea-gomez-vargas/ 
@@ -48,7 +48,7 @@ Soy Socióloga con orientación en estudios de Género(s) y Derechos Humanos. Ac
 
 
 
-Además participo en espacios colaborativos de aprendizaje en ciencia de datos desde las comunidades de usuaries de R en Argentina, formo parte del equipo organizador de [Rladies Buenos Aires](https://twitter.com/RLadiesBA): organización dedicada a promover la diversidad de género y minorías en la comunidad R y de [LatinR](https://latin-r.com/): Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo. 
+Además participo en espacios colaborativos de aprendizaje en ciencia de datos desde las comunidades de usuaries de R en Argentina, formo parte del equipo organizador de [Rladies Buenos Aires](https://rladiesba.netlify.app/): organización dedicada a promover la diversidad de género y minorías en la comunidad R y de [LatinR](https://latin-r.com/): Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo. 
 
 
 
