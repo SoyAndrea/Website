@@ -3,6 +3,9 @@ bio: Socióloga & analista de datos
 
 education:
   courses:
+  - course: Instructora certificada The Carpentries
+    institution: The Carpentries
+    year: 2022
   - course: Social Data Analytics
     institution: Escuela Argentina de Nuevas Tecnologías
     year: 2021
@@ -41,16 +44,20 @@ superuser: true
 title: Andrea
 ---
 
-### Bienvenid@ a mi web profesional
+## Bienvenid@ a mi web profesional
 
 
-Soy Socióloga con orientación en estudios de Género(s) y Derechos Humanos. Actualmente me desempeño como Analista de Estadísticas Poblacionales en la Dirección de Estadísticas Sectoriales en [INDEC](https://www.indec.gob.ar/indec/web/Institucional-Indec-Organigrama) y soy docente universitaria en [teoría feminista](http://aborto.sociales.uba.ar/) y ciencia de datos. 
-
-
-
-Además participo en espacios colaborativos de aprendizaje en ciencia de datos desde las comunidades de usuaries de R en Argentina, formo parte del equipo organizador de [Rladies Buenos Aires](https://rladiesba.netlify.app/): organización dedicada a promover la diversidad de género y minorías en la comunidad R y de [LatinR](https://latin-r.com/): Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo. 
+Soy licenciada en sociología con orientación en estudios de Género(s) y Derechos Humanos. Actualmente me desempeño como Analista de Estadísticas Poblacionales en el Instituto Nacional de Estadística y Censos - INDEC, también soy docente universitaria en ciencia sociales y ciencia de datos. 
 
 
 
-En esta web encontrarás todas mis colaboraciones y proyectos que han sido realizados en ámbitos insterdisciplinarios, y mi curriculum lo podrás visualizar [**aquí**](https://soyandrea.netlify.app/media/CVAndrea.pdf).
+Además participo en espacios colaborativos de aprendizaje en ciencia de datos, principalmente desde el año 2020 formo parte del equipo organizador de [Rladies Buenos Aires](https://rladiesba.netlify.app/): organización dedicada a promover la diversidad de género y minorías en la comunidad R.
 
+
+Anteriormente formé parte del equipo colaborador de [Metadocencia](https://www.metadocencia.org/equipo/) en 2021, y del equipo organizador de [LatinR](https://latin-r.com/): Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo entre 2020 y 2021.
+
+
+
+En esta web encontrarás todas mis colaboraciones, proyectos y demás participaciones que han sido realizadas en ámbitos insterdisciplinarios, y mi curriculum completo lo podrás [visualizar en este enlace](https://soyandrea.netlify.app/media/cv_andreagv.html).
+
+<i class='fas fa-download'></i> [Descargar CV en PDF](https://soyandrea.netlify.app/media/cv_andreagv.pdf)<br><i class='fas fa-download'></i> [Descargar CV en HTML](https://soyandrea.netlify.app/media/cv_andreagv.html)
