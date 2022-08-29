@@ -47,11 +47,11 @@ title: Andrea
 ## Bienvenid@ a mi web profesional
 
 
-Soy licenciada en sociología con orientación en estudios de Género(s) y Derechos Humanos. Actualmente me desempeño como Analista de Estadísticas Poblacionales en el Instituto Nacional de Estadística y Censos - INDEC, también soy docente universitaria en ciencia sociales y ciencia de datos. 
+Soy licenciada en sociología con orientación en estudios de Género(s) y Derechos Humanos. Actualmente me desempeño como analista de estadísticas poblacionales en el Instituto Nacional de Estadística y Censos - INDEC, también ejerzo la docencia universitaria en ciencia sociales y ciencia de datos. 
 
 
 
-Además participo en espacios colaborativos de aprendizaje en ciencia de datos, principalmente desde el año 2020 formo parte del equipo organizador de [Rladies Buenos Aires](https://rladiesba.netlify.app/): organización dedicada a promover la diversidad de género y minorías en la comunidad de usuarios de R.
+Participo en espacios colaborativos de aprendizaje en ciencia de datos, principalmente desde el año 2020 formo parte del equipo organizador de [Rladies Buenos Aires](https://rladiesba.netlify.app/): organización dedicada a promover la diversidad de género y minorías en la comunidad de usuarios de R.
 
 
 Anteriormente formé parte del equipo colaborador de [Metadocencia](https://www.metadocencia.org/equipo/) en 2021, y del equipo organizador de [LatinR](https://latin-r.com/): Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo entre 2020 y 2021.
