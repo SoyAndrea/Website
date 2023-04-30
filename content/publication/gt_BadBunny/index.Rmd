@@ -1,0 +1,51 @@
+---
+title: "Creando tablas en {gt} con Spotify API & Bad Bunny"
+author: "agomezvargas"
+date: "2022-11-23T00:00:00Z"
+output: html_document
+summary: Taller para R-Ladies Buenos Aires en colaboración con Karina Bartolomé.
+links:
+- icon: github
+  icon_pack: fab
+  name: GitHub
+  url: https://github.com/RLadies-BA/gt-spotify
+- icon: globe
+  icon_pack: fas
+  name: R-Ladies Buenos Aires 
+  url: https://rladiesba.netlify.app/
+tags:
+- R
+- gt
+- taller
+---
+
+### R-Ladies Buenos Aires Meetup: Creando tablas en {gt} con Spotify API & Bad Bunny
+
+En colaboración con [Kari Bartolomé](https://karbartolome-blog.netlify.app/) desarrollamos el taller mostrando cómo podemos obtener información desde Spotify API y plasmarla en una tabla usando el paquete {gt} que permite mostrar mucho más que solo números. Aunque el paquete no es parte del Tydiverse, su sintaxis y estructura es compatible con esta poderosa herramienta para el análisis de datos. Y cómo si fuera poco, nos traen un ejemplo con info de nada más y nada menos que Bad Bunny 🐰🎵
+
+### Repositorio GitHub en [RLadies-BA/gt-spotify](https://github.com/RLadies-BA/gt-spotify)
+
+### Slides generadas con {xaringan} 📦.
+
+```{r echo=FALSE}
+knitr::include_url("https://karbartolome.github.io/gt-spotify/01_slides/rladies_gt_spotify.html#1")
+```
+
+
+### Tabla final del meetup en {gt}
+
+```{r echo=FALSE}
+knitr::include_graphics("tabla_badbunny.png")
+```
+
+
+
+### Mirá el taller en el canal de Youtube de [Rladies Buenos Aires](https://www.youtube.com/@RLadiesBuenosAires)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wciGM5rMBos" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### Redes sociales
+<blockquote class="twitter-tweet"><p lang="es" dir="ltr">Por si se lo perdieron, recién cerramos el taller de <a href="https://twitter.com/RLadiesBA?ref_src=twsrc%5Etfw">@RLadiesBA</a> con <a href="https://twitter.com/me_andre?ref_src=twsrc%5Etfw">@me_andre</a> donde mostramos cómo generar tablas {gt} 📦con datos de la API de Spotify. Dejamos una función para generar esta tabla con su artista más escuchado:<br>➡️Slides: <a href="https://t.co/PYTi6mQpHX">https://t.co/PYTi6mQpHX</a><a href="https://twitter.com/lasligasmenores?ref_src=twsrc%5Etfw">@lasligasmenores</a> <a href="https://t.co/DdSRzfqnhe">pic.twitter.com/DdSRzfqnhe</a></p>&mdash; Karina Bartolomé (@karbartolome) <a href="https://twitter.com/karbartolome/status/1595561478836436992?ref_src=twsrc%5Etfw">November 23, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<blockquote class="twitter-tweet"><p lang="es" dir="ltr">Tremendo el taller sobre gt con datos de Spotify dictado por <a href="https://twitter.com/me_andre?ref_src=twsrc%5Etfw">@me_andre</a> y <a href="https://twitter.com/karbartolome?ref_src=twsrc%5Etfw">@karbartolome</a> <a href="https://twitter.com/hashtag/RLadiesBA?src=hash&amp;ref_src=twsrc%5Etfw">#RLadiesBA</a> <a href="https://twitter.com/hashtag/RStatsES?src=hash&amp;ref_src=twsrc%5Etfw">#RStatsES</a> <a href="https://t.co/A645nqIdz3">pic.twitter.com/A645nqIdz3</a></p>&mdash; Patricia Loto (@patriloto) <a href="https://twitter.com/patriloto/status/1595575646343806976?ref_src=twsrc%5Etfw">November 24, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

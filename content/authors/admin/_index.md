@@ -39,7 +39,7 @@ social:
   link: https://twitter.com/me_andre
 - icon: r-project
   icon_pack: fab
-  link: https://rladies.org/ladies-complete-list/name/andrea-gomez-vargas/ 
+  link: https://www.rladies.org/directory/#andrea-gomez-vargas 
 superuser: true
 title: Andrea
 ---
