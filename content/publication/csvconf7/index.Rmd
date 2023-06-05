@@ -3,7 +3,7 @@ title: "Introducción a Git y GitHub desde RStudio"
 author: "agomezvargas"
 date: "2023-04-17T00:00:00Z"
 output: html_document
-summary: Workshop presencial The Carpentries Latinoamérica en la csv,conf,v7.
+summary: Instructora en el Workshop presencial The Carpentries Latinoamérica en la csv,conf,v7.
 links:
 - icon: github
   icon_pack: fab
@@ -18,6 +18,7 @@ tags:
 - git
 - GitHub
 - taller
+- Conferencias
 ---
 
 
@@ -75,13 +76,6 @@ Software Carpentry pretende ayudar a las y los investigadores a realizar su trab
 
 
 Más información sobre Software Carpentry: Teaching basic lab skills for research computing en https://software-carpentry.org/
-
-- [Slides workshop](https://github.com/SoyAndrea/csvconfv7/blob/main/17.04.2023%20git%20%26%20github%20desde%20Rstudio.pdf)
-
-```{r echo=FALSE}
-knitr::include_url("17.04.2023 git & github desde Rstudio.pdf")
-```
-
 
 
 ### Redes sociales
