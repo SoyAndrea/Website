@@ -6,6 +6,6 @@ google_fonts = "family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:
 
 # Font families
 heading_font = "Montserrat"
-body_font = "Roboto"
-nav_font = "Roboto"
-mono_font = "Roboto Mono"
+body_font = "Montserrat"
+nav_font = "Montserrat"
+mono_font = "Montserrat"

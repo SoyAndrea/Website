@@ -24,51 +24,51 @@ feature:
 - description: 
   icon: search-plus
   icon_pack: fas
-  name: investigación social
+  name: Investigación Social
 - description: 
-  icon: transgender
+  icon: chart-line
   icon_pack: fas
-  name: estudios de género(s)
-- description: 
-  icon: chart-bar
-  icon_pack: fas
-  name: análisis de datos
-- description: 
-  icon: open-data
-  icon_pack: ai
-  name: datos abiertos
-- description: 
-  icon: chalkboard-teacher
-  icon_pack: fas
-  name: docencia
+  name: Análisis Estadístico
 - description: 
   icon: r-project
   icon_pack: fab
   name: R
 - description: 
+  icon: transgender
+  icon_pack: fas
+  name: Estudios de Género(s)
+- description: 
+  icon: git-square
+  icon_pack: fab
+  name: Git
+- description: 
   icon: github
   icon_pack: fab
-  name: github
+  name: GitHub
+- description: 
+  icon: chart-bar
+  icon_pack: fas
+  name: Análisis de Datos
+- description: 
+  icon: open-data
+  icon_pack: ai
+  name: Datos Abiertos
+- description: 
+  icon: chalkboard-teacher
+  icon_pack: fas
+  name: Docencia
 - description: 
   icon: project-diagram
   icon_pack: fas
-  name: gestión de proyectos
-- description: 
-  icon: file-invoice-dollar
-  icon_pack: fas
-  name: gestión administrativa
-- description: 
-  icon: instagram
-  icon_pack: fab
-  name: social media
+  name: Gestión de Proyectos
 - description: 
   icon: wordpress
   icon_pack: fab
-  name: wordpress 
+  name: Wordpress 
 - description: 
-  icon: mailchimp
+  icon: markdown
   icon_pack: fab
-  name: email marketing 
+  name: Markdown 
 
 
 # Uncomment to use emoji icons.
