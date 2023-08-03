@@ -14,7 +14,7 @@ education:
     year: 2020
 
 
-highlight_name: false
+highlight_name: true
 interests:
 - Investigación Social
 - Estudios de Género(s)
@@ -62,14 +62,14 @@ alt="latinR logo">
 alt="rladies global logo">
 
 
-Desde 2018 participo en espacios colaborativos de aprendizaje en ciencia de datos, principalmente en el uso de **R** en comunidades que promueven la diversidad de género(s) y una atmósfera amigable para personas interesadas en aprender a programar en R, ¡conócelas!:
+Desde 2018 participo en espacios colaborativos de aprendizaje en ciencia de datos, principalmente en aquellas que se enfocan en el _uso de R_. Estas comunidades promueven la diversidad de género(s) y una atmósfera amigable para personas interesadas en aprender a programar en este lenguaje, ¡conócelas!:
 
 
-- Website team - [R-Ladies Global](https://github.com/rladies)
-- Comité Organizador - [LatinR](https://github.com/LatinR)
-- Instructora - [The Carpentries](https://github.com/carpentries)
-- Organizadora - [R-Ladies Buenos Aires](https://github.com/RLadies-BA) (2019 - 2023)
-- Colaboradora - [Metadocencia](https://github.com/MetaDocencia) (2021)
+- [**R-Ladies Global**](https://github.com/rladies) - (2023 - ∞)
+- [**LatinR**](https://github.com/LatinR) (2020 - ∞)
+- [The Carpentries](https://github.com/carpentries) (2022 - ∞)
+- [R-Ladies Buenos Aires](https://github.com/RLadies-BA) (2019 - 2023)
+- [Metadocencia](https://github.com/MetaDocencia) (2021)
 
 En esta web encontrarás todas mis colaboraciones, proyectos y demás participaciones que han sido realizadas en ámbitos insterdisciplinarios, mi curriculum completo lo podrás [visualizar en este enlace](https://soyandrea.netlify.app/media/cv_andreagv.html) o descargarlo a continuación en tu formato preferido.
 

@@ -7,11 +7,11 @@ widget: featurette
 headless: true
 
 # Order that this section appears on the page.
-weight: 60
+weight: 10
 
 design:
   # Choose how many columns the section has. Valid values: 1 or 2.
-  columns: '1'
+  columns: '2'
 
 title: Skills
 subtitle: habilidades y herramientas
