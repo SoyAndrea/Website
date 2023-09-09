@@ -1,0 +1,83 @@
+---
+title: "Introducción al Análisis de la Encuesta Permanente de Hogares {eph} con R"
+author: "agomezvargas"
+date: "2023-09-07T00:00:00Z"
+output: html_document
+summary: Taller para R-Ladies Buenos Aires en colaboración con Betsy Cohen en UBA sociales.
+links:
+- icon: github
+  icon_pack: fab
+  name: GitHub
+  url: https://github.com/SoyAndrea/tallerEPH
+- icon: globe
+  icon_pack: fas
+  name: web taller EPH en R 
+  url: https://eph-ubasociales.netlify.app/
+tags:
+- R
+- eph
+- tidyverse
+- gt
+- taller
+- Sociología
+- UBA sociales
+---
+
+
+
+<div id="ciclo-de-formaciòn-complementaria-en-uba-sociales" class="section level3">
+<h3>Ciclo de formaciòn complementaria en UBA sociales</h3>
+<div class="float">
+<img src="RladiesSociales.jpg" alt="Fotografía del Taller en la facultad de Ciencias Sociales UBA" />
+<div class="figcaption"><em>Fotografía del Taller en la facultad de Ciencias Sociales UBA</em></div>
+</div>
+<p><br>
+En colaboración con <a href="https://github.com/BetsyCohen"><strong>Betsy Cohen</strong></a> desarrollamos y organizadmos el taller desde <a href="https://rladiesba.netlify.app/">R-Ladies Buenos Aires</a> &amp; el <a href="https://www.nucleodeinnovacion.com/">Núcleo de Innovaciòn Social</a> para del ciclo de formación complementaria de la carrera de Sociologìa en la Facultad de Ciencias Sociales de la UBA.</p>
+<p>En esta ocasión vamos a presentar la potencia de la encuesta y la librería de {tidyverse} para mostrarles cómo podemos obtener bases de datos directamente con el paquete {eph} y vamos a procesarla, traducirla y presentarla en indicadores para el análisis de ciencias sociales.</p>
+</div>
+<div id="queda-a-disposición-todo-el-material" class="section level3">
+<h3>Queda a disposición todo el material:</h3>
+<ul>
+<li><a href="https://drive.google.com/drive/folders/1lWlTc6u-uhUWE5VcuCQRysoSNDmV5HGi?usp=sharing">Descarga la Práctica guiada en Rmd</a></li>
+<li>Repositorio <a href="https://github.com/SoyAndrea/tallerEPH"><strong>GitHub en Taller eph en R</strong></a></li>
+<li>Web con toda la información del taller: <a href="https://eph-ubasociales.netlify.app/"><strong>eph-ubasociales.netlify.app</strong></a></li>
+</ul>
+</div>
+<div id="slides-generadas-con-quarto." class="section level3">
+<h3>Slides generadas con {quarto}.</h3>
+<iframe src="https://eph-ubasociales.netlify.app/slides#/title-slide" width="672" height="400px" data-external="1">
+</iframe>
+</div>
+<div id="redes-sociales" class="section level3">
+<h3>Redes sociales</h3>
+<div id="sociología-uba" class="section level4">
+<h4>Sociología UBA</h4>
+<blockquote class="twitter-tweet">
+<p lang="es" dir="ltr">
+💻| Meetup sobre EPH en <a href="https://twitter.com/hashtag/SociologiaUBA?src=hash&amp;ref_src=twsrc%5Etfw">#SociologiaUBA</a> <br><br>Llevamos adelante un taller junto al colectivo de mujeres programadoras <a href="https://twitter.com/RLadiesBA?ref_src=twsrc%5Etfw"><span class="citation">@RLadiesBA</span></a> para conocer cómo que es y cómo procesar los datos de la EPH con lenguajes de programación de código abierto (R y Python). <a href="https://t.co/cvo6Y64hf5">pic.twitter.com/cvo6Y64hf5</a>
+</p>
+— sociologia.uba (<span class="citation">@sociologia_uba</span>) <a href="https://twitter.com/sociologia_uba/status/1699954034554044803?ref_src=twsrc%5Etfw">September 8, 2023</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+<div id="rladies-buenos-aires" class="section level4">
+<h4>Rladies Buenos Aires</h4>
+<blockquote class="twitter-tweet">
+<p lang="es" dir="ltr">
+Que lindo volver a los eventos presenciales! <a href="https://twitter.com/me_andre?ref_src=twsrc%5Etfw"><span class="citation">@me_andre</span></a> y <a href="https://twitter.com/betsy_ar?ref_src=twsrc%5Etfw"><span class="citation">@betsy_ar</span></a> presentaron una intro al uso de la EPH en R con sala llena🤩<a href="https://twitter.com/hashtag/RLadies?src=hash&amp;ref_src=twsrc%5Etfw">#RLadies</a> <a href="https://t.co/FsEH0kAzEu">pic.twitter.com/FsEH0kAzEu</a>
+</p>
+— R-Ladies BuenosAires (<span class="citation">@RLadiesBA</span>) <a href="https://twitter.com/RLadiesBA/status/1699949471038062913?ref_src=twsrc%5Etfw">September 8, 2023</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+<div id="consejo-de-profesionales-en-sociología" class="section level4">
+<h4>Consejo de Profesionales en Sociología</h4>
+<blockquote class="twitter-tweet">
+<p lang="es" dir="ltr">
+La Comisión de transformación digital invita a participar del Taller de introducción al Análisis de la Encuesta Permanente de Hogares con R organizado por <a href="https://twitter.com/RLadiesBA?ref_src=twsrc%5Etfw"><span class="citation">@RLadiesBA</span></a> en colaboración con <a href="https://twitter.com/sociologia_uba?ref_src=twsrc%5Etfw"><span class="citation">@sociologia_uba</span></a> y el Núcleo de Innovación Social (NIS). <a href="https://t.co/hsywb9xDpP">pic.twitter.com/hsywb9xDpP</a>
+</p>
+— Consejo de Profesionales en Sociología (<span class="citation">@CPSociologia</span>) <a href="https://twitter.com/CPSociologia/status/1694049790185615512?ref_src=twsrc%5Etfw">August 22, 2023</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
