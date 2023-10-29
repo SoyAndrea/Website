@@ -41,12 +41,12 @@ social:
   icon_pack: fab
   link: https://www.rladies.org/directory/#andrea-gomez-vargas 
 superuser: true
-title: Andrea
+title: Andrea Gomez Vargas
 ---
 
-## Bienvenid@ a mi web profesional 👋
+## **Hola, Soy Andre / Hi there, I'm Andre**  👋
 
-Soy licenciada en sociología con orientación en estudios de Género(s) y Derechos Humanos. Actualmente me desempeño como Analista de Estadísticas Poblacionales en el Instituto Nacional de Estadística y Censos - [INDEC](https://www.indec.gob.ar/), también ejerzo la docencia universitaria en ciencia sociales y ciencia de datos. 
+Soy licenciada en sociología con orientación en estudios de Género(s) y Derechos Humanos. Actualmente me desempeño como Analista de Estadísticas Poblacionales en el Instituto Nacional de Estadística y Censos - [INDEC](https://www.indec.gob.ar/), también ejerzo la docencia universitaria en ciencia sociales y ciencia de datos y formo parte del [equipo de R-Ladies Global](https://rladies.org/about-us/global-team/). 
 
 
 ### Comunidades de práctica 💜
@@ -62,7 +62,7 @@ alt="latinR logo">
 alt="rladies global logo">
 
 
-Desde 2018 participo en espacios colaborativos de aprendizaje en ciencia de datos, principalmente en aquellas que se enfocan en el _uso de R_. Estas comunidades promueven la diversidad de género(s) y una atmósfera amigable para personas interesadas en aprender a programar en este lenguaje, ¡conócelas!:
+Desde 2018 participo en espacios colaborativos de aprendizaje en ciencia de datos, principalmente en aquellas que se enfocan en el `uso de R`. Estas comunidades promueven la diversidad de género(s) y una atmósfera amigable para personas interesadas en aprender a programar en este lenguaje, ¡conócelas!:
 
 
 - [**R-Ladies Global**](https://github.com/rladies) - (2023 - ∞)
@@ -71,8 +71,9 @@ Desde 2018 participo en espacios colaborativos de aprendizaje en ciencia de dato
 - [R-Ladies Buenos Aires](https://github.com/RLadies-BA) (2019 - 2023)
 - [Metadocencia](https://github.com/MetaDocencia) (2021)
 
-En esta web encontrarás todas mis colaboraciones, proyectos y demás participaciones que han sido realizadas en ámbitos insterdisciplinarios, mi curriculum completo lo podrás [visualizar en este enlace](https://soyandrea.netlify.app/media/cv_andreagv.html) o descargarlo a continuación en tu formato preferido.
+En esta web encontrarás todas mis colaboraciones, proyectos y demás participaciones que han sido realizadas en ámbitos insterdisciplinarios, mi curriculum completo lo podrás [visualizar en este enlace](https://soyandrea.netlify.app/media/gomezvargas_cv.html) o descargarlo a continuación en tu formato preferido.
 
-<i class='fas fa-download'></i> [Descargar CV en PDF](https://soyandrea.netlify.app/media/cv_andreagv.pdf)<br><i class='fas fa-download'></i> [Descargar CV en HTML](https://soyandrea.netlify.app/media/cv_andreagv.html)
+- <i class='fas fa-download'></i> [Descargar CV en PDF](https://soyandrea.netlify.app/media/gomezvargas_cv.pdf)<br>
+- <i class='fas fa-download'></i> [Descargar CV en HTML](https://soyandrea.netlify.app/media/gomezvargas_cv.html)
 
-*Este sitio fue construido en R con blogdown & Hugo* 🌠
+Este sitio fue construido en R con `{blogdown}` & `HUGO` 🌠

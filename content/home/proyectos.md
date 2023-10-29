@@ -10,7 +10,7 @@ headless: true
 weight: 50
 
 title: Proyectos
-subtitle: ''
+subtitle: 'Participación en espacios educativos, organizaciones sociales, prensa y otros chunk de código'
 
 content:
   # Page type to display. E.g. project.
@@ -27,18 +27,20 @@ content:
   filter_button:
   - name: Todas
     tag: '*'
-  - name: Investigación social
-    tag: Investigación social
+  - name: R
+    tag: R
+  - name: Charlas
+    tag: Charlas
   - name: Docencia
     tag: Docencia
   - name: Prensa
     tag: Prensa
-  - name: R
-    tag: R
+  - name: Investigación social
+    tag: Investigación social
 
 design:
   # Choose how many columns the section has. Valid values: '1' or '2'.
-  columns: '2'
+  columns: '1'
 
   # Toggle between the various page layout types.
   #   1 = List

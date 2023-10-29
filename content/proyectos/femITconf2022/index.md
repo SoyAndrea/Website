@@ -20,6 +20,7 @@ tags:
 - Tecnología
 - Cambio Social
 - Conferencias
+- Charlas
 url_code: ''
 url_dataset: ''
 url_pdf: ''
