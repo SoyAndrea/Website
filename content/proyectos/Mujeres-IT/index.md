@@ -38,8 +38,11 @@ Elaborado junto a la dirección, se desarrolla la capacitación Mujeres & IT par
 En esta charla se abordan las temáticas de Economía del Conocimiento y Tecnologías de la Información (IT) como una oportunidad de empleo para las mujeres en especial, dada su gran rol en la actividad económica en estos tiempos, es el espacio para contarles  qué significa que cada vez seamos más mujeres en IT, que ventajas y beneficios se pueden obtener con este tipo de empleos, los diferentes puestos y las diferentes modalidades para empezar a aprender un nuevo oficio en tecnología y cuáles son las opciones gratuitas y pagas con las que pueden iniciar su carrera en IT, y sin dejar de lado las comunidades de práctica que pueden acompañar este proceso. 
 
 
-<img src="images/frase_final.png" alt="frasel final de capacitación" width="100%"/>
+<img src="images/frase_final.png" alt="frase final de capacitación" width="100%"/>
 
+### Algunas de las participaciones
+
+<img src="images/taller2610.jpg" alt="participación de preguntas" width="100%"/>
 
 ### Cartilla elaborada para entregar a participantes de MUNDO IT
 
