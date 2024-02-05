@@ -24,7 +24,7 @@ interests:
 
 organizations:
 - name: R-Ladies Global Team Member 
-  url: https://rladies.org/
+  url: https://rladies.org/about-us/global-team/
 role: Socióloga & analista de datos
 
 social:
@@ -46,7 +46,7 @@ title: Andrea Gomez Vargas
 
 ## **Hola, Soy Andre / Hi there, I'm Andre**  👋
 
-Soy licenciada en sociología con orientación en estudios de Género(s) y Derechos Humanos. Actualmente me desempeño como Analista de Estadísticas Poblacionales en el Instituto Nacional de Estadística y Censos - [INDEC](https://www.indec.gob.ar/), también ejerzo la docencia universitaria en ciencia sociales y ciencia de datos y formo parte del [equipo de R-Ladies Global](https://rladies.org/about-us/global-team/). 
+Soy licenciada en sociología con orientación en estudios de Género(s) y Derechos Humanos. Actualmente me desempeño como Analista de Estadísticas Poblacionales en el Instituto Nacional de Estadística y Censos - [INDEC Argentina](https://www.indec.gob.ar/), soy instructora The Carpentries y ejerzo la docencia universitaria en ciencia sociales y ciencia de datos. Desde 2023 formo parte del [equipo global de R-Ladies Global](https://rladies.org/about-us/global-team/). 
 
 
 ### Comunidades de práctica 💜
@@ -60,11 +60,13 @@ alt="the carpentries logo">
 alt="latinR logo"> 
 <img align="right" height="50" width="50" src="https://avatars.githubusercontent.com/u/21295846?s=200&v=4" 
 alt="rladies global logo">
+<img align="right" height="50" width="50" src="https://avatars.githubusercontent.com/u/1200269?s=200&v=4" 
+alt="rOpenSci logo">
 
 
 Desde 2018 participo en espacios colaborativos de aprendizaje en ciencia de datos, principalmente en aquellas que se enfocan en el `uso de R`. Estas comunidades promueven la diversidad de género(s) y una atmósfera amigable para personas interesadas en aprender a programar en este lenguaje, ¡conócelas!:
 
-
+- [**rOpenSci**](https://github.com/ropensci) - (2023 - ∞)
 - [**R-Ladies Global**](https://github.com/rladies) - (2023 - ∞)
 - [**LatinR**](https://github.com/LatinR) (2020 - ∞)
 - [The Carpentries](https://github.com/carpentries) (2022 - ∞)
