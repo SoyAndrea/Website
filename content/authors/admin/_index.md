@@ -46,7 +46,7 @@ title: Andrea Gomez Vargas
 
 ## **Hola, Soy Andre / Hi there, I'm Andre**  👋
 
-Soy licenciada en sociología con orientación en estudios de Género(s) y Derechos Humanos. Actualmente me desempeño como Analista de Estadísticas Poblacionales en el Instituto Nacional de Estadística y Censos - [INDEC Argentina](https://www.indec.gob.ar/), soy instructora The Carpentries y ejerzo la docencia universitaria en ciencia sociales y ciencia de datos. Desde 2023 formo parte del [equipo global de R-Ladies Global](https://rladies.org/about-us/global-team/). 
+Soy licenciada en sociología con orientación en estudios de Género(s) y Derechos Humanos. Actualmente me desempeño como Analista de Estadísticas Poblacionales en el Instituto Nacional de Estadística y Censos - [INDEC Argentina](https://www.indec.gob.ar/), soy instructora  Software Carpentry de The Carpentries y ejerzo la docencia universitaria en ciencia sociales y ciencia de datos. Desde 2023 formo parte del [equipo global de R-Ladies Global](https://rladies.org/about-us/global-team/). 
 
 
 ### Comunidades de práctica 💜
