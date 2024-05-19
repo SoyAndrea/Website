@@ -36,8 +36,22 @@
 
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/media/resume.pdf` and uncomment the lines below.
+
 [[main]]
-  name = "CV"
-  url = "media/gomezvargas_cv.html"
+  name = "Curriculum"
+  url = "#CV"
   weight = 8
 
+
+
+[[main]]
+  name = "CV en español"
+  url = "media/gomezvargas_cv.html"
+  weight = 10
+  parent = "Curriculum"
+
+[[main]]
+  name = "English CV"
+  url = "media/gomezvargas_cv_EN.html"
+  weight = 11 
+  parent = "Curriculum"

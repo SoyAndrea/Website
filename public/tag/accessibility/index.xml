@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Accessibility | Andrea</title>
+    <link>/tag/accessibility/</link>
+      <atom:link href="/tag/accessibility/index.xml" rel="self" type="application/rss+xml" />
+    <description>Accessibility</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>es</language><lastBuildDate>Mon, 28 Mar 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu81060471e680bc591d9a375a50696ba4_27362_512x512_fill_lanczos_center_2.png</url>
+      <title>Accessibility</title>
+      <link>/tag/accessibility/</link>
+    </image>
+    
+    <item>
+      <title>RoCur We are R ladies</title>
+      <link>/publication/werladies/</link>
+      <pubDate>Mon, 28 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>/publication/werladies/</guid>
+      <description>&lt;h2 id=&#34;rocur-en-español&#34;&gt;RoCur en Español&lt;/h2&gt;
+&lt;p&gt;Cada lunes en la cuenta de &lt;a href=&#34;https://twitter.com/WeAreRLadies&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;@WeAreRladies&lt;/strong&gt;&lt;/a&gt; alguna rladie de la comunidad es curadora de la cuenta global, a finales marzo tomé el desafío de participar en un idioma diferente y en especial, hablar sobre R desde mi experiencia en el Sur Global y la Sociología.&lt;/p&gt;
+&lt;p&gt;Abordé tres temáticas en R: accesibilidad, ciencias sociales y la comunidad. Compartí información y tips para crear presentaciones o informes accesibles desde R, conté algunos proyectos de temática en ciencias sociales que trabajaron todo en código R y difundí todos los eventos virtuales de rladies a nivel mundial.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;¡Hola comunidad &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt;! Bienvenidas a una nueva semana de We are Rladies en español. Del otro lado de la pantalla les habla Andrea G(&lt;a href=&#34;https://twitter.com/me_andre?ref_src=twsrc%5Etfw&#34;&gt;@me_andre&lt;/a&gt;) desde Buenos Aires, Argentina. &lt;br&gt;&lt;br&gt;¿Ustedes desde que ciudad nos leen? &lt;a href=&#34;https://t.co/rEcFoS5ZJk&#34;&gt;pic.twitter.com/rEcFoS5ZJk&lt;/a&gt;&lt;/p&gt;&amp;mdash; We are R-Ladies (@WeAreRLadies) &lt;a href=&#34;https://twitter.com/WeAreRLadies/status/1508421150145191936?ref_src=twsrc%5Etfw&#34;&gt;March 28, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;Gracias al equipo de &lt;a href=&#34;https://twitter.com/RLadiesGlobal?ref_src=twsrc%5Etfw&#34;&gt;@RLadiesGlobal&lt;/a&gt;&lt;br&gt;por la iniciativa y el espacio 💜&lt;br&gt;&lt;br&gt;Seguiremos haciendo comunidad desde &lt;a href=&#34;https://twitter.com/RLadiesBA?ref_src=twsrc%5Etfw&#34;&gt;@RLadiesBA&lt;/a&gt; &lt;a href=&#34;https://t.co/RIalBJN4db&#34;&gt;https://t.co/RIalBJN4db&lt;/a&gt;&lt;/p&gt;&amp;mdash; We are R-Ladies (@WeAreRLadies) &lt;a href=&#34;https://twitter.com/WeAreRLadies/status/1510034272404582406?ref_src=twsrc%5Etfw&#34;&gt;April 1, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Accessible DataViz</title>
+      <link>/publication/accessibilitydatavis/</link>
+      <pubDate>Mon, 31 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>/publication/accessibilitydatavis/</guid>
+      <description>&lt;h2 id=&#34;r-ladies-east-lansing-hosting-a-virtual-accessible-dataviz-meetup&#34;&gt;R-Ladies East Lansing hosting a virtual Accessible DataViz Meetup&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Come learn how to make your data visualizations &amp;amp; presentations accessible to everyone.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Our first speaker, &lt;a href=&#34;https://www.kekewu.me/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Keke Wu&lt;/a&gt; (PhD student at Univ of Colorado, Boulder) will talk about her research, Understanding Data Accessibility for People with Intellectual and Developmental Disabilities (IDD), giving us concrete ideas about how to make better figures and reach the IDD community.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Our second speaker,Andrea Gomez Vargas (one of the winners of the ‘most accessible presentation’ award at useR! 2021), will talk about how to make an accessible presentation in R, using packages such as RMarkdown.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;learning-accessibility-in-community&#34;&gt;Learning accessibility in community&lt;/h3&gt;
+&lt;p&gt;On this occasion I will tell you a little about our experience while preparing a talk for &lt;a href=&#34;https://soyandrea.netlify.app/publication/user2021/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;useR2021&lt;/strong&gt;&lt;/a&gt; and what accessibility practices we applied to our presentation, which may be useful to you when preparing a presentation using R.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/dataviz.jpeg&#34; alt=&#34;Picture of the virtual meetup with the headshots of the event hosts: Janani, kayla and Stephanie with speakers Keke and Andrea. Where they are sharing a screen that shows the phrase: accessibility is a right.&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Thank you very much Rladies from East Lansing for this invitation and for allowing us to share our experience! This presentation was also done as a group.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;The presentation material (&lt;a href=&#34;https://twitter.com/kekewu728?ref_src=twsrc%5Etfw&#34;&gt;@kekewu728&lt;/a&gt; &lt;a href=&#34;https://twitter.com/me_andre?ref_src=twsrc%5Etfw&#34;&gt;@me_andre&lt;/a&gt;) is now available on GitHub: &lt;a href=&#34;https://t.co/APLLqtj7M1&#34;&gt;https://t.co/APLLqtj7M1&lt;/a&gt; Looking forward to learning more about Accessible DataViz tonight! See you all there! 🙌&lt;/p&gt;&amp;mdash; R-Ladies East Lansing (@RLadiesELansing) &lt;a href=&#34;https://twitter.com/RLadiesELansing/status/1488157260719087616?ref_src=twsrc%5Etfw&#34;&gt;January 31, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h3 id=&#34;watch-on-youtube&#34;&gt;Watch on youtube&lt;/h3&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/RrKB1xLPXY8&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

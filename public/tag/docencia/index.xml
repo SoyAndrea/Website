@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docencia | Andrea</title>
+    <link>/tag/docencia/</link>
+      <atom:link href="/tag/docencia/index.xml" rel="self" type="application/rss+xml" />
+    <description>Docencia</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>es</language><lastBuildDate>Sat, 01 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu81060471e680bc591d9a375a50696ba4_27362_512x512_fill_lanczos_center_2.png</url>
+      <title>Docencia</title>
+      <link>/tag/docencia/</link>
+    </image>
+    
+    <item>
+      <title>Introducción al procesamiento de datos con R para Ciencias Sociales</title>
+      <link>/proyectos/aset/</link>
+      <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>/proyectos/aset/</guid>
+      <description>&lt;h3 id=&#34;edición-2022--2023&#34;&gt;Edición 2022 &amp;amp; 2023&lt;/h3&gt;
+&lt;h4 id=&#34;asociación-argentina-de-especialistas-en-estudios-del-trabajo-aset&#34;&gt;Asociación Argentina de Especialistas en Estudios del Trabajo (ASET)&lt;/h4&gt;
+&lt;p&gt;Junto a &lt;a href=&#34;https://r-intro-aset.netlify.app/about_pablotiscornia&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Pablo Tiscornia&lt;/a&gt;, desarrollamo el taller que tiene como principal objetivo introducir a los y las participantes en el mundo de R y la programación para producir información estadística. La idea es centrarse en cómo encarar un proyecto que involucre meter manos en los datos, desde cómo nombrar mis carpetas o archivos, importarlos para acceder a la información, limpiar los datos y procesarlos hasta como visualizar, analizar y comunicar los hallazgos.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/pablotis/intro_r_aset&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Repositorio del curso&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://r-intro-aset.netlify.app/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Website del curso&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe width=&#34;1000&#34; height=&#34;500&#34; src=&#34;https://r-intro-aset.netlify.app/&#34; title=&#34;Webpage del curso&#34;&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Materia optativa en UBA sociales - Carrera de Trabajo Social</title>
+      <link>/proyectos/materia-optativa/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/proyectos/materia-optativa/</guid>
+      <description>&lt;h2 id=&#34;acceso-a-la-interrupción-voluntaria-del-embarazo-en-argentina-aportes-e-las-ciencias-sociales-y-el-activismo-feminista&#34;&gt;Acceso a la interrupción voluntaria del embarazo en Argentina: aportes e las ciencias sociales y el activismo feminista&lt;/h2&gt;
+&lt;h5 id=&#34;facultad-de-ciencias-sociales---uba&#34;&gt;FACULTAD DE CIENCIAS SOCIALES - UBA&lt;/h5&gt;
+&lt;h5 id=&#34;cátedra-delvile&#34;&gt;CÁTEDRA DELVILE&lt;/h5&gt;
+&lt;p&gt;Nos proponemos con esta materia dar respuesta a la necesidad de formación en el tema de las futuras profesionales de las Ciencias Sociales, aportando herramientas teórico metodológicas para el abordaje de la problemática del aborto en Argentina desde una perspectiva de género y de derechos humanos, de los que los derechos sexuales y los derechos reproductivos son parte.&lt;/p&gt;
+&lt;p&gt;Cabe destacar que respecto de las/os estudiantes de Trabajo Social, muchas se insertarán posteriormente, como profesionales, en el sistema de salud y como refiere la Ley Federal de Trabajo Social (nº 27.072), el ejercicio de nuestra profesión debe fundarse en la defensa, reivindicación y promoción del ejercicio efectivo de los derechos humanos y sociales, asimismo reconoce la necesidad de capacitarse y actualizarse en el campo disciplinario del trabajo social y de las ciencias sociales. Por otro lado, muchas/os trabajadores/as sociales y sociólogos/as trabajan en el sistema educativo, tanto como docentes como en equipos socio educativos. Y profesionales de todas las disciplinas se desempeñan en áreas de gestión y de investigación.&lt;/p&gt;
+&lt;p&gt;Por tal motivo, que las estudiantes puedan adentrarse en el análisis de la problemática del aborto, su contexto socio-histórico, su aspecto legal y epidemiológico, resulta central para avanzar hacia la apropiación de herramientas que les permitan no solo reflexionar acerca del rol profesional sino también fundar sólidamente sus acciones a fin de desarrollar un ejercicio profesional que cotidianamente se pronuncie a través de sus prácticas en la defensa de los derechos de las personas gestantes. Esto permitirá encarar en mejores condiciones las tensiones y confrontaciones que se dan en los espacios institucionales en los que nos insertamos, así como los procesos de intervención con las personas en situación de aborto.&lt;/p&gt;
+&lt;h4 id=&#34;participación-en-jornadas-de-debate-sobre-formación-profesional-del-trabajo-social&#34;&gt;Participación en Jornadas de debate sobre Formación Profesional del Trabajo Social&lt;/h4&gt;
+&lt;p&gt;Activismo desde el aula: propuesta político-pedagógica de la materia Acceso a la interrupción voluntaria del embarazo en Argentina: aportes e las ciencias sociales y el activismo feminista&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/rWaSIIYTiwU&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cátedra libre en UBA sociales</title>
+      <link>/proyectos/catedra-libe/</link>
+      <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>/proyectos/catedra-libe/</guid>
+      <description>&lt;h2 id=&#34;catedra-libre-virtual-de-la-campaña-nacional-por-el-derecho-al-aborto-legal-seguro-y-gratuito&#34;&gt;CATEDRA LIBRE VIRTUAL DE LA CAMPAÑA NACIONAL POR EL DERECHO AL ABORTO LEGAL, SEGURO Y GRATUITO&lt;/h2&gt;
+&lt;h5 id=&#34;facultad-de-ciencias-sociales---uba&#34;&gt;FACULTAD DE CIENCIAS SOCIALES - UBA&lt;/h5&gt;
+&lt;h5 id=&#34;cohorte-2019--2020&#34;&gt;COHORTE 2019 -2020&lt;/h5&gt;
+&lt;p&gt;La propuesta se encuadra en la necesidad de que lxs futurxs profesionales en ciencias sociales y lxs asistentes a este seminario adquieran herramientas teóricas y prácticas y un conocimiento inicial pero abarcativo sobre la necesidad de despenalizar y legalizar el aborto para solucionar los problemas que crea la clandestinidad de su práctica.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Encuentro 1&lt;/strong&gt; De las luchas por el aborto a la Campaña Nacional por el Derecho al Aborto Legal Seguro y Gratuito.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Encuentro 2&lt;/strong&gt; Interpelaciones y diálogos de la Campaña Nacional
+por el Derecho al Aborto Legal Seguro y Gratuito en el campo de la salud.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Encuentro 3&lt;/strong&gt; Subjetividades en la lucha por el derecho al aborto legal, seguro y gratuito.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Encuentro 4&lt;/strong&gt; La Comunicación en la lucha por el derecho al aborto legal&lt;/p&gt;
+&lt;h5 id=&#34;equipo-docente&#34;&gt;EQUIPO DOCENTE&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;images/equipo2020.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;cohorte-2020&#34;&gt;COHORTE 2020&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;images/cohorte2020.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;cohorte-2019&#34;&gt;COHORTE 2019&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;images/cohorte2019.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

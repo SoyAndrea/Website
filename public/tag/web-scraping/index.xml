@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>web scraping | Andrea</title>
+    <link>/tag/web-scraping/</link>
+      <atom:link href="/tag/web-scraping/index.xml" rel="self" type="application/rss+xml" />
+    <description>web scraping</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>es</language><lastBuildDate>Tue, 01 Dec 2020 21:13:14 -0500</lastBuildDate>
+    <image>
+      <url>/images/icon_hu81060471e680bc591d9a375a50696ba4_27362_512x512_fill_lanczos_center_2.png</url>
+      <title>web scraping</title>
+      <link>/tag/web-scraping/</link>
+    </image>
+    
+    <item>
+      <title>SEO &amp; R: web scraping para linkbuilding</title>
+      <link>/proyectos/seo-r/</link>
+      <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
+      <guid>/proyectos/seo-r/</guid>
+      <description>
+
+
+&lt;div id=&#34;por-qué-linkbuilding&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;¿Por qué linkbuilding?&lt;/h3&gt;
+&lt;p&gt;Parte del desarrollo de estrategias SEO offpage es la generación de enlaces externos conocidos como backlinks. Para esto, es necesario contar con un listado de sitios disponibles para generarlos y es indispensable actualizarlo constantemente.&lt;/p&gt;
+&lt;p&gt;¿cómo buscarlos? Hay diferentes formas pero depende principalmente de tu objetivo de búsqueda o target. Una de ellas es a través de webscraping si quieres un listado masivo de sitios, en este caso: directorios de prensa.&lt;/p&gt;
+&lt;div id=&#34;librerias-a-utilizar&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Librerias a utilizar&lt;/h4&gt;
+&lt;p&gt;Antes de iniciar es necesario que cuentes con los siguientes paquetes de R, sino los tienes los instalas con install.packages(“nombre de paquete”): &lt;strong&gt;Rvest,tidyverse y xm12&lt;/strong&gt;. Una vez instalados, los activás con la función de library:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+library(rvest)
+library(xml2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Por otro lado contamos con el sitios web a scrapear que en este caso es un directorio de prensa de destintos paises a nivel regional. Para probar el código elegimos un país: Colombia.&lt;/p&gt;
+&lt;div id=&#34;agregar-sitio-a-scrapear&#34; class=&#34;section level5&#34;&gt;
+&lt;h5&gt;Agregar sitio a scrapear&lt;/h5&gt;
+&lt;p&gt;Copiamos la URL completa para leer y filtrar la información que necesitamos: Nombre del sitio + URL&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#LECTURA HTML DEL SITIO
+sitioscolombia &amp;lt;- read_html(&amp;quot;https://www.mediosmedios.com.ar/A.%20Colombia.htm&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ahora, queremos ver en detalle la URL de los sitios que nos detalla el listado del directorio y guardarla como primer lista que llamaré lista_sitios_colombia_url&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#PARA SCRAPEAR LAS URLS QUE QUEREMOS
+listasitioscolombiaurl &amp;lt;- sitioscolombia %&amp;gt;% html_nodes(&amp;quot;li&amp;quot;) %&amp;gt;% html_nodes(&amp;#39;a&amp;#39;) %&amp;gt;% html_attr(&amp;#39;href&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Con esta opción lograremos ver el primer listado&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#ACÁ VAS A ENCONTRAR EL LISTADO DE URLS
+view(listasitioscolombiaurl)&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;images/image.png&#34; alt=&#34;&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;&lt;em&gt;imagen ilustrativa view(listasitioscolombiaurl&lt;/em&gt;)&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Ahora queremos sumarle el nombre del sitio donde estaba anclada la URL del sitio&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#PARA SCRAPEAR LOS NOMBRES DE LOS SITIOS
+listasitiosnombre &amp;lt;- sitioscolombia %&amp;gt;% html_nodes(&amp;quot;li&amp;quot;) %&amp;gt;% html_nodes(&amp;#39;a&amp;#39;) %&amp;gt;% html_text() %&amp;gt;% str_remove_all(&amp;#39;\\n&amp;#39;) %&amp;gt;% str_remove_all(&amp;#39;\\r&amp;#39;) %&amp;gt;% str_replace_all(&amp;quot;\\s*&amp;quot;, &amp;quot; &amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Y si queremos desplegar el listado ejecutamos la misma función de &lt;em&gt;view&lt;/em&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;View(listasitiosnombre)&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;images/image%20(2).png&#34; alt=&#34;&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;&lt;em&gt;View(listasitiosnombre)&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;dataframe-para-recopilar-nombre-de-medios-y-url&#34; class=&#34;section level5&#34;&gt;
+&lt;h5&gt;DataFrame para recopilar nombre de medios y URL&lt;/h5&gt;
+&lt;p&gt;Ahora queremos unificar los listados obtenidos para tener nuestra lista de medios completa&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;df_sitios &amp;lt;- data.frame(listasitiosnombre, listasitioscolombiaurl)
+View(df_sitios)&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;images/image%20(3).png&#34; alt=&#34;&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;&lt;em&gt;imagen ilustrativa Dataframe&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Es hora de exportar nuestro listado para poder trabajarlo en otras herramientas ya sea google sheets, screaming fog u otras APIs&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exportamos-información-en-csv&#34; class=&#34;section level5&#34;&gt;
+&lt;h5&gt;Exportamos información en CSV&lt;/h5&gt;
+&lt;p&gt;El formato CSV es el mas recomendado pero puedes optar por otras opciones que ofrece la opción &lt;em&gt;write.&lt;/em&gt; y le asignas el nombre de archivo en la opción &lt;em&gt;file = nombre de tu archivo&lt;/em&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;write.csv(df_sitios, file = &amp;quot;sitioscolombia.csv&amp;quot;, row.names = FALSE)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;El documento estará en la carpeta donde trabajes el proyecto o RMD actual&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;images/image%20(4).png&#34; alt=&#34;&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;&lt;em&gt;imagen ilustrativa CSV descargado&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;fuentes-y-recursos&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Fuentes y recursos&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://rvest.tidyverse.org/articles/harvesting-the-web.html&#34;&gt;&lt;strong&gt;rvest&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.rstudio.com/2014/11/24/rvest-easy-web-scraping-with-r/&#34;&gt;&lt;strong&gt;rvest: easy web scraping with R&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/questions/35247033/using-rvest-to-extract-links&#34;&gt;&lt;strong&gt;Stackoverflow&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

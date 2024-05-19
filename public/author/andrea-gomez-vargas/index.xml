@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Andrea Gomez Vargas | Andrea</title>
+    <link>/author/andrea-gomez-vargas/</link>
+      <atom:link href="/author/andrea-gomez-vargas/index.xml" rel="self" type="application/rss+xml" />
+    <description>Andrea Gomez Vargas</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>es</language><lastBuildDate>Fri, 20 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/author/andrea-gomez-vargas/avatar_hu55bd6afbafa21ee2e44149c365740aa2_733477_270x270_fill_q75_lanczos_center.jpg</url>
+      <title>Andrea Gomez Vargas</title>
+      <link>/author/andrea-gomez-vargas/</link>
+    </image>
+    
+    <item>
+      <title>SIES Argentina: R &amp; Shiny en la difusión de estadísticas oficiales</title>
+      <link>/publication/latinr2023/</link>
+      <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>/publication/latinr2023/</guid>
+      <description>&lt;h3 id=&#34;conferencia-latinoamericana-sobre-uso-de-r-en-investigación--desarrollo-latinr&#34;&gt;Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo #LatinR&lt;/h3&gt;
+&lt;h5 id=&#34;18-al-20-de-octubre-de-2023---montevideo-uruguay&#34;&gt;18 al 20 de octubre de 2023 - Montevideo, Uruguay&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;Sesión temática: Datos abiertos y estadísticas oficiales (charla 20 minutos)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;📺 &lt;a href=&#34;https://sies-latinr2023.netlify.app/#/title-slide&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;📑 &lt;a href=&#34;https://github.com/SoyAndrea/SIES_LatinR2023/blob/main/SIES%20Argentina.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Resumen&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;📈 Shiny app: &lt;a href=&#34;https://shiny.indec.gob.ar/sies/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shiny.indec.gob.ar/sies&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;resumen&#34;&gt;&lt;strong&gt;Resumen&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;En esta presentación compartimos el proceso de construcción de la Shiny del Sistema Integrado de Estadísticas Sociales SIES elaborado por el equipo de la Dirección de Estadísticas sectoriales dependiente de la Dirección Nacional de Estadísticas Sociales y de Población de INDEC de Argentina.&lt;/p&gt;
+&lt;p&gt;En la charla expuse los aprendizajes y dificultades durante este proceso en el equipo, y la importancia de la articulación con otros equipos, organismos públicos y la comunidad de R.&lt;/p&gt;
+&lt;img src=&#34;images/presentacion1.jpeg&#34; alt=&#34;exposición en el salón 6&#34; width=&#34;60%&#34;/&gt;
+&lt;img src=&#34;images/presentacion2.jpeg&#34; alt=&#34;exposición en el salón 6&#34; width=&#34;60%&#34;/&gt;
+&lt;h3 id=&#34;equipo-des&#34;&gt;&lt;strong&gt;Equipo DES&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Andrea Gomez Vargas&lt;/li&gt;
+&lt;li&gt;Maria Florencia Bathory&lt;/li&gt;
+&lt;li&gt;Juan Manuel Damiani&lt;/li&gt;
+&lt;li&gt;Barbara Estévez Leston&lt;/li&gt;
+&lt;li&gt;Jimena Fernández Moyano&lt;/li&gt;
+&lt;li&gt;Leandro Olivo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img style=&#34;float: left;&#34; src=&#34;https://www.indec.gob.ar/Images_WEBINDEC/Logo/Logo_Indec.png&#34; alt=&#34;logo indec&#34; width=&#34;50%&#34;/&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Git &amp; Github para proyectos colaborativos en R</title>
+      <link>/publication/renagro/</link>
+      <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>/publication/renagro/</guid>
+      <description>&lt;h2 id=&#34;r-en-agronomia&#34;&gt;R en Agronomia&lt;/h2&gt;
+&lt;p&gt;Inicia el ciclo de webinars de R en Agronomía del INTA con esta charla virtual sobre proyectos colaborativos en Rstudio con Git &amp;amp; GItHub. Una herramienta indispensable para el trabajo en ciencia de datos, la reproducibilidad y automatización de procesos.&lt;/p&gt;
+&lt;p&gt;En esta charla se abarcan conceptos y comandos básicos, incluyendo ejemplos en vivo de repositorios remotos y control de cambios.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/SoyAndrea/Porfinviernes/blob/main/Git%20y%20Github%20-%209%20de%20junio/9.06.2023%20Github%20para%20proyectos%20colaborativos%20en%20R%20.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Slides&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Las ilustraciones son de Allison Horst y Julia Lowndes, tomadas del blog &lt;a href=&#34;https://www.openscapes.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Openscapes&lt;/a&gt;, nota: &lt;a href=&#34;https://www.openscapes.org/blog/2022/05/27/github-illustrated-series/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt; GitHub for supporting, contributing, and failing safely&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/68739659-fb6f-41e8-9813-32e1de3d82c0_rw_1920.png?h=4b046efe7664ab833358c241b10bd8e6&#34; alt=&#34;Ilustraciones de Allison Horst&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>(de)Generando la Ciencia Política</title>
+      <link>/publication/degenerandocp/</link>
+      <pubDate>Tue, 12 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>/publication/degenerandocp/</guid>
+      <description>&lt;h2 id=&#34;el-acceso-de-las-mujeres-al-mundo-de-la-tecnología-y-la-big-data&#34;&gt;El acceso de las mujeres al mundo de la tecnología y la big data&lt;/h2&gt;
+&lt;h4 id=&#34;opinión-pública---comunicación-política&#34;&gt;OPINIÓN PÚBLICA - COMUNICACIÓN POLÍTICA&lt;/h4&gt;
+&lt;p&gt;Participación desde Rladies Buenos Aires en el primer encuentro del seminario para hablar sobre las brechas y desigualdades que enfrentan las mujeres y disidencias para integrarse al rubro de ciencia de datos en general y desde la ciencias sociales en particular.&lt;/p&gt;
+&lt;p&gt;Algunos items a destacar&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;El mercado laboral de las nuevas tecnologías y el big data.&lt;/li&gt;
+&lt;li&gt;El acceso de las mujeres a la formación en nuevas tecnologías.&lt;/li&gt;
+&lt;li&gt;La brecha salarial, de tiempo y de trabajo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;images/charla&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;Tuvimos el gusto de escuchar a &lt;a href=&#34;https://twitter.com/Celeste_Box?ref_src=twsrc%5Etfw&#34;&gt;@Celeste_Box&lt;/a&gt; y a &lt;a href=&#34;https://twitter.com/me_andre?ref_src=twsrc%5Etfw&#34;&gt;@me_andre&lt;/a&gt; (&lt;a href=&#34;https://twitter.com/RLadiesBA?ref_src=twsrc%5Etfw&#34;&gt;@RLadiesBA&lt;/a&gt;) sobre &amp;quot;el acceso de las mujeres al mundo de la tecnología y la &lt;a href=&#34;https://twitter.com/hashtag/BigData?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#BigData&lt;/a&gt;&amp;quot;, en el marco del primer encuentro de (de)Generando la Ciencia Política. &lt;br&gt;&lt;br&gt;👉 Conocé más sobre el seminario en &lt;a href=&#34;https://t.co/ztmysLHCwE&#34;&gt;https://t.co/ztmysLHCwE&lt;/a&gt; &lt;a href=&#34;https://t.co/lmbnTQzNy4&#34;&gt;pic.twitter.com/lmbnTQzNy4&lt;/a&gt;&lt;/p&gt;&amp;mdash; Ciencia Política - UBA (@CpoliticaUBA) &lt;a href=&#34;https://twitter.com/CpoliticaUBA/status/1516522382961295365?ref_src=twsrc%5Etfw&#34;&gt;April 19, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; 
+&lt;h5 id=&#34;registro-fotográfico-de-la-jornada&#34;&gt;Registro fotográfico de la jornada&lt;/h5&gt;
+&lt;blockquote class=&#34;instagram-media&#34; data-instgrm-captioned data-instgrm-permalink=&#34;https://www.instagram.com/p/CcTJv6pOJcy/?utm_source=ig_embed&amp;amp;utm_campaign=loading&#34; data-instgrm-version=&#34;14&#34; style=&#34; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&#34;&gt;&lt;div style=&#34;padding:16px;&#34;&gt; &lt;a href=&#34;https://www.instagram.com/p/CcTJv6pOJcy/?utm_source=ig_embed&amp;amp;utm_campaign=loading&#34; style=&#34; background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;&#34; target=&#34;_blank&#34;&gt; &lt;div style=&#34; display: flex; flex-direction: row; align-items: center;&#34;&gt; &lt;div style=&#34;background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;&#34;&gt;&lt;/div&gt; &lt;div style=&#34;display: flex; flex-direction: column; flex-grow: 1; justify-content: center;&#34;&gt; &lt;div style=&#34; background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;&#34;&gt;&lt;/div&gt; &lt;div style=&#34; background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;&#34;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&#34;padding: 19% 0;&#34;&gt;&lt;/div&gt; &lt;div style=&#34;display:block; height:50px; margin:0 auto 12px; width:50px;&#34;&gt;&lt;svg width=&#34;50px&#34; height=&#34;50px&#34; viewBox=&#34;0 0 60 60&#34; version=&#34;1.1&#34; xmlns=&#34;https://www.w3.org/2000/svg&#34; xmlns:xlink=&#34;https://www.w3.org/1999/xlink&#34;&gt;&lt;g stroke=&#34;none&#34; stroke-width=&#34;1&#34; fill=&#34;none&#34; fill-rule=&#34;evenodd&#34;&gt;&lt;g transform=&#34;translate(-511.000000, -20.000000)&#34; fill=&#34;#000000&#34;&gt;&lt;g&gt;&lt;path d=&#34;M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631&#34;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/div&gt;&lt;div style=&#34;padding-top: 8px;&#34;&gt; &lt;div style=&#34; color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;&#34;&gt;Ver esta publicación en Instagram&lt;/div&gt;&lt;/div&gt;&lt;div style=&#34;padding: 12.5% 0;&#34;&gt;&lt;/div&gt; &lt;div style=&#34;display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;&#34;&gt;&lt;div&gt; &lt;div style=&#34;background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);&#34;&gt;&lt;/div&gt; &lt;div style=&#34;background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;&#34;&gt;&lt;/div&gt; &lt;div style=&#34;background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);&#34;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&#34;margin-left: 8px;&#34;&gt; &lt;div style=&#34; background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;&#34;&gt;&lt;/div&gt; &lt;div style=&#34; width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)&#34;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&#34;margin-left: auto;&#34;&gt; &lt;div style=&#34; width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);&#34;&gt;&lt;/div&gt; &lt;div style=&#34; background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);&#34;&gt;&lt;/div&gt; &lt;div style=&#34; width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);&#34;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt; &lt;div style=&#34;display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;&#34;&gt; &lt;div style=&#34; background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;&#34;&gt;&lt;/div&gt; &lt;div style=&#34; background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;&#34;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;&lt;p style=&#34; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&#34;&gt;&lt;a href=&#34;https://www.instagram.com/p/CcTJv6pOJcy/?utm_source=ig_embed&amp;amp;utm_campaign=loading&#34; style=&#34; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;&#34; target=&#34;_blank&#34;&gt;Una publicación compartida por (de)GenerandoLaCienciaPolítica (@degenerandocp)&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt; &lt;script async src=&#34;//www.instagram.com/embed.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>RoCur We are R ladies</title>
+      <link>/publication/werladies/</link>
+      <pubDate>Mon, 28 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>/publication/werladies/</guid>
+      <description>&lt;h2 id=&#34;rocur-en-español&#34;&gt;RoCur en Español&lt;/h2&gt;
+&lt;p&gt;Cada lunes en la cuenta de &lt;a href=&#34;https://twitter.com/WeAreRLadies&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;@WeAreRladies&lt;/strong&gt;&lt;/a&gt; alguna rladie de la comunidad es curadora de la cuenta global, a finales marzo tomé el desafío de participar en un idioma diferente y en especial, hablar sobre R desde mi experiencia en el Sur Global y la Sociología.&lt;/p&gt;
+&lt;p&gt;Abordé tres temáticas en R: accesibilidad, ciencias sociales y la comunidad. Compartí información y tips para crear presentaciones o informes accesibles desde R, conté algunos proyectos de temática en ciencias sociales que trabajaron todo en código R y difundí todos los eventos virtuales de rladies a nivel mundial.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;¡Hola comunidad &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt;! Bienvenidas a una nueva semana de We are Rladies en español. Del otro lado de la pantalla les habla Andrea G(&lt;a href=&#34;https://twitter.com/me_andre?ref_src=twsrc%5Etfw&#34;&gt;@me_andre&lt;/a&gt;) desde Buenos Aires, Argentina. &lt;br&gt;&lt;br&gt;¿Ustedes desde que ciudad nos leen? &lt;a href=&#34;https://t.co/rEcFoS5ZJk&#34;&gt;pic.twitter.com/rEcFoS5ZJk&lt;/a&gt;&lt;/p&gt;&amp;mdash; We are R-Ladies (@WeAreRLadies) &lt;a href=&#34;https://twitter.com/WeAreRLadies/status/1508421150145191936?ref_src=twsrc%5Etfw&#34;&gt;March 28, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;Gracias al equipo de &lt;a href=&#34;https://twitter.com/RLadiesGlobal?ref_src=twsrc%5Etfw&#34;&gt;@RLadiesGlobal&lt;/a&gt;&lt;br&gt;por la iniciativa y el espacio 💜&lt;br&gt;&lt;br&gt;Seguiremos haciendo comunidad desde &lt;a href=&#34;https://twitter.com/RLadiesBA?ref_src=twsrc%5Etfw&#34;&gt;@RLadiesBA&lt;/a&gt; &lt;a href=&#34;https://t.co/RIalBJN4db&#34;&gt;https://t.co/RIalBJN4db&lt;/a&gt;&lt;/p&gt;&amp;mdash; We are R-Ladies (@WeAreRLadies) &lt;a href=&#34;https://twitter.com/WeAreRLadies/status/1510034272404582406?ref_src=twsrc%5Etfw&#34;&gt;April 1, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Accessible DataViz</title>
+      <link>/publication/accessibilitydatavis/</link>
+      <pubDate>Mon, 31 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>/publication/accessibilitydatavis/</guid>
+      <description>&lt;h2 id=&#34;r-ladies-east-lansing-hosting-a-virtual-accessible-dataviz-meetup&#34;&gt;R-Ladies East Lansing hosting a virtual Accessible DataViz Meetup&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Come learn how to make your data visualizations &amp;amp; presentations accessible to everyone.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Our first speaker, &lt;a href=&#34;https://www.kekewu.me/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Keke Wu&lt;/a&gt; (PhD student at Univ of Colorado, Boulder) will talk about her research, Understanding Data Accessibility for People with Intellectual and Developmental Disabilities (IDD), giving us concrete ideas about how to make better figures and reach the IDD community.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Our second speaker,Andrea Gomez Vargas (one of the winners of the ‘most accessible presentation’ award at useR! 2021), will talk about how to make an accessible presentation in R, using packages such as RMarkdown.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;learning-accessibility-in-community&#34;&gt;Learning accessibility in community&lt;/h3&gt;
+&lt;p&gt;On this occasion I will tell you a little about our experience while preparing a talk for &lt;a href=&#34;https://soyandrea.netlify.app/publication/user2021/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;useR2021&lt;/strong&gt;&lt;/a&gt; and what accessibility practices we applied to our presentation, which may be useful to you when preparing a presentation using R.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/dataviz.jpeg&#34; alt=&#34;Picture of the virtual meetup with the headshots of the event hosts: Janani, kayla and Stephanie with speakers Keke and Andrea. Where they are sharing a screen that shows the phrase: accessibility is a right.&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Thank you very much Rladies from East Lansing for this invitation and for allowing us to share our experience! This presentation was also done as a group.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;The presentation material (&lt;a href=&#34;https://twitter.com/kekewu728?ref_src=twsrc%5Etfw&#34;&gt;@kekewu728&lt;/a&gt; &lt;a href=&#34;https://twitter.com/me_andre?ref_src=twsrc%5Etfw&#34;&gt;@me_andre&lt;/a&gt;) is now available on GitHub: &lt;a href=&#34;https://t.co/APLLqtj7M1&#34;&gt;https://t.co/APLLqtj7M1&lt;/a&gt; Looking forward to learning more about Accessible DataViz tonight! See you all there! 🙌&lt;/p&gt;&amp;mdash; R-Ladies East Lansing (@RLadiesELansing) &lt;a href=&#34;https://twitter.com/RLadiesELansing/status/1488157260719087616?ref_src=twsrc%5Etfw&#34;&gt;January 31, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h3 id=&#34;watch-on-youtube&#34;&gt;Watch on youtube&lt;/h3&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/RrKB1xLPXY8&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>LatinR 2021</title>
+      <link>/publication/latinr2021/</link>
+      <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/latinr2021/</guid>
+      <description>&lt;h2 id=&#34;conociendo-el-camino-para-aprender-a-usar-r-en-latinoamérica-desafíos-para-promover-la-inclusión-y-diversidad&#34;&gt;Conociendo el camino para aprender a usar R en Latinoamérica: desafíos para promover la inclusión y diversidad&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;sesión iniciativas de la Comunidad de R&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;de-que-se-trató-esta-iniciativa&#34;&gt;&lt;strong&gt;¿De que se trató esta iniciativa?&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;El entorno de R es una poderosa herramienta utilizada mundialmente para diversos fines. A pesar de la gran variedad de usos que se le da a esta herramienta, todas las personas que utilizan R tienen algo en común y es que en algún momento tuvieron que aprender dicho lenguaje. ¿Cuáles fueron los motivos por los cuales lo hicieron? ¿Dónde fue que aprendieron a usar R? ¿Qué desafíos enfrentan aquellas personas que utilizan R?&lt;/p&gt;
+&lt;p&gt;Estas son algunas de las preguntas incluidas en la primera encuesta Latinoamericana sobre el uso de R realizada en 2020. Creamos dicha encuesta para evaluar qué desafíos enfrentan los usuarios de R en una región donde el idioma, la infraestructura y las diferencias en acceso a recursos, información y capacitación pueden representar una barrera para el aprendizaje y uso de R. Solo conociendo cuáles son esas barreras y dificultades que enfrentaron (o no) al aprender y utilizar R es que se podrían implementar prácticas que mejoren la inclusión de les usuaries.&lt;/p&gt;
+&lt;p&gt;En esta charla presentaremos el análisis y los resultados de las preguntas antes mencionadas entre otras, e invitaremos a que más personas se sumen a esta iniciativa. La encuesta es abierta y reutilizable dado que buscamos inspirar a otras regiones desatendidas de todo el mundo a identificar sus fortalezas y desafíos y de dicha manera ayudar a aumentar la inclusión y la diversidad de la comunidad internacional de R.&lt;/p&gt;
+&lt;h3 id=&#34;equipo&#34;&gt;&lt;strong&gt;Equipo&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://paocorrales.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Paola Corrales&lt;/a&gt; (CIMA, FCEN, UBA),
+Claudia A. Huaylla (IRNAD-CONICET-UNRN),
+Virginia A. García Alonso (IBBEA-CONICET-UBA),
+Joselyn Chávez (IBt-UNAM),
+Denisse Fierro Arcos (IMAS-UTAS) y 
+Andrea Gómez Vargas (FSOC, UBA).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/equipo.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;reviví-la-presentación-en-youtube&#34;&gt;Reviví la presentación en Youtube&lt;/h3&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/O31-2LHZDoM&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;h3 id=&#34;sesión-en-vivo-10-de-noviembre&#34;&gt;Sesión en vivo 10 de noviembre&lt;/h3&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/4TCNocxRtwo?start=4670&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;Todas las presentaciones de &lt;strong&gt;LatinR 2021&lt;/strong&gt; &lt;a href=&#34;https://github.com/LatinR/presentaciones-LatinR2021&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;aquí&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cómo empezaR</title>
+      <link>/publication/comoempezar/</link>
+      <pubDate>Wed, 22 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/comoempezar/</guid>
+      <description>&lt;h2 id=&#34;cómo-empezar-desde-las-ciencias-sociales-hacia-las-ciencias-de-datos&#34;&gt;Cómo empezaR: desde las Ciencias Sociales hacia las Ciencias de Datos&lt;/h2&gt;
+&lt;p&gt;¡Si venís de las Ciencias Sociales y no sabés como empezar en el mundo de la ciencia de datos este meetup es para vos! Desde el Núcleo de Innovación Social (NIS) y RLadies Buenos Aires les traemos esta charla con 4 expositorxs egresadxs de carreras vinculadas a las Ciencias Sociales que trabajan en ciencia de datos.&lt;/p&gt;
+&lt;p&gt;Cada une contará su experiencia de primera mano sobre cómo arrancaron en este tipo de roles, qué trabas tuvieron, qué dificultades enfrentaron, y qué herramientas consideran que les sumaron y que pueden servirle a unx egresadx que quiera inciarse en mundo de la ciencia de datos.&lt;/p&gt;
+&lt;h3 id=&#34;exponen&#34;&gt;Exponen:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Andrea Gómez Vargas (@me_andre) - Socióloga&lt;/li&gt;
+&lt;li&gt;Pedro Orden (@pedroorden) - Sociólogo, investigador y científico de datos.&lt;/li&gt;
+&lt;li&gt;Ramiro Fernández (@ramaol) - Sociólogo y científico de datos&lt;/li&gt;
+&lt;li&gt;María Cristina Nanton (@bynans1) - Comunicadora social y analista de datos&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;coordina&#34;&gt;Coordina:&lt;/h3&gt;
+&lt;p&gt;Betsy Cohen (@betsy_ar) - Socióloga&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;Gracias a todes les que asistieron a Cómo empezaR de &lt;a href=&#34;https://twitter.com/hashtag/rladies?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rladies&lt;/a&gt; y el NIS! Son todes parte de esta comunidad &lt;a href=&#34;https://twitter.com/hashtag/RStats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#RStats&lt;/a&gt; &lt;br&gt;&lt;br&gt;Acá toda la alegría del team organizador :D&lt;a href=&#34;https://twitter.com/bynans1?ref_src=twsrc%5Etfw&#34;&gt;@bynans1&lt;/a&gt; &lt;a href=&#34;https://twitter.com/JesiFormoso?ref_src=twsrc%5Etfw&#34;&gt;@JesiFormoso&lt;/a&gt; &lt;a href=&#34;https://twitter.com/MonicaLA2000?ref_src=twsrc%5Etfw&#34;&gt;@MonicaLA2000&lt;/a&gt; &lt;a href=&#34;https://twitter.com/pmnatural?ref_src=twsrc%5Etfw&#34;&gt;@pmnatural&lt;/a&gt; &lt;a href=&#34;https://twitter.com/VA_GarciaAlonso?ref_src=twsrc%5Etfw&#34;&gt;@VA_GarciaAlonso&lt;/a&gt; &lt;a href=&#34;https://twitter.com/me_andre?ref_src=twsrc%5Etfw&#34;&gt;@me_andre&lt;/a&gt; &lt;a href=&#34;https://twitter.com/pedroorden?ref_src=twsrc%5Etfw&#34;&gt;@pedroorden&lt;/a&gt; &lt;a href=&#34;https://twitter.com/ramaol?ref_src=twsrc%5Etfw&#34;&gt;@ramaol&lt;/a&gt; &lt;a href=&#34;https://twitter.com/betsy_ar?ref_src=twsrc%5Etfw&#34;&gt;@betsy_ar&lt;/a&gt; &lt;a href=&#34;https://t.co/OFsqI8Ii5d&#34;&gt;pic.twitter.com/OFsqI8Ii5d&lt;/a&gt;&lt;/p&gt;&amp;mdash; R-Ladies BuenosAires (@RLadiesBA) &lt;a href=&#34;https://twitter.com/RLadiesBA/status/1440821762204127234?ref_src=twsrc%5Etfw&#34;&gt;September 22, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h3 id=&#34;revive-la-charla-en-el-canal-de-rladies-buenos-aires&#34;&gt;Revive la charla en el canal de Rladies Buenos Aires&lt;/h3&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/isoSCXA2gqo&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;Ahora &lt;a href=&#34;https://twitter.com/me_andre?ref_src=twsrc%5Etfw&#34;&gt;@me_andre&lt;/a&gt; contando que “no siempre se llega directamente a la carrera de datos...&amp;quot; y cuál fue su camino desde la sociología a trabajar en el INDEC! &lt;a href=&#34;https://t.co/wNcO92mou3&#34;&gt;pic.twitter.com/wNcO92mou3&lt;/a&gt;&lt;/p&gt;&amp;mdash; R-Ladies BuenosAires (@RLadiesBA) &lt;a href=&#34;https://twitter.com/RLadiesBA/status/1440795986222215170?ref_src=twsrc%5Etfw&#34;&gt;September 22, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>ReinventarTEC 2021</title>
+      <link>/publication/reinventartec2021/</link>
+      <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/reinventartec2021/</guid>
+      <description>&lt;h2 id=&#34;primeros-pasos-en-r-para-el-análisis-de-datos&#34;&gt;&lt;strong&gt;Primeros pasos en R para el análisis de datos&lt;/strong&gt;&lt;/h2&gt;
+&lt;h4 id=&#34;reinventartec-2021---taller&#34;&gt;ReinventarTEC 2021 - taller&lt;/h4&gt;
+&lt;p&gt;Taller organizado por los capítulos de Rladies Buenos Aires, Ushuaia y Resistencia-Corientes, dirigido por Patricia Loto y Andrea Gomez Vargas para la segunda edición de ReinventarTEC. Un ciclo de talleres con el fin de inspirar a mujeres de todas las edades y profesiones a reinventarse y crear un mejor futuro laboral en la era digital.&lt;/p&gt;
+&lt;p&gt;En esta ocasión quisimos brindar tips y materiales iniciales, gratuitos y accesibles para empezar a hacer análisis de datos con una pequeña introducción para aprender a usar R y tidyverse.&lt;/p&gt;
+&lt;img src=&#34;images/tidyverse.png&#34; alt=&#34;&#34; width=&#34;70%&#34;/&gt;
+&lt;p&gt;Para que no quedara solo conceptos, realizamos un ejercicio práctico con un dataset sobre LEGO. Te comparto los links con la presentación y ejercicio de práctica.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Práctica Rstudio desde la nube:&lt;/strong&gt;  &lt;a href=&#34;https://rstudio.cloud/project/2704255&#34;&gt;https://rstudio.cloud/project/2704255&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Presentación + Guía de instalación Rstudio:&lt;/strong&gt; &lt;a href=&#34;https://bit.ly/Taller9-ReinventarTEC&#34;&gt;https://bit.ly/Taller9-ReinventarTEC&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Repositorio en GitHub&lt;/strong&gt; &lt;a href=&#34;https://github.com/PatriLoto/reinventarTEC_2021&#34;&gt;https://github.com/PatriLoto/reinventarTEC_2021&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;info: &lt;a href=&#34;https://mincyt.cba.gov.ar/reinventartec/&#34;&gt;https://mincyt.cba.gov.ar/reinventartec/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;pt&#34; dir=&#34;ltr&#34;&gt;Terminando! &lt;a href=&#34;https://twitter.com/hashtag/ReinventarTEC?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ReinventarTEC&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rladies?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rladies&lt;/a&gt;&lt;a href=&#34;https://twitter.com/RLadies_rciacte?ref_src=twsrc%5Etfw&#34;&gt;@RLadies_rciacte&lt;/a&gt;&lt;br&gt; YouTube: &lt;a href=&#34;https://t.co/3Pk31zNKZK&#34;&gt;https://t.co/3Pk31zNKZK&lt;/a&gt; &lt;a href=&#34;https://t.co/csMK1Bj4Rc&#34;&gt;pic.twitter.com/csMK1Bj4Rc&lt;/a&gt;&lt;/p&gt;&amp;mdash; R-Ladies BuenosAires (@RLadiesBA) &lt;a href=&#34;https://twitter.com/RLadiesBA/status/1415446571676745728?ref_src=twsrc%5Etfw&#34;&gt;July 14, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; 
+&lt;p&gt;&lt;strong&gt;Míralo en el canal de Youtube del Ministerio&lt;/strong&gt;&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/Q8kKAnB3Xf8&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;strong&gt;Difusión&lt;/strong&gt;&lt;/p&gt;
+&lt;img src=&#34;images/Difusion.jpg&#34; alt=&#34;&#34; width=&#34;80%&#34;/&gt;
+&lt;p&gt;&lt;strong&gt;Prensa&lt;/strong&gt;
+&lt;a href=&#34;https://prensa.cba.gov.ar/ciencia-y-tecnologia/ciencia-con-perspectiva-de-genero-finaliza-la-2-edicion-del-programa-reinventartec/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Finalizó la 2° edición del programa ReinventarTEC&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>useR 2021: uso de R en latinoamérica</title>
+      <link>/publication/user2021/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/user2021/</guid>
+      <description>&lt;h2 id=&#34;uso-de-r-en-latinoamérica-fortalezas-desafíos-y-debilidades&#34;&gt;Uso de R en Latinoamérica: fortalezas, desafíos y debilidades&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Regular talk - Community and Outreach&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;de-que-se-trató-esta-iniciativa&#34;&gt;&lt;strong&gt;¿De que se trató esta iniciativa?&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Sabemos que el entorno de R es utilizado globalmente para diversos fines. Sin embargo, ¿qué tan ampliamente es utilizado en países periféricos como los Latinoamericanos donde el inglés no es el idioma oficial y donde la infraestructura y el  acceso a diversos recursos no están garantizados entre otros?&lt;/p&gt;
+&lt;p&gt;En agosto de 2020 un grupo de personas pertenecientes a comunidades de usuarios y usuarias de R en Latinoamérica, nos propusimos generar una encuesta para conocer a las personas que usan R en Latinoamérica, intentando resaltar cuáles son nuestras posibles fortalezas y a qué desafíos nos enfrentamos.&lt;/p&gt;
+&lt;p&gt;Con base en los objetivos propuestos, diseñamos una encuesta de 31 preguntas las cuales abordaban 5 ejes principales: su interés en R, información demográfica, su nivel académico, su relación con la comunidad de R y el área en que usan R.&lt;/p&gt;
+&lt;p&gt;Con la finalidad de fomentar la inclusividad, la encuesta fue confeccionada en tres idiomas español, portugués e inglés para que las personas contestaran en el idioma con el que se sintieran más cómodas.&lt;/p&gt;
+&lt;p&gt;La iniciativa fue difundida en numerosas redes como Twitter, Slack y Telegram de grupos que trabajan con R. Para esta encuesta se invitó a participar a quienes hayan nacido y/o sean residentes en Latinoamérica.&lt;/p&gt;
+&lt;p&gt;Este pequeño proyecto creció gracias al gran trabajo y colaboración de muchas personas que sumaron preguntas, ayudaron a corregir errores y generaron las distintas traducciones para que esté disponible en español, portugués e inglés y tenga en cuenta la diversidad de realidades en la región. 
+Pero además pasó a ser un proyecto de R-Forwards, el grupo de trabajo de la R Foundation que busca mejorar la inclusión y diversidad en el mundo de R.&lt;/p&gt;
+&lt;p&gt;Slides en &lt;a href=&#34;https://encuesta-user2021-es.netlify.app/#1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;español&lt;/strong&gt;&lt;/a&gt; e  &lt;a href=&#34;https://encuesta-user2021-en.netlify.app/#1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;inglés&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;equipo&#34;&gt;&lt;strong&gt;Equipo&lt;/strong&gt;:&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://paocorrales.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Paola Corrales&lt;/a&gt; (CIMA, FCEN, UBA), 
+Claudia A. Huaylla (IRNAD-CONICET-UNRN),
+Virginia A. García Alonso (IBBEA-CONICET-UBA),
+Joselyn Chávez (IBt-UNAM),
+Denisse Fierro Arcos (IMAS-UTAS),
+Andrea Gómez Vargas (FSOC, UBA).&lt;/p&gt;
+&lt;img src=&#34;images/equipo.jpg&#34; alt=&#34;&#34; width=&#34;80%&#34;/&gt;
+&lt;h3 id=&#34;accessibility-awards&#34;&gt;&lt;strong&gt;Accessibility Awards&lt;/strong&gt;&lt;/h3&gt;
+&lt;img src=&#34;images/awards.png&#34; alt=&#34;&#34; width=&#34;80%&#34;/&gt;
+&lt;p&gt;La presentación del trabajo fue reconocida  por useR! al ser elaborada en dos idiomas y con parámetros de accesibilidad.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Awards time 🏆&lt;br&gt;Our Accessibility Mentions: Natalia Morandeira, Virginia Alonso and colleagues, and Lluís Revilla. Great job, thank you for making your presentations accessible!&lt;/p&gt;&amp;mdash; useR! 2021 (@_useRconf) &lt;a href=&#34;https://twitter.com/_useRconf/status/1413617667500556291?ref_src=twsrc%5Etfw&#34;&gt;July 9, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; 
+&lt;h3 id=&#34;reviví-la-presentación-en-youtube&#34;&gt;Reviví la presentación en Youtube&lt;/h3&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/LyBLJlN6dqo&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>R en Buenos Aires</title>
+      <link>/publication/renbaires/</link>
+      <pubDate>Fri, 14 May 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/renbaires/</guid>
+      <description>&lt;h2 id=&#34;capítulo-2-una-presentación-a-toda-marcha-de-r&#34;&gt;Capítulo 2: Una presentación a toda marcha de R&lt;/h2&gt;
+&lt;p&gt;Siguiendo con el club de lectura de &lt;a href=&#34;https://bitsandbricks.github.io/ciencia_de_datos_gente_sociable/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Ciencia de Datos para Gente Sociable de Antonio Vazquez Brust&lt;/strong&gt;&lt;/a&gt; introducí el segundo capitulo donde ya comenzamos a conocer la interfaz de R studio y armamos nuestro primer proyecto.&lt;/p&gt;
+&lt;p&gt;Acá conté los primeros 5  pasos que el autor nos invita a conocer y navegar en R:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/RPRIMERO.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Quedan muchos capitulos por charlar, sumate a los próximos en &lt;a href=&#34;https://www.meetup.com/es/renbaires/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;R en Baires&lt;/strong&gt;&lt;/a&gt;. Si no puedes asistir, quedan grabados en el canal de youtube.&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/YZT2hX800yg&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>RLadies Buenos Aires</title>
+      <link>/publication/rladiesbuenosaires/</link>
+      <pubDate>Sun, 31 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/rladiesbuenosaires/</guid>
+      <description>&lt;h2 id=&#34;capítulo-buenos-aires&#34;&gt;Capítulo Buenos Aires&lt;/h2&gt;
+&lt;p&gt;Desde 2019 me sumé como colaboradora y en 2020 como co-organizadora del capítulo en Buenos Aires, entre la presencialidad y la virtualidad hermos organizando variados encuentros con diferentes temáticas y participantes de distintas profesiones. Siendo un espacio interdisciplinario, horizontal y colectivo.&lt;/p&gt;
+&lt;p&gt;No importa si nunca usaste R o si tenés R como herramienta principal de trabajo. El objetivo es promover R, intercambiar conocimiento y crear una red de contactos a nivel local y global.&lt;/p&gt;
+&lt;p&gt;Encuentra en nuestro canal de youtube los encuentros virtuales que realizamos en 2020 desde Buenos Aires. Y conoce lo realizado a nivel nacional en &lt;a href=&#34;https://rladiesenargentina.github.io/Resumen_meetups_2020/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;RLadies en Argentina durante 2020&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;En 2022 cumplimos 5 años, festejamos con un (Re)encuentro presencial y con el lanzamiento de la página web &lt;a href=&#34;https://rladiesba.netlify.app/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;rladiesba.netlify.app&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;Hay comunidad &lt;a href=&#34;https://twitter.com/hashtag/Rladies?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Rladies&lt;/a&gt; 🥳💜💜💜 &lt;a href=&#34;https://t.co/DCtqAeqsD6&#34;&gt;pic.twitter.com/DCtqAeqsD6&lt;/a&gt;&lt;/p&gt;&amp;mdash; R-Ladies BuenosAires (@RLadiesBA) &lt;a href=&#34;https://twitter.com/RLadiesBA/status/1502763807000735759?ref_src=twsrc%5Etfw&#34;&gt;March 12, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

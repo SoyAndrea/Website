@@ -30,13 +30,29 @@ feature:
   icon_pack: fas
   name: Análisis Estadístico
 - description: 
-  icon: r-project
-  icon_pack: fab
-  name: R
+  icon: chalkboard-teacher
+  icon_pack: fas
+  name: Docencia
 - description: 
   icon: transgender
   icon_pack: fas
   name: Estudios de Género(s)
+- description: 
+  icon: chart-bar
+  icon_pack: fas
+  name: Análisis de Datos
+- description: 
+  icon: open-data
+  icon_pack: ai
+  name: Data Viz
+- description: 
+  icon: r-project
+  icon_pack: fab
+  name: R
+- description: 
+  icon: database
+  icon_pack: fas 
+  name: SQL
 - description: 
   icon: git-square
   icon_pack: fab
@@ -46,29 +62,13 @@ feature:
   icon_pack: fab
   name: GitHub
 - description: 
-  icon: chart-bar
-  icon_pack: fas
-  name: Análisis de Datos
-- description: 
-  icon: open-data
-  icon_pack: ai
-  name: Datos Abiertos
-- description: 
-  icon: chalkboard-teacher
-  icon_pack: fas
-  name: Docencia
-- description: 
-  icon: project-diagram
-  icon_pack: fas
-  name: Gestión de Proyectos
-- description: 
-  icon: wordpress
+  icon: html5
   icon_pack: fab
-  name: Wordpress 
+  name: HTML 
 - description: 
-  icon: markdown
+  icon: css3-alt
   icon_pack: fab
-  name: Markdown 
+  name: CSS
 
 
 # Uncomment to use emoji icons.

@@ -20,8 +20,8 @@ interests:
 - Estudios de Género(s)
 - Políticas Públicas y Políticas Sociales
 - Ciencia de Datos
-- Datos Abiertos
 - Programación en R
+- Visualización de datos
 
 organizations:
 - name: R-Ladies Global Team Member 
@@ -40,7 +40,7 @@ social:
   link: https://mastodon.social/@me_andre
 - icon: r-project
   icon_pack: fab
-  link: https://www.rladies.org/directory/#andrea-gomez-vargas 
+  link: https://rladies.org/about-us/global-team/ 
 superuser: true
 title: Andrea Gomez Vargas
 ---
@@ -73,9 +73,9 @@ Desde 2018 participo en espacios colaborativos de aprendizaje en ciencia de dato
 - [**LatinR**](https://github.com/LatinR) (2020 - ∞)
 - [**R-Ladies Buenos Aires**](https://github.com/RLadies-BA) (2019 - 2023)
 
-En esta web encontrarás todas mis colaboraciones, proyectos y demás participaciones que han sido realizadas en ámbitos insterdisciplinarios, mi curriculum completo lo podrás [visualizar en este enlace](https://soyandrea.netlify.app/media/gomezvargas_cv.html) o descargarlo a continuación en tu formato preferido.
+En esta web encontrarás todas mis colaboraciones, proyectos y demás participaciones que han sido realizadas en ámbitos insterdisciplinarios, mi curriculum completo lo podrás [visualizar en este enlace](https://soyandrea.netlify.app/media/gomezvargas_cv.html) o descargarlo a continuación en tu idioma preferido.
 
-- <i class='fas fa-download'></i> [Descargar CV en PDF](https://soyandrea.netlify.app/media/gomezvargas_cv.pdf)<br>
-- <i class='fas fa-download'></i> [Descargar CV en HTML](https://soyandrea.netlify.app/media/gomezvargas_cv.html)
+- <i class='fas fa-download'></i> [**Descargar CV en PDF**](https://soyandrea.netlify.app/media/gomezvargas_cv.pdf)<br>
+- <i class='fas fa-download'></i> [**Download CV in PDF**](https://soyandrea.netlify.app/media/gomezvargas_cv_EN.pdf)
 
 Este sitio fue construido en R con `{blogdown}` & `HUGO` 🌠

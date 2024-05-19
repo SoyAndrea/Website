@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tidytuesday | Andrea</title>
+    <link>/tag/tidytuesday/</link>
+      <atom:link href="/tag/tidytuesday/index.xml" rel="self" type="application/rss+xml" />
+    <description>tidytuesday</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>es</language><lastBuildDate>Tue, 25 Apr 2023 21:13:14 -0500</lastBuildDate>
+    <image>
+      <url>/images/icon_hu81060471e680bc591d9a375a50696ba4_27362_512x512_fill_lanczos_center_2.png</url>
+      <title>tidytuesday</title>
+      <link>/tag/tidytuesday/</link>
+    </image>
+    
+    <item>
+      <title>Mis primeros pasos en #tidytuesday</title>
+      <link>/proyectos/tidytuesday/</link>
+      <pubDate>Tue, 25 Apr 2023 21:13:14 -0500</pubDate>
+      <guid>/proyectos/tidytuesday/</guid>
+      <description>
+&lt;script src=&#34;/proyectos/tidytuesday/index_files/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/proyectos/tidytuesday/index_files/plotly-binding/plotly.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/proyectos/tidytuesday/index_files/typedarray/typedarray.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/proyectos/tidytuesday/index_files/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/proyectos/tidytuesday/index_files/crosstalk/css/crosstalk.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/proyectos/tidytuesday/index_files/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/proyectos/tidytuesday/index_files/plotly-htmlwidgets-css/plotly-htmlwidgets.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/proyectos/tidytuesday/index_files/plotly-main/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;r4ds---r-para-ciencia-de-datos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;R4DS - R para Ciencia de Datos&lt;/h2&gt;
+&lt;p&gt;&lt;img style=&#34;float: left;&#34; src=&#34;https://user-images.githubusercontent.com/29187501/38734884-c31c6c30-3eec-11e8-966b-17172b21a279.png&#34; alt=&#34;R4DS hex&#34; width=&#34;30%&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://rfordatasci.com/&#34;&gt;&lt;strong&gt;R4DS&lt;/strong&gt;&lt;/a&gt; es una comunidad de aprendices de R de todos los niveles que trabajan juntos para mejorar sus habilidades en ciencia de datos. Y dentro de las actividades de la comunidad es tidytuesday, que es un proyecto semanal de datos sociales. Todos están invitados a participar y se invita a compartir el código utilizado para generar los resultados.&lt;/p&gt;
+&lt;p&gt;Acá puedes conocer el &lt;a href=&#34;https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-04-25/readme.md&#34;&gt;repositorio del proyecto con la actividad de cada semana y participar!&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;semana-elegida-tidytuesday-week-17---2023-london-marathon-running&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Semana elegida &lt;code&gt;{tidytuesday}&lt;/code&gt;: &lt;strong&gt;Week 17 - 2023: London Marathon&lt;/strong&gt; 🏃&lt;/h2&gt;
+&lt;div id=&#34;mis-paquetes-a-utilizar&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;mis paquetes a utilizar&lt;/h4&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse) # manipulación del dato
+library(plotly) # gráfico interactivo
+library(tidytuesdayR) # obtengo dataset&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;dataset-elegido&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;dataset elegido&lt;/h4&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tuesdata &amp;lt;- tidytuesdayR::tt_load(&amp;#39;2023-04-25&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## 	Downloading file 1 of 2: `winners.csv`
+## 	Downloading file 2 of 2: `london_marathon.csv`&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;winners &amp;lt;- tuesdata$winners&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mi-primer-gráfico&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;mi primer gráfico&lt;/h2&gt;
+&lt;div id=&#34;en-plotly&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;En &lt;code&gt;{plotly}&lt;/code&gt;&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;count(winners, Nationality, Category) %&amp;gt;%   
+    plot_ly(x=~Nationality, y=~n,  type = &amp;#39;bar&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;plotly html-widget html-fill-item-overflow-hidden html-fill-item&#34; id=&#34;htmlwidget-1&#34; style=&#34;width:672px;height:480px;&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;visdat&#34;:{&#34;5a4014ea142f&#34;:[&#34;function () &#34;,&#34;plotlyVisDat&#34;]},&#34;cur_data&#34;:&#34;5a4014ea142f&#34;,&#34;attrs&#34;:{&#34;5a4014ea142f&#34;:{&#34;x&#34;:{},&#34;y&#34;:{},&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;bar&#34;}},&#34;layout&#34;:{&#34;margin&#34;:{&#34;b&#34;:40,&#34;l&#34;:60,&#34;t&#34;:25,&#34;r&#34;:10},&#34;xaxis&#34;:{&#34;domain&#34;:[0,1],&#34;automargin&#34;:true,&#34;title&#34;:&#34;Nationality&#34;,&#34;type&#34;:&#34;category&#34;,&#34;categoryorder&#34;:&#34;array&#34;,&#34;categoryarray&#34;:[&#34;Australia&#34;,&#34;Belgium&#34;,&#34;Canada&#34;,&#34;China&#34;,&#34;Denmark&#34;,&#34;Ethiopia&#34;,&#34;France&#34;,&#34;Germany&#34;,&#34;Ireland&#34;,&#34;Italy&#34;,&#34;Japan&#34;,&#34;Kenya&#34;,&#34;Mexico&#34;,&#34;Morocco&#34;,&#34;Netherlands&#34;,&#34;Norway&#34;,&#34;Poland&#34;,&#34;Portugal&#34;,&#34;Soviet Union&#34;,&#34;Spain&#34;,&#34;Sweden&#34;,&#34;Switzerland&#34;,&#34;United Kingdom&#34;,&#34;United States&#34;]},&#34;yaxis&#34;:{&#34;domain&#34;:[0,1],&#34;automargin&#34;:true,&#34;title&#34;:&#34;n&#34;},&#34;hovermode&#34;:&#34;closest&#34;,&#34;showlegend&#34;:false},&#34;source&#34;:&#34;A&#34;,&#34;config&#34;:{&#34;modeBarButtonsToAdd&#34;:[&#34;hoverclosest&#34;,&#34;hovercompare&#34;],&#34;showSendToCloud&#34;:false},&#34;data&#34;:[{&#34;x&#34;:[&#34;Australia&#34;,&#34;Australia&#34;,&#34;Belgium&#34;,&#34;Canada&#34;,&#34;China&#34;,&#34;Denmark&#34;,&#34;Denmark&#34;,&#34;Ethiopia&#34;,&#34;Ethiopia&#34;,&#34;France&#34;,&#34;Germany&#34;,&#34;Ireland&#34;,&#34;Ireland&#34;,&#34;Ireland&#34;,&#34;Italy&#34;,&#34;Japan&#34;,&#34;Japan&#34;,&#34;Kenya&#34;,&#34;Kenya&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Morocco&#34;,&#34;Netherlands&#34;,&#34;Norway&#34;,&#34;Norway&#34;,&#34;Poland&#34;,&#34;Portugal&#34;,&#34;Portugal&#34;,&#34;Soviet Union&#34;,&#34;Spain&#34;,&#34;Sweden&#34;,&#34;Sweden&#34;,&#34;Switzerland&#34;,&#34;Switzerland&#34;,&#34;United Kingdom&#34;,&#34;United Kingdom&#34;,&#34;United Kingdom&#34;,&#34;United Kingdom&#34;,&#34;United States&#34;,&#34;United States&#34;,&#34;United States&#34;,&#34;United States&#34;],&#34;y&#34;:[2,1,1,4,1,1,2,5,4,3,5,2,3,1,4,2,1,16,14,3,2,2,1,1,6,2,3,1,1,1,1,2,6,4,6,16,15,7,2,2,6,1],&#34;type&#34;:&#34;bar&#34;,&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(31,119,180,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(31,119,180,1)&#34;}},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(31,119,180,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(31,119,180,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null}],&#34;highlight&#34;:{&#34;on&#34;:&#34;plotly_click&#34;,&#34;persistent&#34;:false,&#34;dynamic&#34;:false,&#34;selectize&#34;:false,&#34;opacityDim&#34;:0.20000000000000001,&#34;selected&#34;:{&#34;opacity&#34;:1},&#34;debounce&#34;:0},&#34;shinyEvents&#34;:[&#34;plotly_hover&#34;,&#34;plotly_click&#34;,&#34;plotly_selected&#34;,&#34;plotly_relayout&#34;,&#34;plotly_brushed&#34;,&#34;plotly_brushing&#34;,&#34;plotly_clickannotation&#34;,&#34;plotly_doubleclick&#34;,&#34;plotly_deselect&#34;,&#34;plotly_afterplot&#34;,&#34;plotly_sunburstclick&#34;],&#34;base_url&#34;:&#34;https://plot.ly&#34;},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sumo-paleta-de-colores&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Sumo paleta de colores&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;palet  &amp;lt;- c(&amp;quot;#f18701&amp;quot;, &amp;quot;#f7b801&amp;quot;, &amp;quot;#7678ed&amp;quot;, &amp;quot;#3d348b&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ordeno-categorias-y-adecuo-paleta-de-colores&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Ordeno categorias y adecuo paleta de colores&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;count(winners, Nationality, Category) %&amp;gt;%   
+    plot_ly(x=~Nationality, y=~n,  type = &amp;#39;bar&amp;#39;, 
+                  color = ~Category, colors = palet) %&amp;gt;% 
+  layout(
+    title =  &amp;quot;Winners of London marathon by Nationality in each category from 1981 - 2022&amp;quot;,
+              yaxis = list(title = &amp;#39;Number of winners&amp;#39;, range= c(0,45)), 
+              xaxis = list(title = &amp;#39;Nationality&amp;#39;, categoryorder = &amp;quot;total descending&amp;quot;,
+                           tickangle = -45),
+              barmode = &amp;quot;stack&amp;quot;,bargap = 2, plot_bgcolor=&amp;#39;white&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;plotly html-widget html-fill-item-overflow-hidden html-fill-item&#34; id=&#34;htmlwidget-2&#34; style=&#34;width:672px;height:480px;&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;visdat&#34;:{&#34;5a404d8a2a93&#34;:[&#34;function () &#34;,&#34;plotlyVisDat&#34;]},&#34;cur_data&#34;:&#34;5a404d8a2a93&#34;,&#34;attrs&#34;:{&#34;5a404d8a2a93&#34;:{&#34;x&#34;:{},&#34;y&#34;:{},&#34;color&#34;:{},&#34;colors&#34;:[&#34;#f18701&#34;,&#34;#f7b801&#34;,&#34;#7678ed&#34;,&#34;#3d348b&#34;],&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;bar&#34;}},&#34;layout&#34;:{&#34;margin&#34;:{&#34;b&#34;:40,&#34;l&#34;:60,&#34;t&#34;:25,&#34;r&#34;:10},&#34;title&#34;:&#34;Winners of London marathon by Nationality in each category from 1981 - 2022&#34;,&#34;yaxis&#34;:{&#34;domain&#34;:[0,1],&#34;automargin&#34;:true,&#34;title&#34;:&#34;Number of winners&#34;,&#34;range&#34;:[0,45]},&#34;xaxis&#34;:{&#34;domain&#34;:[0,1],&#34;automargin&#34;:true,&#34;title&#34;:&#34;Nationality&#34;,&#34;categoryorder&#34;:&#34;total descending&#34;,&#34;tickangle&#34;:-45,&#34;type&#34;:&#34;category&#34;,&#34;categoryarray&#34;:[&#34;Australia&#34;,&#34;Belgium&#34;,&#34;Canada&#34;,&#34;China&#34;,&#34;Denmark&#34;,&#34;Ethiopia&#34;,&#34;France&#34;,&#34;Germany&#34;,&#34;Ireland&#34;,&#34;Italy&#34;,&#34;Japan&#34;,&#34;Kenya&#34;,&#34;Mexico&#34;,&#34;Morocco&#34;,&#34;Netherlands&#34;,&#34;Norway&#34;,&#34;Poland&#34;,&#34;Portugal&#34;,&#34;Soviet Union&#34;,&#34;Spain&#34;,&#34;Sweden&#34;,&#34;Switzerland&#34;,&#34;United Kingdom&#34;,&#34;United States&#34;]},&#34;barmode&#34;:&#34;stack&#34;,&#34;bargap&#34;:2,&#34;plot_bgcolor&#34;:&#34;white&#34;,&#34;hovermode&#34;:&#34;closest&#34;,&#34;showlegend&#34;:true},&#34;source&#34;:&#34;A&#34;,&#34;config&#34;:{&#34;modeBarButtonsToAdd&#34;:[&#34;hoverclosest&#34;,&#34;hovercompare&#34;],&#34;showSendToCloud&#34;:false},&#34;data&#34;:[{&#34;x&#34;:[&#34;Denmark&#34;,&#34;Ethiopia&#34;,&#34;Japan&#34;,&#34;Kenya&#34;,&#34;Mexico&#34;,&#34;Morocco&#34;,&#34;Norway&#34;,&#34;Portugal&#34;,&#34;Soviet Union&#34;,&#34;Spain&#34;,&#34;United Kingdom&#34;,&#34;United States&#34;],&#34;y&#34;:[1,5,2,16,3,2,1,3,1,1,6,2],&#34;type&#34;:&#34;bar&#34;,&#34;name&#34;:&#34;Men&#34;,&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(241,135,1,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(241,135,1,1)&#34;}},&#34;textfont&#34;:{&#34;color&#34;:&#34;rgba(241,135,1,1)&#34;},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(241,135,1,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(241,135,1,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;x&#34;:[&#34;Australia&#34;,&#34;Belgium&#34;,&#34;Canada&#34;,&#34;France&#34;,&#34;Ireland&#34;,&#34;Mexico&#34;,&#34;Sweden&#34;,&#34;Switzerland&#34;,&#34;United Kingdom&#34;,&#34;United States&#34;],&#34;y&#34;:[2,1,4,3,2,2,1,6,16,2],&#34;type&#34;:&#34;bar&#34;,&#34;name&#34;:&#34;Wheelchair Men&#34;,&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(247,184,1,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(247,184,1,1)&#34;}},&#34;textfont&#34;:{&#34;color&#34;:&#34;rgba(247,184,1,1)&#34;},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(247,184,1,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(247,184,1,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;x&#34;:[&#34;Australia&#34;,&#34;Denmark&#34;,&#34;Ireland&#34;,&#34;Italy&#34;,&#34;Japan&#34;,&#34;Netherlands&#34;,&#34;Sweden&#34;,&#34;Switzerland&#34;,&#34;United Kingdom&#34;,&#34;United States&#34;],&#34;y&#34;:[1,2,3,4,1,1,2,4,15,6],&#34;type&#34;:&#34;bar&#34;,&#34;name&#34;:&#34;Wheelchair Women&#34;,&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(118,120,237,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(118,120,237,1)&#34;}},&#34;textfont&#34;:{&#34;color&#34;:&#34;rgba(118,120,237,1)&#34;},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(118,120,237,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(118,120,237,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;x&#34;:[&#34;China&#34;,&#34;Ethiopia&#34;,&#34;Germany&#34;,&#34;Ireland&#34;,&#34;Kenya&#34;,&#34;Norway&#34;,&#34;Poland&#34;,&#34;Portugal&#34;,&#34;United Kingdom&#34;,&#34;United States&#34;],&#34;y&#34;:[1,4,5,1,14,6,2,1,7,1],&#34;type&#34;:&#34;bar&#34;,&#34;name&#34;:&#34;Women&#34;,&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(61,52,139,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(61,52,139,1)&#34;}},&#34;textfont&#34;:{&#34;color&#34;:&#34;rgba(61,52,139,1)&#34;},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(61,52,139,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(61,52,139,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null}],&#34;highlight&#34;:{&#34;on&#34;:&#34;plotly_click&#34;,&#34;persistent&#34;:false,&#34;dynamic&#34;:false,&#34;selectize&#34;:false,&#34;opacityDim&#34;:0.20000000000000001,&#34;selected&#34;:{&#34;opacity&#34;:1},&#34;debounce&#34;:0},&#34;shinyEvents&#34;:[&#34;plotly_hover&#34;,&#34;plotly_click&#34;,&#34;plotly_selected&#34;,&#34;plotly_relayout&#34;,&#34;plotly_brushed&#34;,&#34;plotly_brushing&#34;,&#34;plotly_clickannotation&#34;,&#34;plotly_doubleclick&#34;,&#34;plotly_deselect&#34;,&#34;plotly_afterplot&#34;,&#34;plotly_sunburstclick&#34;],&#34;base_url&#34;:&#34;https://plot.ly&#34;},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ggplot2&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;code&gt;{ggplot2}&lt;/code&gt;&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(winners, aes(x=fct_rev(fct_infreq(Nationality)))) +
+  geom_bar() +
+  coord_flip()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/proyectos/tidytuesday/index_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Mejoro colores y formato&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(winners, aes(x=fct_rev(fct_infreq(Nationality)))) +
+  geom_bar(aes(fill = Category)) +
+  coord_flip() +
+  scale_fill_manual(values = c(&amp;quot;#186F65&amp;quot;, &amp;quot;#B5CB99&amp;quot;, &amp;quot;#D988B9&amp;quot;, &amp;quot;#B0578D&amp;quot;)) +
+  labs(
+    y = &amp;#39;Number of winners&amp;#39;,
+    x = &amp;#39;Nationality&amp;#39;,
+    title = &amp;quot;Winners of London marathon by Nationality in each category&amp;quot;,
+    subtitle = &amp;quot;from 1981 - 2022&amp;quot;,
+    caption = &amp;quot;Source: Nicola Rennie&amp;#39;s London Marathon R package&amp;quot;,
+  )+
+  theme_minimal()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/proyectos/tidytuesday/index_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

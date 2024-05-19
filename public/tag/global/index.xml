@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Global | Andrea</title>
+    <link>/tag/global/</link>
+      <atom:link href="/tag/global/index.xml" rel="self" type="application/rss+xml" />
+    <description>Global</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>es</language><lastBuildDate>Mon, 28 Mar 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu81060471e680bc591d9a375a50696ba4_27362_512x512_fill_lanczos_center_2.png</url>
+      <title>Global</title>
+      <link>/tag/global/</link>
+    </image>
+    
+    <item>
+      <title>RoCur We are R ladies</title>
+      <link>/publication/werladies/</link>
+      <pubDate>Mon, 28 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>/publication/werladies/</guid>
+      <description>&lt;h2 id=&#34;rocur-en-español&#34;&gt;RoCur en Español&lt;/h2&gt;
+&lt;p&gt;Cada lunes en la cuenta de &lt;a href=&#34;https://twitter.com/WeAreRLadies&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;@WeAreRladies&lt;/strong&gt;&lt;/a&gt; alguna rladie de la comunidad es curadora de la cuenta global, a finales marzo tomé el desafío de participar en un idioma diferente y en especial, hablar sobre R desde mi experiencia en el Sur Global y la Sociología.&lt;/p&gt;
+&lt;p&gt;Abordé tres temáticas en R: accesibilidad, ciencias sociales y la comunidad. Compartí información y tips para crear presentaciones o informes accesibles desde R, conté algunos proyectos de temática en ciencias sociales que trabajaron todo en código R y difundí todos los eventos virtuales de rladies a nivel mundial.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;¡Hola comunidad &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt;! Bienvenidas a una nueva semana de We are Rladies en español. Del otro lado de la pantalla les habla Andrea G(&lt;a href=&#34;https://twitter.com/me_andre?ref_src=twsrc%5Etfw&#34;&gt;@me_andre&lt;/a&gt;) desde Buenos Aires, Argentina. &lt;br&gt;&lt;br&gt;¿Ustedes desde que ciudad nos leen? &lt;a href=&#34;https://t.co/rEcFoS5ZJk&#34;&gt;pic.twitter.com/rEcFoS5ZJk&lt;/a&gt;&lt;/p&gt;&amp;mdash; We are R-Ladies (@WeAreRLadies) &lt;a href=&#34;https://twitter.com/WeAreRLadies/status/1508421150145191936?ref_src=twsrc%5Etfw&#34;&gt;March 28, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;Gracias al equipo de &lt;a href=&#34;https://twitter.com/RLadiesGlobal?ref_src=twsrc%5Etfw&#34;&gt;@RLadiesGlobal&lt;/a&gt;&lt;br&gt;por la iniciativa y el espacio 💜&lt;br&gt;&lt;br&gt;Seguiremos haciendo comunidad desde &lt;a href=&#34;https://twitter.com/RLadiesBA?ref_src=twsrc%5Etfw&#34;&gt;@RLadiesBA&lt;/a&gt; &lt;a href=&#34;https://t.co/RIalBJN4db&#34;&gt;https://t.co/RIalBJN4db&lt;/a&gt;&lt;/p&gt;&amp;mdash; We are R-Ladies (@WeAreRLadies) &lt;a href=&#34;https://twitter.com/WeAreRLadies/status/1510034272404582406?ref_src=twsrc%5Etfw&#34;&gt;April 1, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Accessible DataViz</title>
+      <link>/publication/accessibilitydatavis/</link>
+      <pubDate>Mon, 31 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>/publication/accessibilitydatavis/</guid>
+      <description>&lt;h2 id=&#34;r-ladies-east-lansing-hosting-a-virtual-accessible-dataviz-meetup&#34;&gt;R-Ladies East Lansing hosting a virtual Accessible DataViz Meetup&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Come learn how to make your data visualizations &amp;amp; presentations accessible to everyone.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Our first speaker, &lt;a href=&#34;https://www.kekewu.me/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Keke Wu&lt;/a&gt; (PhD student at Univ of Colorado, Boulder) will talk about her research, Understanding Data Accessibility for People with Intellectual and Developmental Disabilities (IDD), giving us concrete ideas about how to make better figures and reach the IDD community.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Our second speaker,Andrea Gomez Vargas (one of the winners of the ‘most accessible presentation’ award at useR! 2021), will talk about how to make an accessible presentation in R, using packages such as RMarkdown.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;learning-accessibility-in-community&#34;&gt;Learning accessibility in community&lt;/h3&gt;
+&lt;p&gt;On this occasion I will tell you a little about our experience while preparing a talk for &lt;a href=&#34;https://soyandrea.netlify.app/publication/user2021/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;useR2021&lt;/strong&gt;&lt;/a&gt; and what accessibility practices we applied to our presentation, which may be useful to you when preparing a presentation using R.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/dataviz.jpeg&#34; alt=&#34;Picture of the virtual meetup with the headshots of the event hosts: Janani, kayla and Stephanie with speakers Keke and Andrea. Where they are sharing a screen that shows the phrase: accessibility is a right.&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Thank you very much Rladies from East Lansing for this invitation and for allowing us to share our experience! This presentation was also done as a group.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;The presentation material (&lt;a href=&#34;https://twitter.com/kekewu728?ref_src=twsrc%5Etfw&#34;&gt;@kekewu728&lt;/a&gt; &lt;a href=&#34;https://twitter.com/me_andre?ref_src=twsrc%5Etfw&#34;&gt;@me_andre&lt;/a&gt;) is now available on GitHub: &lt;a href=&#34;https://t.co/APLLqtj7M1&#34;&gt;https://t.co/APLLqtj7M1&lt;/a&gt; Looking forward to learning more about Accessible DataViz tonight! See you all there! 🙌&lt;/p&gt;&amp;mdash; R-Ladies East Lansing (@RLadiesELansing) &lt;a href=&#34;https://twitter.com/RLadiesELansing/status/1488157260719087616?ref_src=twsrc%5Etfw&#34;&gt;January 31, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h3 id=&#34;watch-on-youtube&#34;&gt;Watch on youtube&lt;/h3&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/RrKB1xLPXY8&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>LatinR 2021</title>
+      <link>/publication/latinr2021/</link>
+      <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/latinr2021/</guid>
+      <description>&lt;h2 id=&#34;conociendo-el-camino-para-aprender-a-usar-r-en-latinoamérica-desafíos-para-promover-la-inclusión-y-diversidad&#34;&gt;Conociendo el camino para aprender a usar R en Latinoamérica: desafíos para promover la inclusión y diversidad&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;sesión iniciativas de la Comunidad de R&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;de-que-se-trató-esta-iniciativa&#34;&gt;&lt;strong&gt;¿De que se trató esta iniciativa?&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;El entorno de R es una poderosa herramienta utilizada mundialmente para diversos fines. A pesar de la gran variedad de usos que se le da a esta herramienta, todas las personas que utilizan R tienen algo en común y es que en algún momento tuvieron que aprender dicho lenguaje. ¿Cuáles fueron los motivos por los cuales lo hicieron? ¿Dónde fue que aprendieron a usar R? ¿Qué desafíos enfrentan aquellas personas que utilizan R?&lt;/p&gt;
+&lt;p&gt;Estas son algunas de las preguntas incluidas en la primera encuesta Latinoamericana sobre el uso de R realizada en 2020. Creamos dicha encuesta para evaluar qué desafíos enfrentan los usuarios de R en una región donde el idioma, la infraestructura y las diferencias en acceso a recursos, información y capacitación pueden representar una barrera para el aprendizaje y uso de R. Solo conociendo cuáles son esas barreras y dificultades que enfrentaron (o no) al aprender y utilizar R es que se podrían implementar prácticas que mejoren la inclusión de les usuaries.&lt;/p&gt;
+&lt;p&gt;En esta charla presentaremos el análisis y los resultados de las preguntas antes mencionadas entre otras, e invitaremos a que más personas se sumen a esta iniciativa. La encuesta es abierta y reutilizable dado que buscamos inspirar a otras regiones desatendidas de todo el mundo a identificar sus fortalezas y desafíos y de dicha manera ayudar a aumentar la inclusión y la diversidad de la comunidad internacional de R.&lt;/p&gt;
+&lt;h3 id=&#34;equipo&#34;&gt;&lt;strong&gt;Equipo&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://paocorrales.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Paola Corrales&lt;/a&gt; (CIMA, FCEN, UBA),
+Claudia A. Huaylla (IRNAD-CONICET-UNRN),
+Virginia A. García Alonso (IBBEA-CONICET-UBA),
+Joselyn Chávez (IBt-UNAM),
+Denisse Fierro Arcos (IMAS-UTAS) y 
+Andrea Gómez Vargas (FSOC, UBA).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/equipo.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;reviví-la-presentación-en-youtube&#34;&gt;Reviví la presentación en Youtube&lt;/h3&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/O31-2LHZDoM&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;h3 id=&#34;sesión-en-vivo-10-de-noviembre&#34;&gt;Sesión en vivo 10 de noviembre&lt;/h3&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/4TCNocxRtwo?start=4670&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;Todas las presentaciones de &lt;strong&gt;LatinR 2021&lt;/strong&gt; &lt;a href=&#34;https://github.com/LatinR/presentaciones-LatinR2021&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;aquí&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>useR 2021: uso de R en latinoamérica</title>
+      <link>/publication/user2021/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/user2021/</guid>
+      <description>&lt;h2 id=&#34;uso-de-r-en-latinoamérica-fortalezas-desafíos-y-debilidades&#34;&gt;Uso de R en Latinoamérica: fortalezas, desafíos y debilidades&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Regular talk - Community and Outreach&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;de-que-se-trató-esta-iniciativa&#34;&gt;&lt;strong&gt;¿De que se trató esta iniciativa?&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Sabemos que el entorno de R es utilizado globalmente para diversos fines. Sin embargo, ¿qué tan ampliamente es utilizado en países periféricos como los Latinoamericanos donde el inglés no es el idioma oficial y donde la infraestructura y el  acceso a diversos recursos no están garantizados entre otros?&lt;/p&gt;
+&lt;p&gt;En agosto de 2020 un grupo de personas pertenecientes a comunidades de usuarios y usuarias de R en Latinoamérica, nos propusimos generar una encuesta para conocer a las personas que usan R en Latinoamérica, intentando resaltar cuáles son nuestras posibles fortalezas y a qué desafíos nos enfrentamos.&lt;/p&gt;
+&lt;p&gt;Con base en los objetivos propuestos, diseñamos una encuesta de 31 preguntas las cuales abordaban 5 ejes principales: su interés en R, información demográfica, su nivel académico, su relación con la comunidad de R y el área en que usan R.&lt;/p&gt;
+&lt;p&gt;Con la finalidad de fomentar la inclusividad, la encuesta fue confeccionada en tres idiomas español, portugués e inglés para que las personas contestaran en el idioma con el que se sintieran más cómodas.&lt;/p&gt;
+&lt;p&gt;La iniciativa fue difundida en numerosas redes como Twitter, Slack y Telegram de grupos que trabajan con R. Para esta encuesta se invitó a participar a quienes hayan nacido y/o sean residentes en Latinoamérica.&lt;/p&gt;
+&lt;p&gt;Este pequeño proyecto creció gracias al gran trabajo y colaboración de muchas personas que sumaron preguntas, ayudaron a corregir errores y generaron las distintas traducciones para que esté disponible en español, portugués e inglés y tenga en cuenta la diversidad de realidades en la región. 
+Pero además pasó a ser un proyecto de R-Forwards, el grupo de trabajo de la R Foundation que busca mejorar la inclusión y diversidad en el mundo de R.&lt;/p&gt;
+&lt;p&gt;Slides en &lt;a href=&#34;https://encuesta-user2021-es.netlify.app/#1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;español&lt;/strong&gt;&lt;/a&gt; e  &lt;a href=&#34;https://encuesta-user2021-en.netlify.app/#1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;inglés&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;equipo&#34;&gt;&lt;strong&gt;Equipo&lt;/strong&gt;:&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://paocorrales.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Paola Corrales&lt;/a&gt; (CIMA, FCEN, UBA), 
+Claudia A. Huaylla (IRNAD-CONICET-UNRN),
+Virginia A. García Alonso (IBBEA-CONICET-UBA),
+Joselyn Chávez (IBt-UNAM),
+Denisse Fierro Arcos (IMAS-UTAS),
+Andrea Gómez Vargas (FSOC, UBA).&lt;/p&gt;
+&lt;img src=&#34;images/equipo.jpg&#34; alt=&#34;&#34; width=&#34;80%&#34;/&gt;
+&lt;h3 id=&#34;accessibility-awards&#34;&gt;&lt;strong&gt;Accessibility Awards&lt;/strong&gt;&lt;/h3&gt;
+&lt;img src=&#34;images/awards.png&#34; alt=&#34;&#34; width=&#34;80%&#34;/&gt;
+&lt;p&gt;La presentación del trabajo fue reconocida  por useR! al ser elaborada en dos idiomas y con parámetros de accesibilidad.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Awards time 🏆&lt;br&gt;Our Accessibility Mentions: Natalia Morandeira, Virginia Alonso and colleagues, and Lluís Revilla. Great job, thank you for making your presentations accessible!&lt;/p&gt;&amp;mdash; useR! 2021 (@_useRconf) &lt;a href=&#34;https://twitter.com/_useRconf/status/1413617667500556291?ref_src=twsrc%5Etfw&#34;&gt;July 9, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; 
+&lt;h3 id=&#34;reviví-la-presentación-en-youtube&#34;&gt;Reviví la presentación en Youtube&lt;/h3&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/LyBLJlN6dqo&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>LatinR 2020 - panel accesibilidad e inclusión</title>
+      <link>/publication/accesibilidad-inclusion/</link>
+      <pubDate>Fri, 09 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/accesibilidad-inclusion/</guid>
+      <description>&lt;h2 id=&#34;de-qué-hablamos-cuando-hablamos-de-inclusión-y-accesibilidad-en-el-mundo-de-la-tecnología&#34;&gt;¿De qué hablamos cuando hablamos de inclusión y accesibilidad en el mundo de la tecnología?&lt;/h2&gt;
+&lt;p&gt;En esta ocasión reunimos a integrantes de diferentes comunidades en latinoamérica que promueven y trabajan por la inclusión y accesibilidad en el mundo de la tecnología para que den a conocer su trabajo, sus objetivos, logros y desafíos a la hora de lograr una inclusión y accesibilidad real. Queremos generar un espacio de reflexión, donde podamos pensar en conjunto sobre la importancia de que la tecnología sea más inclusiva y accesible a todes y pensar a las comunidades como actores principales para llevar a cabo este objetivo.&lt;/p&gt;
+&lt;p&gt;Míralo en el canal de youtube de LatinR &lt;a href=&#34;https://youtu.be/xkRFGbZocIU&#34;&gt;https://youtu.be/xkRFGbZocIU&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Modera:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Andrea Gómez Vargas (LatinR - miembro comité organizador)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Participan:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Merary Alvarado (DALAT Desarrollo Accesible Latinoamericano)&lt;/li&gt;
+&lt;li&gt;Martín Baldasarre (DALAT Desarrollo Accesible Latinoamericano)&lt;/li&gt;
+&lt;li&gt;Abe Quiroga (Transistemas Argentina)&lt;/li&gt;
+&lt;li&gt;Coi Bressan (Transistemas Argentina)&lt;/li&gt;
+&lt;li&gt;Joselyn Chávez (R-Ladies Cuernavaca &amp;amp; R-Ladies México)&lt;/li&gt;
+&lt;li&gt;Milagros Villavicencio (R-Ladies Natal - Brasil)&lt;/li&gt;
+&lt;li&gt;Fernanda Kelly (R-Ladies Goiânia - Brasil)&lt;/li&gt;
+&lt;li&gt;Lupe Canaviri Maydana (Laboratoria &amp;amp; PyLadies El Alto - Bolivia)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

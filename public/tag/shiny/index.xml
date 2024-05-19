@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shiny | Andrea</title>
+    <link>/tag/shiny/</link>
+      <atom:link href="/tag/shiny/index.xml" rel="self" type="application/rss+xml" />
+    <description>Shiny</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>es</language><lastBuildDate>Fri, 20 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu81060471e680bc591d9a375a50696ba4_27362_512x512_fill_lanczos_center_2.png</url>
+      <title>Shiny</title>
+      <link>/tag/shiny/</link>
+    </image>
+    
+    <item>
+      <title>SIES Argentina: R &amp; Shiny en la difusión de estadísticas oficiales</title>
+      <link>/publication/latinr2023/</link>
+      <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>/publication/latinr2023/</guid>
+      <description>&lt;h3 id=&#34;conferencia-latinoamericana-sobre-uso-de-r-en-investigación--desarrollo-latinr&#34;&gt;Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo #LatinR&lt;/h3&gt;
+&lt;h5 id=&#34;18-al-20-de-octubre-de-2023---montevideo-uruguay&#34;&gt;18 al 20 de octubre de 2023 - Montevideo, Uruguay&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;Sesión temática: Datos abiertos y estadísticas oficiales (charla 20 minutos)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;📺 &lt;a href=&#34;https://sies-latinr2023.netlify.app/#/title-slide&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;📑 &lt;a href=&#34;https://github.com/SoyAndrea/SIES_LatinR2023/blob/main/SIES%20Argentina.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Resumen&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;📈 Shiny app: &lt;a href=&#34;https://shiny.indec.gob.ar/sies/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shiny.indec.gob.ar/sies&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;resumen&#34;&gt;&lt;strong&gt;Resumen&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;En esta presentación compartimos el proceso de construcción de la Shiny del Sistema Integrado de Estadísticas Sociales SIES elaborado por el equipo de la Dirección de Estadísticas sectoriales dependiente de la Dirección Nacional de Estadísticas Sociales y de Población de INDEC de Argentina.&lt;/p&gt;
+&lt;p&gt;En la charla expuse los aprendizajes y dificultades durante este proceso en el equipo, y la importancia de la articulación con otros equipos, organismos públicos y la comunidad de R.&lt;/p&gt;
+&lt;img src=&#34;images/presentacion1.jpeg&#34; alt=&#34;exposición en el salón 6&#34; width=&#34;60%&#34;/&gt;
+&lt;img src=&#34;images/presentacion2.jpeg&#34; alt=&#34;exposición en el salón 6&#34; width=&#34;60%&#34;/&gt;
+&lt;h3 id=&#34;equipo-des&#34;&gt;&lt;strong&gt;Equipo DES&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Andrea Gomez Vargas&lt;/li&gt;
+&lt;li&gt;Maria Florencia Bathory&lt;/li&gt;
+&lt;li&gt;Juan Manuel Damiani&lt;/li&gt;
+&lt;li&gt;Barbara Estévez Leston&lt;/li&gt;
+&lt;li&gt;Jimena Fernández Moyano&lt;/li&gt;
+&lt;li&gt;Leandro Olivo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img style=&#34;float: left;&#34; src=&#34;https://www.indec.gob.ar/Images_WEBINDEC/Logo/Logo_Indec.png&#34; alt=&#34;logo indec&#34; width=&#34;50%&#34;/&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

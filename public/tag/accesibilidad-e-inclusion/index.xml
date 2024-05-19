@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Accesibilidad e inclusión | Andrea</title>
+    <link>/tag/accesibilidad-e-inclusion/</link>
+      <atom:link href="/tag/accesibilidad-e-inclusion/index.xml" rel="self" type="application/rss+xml" />
+    <description>Accesibilidad e inclusión</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>es</language><lastBuildDate>Mon, 31 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu81060471e680bc591d9a375a50696ba4_27362_512x512_fill_lanczos_center_2.png</url>
+      <title>Accesibilidad e inclusión</title>
+      <link>/tag/accesibilidad-e-inclusion/</link>
+    </image>
+    
+    <item>
+      <title>Accessible DataViz</title>
+      <link>/publication/accessibilitydatavis/</link>
+      <pubDate>Mon, 31 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>/publication/accessibilitydatavis/</guid>
+      <description>&lt;h2 id=&#34;r-ladies-east-lansing-hosting-a-virtual-accessible-dataviz-meetup&#34;&gt;R-Ladies East Lansing hosting a virtual Accessible DataViz Meetup&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Come learn how to make your data visualizations &amp;amp; presentations accessible to everyone.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Our first speaker, &lt;a href=&#34;https://www.kekewu.me/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Keke Wu&lt;/a&gt; (PhD student at Univ of Colorado, Boulder) will talk about her research, Understanding Data Accessibility for People with Intellectual and Developmental Disabilities (IDD), giving us concrete ideas about how to make better figures and reach the IDD community.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Our second speaker,Andrea Gomez Vargas (one of the winners of the ‘most accessible presentation’ award at useR! 2021), will talk about how to make an accessible presentation in R, using packages such as RMarkdown.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;learning-accessibility-in-community&#34;&gt;Learning accessibility in community&lt;/h3&gt;
+&lt;p&gt;On this occasion I will tell you a little about our experience while preparing a talk for &lt;a href=&#34;https://soyandrea.netlify.app/publication/user2021/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;useR2021&lt;/strong&gt;&lt;/a&gt; and what accessibility practices we applied to our presentation, which may be useful to you when preparing a presentation using R.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/dataviz.jpeg&#34; alt=&#34;Picture of the virtual meetup with the headshots of the event hosts: Janani, kayla and Stephanie with speakers Keke and Andrea. Where they are sharing a screen that shows the phrase: accessibility is a right.&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Thank you very much Rladies from East Lansing for this invitation and for allowing us to share our experience! This presentation was also done as a group.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;The presentation material (&lt;a href=&#34;https://twitter.com/kekewu728?ref_src=twsrc%5Etfw&#34;&gt;@kekewu728&lt;/a&gt; &lt;a href=&#34;https://twitter.com/me_andre?ref_src=twsrc%5Etfw&#34;&gt;@me_andre&lt;/a&gt;) is now available on GitHub: &lt;a href=&#34;https://t.co/APLLqtj7M1&#34;&gt;https://t.co/APLLqtj7M1&lt;/a&gt; Looking forward to learning more about Accessible DataViz tonight! See you all there! 🙌&lt;/p&gt;&amp;mdash; R-Ladies East Lansing (@RLadiesELansing) &lt;a href=&#34;https://twitter.com/RLadiesELansing/status/1488157260719087616?ref_src=twsrc%5Etfw&#34;&gt;January 31, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h3 id=&#34;watch-on-youtube&#34;&gt;Watch on youtube&lt;/h3&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/RrKB1xLPXY8&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>LatinR 2020 - panel accesibilidad e inclusión</title>
+      <link>/publication/accesibilidad-inclusion/</link>
+      <pubDate>Fri, 09 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/accesibilidad-inclusion/</guid>
+      <description>&lt;h2 id=&#34;de-qué-hablamos-cuando-hablamos-de-inclusión-y-accesibilidad-en-el-mundo-de-la-tecnología&#34;&gt;¿De qué hablamos cuando hablamos de inclusión y accesibilidad en el mundo de la tecnología?&lt;/h2&gt;
+&lt;p&gt;En esta ocasión reunimos a integrantes de diferentes comunidades en latinoamérica que promueven y trabajan por la inclusión y accesibilidad en el mundo de la tecnología para que den a conocer su trabajo, sus objetivos, logros y desafíos a la hora de lograr una inclusión y accesibilidad real. Queremos generar un espacio de reflexión, donde podamos pensar en conjunto sobre la importancia de que la tecnología sea más inclusiva y accesible a todes y pensar a las comunidades como actores principales para llevar a cabo este objetivo.&lt;/p&gt;
+&lt;p&gt;Míralo en el canal de youtube de LatinR &lt;a href=&#34;https://youtu.be/xkRFGbZocIU&#34;&gt;https://youtu.be/xkRFGbZocIU&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Modera:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Andrea Gómez Vargas (LatinR - miembro comité organizador)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Participan:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Merary Alvarado (DALAT Desarrollo Accesible Latinoamericano)&lt;/li&gt;
+&lt;li&gt;Martín Baldasarre (DALAT Desarrollo Accesible Latinoamericano)&lt;/li&gt;
+&lt;li&gt;Abe Quiroga (Transistemas Argentina)&lt;/li&gt;
+&lt;li&gt;Coi Bressan (Transistemas Argentina)&lt;/li&gt;
+&lt;li&gt;Joselyn Chávez (R-Ladies Cuernavaca &amp;amp; R-Ladies México)&lt;/li&gt;
+&lt;li&gt;Milagros Villavicencio (R-Ladies Natal - Brasil)&lt;/li&gt;
+&lt;li&gt;Fernanda Kelly (R-Ladies Goiânia - Brasil)&lt;/li&gt;
+&lt;li&gt;Lupe Canaviri Maydana (Laboratoria &amp;amp; PyLadies El Alto - Bolivia)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

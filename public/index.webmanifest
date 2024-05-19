@@ -1,0 +1,18 @@
+{
+  "name": "Andrea",
+  "short_name": "Andrea",
+  "lang": "es",
+  "theme_color": "#003049",
+  "background_color": "#003049",
+  "icons": [{
+    "src": "/images/icon_hu81060471e680bc591d9a375a50696ba4_27362_192x192_fill_lanczos_center_2.png",
+    "sizes": "192x192",
+    "type": "image/png"
+    }, {
+    "src": "/images/icon_hu81060471e680bc591d9a375a50696ba4_27362_512x512_fill_lanczos_center_2.png",
+    "sizes": "512x512",
+    "type": "image/png"
+     }],
+  "display": "standalone",
+  "start_url": "/?utm_source=web_app_manifest"
+}

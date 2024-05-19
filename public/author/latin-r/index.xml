@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Latin R | Andrea</title>
+    <link>/author/latin-r/</link>
+      <atom:link href="/author/latin-r/index.xml" rel="self" type="application/rss+xml" />
+    <description>Latin R</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>es</language><lastBuildDate>Fri, 09 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu81060471e680bc591d9a375a50696ba4_27362_512x512_fill_lanczos_center_2.png</url>
+      <title>Latin R</title>
+      <link>/author/latin-r/</link>
+    </image>
+    
+    <item>
+      <title>LatinR 2020 - panel accesibilidad e inclusión</title>
+      <link>/publication/accesibilidad-inclusion/</link>
+      <pubDate>Fri, 09 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/accesibilidad-inclusion/</guid>
+      <description>&lt;h2 id=&#34;de-qué-hablamos-cuando-hablamos-de-inclusión-y-accesibilidad-en-el-mundo-de-la-tecnología&#34;&gt;¿De qué hablamos cuando hablamos de inclusión y accesibilidad en el mundo de la tecnología?&lt;/h2&gt;
+&lt;p&gt;En esta ocasión reunimos a integrantes de diferentes comunidades en latinoamérica que promueven y trabajan por la inclusión y accesibilidad en el mundo de la tecnología para que den a conocer su trabajo, sus objetivos, logros y desafíos a la hora de lograr una inclusión y accesibilidad real. Queremos generar un espacio de reflexión, donde podamos pensar en conjunto sobre la importancia de que la tecnología sea más inclusiva y accesible a todes y pensar a las comunidades como actores principales para llevar a cabo este objetivo.&lt;/p&gt;
+&lt;p&gt;Míralo en el canal de youtube de LatinR &lt;a href=&#34;https://youtu.be/xkRFGbZocIU&#34;&gt;https://youtu.be/xkRFGbZocIU&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Modera:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Andrea Gómez Vargas (LatinR - miembro comité organizador)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Participan:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Merary Alvarado (DALAT Desarrollo Accesible Latinoamericano)&lt;/li&gt;
+&lt;li&gt;Martín Baldasarre (DALAT Desarrollo Accesible Latinoamericano)&lt;/li&gt;
+&lt;li&gt;Abe Quiroga (Transistemas Argentina)&lt;/li&gt;
+&lt;li&gt;Coi Bressan (Transistemas Argentina)&lt;/li&gt;
+&lt;li&gt;Joselyn Chávez (R-Ladies Cuernavaca &amp;amp; R-Ladies México)&lt;/li&gt;
+&lt;li&gt;Milagros Villavicencio (R-Ladies Natal - Brasil)&lt;/li&gt;
+&lt;li&gt;Fernanda Kelly (R-Ladies Goiânia - Brasil)&lt;/li&gt;
+&lt;li&gt;Lupe Canaviri Maydana (Laboratoria &amp;amp; PyLadies El Alto - Bolivia)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

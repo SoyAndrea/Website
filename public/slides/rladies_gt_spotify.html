@@ -1,0 +1,1750 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Creando tablas en {gt} con Spotify API &amp; Bad Bunny</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Andrea Gómez Vargas &amp; Karina Bartolomé" />
+    <meta name="date" content="2022-11-23" />
+    <script src="rladies_gt_spotify_files/header-attrs-2.17/header-attrs.js"></script>
+    <link href="rladies_gt_spotify_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="rladies_gt_spotify_files/remark-css-0.0.1/rladies.css" rel="stylesheet" />
+    <link href="rladies_gt_spotify_files/remark-css-0.0.1/rladies-fonts.css" rel="stylesheet" />
+    <link href="rladies_gt_spotify_files/panelset-0.2.6/panelset.css" rel="stylesheet" />
+    <script src="rladies_gt_spotify_files/panelset-0.2.6/panelset.js"></script>
+    <link href="rladies_gt_spotify_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/5235085b15.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Creando tablas en {gt} con Spotify API &amp; Bad Bunny
+]
+.subtitle[
+## ︿<br/>R-Ladies Buenos Aires
+]
+.author[
+### Andrea Gómez Vargas &amp; Karina Bartolomé
+]
+.date[
+### 2022-11-23
+]
+
+---
+
+class: center, middle, big-font
+
+# RLadies
+
+
+
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 30px;
+height: 30px;
+z-index: 0;
+background-image: url(https://raw.githubusercontent.com/karbartolome/rladies_charlas/main/01_r_python/02_slides/images/github.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('a')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = 'https://github.com/karbartolome/gt-spotify'
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+
+&lt;style type="text/css"&gt;
+/* Table width = 100% max-width */
+.remark-slide table{
+    width: 100%;
+}
+
+/* background-color blanco siempre */
+.remark-slide thead, .remark-slide tr:nth-child(2n) {
+    background-color: white;
+}
+
+/* Incremento en transparencia del color de highlight del código ya que lo uso mucho y así se lee mejor */
+.remark-code-line-highlighted { 
+    background-color: rgba(136, 57, 138, 0.1);
+}
+
+/* Big font size */
+.big-font h1 {
+  font-size: 100pt;
+}
+/* Tamaño letra contenido */
+.remark-slide-content {
+  font-size: 20pt;
+}
+
+h1, h2, h3 {
+  font-weight: normal;
+  color: #562457;
+}
+
+&lt;/style&gt;
+
+
+
+
+---
+
+## RLadies Global
+
+
+.pull-left[
+
+&lt;img src="https://rladies.org/wp-content/uploads/2016/12/R-LadiesGlobal.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+- 216 capítulos
+- 61 países
+- 100267 miembrxs
+
+]
+
+.pull-right[
+
+&lt;img src="images/rladiesglobal.png" width="100%" style="display: block; margin: auto;" /&gt;
+]
+
+
+
+
+---
+class: left
+
+## RLadies Buenos Aires
+
+.pull-left[
+
+&lt;img src="https://rladiesba.netlify.app/author/rladies-buenos-aires/avatar_huae50964fd4ece6c135015c99a5e9a56e_144270_270x270_fill_lanczos_center_2.png" width="70%" style="display: block; margin: auto;" /&gt;
+[<svg aria-label="Globe" role="img" viewBox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#562457;overflow:visible;position:relative;"><title>Globe</title><path d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"/></svg> rladiesba.netlify.app](https://rladiesba.netlify.app/) 
+[<svg aria-label="Meetup" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#562457;overflow:visible;position:relative;"><title>Meetup</title><path d="M99 414.3c1.1 5.7-2.3 11.1-8 12.3-5.4 1.1-10.9-2.3-12-8-1.1-5.4 2.3-11.1 7.7-12.3 5.4-1.2 11.1 2.3 12.3 8zm143.1 71.4c-6.3 4.6-8 13.4-3.7 20 4.6 6.6 13.4 8.3 20 3.7 6.3-4.6 8-13.4 3.4-20-4.2-6.5-13.1-8.3-19.7-3.7zm-86-462.3c6.3-1.4 10.3-7.7 8.9-14-1.1-6.6-7.4-10.6-13.7-9.1-6.3 1.4-10.3 7.7-9.1 14 1.4 6.6 7.6 10.6 13.9 9.1zM34.4 226.3c-10-6.9-23.7-4.3-30.6 6-6.9 10-4.3 24 5.7 30.9 10 7.1 23.7 4.6 30.6-5.7 6.9-10.4 4.3-24.1-5.7-31.2zm272-170.9c10.6-6.3 13.7-20 7.7-30.3-6.3-10.6-19.7-14-30-7.7s-13.7 20-7.4 30.6c6 10.3 19.4 13.7 29.7 7.4zm-191.1 58c7.7-5.4 9.4-16 4.3-23.7s-15.7-9.4-23.1-4.3c-7.7 5.4-9.4 16-4.3 23.7 5.1 7.8 15.6 9.5 23.1 4.3zm372.3 156c-7.4 1.7-12.3 9.1-10.6 16.9 1.4 7.4 8.9 12.3 16.3 10.6 7.4-1.4 12.3-8.9 10.6-16.6-1.5-7.4-8.9-12.3-16.3-10.9zm39.7-56.8c-1.1-5.7-6.6-9.1-12-8-5.7 1.1-9.1 6.9-8 12.6 1.1 5.4 6.6 9.1 12.3 8 5.4-1.5 9.1-6.9 7.7-12.6zM447 138.9c-8.6 6-10.6 17.7-4.9 26.3 5.7 8.6 17.4 10.6 26 4.9 8.3-6 10.3-17.7 4.6-26.3-5.7-8.7-17.4-10.9-25.7-4.9zm-6.3 139.4c26.3 43.1 15.1 100-26.3 129.1-17.4 12.3-37.1 17.7-56.9 17.1-12 47.1-69.4 64.6-105.1 32.6-1.1.9-2.6 1.7-3.7 2.9-39.1 27.1-92.3 17.4-119.4-22.3-9.7-14.3-14.6-30.6-15.1-46.9-65.4-10.9-90-94-41.1-139.7-28.3-46.9.6-107.4 53.4-114.9C151.6 70 234.1 38.6 290.1 82c67.4-22.3 136.3 29.4 130.9 101.1 41.1 12.6 52.8 66.9 19.7 95.2zm-70 74.3c-3.1-20.6-40.9-4.6-43.1-27.1-3.1-32 43.7-101.1 40-128-3.4-24-19.4-29.1-33.4-29.4-13.4-.3-16.9 2-21.4 4.6-2.9 1.7-6.6 4.9-11.7-.3-6.3-6-11.1-11.7-19.4-12.9-12.3-2-17.7 2-26.6 9.7-3.4 2.9-12 12.9-20 9.1-3.4-1.7-15.4-7.7-24-11.4-16.3-7.1-40 4.6-48.6 20-12.9 22.9-38 113.1-41.7 125.1-8.6 26.6 10.9 48.6 36.9 47.1 11.1-.6 18.3-4.6 25.4-17.4 4-7.4 41.7-107.7 44.6-112.6 2-3.4 8.9-8 14.6-5.1 5.7 3.1 6.9 9.4 6 15.1-1.1 9.7-28 70.9-28.9 77.7-3.4 22.9 26.9 26.6 38.6 4 3.7-7.1 45.7-92.6 49.4-98.3 4.3-6.3 7.4-8.3 11.7-8 3.1 0 8.3.9 7.1 10.9-1.4 9.4-35.1 72.3-38.9 87.7-4.6 20.6 6.6 41.4 24.9 50.6 11.4 5.7 62.5 15.7 58.5-11.1zm5.7 92.3c-10.3 7.4-12.9 22-5.7 32.6 7.1 10.6 21.4 13.1 32 6 10.6-7.4 13.1-22 6-32.6-7.4-10.6-21.7-13.5-32.3-6z"/></svg> meetup.com](https://www.meetup.com/es/rladies-buenos-aires/)
+[<svg aria-label="GitHub" role="img" viewBox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#562457;overflow:visible;position:relative;"><title>GitHub</title><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> GitHub](https://github.com/RLadies-BA)
+[<svg aria-label="Twitter" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#562457;overflow:visible;position:relative;"><title>Twitter</title><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg> @RLadiesBA](https://twitter.com/RLadiesBA)
+[<svg aria-label="Instagram" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#562457;overflow:visible;position:relative;"><title>Instagram</title><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg> RLadiesBA](https://www.instagram.com/rladiesba/)
+
+
+]
+
+.pull-right[
+
+### Sponsors:
+
+
+&lt;img src="https://guide.rladies.org/images/horizontal-logo.png" width="60%" style="display: block; margin: auto auto auto 0;" /&gt;
+
+&lt;img src="https://www.r-consortium.org/wp-content/uploads/sites/13/2016/09/RConsortium_Horizontal_Pantone.png" width="60%" style="display: block; margin: auto auto auto 0;" /&gt;
+
+]
+---
+
+## RLadies Buenos Aires - organizadoras
+
+&lt;img src="images/rladiesba.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+class: center, middle, big-font
+
+&lt;img src="images/meetup.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+class: left, middle
+
+# ¿Quiénes somos?
+
+
+.pull-left[
+&lt;br&gt;
+
+&lt;img src="images/imagen1.png" width="40%" style="display: block; margin: auto;" /&gt;
+]
+
+
+.pull-right[
+### Andrea Gómez Vargas
+
+- Socióloga
+- Data Analyst en INDEC
+- Fan de Bad Bunny 
+
+### Karina Bartolomé
+
+- Economista
+- Data Scientist en Ualá 
+- Fan de {gt}
+]
+
+---
+
+class: center, middle, inverse
+
+# Antes de arrancar
+
+&lt;img src="https://thepcosbible-com.exactdn.com/wp-content/uploads/2020/06/giphy-7.gif?strip=all&amp;lossy=1&amp;quality=80&amp;resize=514%2C288&amp;ssl=1" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+class: left, middle
+## Qué se necesita para este taller?
+
+--
+
+🔸  Ganas de hacer tablas 
+
+--
+
+🔸  Una cuenta en &lt;a&gt;&lt;i class="fa fa-spotify fa-fw"&gt;&lt;/i&gt; Spotify&lt;/a&gt;
+
+--
+  
+🔸  &lt;a&gt;&lt;i class="fa fa-registered fa-fw"&gt;&lt;/i&gt;&lt;/a&gt; y RStudio instalados, con los siguientes paquetes:
+
+
+```r
+library(tidyverse) # Manipulación de datos
+library(gt)        # Tablas gt: grammar of tables
+library(gtExtras)  # Extras de tablas gt
+library(spotifyr)  # API de spotify
+library(rjson)     # Leer jsons de credenciales
+library(ggrepel)   # Textos en ggplot
+```
+
+---
+
+background-position: 50% 50%
+class: center, inverse, middle, big-font
+
+
+# Ahora sí 🚀
+
+---
+class: left, middle
+
+## ¿Qué vamos a ver hoy?
+
+--
+
+🔸 Cómo extraer datos de la **API de Spotify** 
+
+
+🔸 Introducción a **The Grammar of Tables {gt}** 📦
+
+
+🔸 Creación de **tablas en {gt} 📦 con datos de Spotify**
+
+---
+
+class: center, middle, inverse, big-font
+
+# &lt;a&gt;&lt;i class="fa fa-spotify"&gt;&lt;/i&gt;&amp;nbsp; API de Spotify&lt;/a&gt;
+
+---
+
+##  ¿Qué es una API?
+
+--
+
+Las API son mecanismos que `permiten a dos componentes de software comunicarse entre sí` mediante un conjunto de definiciones y protocolos. 
+
+--
+
+.pull-left[
+
+&lt;img src="images/apis_meme.png" width="70%" style="display: block; margin: auto;" /&gt;
+
+]
+
+.pull-right[
+
+
+&lt;a href="https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api"&gt;&lt;i class="fa fa-twitter fa-fw"&gt;&lt;/i&gt;&amp;nbsp; API de Twitter&lt;/a&gt;&lt;br&gt;
+
+
+&lt;a href="https://www.argentina.gob.ar/onti/software-publico/catalogo/apis"&gt;&lt;i class="fa fa-globe"&gt;&lt;/i&gt;&amp;nbsp; APIs Argentina&lt;/a&gt;&lt;br&gt;
+
+Etc. 
+
+
+]
+
+---
+
+
+## &lt;a href="https://developer.spotify.com/documentation/web-api/"&gt;&lt;i class="fa fa-spotify"&gt;&lt;/i&gt;&amp;nbsp; API de Spotify&lt;/a&gt;&lt;br&gt;
+
+--
+
+Datos que se pueden obtener a partir de esta API:
+
+--
+
+🔸  Datos sobre artistas
+
+--
+
+🔸 Datos sobre álbumes
+
+--
+
+🔸 Datos sobre el usuario
+
+--
+
+🔸 Y más 😎
+
+--
+
+Para más información, visitar la &lt;a href="https://developer.spotify.com/documentation/web-api/reference/#/"&gt;**documentación  de la API de Spotify**&lt;/a&gt;&lt;br&gt;
+
+---
+
+## &lt;a&gt;&lt;i class="fa fa-spotify"&gt;&lt;/i&gt;&amp;nbsp; Credenciales de Spotify&lt;/a&gt;&lt;br&gt; 
+
+Para obtener credenciales que permitan consultar datos desde la API es necesario ingresar a &lt;a href="https://developer.spotify.com/"&gt;**Spotify for developers**&lt;/a&gt;.
+
+Compartimos un &lt;a href="https://docs.google.com/document/d/1GpOBol3E-1hg6AIQyD2ZN5GYlrHkIRl-gGooGEdBm0A/edit"&gt;**documento con los pasos detallados para generar tus credenciales**&lt;/a&gt;.
+
+--
+
+⚠️ Recordá que tus credenciales son personales, no las compartas. ⚠️
+
+--
+
+### Autenticación 
+
+Se utiliza la función **get_spotify_access_token()** de {spotifyr} 📦 para autenticarse con las credenciales:
+
+
+
+
+```r
+access_token &lt;- get_spotify_access_token()
+```
+
+
+---
+
+## &lt;a&gt;&lt;i class="fa fa-spotify"&gt;&lt;/i&gt;&amp;nbsp; Consulta simple a la API&lt;/a&gt;&lt;br&gt;   
+
+Consulta de los N artistas que más escuchaste en el corto plazo:
+
+
+```r
+N = 1
+
+df_artistas &lt;- get_my_top_artists_or_tracks(
+    type = 'artists', 
+    time_range = 'short_term', 
+    limit = N
+  ) %&gt;% 
+  select(name, followers.total, genres)
+```
+
+```
+Auto-refreshing stale OAuth token.
+```
+
+
+
+```r
+df_artistas %&gt;% 
+  head() 
+```
+
+```
+               name followers.total
+1 Las Ligas Menores           77946
+                                                   genres
+1 argentine alternative rock, argentine indie, latin rock
+```
+
+
+---
+
+class: center, big-font, inverse
+
+# Introducción a {gt}
+
+&lt;img src="images/gt_meme.jpg" width="35%" style="display: block; margin: auto;" /&gt;
+
+
+---
+&lt;br&gt;
+The grammar of tables (gt) se basa en la siguiente estructura: 
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="https://karbartolome-blog.netlify.app/posts/tablas-subte/images/gt_workflow_diagram.svg" alt="Estructura de tablas gt, fuente: https://gt.rstudio.com"  /&gt;
+&lt;p class="caption"&gt;Estructura de tablas gt, fuente: https://gt.rstudio.com&lt;/p&gt;
+&lt;/div&gt;
+
+
+---
+
+En donde las tablas tienen un formato específico, generado mediante capas:
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="https://karbartolome-blog.netlify.app/posts/tablas-subte/images/gt_parts_of_a_table.svg" alt="Estructura de tablas gt, fuente: https://gt.rstudio.com"  /&gt;
+&lt;p class="caption"&gt;Estructura de tablas gt, fuente: https://gt.rstudio.com&lt;/p&gt;
+&lt;/div&gt;
+
+---
+
+class: center, inverse, middle, big-font
+
+# Bad Bunny 
+
+
+&lt;img src="https://64.media.tumblr.com/1623e4fc39e004a212029bb36513b310/b693e0e3d8bdd649-95/s540x810/3461e29ed079728927adec76cfb37f3463cc56f5.gifv" width="50%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+Vamos a realizar una búsqueda de datos de **Bad Bunny** 🐰:
+
+
+```r
+ARTISTA = 'bad bunny'
+```
+
+Para este artista, se genera una búsqueda de variables mediante la función **get_artist_audio_features()**:
+
+
+```r
+vars_audio = c(
+  'danceability', 'energy', 'loudness', 'acousticness', 'instrumentalness'
+)
+```
+
+
+```r
+df_artist_features &lt;- get_artist_audio_features(artist = ARTISTA) %&gt;%
+  select(
+    artist_id, artist_name, album_id, album_name,
+    album_release_date, album_images, track_name, duration_ms,
+    all_of(vars_audio)       
+  ) %&gt;% 
+  arrange(desc(album_release_date))
+```
+
+---
+
+Realizamos una **agregación por álbum** para obtener la duración total y una lista de todos los valores de cada una de las variables de audio en cada uno de los álbumes:
+
+
+```r
+df_albums &lt;- df_artist_features %&gt;% 
+  group_by(
+    album_images, artist_name, album_id, album_name, album_release_date
+  ) %&gt;%
+  summarise(
+    duration_mins = sum(duration_ms/(1000*60)),
+    across(all_of(vars_audio), ~ list(.x)),
+  ) %&gt;% 
+  ungroup()
+```
+
+Estas listas luego serán utilizadas para visualizar la distribución de cada variable a nivel álbum.
+
+---
+
+Se cuenta con un df de variables vinculadas a cada canción de cada álbum del artista seleccionado:
+
+
+
+
+```r
+df_albums %&gt;% 
+  glimpse()
+```
+
+```
+Rows: 6
+Columns: 11
+$ album_images       &lt;list&gt; [&lt;data.frame[3 x 3]&gt;], [&lt;data.frame[3 x 3]&gt;], [&lt;da…
+$ artist_name        &lt;chr&gt; "Bad Bunny", "Bad Bunny", "Bad Bunny", "Bad Bunny",…
+$ album_id           &lt;chr&gt; "3RQQmkQEvNCY4prGKE6oc5", "2d9BCZeAAhiZWPpbX9aPCW",…
+$ album_name         &lt;chr&gt; "Un Verano Sin Ti", "EL ÚLTIMO TOUR DEL MUNDO", "LA…
+$ album_release_date &lt;chr&gt; "2022-05-06", "2020-11-27", "2020-05-10", "2020-02-…
+$ duration_mins      &lt;dbl&gt; 81.85270, 47.33332, 30.31767, 65.96717, 31.10840, 5…
+$ danceability       &lt;list&gt; &lt;0.804, 0.564, 0.911, 0.650, 0.787, 0.872, 0.795, …
+$ energy             &lt;list&gt; &lt;0.674, 0.903, 0.712, 0.715, 0.546, 0.588, 0.684, …
+$ loudness           &lt;list&gt; &lt;-5.453, -3.221, -5.105, -5.198, -7.094, -6.276, -…
+$ acousticness       &lt;list&gt; &lt;0.2940, 0.3560, 0.0901, 0.0993, 0.3050, 0.2750, 0…
+$ instrumentalness   &lt;list&gt; &lt;0.00000118, 0.00000000, 0.00002680, 0.00029100, 0…
+```
+
+---
+
+Se seleccionan las columnas que no sean listas y se visualizan con **{gt}** 📦
+
+
+```r
+tabla &lt;- df_albums %&gt;% 
+  select(artist_name, album_name, album_release_date, duration_mins) %&gt;% 
+  
+  # Se convierte el df a the grammar of tables
+  gt()
+
+tabla
+```
+
+<div id="eslevyueyx" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#eslevyueyx .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#eslevyueyx .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#eslevyueyx .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#eslevyueyx .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#eslevyueyx .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#eslevyueyx .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#eslevyueyx .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#eslevyueyx .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#eslevyueyx .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#eslevyueyx .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#eslevyueyx .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#eslevyueyx .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#eslevyueyx .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#eslevyueyx .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#eslevyueyx .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#eslevyueyx .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#eslevyueyx .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#eslevyueyx .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#eslevyueyx .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#eslevyueyx .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#eslevyueyx .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#eslevyueyx .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#eslevyueyx .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#eslevyueyx .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#eslevyueyx .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#eslevyueyx .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#eslevyueyx .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#eslevyueyx .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#eslevyueyx .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#eslevyueyx .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#eslevyueyx .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#eslevyueyx .gt_left {
+  text-align: left;
+}
+
+#eslevyueyx .gt_center {
+  text-align: center;
+}
+
+#eslevyueyx .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#eslevyueyx .gt_font_normal {
+  font-weight: normal;
+}
+
+#eslevyueyx .gt_font_bold {
+  font-weight: bold;
+}
+
+#eslevyueyx .gt_font_italic {
+  font-style: italic;
+}
+
+#eslevyueyx .gt_super {
+  font-size: 65%;
+}
+
+#eslevyueyx .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#eslevyueyx .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#eslevyueyx .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#eslevyueyx .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#eslevyueyx .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#eslevyueyx .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#eslevyueyx .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">artist_name</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">album_name</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">album_release_date</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">duration_mins</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">Bad Bunny</td>
+<td class="gt_row gt_left">Un Verano Sin Ti</td>
+<td class="gt_row gt_right">2022-05-06</td>
+<td class="gt_row gt_right">81.85270</td></tr>
+    <tr><td class="gt_row gt_left">Bad Bunny</td>
+<td class="gt_row gt_left">EL ÚLTIMO TOUR DEL MUNDO</td>
+<td class="gt_row gt_right">2020-11-27</td>
+<td class="gt_row gt_right">47.33332</td></tr>
+    <tr><td class="gt_row gt_left">Bad Bunny</td>
+<td class="gt_row gt_left">LAS QUE NO IBAN A SALIR</td>
+<td class="gt_row gt_right">2020-05-10</td>
+<td class="gt_row gt_right">30.31767</td></tr>
+    <tr><td class="gt_row gt_left">Bad Bunny</td>
+<td class="gt_row gt_left">YHLQMDLG</td>
+<td class="gt_row gt_right">2020-02-29</td>
+<td class="gt_row gt_right">65.96717</td></tr>
+    <tr><td class="gt_row gt_left">Bad Bunny</td>
+<td class="gt_row gt_left">OASIS</td>
+<td class="gt_row gt_right">2019-06-28</td>
+<td class="gt_row gt_right">31.10840</td></tr>
+    <tr><td class="gt_row gt_left">Bad Bunny</td>
+<td class="gt_row gt_left">X 100PRE</td>
+<td class="gt_row gt_right">2018-12-23</td>
+<td class="gt_row gt_right">53.94298</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+
+---
+
+Siguiendo con la lógica de {gt} 📦 es posible añadir nuevas capas a la tabla. Por ejemplo, se añade título, subtítulo y colores:
+
+
+```r
+tabla %&gt;% 
+  tab_header(
+    title = md('**Bad Bunny** en Spotify'),
+    subtitle = 'Álbumes más recientes'
+  ) %&gt;% 
+  gt_color_box(
+    columns = duration_mins, palette=c('white', 'green'), 
+    domain=c(0,round(max(df_albums$duration_mins))+1))
+```
+
+<div id="uofxnwcmfp" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#uofxnwcmfp .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#uofxnwcmfp .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#uofxnwcmfp .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#uofxnwcmfp .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#uofxnwcmfp .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#uofxnwcmfp .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#uofxnwcmfp .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#uofxnwcmfp .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#uofxnwcmfp .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#uofxnwcmfp .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#uofxnwcmfp .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#uofxnwcmfp .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#uofxnwcmfp .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#uofxnwcmfp .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#uofxnwcmfp .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#uofxnwcmfp .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#uofxnwcmfp .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uofxnwcmfp .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#uofxnwcmfp .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#uofxnwcmfp .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uofxnwcmfp .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#uofxnwcmfp .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#uofxnwcmfp .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#uofxnwcmfp .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uofxnwcmfp .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#uofxnwcmfp .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#uofxnwcmfp .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#uofxnwcmfp .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#uofxnwcmfp .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uofxnwcmfp .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#uofxnwcmfp .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uofxnwcmfp .gt_left {
+  text-align: left;
+}
+
+#uofxnwcmfp .gt_center {
+  text-align: center;
+}
+
+#uofxnwcmfp .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#uofxnwcmfp .gt_font_normal {
+  font-weight: normal;
+}
+
+#uofxnwcmfp .gt_font_bold {
+  font-weight: bold;
+}
+
+#uofxnwcmfp .gt_font_italic {
+  font-style: italic;
+}
+
+#uofxnwcmfp .gt_super {
+  font-size: 65%;
+}
+
+#uofxnwcmfp .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#uofxnwcmfp .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#uofxnwcmfp .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#uofxnwcmfp .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#uofxnwcmfp .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#uofxnwcmfp .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#uofxnwcmfp .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table">
+  <thead class="gt_header">
+    <tr>
+      <td colspan="4" class="gt_heading gt_title gt_font_normal" style><strong>Bad Bunny</strong> en Spotify</td>
+    </tr>
+    <tr>
+      <td colspan="4" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>Álbumes más recientes</td>
+    </tr>
+  </thead>
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">artist_name</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">album_name</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">album_release_date</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">duration_mins</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">Bad Bunny</td>
+<td class="gt_row gt_left">Un Verano Sin Ti</td>
+<td class="gt_row gt_right">2022-05-06</td>
+<td class="gt_row gt_right"><div>
+  <div style="height: 20px;width:70px; background-color: #1AFF1033;border-radius:5px;)">
+    <div style="height: 13px;width: 13px;background-color: #1AFF10;display: inline-block;border-radius:4px;float:left;position:relative;top:17%;left:6%;"></div>
+    <div style="display: inline-block;float:right;line-height:20px; font-weight: bold;padding: 0px 2.5px;">82</div>
+  </div>
+</div></td></tr>
+    <tr><td class="gt_row gt_left">Bad Bunny</td>
+<td class="gt_row gt_left">EL ÚLTIMO TOUR DEL MUNDO</td>
+<td class="gt_row gt_right">2020-11-27</td>
+<td class="gt_row gt_right"><div>
+  <div style="height: 20px;width:70px; background-color: #A4FF8C33;border-radius:5px;)">
+    <div style="height: 13px;width: 13px;background-color: #A4FF8C;display: inline-block;border-radius:4px;float:left;position:relative;top:17%;left:6%;"></div>
+    <div style="display: inline-block;float:right;line-height:20px; font-weight: bold;padding: 0px 2.5px;">47</div>
+  </div>
+</div></td></tr>
+    <tr><td class="gt_row gt_left">Bad Bunny</td>
+<td class="gt_row gt_left">LAS QUE NO IBAN A SALIR</td>
+<td class="gt_row gt_right">2020-05-10</td>
+<td class="gt_row gt_right"><div>
+  <div style="height: 20px;width:70px; background-color: #C8FFB633;border-radius:5px;)">
+    <div style="height: 13px;width: 13px;background-color: #C8FFB6;display: inline-block;border-radius:4px;float:left;position:relative;top:17%;left:6%;"></div>
+    <div style="display: inline-block;float:right;line-height:20px; font-weight: bold;padding: 0px 2.5px;">30</div>
+  </div>
+</div></td></tr>
+    <tr><td class="gt_row gt_left">Bad Bunny</td>
+<td class="gt_row gt_left">YHLQMDLG</td>
+<td class="gt_row gt_right">2020-02-29</td>
+<td class="gt_row gt_right"><div>
+  <div style="height: 20px;width:70px; background-color: #71FF5933;border-radius:5px;)">
+    <div style="height: 13px;width: 13px;background-color: #71FF59;display: inline-block;border-radius:4px;float:left;position:relative;top:17%;left:6%;"></div>
+    <div style="display: inline-block;float:right;line-height:20px; font-weight: bold;padding: 0px 2.5px;">66</div>
+  </div>
+</div></td></tr>
+    <tr><td class="gt_row gt_left">Bad Bunny</td>
+<td class="gt_row gt_left">OASIS</td>
+<td class="gt_row gt_right">2019-06-28</td>
+<td class="gt_row gt_right"><div>
+  <div style="height: 20px;width:70px; background-color: #C7FFB433;border-radius:5px;)">
+    <div style="height: 13px;width: 13px;background-color: #C7FFB4;display: inline-block;border-radius:4px;float:left;position:relative;top:17%;left:6%;"></div>
+    <div style="display: inline-block;float:right;line-height:20px; font-weight: bold;padding: 0px 2.5px;">31</div>
+  </div>
+</div></td></tr>
+    <tr><td class="gt_row gt_left">Bad Bunny</td>
+<td class="gt_row gt_left">X 100PRE</td>
+<td class="gt_row gt_right">2018-12-23</td>
+<td class="gt_row gt_right"><div>
+  <div style="height: 20px;width:70px; background-color: #94FF7B33;border-radius:5px;)">
+    <div style="height: 13px;width: 13px;background-color: #94FF7B;display: inline-block;border-radius:4px;float:left;position:relative;top:17%;left:6%;"></div>
+    <div style="display: inline-block;float:right;line-height:20px; font-weight: bold;padding: 0px 2.5px;">54</div>
+  </div>
+</div></td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+
+
+---
+Con **muchas** capas, es posible convertir el df original en la siguiente tabla:
+
+&lt;img src="../02_caso_spotify/tablas/tabla_8.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+
+class: center, middle
+
+&lt;img src="images/meme_badbunny.png" width="30%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+class: center, middle
+
+&lt;img src="https://i.pinimg.com/564x/9a/54/17/9a541707e8b87607f25091fbc4538598.jpg" width="30%" style="display: block; margin: auto;" /&gt;
+
+
+Veamos los detalles en el archivo .Rmd:
+
+🔗 [Generando tablas de Bad Bunny a partir de datos de Spotify](https://github.com/karbartolome/gt-spotify/blob/main/02_caso_spotify/spotify_gt_rendered.md)
+
+🔗 [Proyecto en RStudio Cloud (ahora Posit)](https://posit.cloud/content/5019119)
+
+
+---
+
+# Compartí tu tabla en redes sociales 
+
+
+Dejamos un script: 🔗 [generar_tabla_artista.R](https://github.com/karbartolome/gt-spotify/blob/main/02_caso_spotify/generar_tabla_artista.R) que permite generar la tabla del .Rmd a partir de una función para un artista específico. 
+
+Si te interesa, 🤩**podes utilizar la función para generar una tabla {gt} sobre tu artista favorito y compartirla en las redes con los hashtags: #RLadiesBA y #RStatsES** 🤩
+
+---
+
+Se cargan las funciones incluidas en el script y se genera la tabla: 
+
+
+```r
+source(here::here('02_caso_spotify/generar_tabla_artista.R'))
+
+df &lt;- gen_data_artista(.artista='las ligas menores')
+
+tabla &lt;- gen_tabla_artista(.df=df,.head=5)
+```
+
+
+
+&lt;img src="../02_caso_spotify/tablas/tabla_otro_artista.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+
+class: center, middle, inverse, big-font
+
+# Comentarios finales
+
+---
+
+# Cosas que queremos que se lleven de este workshop
+
+&lt;img src="https://acegif.com/wp-content/uploads/gifs/spongebob-rainbow-1.gif" width="20%" style="display: block; margin: auto;" /&gt;
+
+--
+
+- Las tablas también son una forma de visualización de datos.
+
+--
+
+- {gt} 📦 simplifica la generación de tablas mediante una estructura similar a {ggplot2} 📦, utilizando capas.
+
+--
+
+- Las APIs son un método muy útil para acceder a datos que de otra forma sería muy complejo consultar.
+
+
+
+---
+
+# Links utiles
+
+- 🔗 [Galería de tablas de RStudio](https://community.rstudio.com/c/table-gallery)
+- 🔗 [Documentación de {gt}📦](https://gt.rstudio.com/)
+- 🔗 [Documentación de {spotifyr} 📦](https://www.rcharlie.com/spotifyr/)
+- 🔗 [Intro a Tidyverse | con Jimena Saucedo y María Nanton en el Women in Bioinformatics and Data Science](https://www.youtube.com/watch?v=ycudMihLues&amp;ab_channel=RLadiesBuenosAires)
+- 🔗 [Post sobre el uso de gt: Uso del subte en la Ciudad Autónoma de Buenos Aires](https://karbartolome-blog.netlify.app/posts/tablas-subte/)
+
+- 🔗 [Otro link (:](https://www.youtube.com/watch?v=dQw4w9WgXcQ&amp;ab_channel=RickAstley)
+---
+
+class: inverse, center, middle
+
+# Contacto
+
+.pull-left[
+
+&lt;a href="https://karbartolome-blog.netlify.com"&gt;&lt;i class="fa fa-link fa-fw"&gt;&lt;/i&gt;&amp;nbsp; karbartolome-blog.netlify.com&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://twitter.com/karbartolome"&gt;&lt;i class="fa fa-twitter fa-fw"&gt;&lt;/i&gt;&amp;nbsp; @karbartolome&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://github.com/karbartolome"&gt;&lt;i class="fa fa-github fa-fw"&gt;&lt;/i&gt;&amp;nbsp; @karbartolome&lt;/a&gt;&lt;br&gt;
+
+]
+
+.pull-right[
+
+&lt;a href="https://soyandrea.netlify.app"&gt;&lt;i class="fa fa-link fa-fw"&gt;&lt;/i&gt;&amp;nbsp; Soyandrea.netlify.app&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://twitter.com/me_andre"&gt;&lt;i class="fa fa-twitter fa-fw"&gt;&lt;/i&gt;&amp;nbsp; @me_andre&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://github.com/SoyAndrea"&gt;&lt;i class="fa fa-github fa-fw"&gt;&lt;/i&gt;&amp;nbsp; @SoyAndrea&lt;/a&gt;&lt;br&gt;
+
+]
+
+
+---
+
+
+class: center, middle, big-font, inverse
+
+# Muchas gracias!!
+
+Las slides fueron creadas con el paquete [**xaringan**](https://github.com/yihui/xaringan), utilizando el template de Rladies
+
+
+---
+&lt;br&gt;
+
+&lt;img src="https://gifdb.com/images/thumbnail/bad-bunny-eating-popcorn-mi03a75ps5zxfv72.gif" width="80%" style="display: block; margin: auto;" /&gt;
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"navigation": {
+"scroll": false
+},
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+<script>
+(function() {
+  var divHTML = document.querySelectorAll(".details-open");
+  divHTML.forEach(function (el) {
+    var preNodes = el.getElementsByTagName("pre");
+    var outputNode = preNodes[1];
+    outputNode.outerHTML = "<details open class='output'><summary>Output</summary>" + outputNode.outerHTML + "</details>";
+  })
+})();
+(function() {
+  var divHTML = document.querySelectorAll(".details");
+  divHTML.forEach(function (el) {
+    var preNodes = el.getElementsByTagName("pre");
+    var outputNode = preNodes[1];
+    outputNode.outerHTML = "<details class='output'><summary>Output</summary>" + outputNode.outerHTML + "</details>";
+  })
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

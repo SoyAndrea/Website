@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gt | Andrea</title>
+    <link>/tag/gt/</link>
+      <atom:link href="/tag/gt/index.xml" rel="self" type="application/rss+xml" />
+    <description>gt</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>es</language><lastBuildDate>Thu, 07 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu81060471e680bc591d9a375a50696ba4_27362_512x512_fill_lanczos_center_2.png</url>
+      <title>gt</title>
+      <link>/tag/gt/</link>
+    </image>
+    
+    <item>
+      <title>Introducción al Análisis de la Encuesta Permanente de Hogares {eph} con R</title>
+      <link>/publication/ephrladies/</link>
+      <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>/publication/ephrladies/</guid>
+      <description>
+
+
+&lt;div id=&#34;ciclo-de-formaciòn-complementaria-en-uba-sociales&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Ciclo de formaciòn complementaria en UBA sociales&lt;/h3&gt;
+&lt;div class=&#34;float&#34;&gt;
+&lt;img src=&#34;RladiesSociales.jpg&#34; alt=&#34;Fotografía del Taller en la facultad de Ciencias Sociales UBA&#34; /&gt;
+&lt;div class=&#34;figcaption&#34;&gt;&lt;em&gt;Fotografía del Taller en la facultad de Ciencias Sociales UBA&lt;/em&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br&gt;
+En colaboración con &lt;a href=&#34;https://github.com/BetsyCohen&#34;&gt;&lt;strong&gt;Betsy Cohen&lt;/strong&gt;&lt;/a&gt; desarrollamos y organizadmos el taller desde &lt;a href=&#34;https://rladiesba.netlify.app/&#34;&gt;R-Ladies Buenos Aires&lt;/a&gt; &amp;amp; el &lt;a href=&#34;https://www.nucleodeinnovacion.com/&#34;&gt;Núcleo de Innovaciòn Social&lt;/a&gt; para del ciclo de formación complementaria de la carrera de Sociologìa en la Facultad de Ciencias Sociales de la UBA.&lt;/p&gt;
+&lt;p&gt;En esta ocasión vamos a presentar la potencia de la encuesta y la librería de {tidyverse} para mostrarles cómo podemos obtener bases de datos directamente con el paquete {eph} y vamos a procesarla, traducirla y presentarla en indicadores para el análisis de ciencias sociales.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;queda-a-disposición-todo-el-material&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Queda a disposición todo el material:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/drive/folders/1lWlTc6u-uhUWE5VcuCQRysoSNDmV5HGi?usp=sharing&#34;&gt;Descarga la Práctica guiada en Rmd&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Repositorio &lt;a href=&#34;https://github.com/SoyAndrea/tallerEPH&#34;&gt;&lt;strong&gt;GitHub en Taller eph en R&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Web con toda la información del taller: &lt;a href=&#34;https://eph-ubasociales.netlify.app/&#34;&gt;&lt;strong&gt;eph-ubasociales.netlify.app&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;slides-generadas-con-quarto.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Slides generadas con {quarto}.&lt;/h3&gt;
+&lt;iframe src=&#34;https://eph-ubasociales.netlify.app/slides#/title-slide&#34; width=&#34;672&#34; height=&#34;400px&#34; data-external=&#34;1&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;div id=&#34;redes-sociales&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Redes sociales&lt;/h3&gt;
+&lt;div id=&#34;sociología-uba&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Sociología UBA&lt;/h4&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;
+&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;
+💻| Meetup sobre EPH en &lt;a href=&#34;https://twitter.com/hashtag/SociologiaUBA?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SociologiaUBA&lt;/a&gt; &lt;br&gt;&lt;br&gt;Llevamos adelante un taller junto al colectivo de mujeres programadoras &lt;a href=&#34;https://twitter.com/RLadiesBA?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@RLadiesBA&lt;/span&gt;&lt;/a&gt; para conocer cómo que es y cómo procesar los datos de la EPH con lenguajes de programación de código abierto (R y Python). &lt;a href=&#34;https://t.co/cvo6Y64hf5&#34;&gt;pic.twitter.com/cvo6Y64hf5&lt;/a&gt;
+&lt;/p&gt;
+— sociologia.uba (&lt;span class=&#34;citation&#34;&gt;@sociologia_uba&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/sociologia_uba/status/1699954034554044803?ref_src=twsrc%5Etfw&#34;&gt;September 8, 2023&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+&lt;div id=&#34;rladies-buenos-aires&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Rladies Buenos Aires&lt;/h4&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;
+&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;
+Que lindo volver a los eventos presenciales! &lt;a href=&#34;https://twitter.com/me_andre?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@me_andre&lt;/span&gt;&lt;/a&gt; y &lt;a href=&#34;https://twitter.com/betsy_ar?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@betsy_ar&lt;/span&gt;&lt;/a&gt; presentaron una intro al uso de la EPH en R con sala llena🤩&lt;a href=&#34;https://twitter.com/hashtag/RLadies?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#RLadies&lt;/a&gt; &lt;a href=&#34;https://t.co/FsEH0kAzEu&#34;&gt;pic.twitter.com/FsEH0kAzEu&lt;/a&gt;
+&lt;/p&gt;
+— R-Ladies BuenosAires (&lt;span class=&#34;citation&#34;&gt;@RLadiesBA&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/RLadiesBA/status/1699949471038062913?ref_src=twsrc%5Etfw&#34;&gt;September 8, 2023&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+&lt;div id=&#34;consejo-de-profesionales-en-sociología&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Consejo de Profesionales en Sociología&lt;/h4&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;
+&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;
+La Comisión de transformación digital invita a participar del Taller de introducción al Análisis de la Encuesta Permanente de Hogares con R organizado por &lt;a href=&#34;https://twitter.com/RLadiesBA?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@RLadiesBA&lt;/span&gt;&lt;/a&gt; en colaboración con &lt;a href=&#34;https://twitter.com/sociologia_uba?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@sociologia_uba&lt;/span&gt;&lt;/a&gt; y el Núcleo de Innovación Social (NIS). &lt;a href=&#34;https://t.co/hsywb9xDpP&#34;&gt;pic.twitter.com/hsywb9xDpP&lt;/a&gt;
+&lt;/p&gt;
+— Consejo de Profesionales en Sociología (&lt;span class=&#34;citation&#34;&gt;@CPSociologia&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/CPSociologia/status/1694049790185615512?ref_src=twsrc%5Etfw&#34;&gt;August 22, 2023&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Creando tablas en {gt} con Spotify API &amp; Bad Bunny</title>
+      <link>/publication/gt_badbunny/</link>
+      <pubDate>Wed, 23 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>/publication/gt_badbunny/</guid>
+      <description>
+
+
+&lt;div id=&#34;r-ladies-buenos-aires-meetup-creando-tablas-en-gt-con-spotify-api-bad-bunny&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;R-Ladies Buenos Aires Meetup: Creando tablas en {gt} con Spotify API &amp;amp; Bad Bunny&lt;/h3&gt;
+&lt;p&gt;En colaboración con &lt;a href=&#34;https://karbartolome-blog.netlify.app/&#34;&gt;Kari Bartolomé&lt;/a&gt; desarrollamos el taller mostrando cómo podemos obtener información desde Spotify API y plasmarla en una tabla usando el paquete {gt} que permite mostrar mucho más que solo números. Aunque el paquete no es parte del Tydiverse, su sintaxis y estructura es compatible con esta poderosa herramienta para el análisis de datos. Y cómo si fuera poco, nos traen un ejemplo con info de nada más y nada menos que Bad Bunny 🐰🎵&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;repositorio-github-en-rladies-bagt-spotify&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Repositorio GitHub en &lt;a href=&#34;https://github.com/RLadies-BA/gt-spotify&#34;&gt;RLadies-BA/gt-spotify&lt;/a&gt;&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;slides-generadas-con-xaringan-.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Slides generadas con {xaringan} 📦.&lt;/h3&gt;
+&lt;iframe src=&#34;https://karbartolome.github.io/gt-spotify/01_slides/rladies_gt_spotify.html#1&#34; width=&#34;672&#34; height=&#34;400px&#34; data-external=&#34;1&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tabla-final-del-meetup-en-gt&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Tabla final del meetup en {gt}&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;tabla_badbunny.png&#34; width=&#34;1120&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mirá-el-taller-en-el-canal-de-youtube-de-rladies-buenos-aires&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Mirá el taller en el canal de Youtube de &lt;a href=&#34;https://www.youtube.com/@RLadiesBuenosAires&#34;&gt;Rladies Buenos Aires&lt;/a&gt;&lt;/h3&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/wciGM5rMBos&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;div id=&#34;redes-sociales&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Redes sociales&lt;/h3&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;
+&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;
+Por si se lo perdieron, recién cerramos el taller de &lt;a href=&#34;https://twitter.com/RLadiesBA?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@RLadiesBA&lt;/span&gt;&lt;/a&gt; con &lt;a href=&#34;https://twitter.com/me_andre?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@me_andre&lt;/span&gt;&lt;/a&gt; donde mostramos cómo generar tablas {gt} 📦con datos de la API de Spotify. Dejamos una función para generar esta tabla con su artista más escuchado:&lt;br&gt;➡️Slides: &lt;a href=&#34;https://t.co/PYTi6mQpHX&#34;&gt;https://t.co/PYTi6mQpHX&lt;/a&gt;&lt;a href=&#34;https://twitter.com/lasligasmenores?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@lasligasmenores&lt;/span&gt;&lt;/a&gt; &lt;a href=&#34;https://t.co/DdSRzfqnhe&#34;&gt;pic.twitter.com/DdSRzfqnhe&lt;/a&gt;
+&lt;/p&gt;
+— Karina Bartolomé (&lt;span class=&#34;citation&#34;&gt;@karbartolome&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/karbartolome/status/1595561478836436992?ref_src=twsrc%5Etfw&#34;&gt;November 23, 2022&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;
+&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;
+Tremendo el taller sobre gt con datos de Spotify dictado por &lt;a href=&#34;https://twitter.com/me_andre?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@me_andre&lt;/span&gt;&lt;/a&gt; y &lt;a href=&#34;https://twitter.com/karbartolome?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@karbartolome&lt;/span&gt;&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/RLadiesBA?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#RLadiesBA&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/RStatsES?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#RStatsES&lt;/a&gt; &lt;a href=&#34;https://t.co/A645nqIdz3&#34;&gt;pic.twitter.com/A645nqIdz3&lt;/a&gt;
+&lt;/p&gt;
+— Patricia Loto (&lt;span class=&#34;citation&#34;&gt;@patriloto&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/patriloto/status/1595575646343806976?ref_src=twsrc%5Etfw&#34;&gt;November 24, 2022&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

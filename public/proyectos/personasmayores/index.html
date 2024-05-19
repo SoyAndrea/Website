@@ -1,0 +1,2170 @@
+<!DOCTYPE html><html lang="es" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  
+  
+  <meta name="generator" content="Wowchemy 5.0.0-beta.2 for Hugo">
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Andrea Gomez Vargas">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Análisis de indicadores en R con fuente INDEC &amp; ANSES">
+
+  
+  <link rel="alternate" hreflang="es" href="/proyectos/personasmayores/">
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#003049">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="print" onload="this.media='all'">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.1553030b8485518167c51e30c68f1fdc.css">
+
+  
+
+
+
+
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+  <link rel="manifest" href="/index.webmanifest">
+  
+
+  <link rel="icon" type="image/png" href="/images/icon_hu81060471e680bc591d9a375a50696ba4_27362_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu81060471e680bc591d9a375a50696ba4_27362_180x180_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/proyectos/personasmayores/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Andrea">
+  <meta property="og:url" content="/proyectos/personasmayores/">
+  <meta property="og:title" content="Seguridad económica en las personas mayores en Argentina | Andrea">
+  <meta property="og:description" content="Análisis de indicadores en R con fuente INDEC &amp; ANSES"><meta property="og:image" content="/proyectos/personasmayores/featured.jpg">
+  <meta property="twitter:image" content="/proyectos/personasmayores/featured.jpg"><meta property="og:locale" content="es">
+  
+    
+      <meta property="article:published_time" content="2024-05-12T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2024-05-12T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Seguridad económica en las personas mayores en Argentina | Andrea</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  ">
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.0475bc389b7599ef6b1889ad17c11742.js"></script>
+
+  
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Buscar</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Cerrar"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Buscar..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Buscar...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Andrea</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Barra de navegación">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Andrea</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#hola"><span>Hola</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#skills"><span>Skills</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#tags"><span>Popular Topics</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#mundo_R"><span>Mundo R</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#proyectos"><span>Proyectos</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#media"><span>Media</span></a>
+        </li>
+
+        
+        
+
+        
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"><span>Curriculum</span><span class="caret"></span>
+          </a>
+          <div class="dropdown-menu">
+            
+              <a class="dropdown-item" href="/media/gomezvargas_cv.html"><span>CV en español</span></a>
+            
+              <a class="dropdown-item" href="/media/gomezvargas_cv_EN.html"><span>English CV</span></a>
+            
+          </div>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Buscar"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+<div class="article-container pt-3">
+  <h1>Seguridad económica en las personas mayores en Argentina</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    2024-05-12
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 557px;">
+  <div style="position: relative">
+    <img src="/proyectos/personasmayores/featured_hu2c351dd981574961de072cc19c845147_805486_720x0_resize_q75_lanczos.jpg" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      
+
+
+<div id="qué-dicen-las-estadísticas-y-una-mirada-al-contexto-actual-en-r." class="section level1">
+<h1>Qué dicen las estadísticas y una mirada al contexto actual en R.</h1>
+<p>La capacidad de las personas de disponer de bienes en general, económicos y no económicos, hacen de la calidad de vida un elemento clave para la subsistencia a lo largo del ciclo de vida. De esta manera, la seguridad económica de las personas mayores se define como la capacidad de disponer y usar de forma independiente y autónoma, una cierta cantidad de recursos económicos regulares y en montos suficientes para asegurar una buena calidad de vida. El cual permite a las personas mayores satisfacer las necesidades objetivas que agregan calidad a los años, y disponer de independencia en la toma de decisiones. Además, mejora su autoestima, al propiciar el desempeño de roles significativos y la participación en la vida cotidiana como ciudadanos con plenos derechos (Huenchuan y Guzmán, 2006).</p>
+<p>A medida que las personas envejecen se retiran del mercado laboral y esto deriva a la necesidad de contar con sistemas de protección social que garanticen la percepción de un ingreso. Así, la seguridad económica permite generar las condiciones para un envejecimiento con dignidad y seguridad. De acuerdo con las Naciones Unidas, la seguridad económica constituye una legítima aspiración en la vejez, tanto en el caso de una
+persona que ha contribuido durante toda su vida a la seguridad social como en el de otra que, por su trayectoria laboral o por otras razones,
+no cumple con los requisitos suficientes para acceder a una pensión contributiva (Naciones Unidas, 1995).</p>
+<p>En Argentina, el Sistema Integrado de Jubilaciones y Pensiones comprendidas en la <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/639/texact.htm">Ley 24.241</a> establecen el marco normativo de cobertura, beneficios y requisitos para la prestación básica universal, entre otros. En este informe se utilizarán las fuentes de datos oficiales del INDEC y ANSES para relevar las estadísiticas nacionales con indicadores publicados que den cuenta del alcance de este sistema y su implicancia en la seguridad económica. Para este análisis se definirá a personas mayores a aquellas que se encuentran en la edad jubilatoria por ley definida para las mujeres a patir de 60 años y más, y en el caso de los varones a partir de los 65 años y más.</p>
+<div id="fuentes-de-datos" class="section level2 tabset">
+<h2>Fuentes de datos</h2>
+<p>Para este informe, trabajaremos con la Encuesta Permanente de Hogares (EPH) total urbano, principal programa nacional de producción sistemática y permanente de indicadores sociales que lleva a cabo el Instituto Nacional de EstadÌstica y Censos (INDEC), que permite conocer las caracterÌsticas sociodemográficas y socioeconómicas de la población.</p>
+<p>Y el Boletín Estadístico de la Seguridad Social (BESS) es una publicación trimestral del ANSES que brinda cuadros de series estadísticas consolidadas y actualizadas sobre las variables más relevantes de la seguridad social en la Argentina, entre ellas la del Sistema Integrado Previsional Argentino (SIPA).</p>
+<div id="indec---eph" class="section level3">
+<h3>INDEC - EPH</h3>
+<ul>
+<li><p><a href="https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos">Encuesta Permanente de Hogares total nacional urbano 2023</a></p></li>
+<li><p><a href="https://www.indec.gob.ar/ftp/cuadros/menusuperior/eahu/EPH_tot_urbano_estructura_bases_2023.pdf">Diseño de registro</a></p></li>
+</ul>
+<p>Con la encuesta se trabajará con las bases de hogar y personas para dar cuenta de indicadores de tipo socioeconómico. Su mayor cobertura geográfica se brinda se encuentran ya disponibles para trabajar en formato tidy.</p>
+<p>Cobertura geográfica:</p>
+<ul>
+<li><p>Total nacional de población urbana residente en hogares particulares.</p></li>
+<li><p>Total 31 aglomerados urbanos.</p></li>
+<li><p>Totales provinciales de población urbana residente en hogares particulares.</p></li>
+</ul>
+<pre class="r"><code>base_personas &lt;- get_total_urbano( year = 2023, type = &quot;individual&quot;, vars = &quot;all&quot;)
+base_hogares &lt;-  get_total_urbano( year = 2023, type = &quot;hogar&quot;, vars = &quot;all&quot;)
+
+EPHU2023 &lt;- base_personas %&gt;% 
+  left_join(base_hogares %&gt;% select(-PONDERA),
+            by = c(&quot;CODUSU&quot;, &quot;NRO_HOGAR&quot;, &quot;ANO4&quot;,&quot;PROVINCIA&quot;, &quot;AGLOMERADO&quot;))</code></pre>
+</div>
+<div id="anses---bess" class="section level3">
+<h3>ANSES - BESS</h3>
+<p><a href="https://www.argentina.gob.ar/trabajo/seguridadsocial/bess">Boletín Estadístico de la Seguridad Social</a>: Sistema previsional Contributivo - Pasivos.</p>
+<p>Estos registros administrativos cuentan con los datos únicamente por cuadros de excel, antes de usarlo vamos a transformarlo en tablas para que quede en formato <em>tidy</em> y se puedan procesar sus respectivos indicadores. Esto solo se realizará para los cuadros 2.3.2 y 2.3.12.</p>
+<ul>
+<li>La cobertura geográfica: Total del país</li>
+</ul>
+<pre class="r"><code>#Cuadro 2.3.2
+BESS232 &lt;- read_excel(&quot;data/estadisticas_de_seguridad_social_pasivos_03-2024.xlsx&quot;, sheet = &quot;2.3.2&quot;)</code></pre>
+<pre><code>## New names:
+## • `` -&gt; `...2`
+## • `` -&gt; `...3`
+## • `` -&gt; `...4`
+## • `` -&gt; `...5`
+## • `` -&gt; `...6`
+## • `` -&gt; `...7`
+## • `` -&gt; `...8`
+## • `` -&gt; `...9`
+## • `` -&gt; `...10`
+## • `` -&gt; `...11`
+## • `` -&gt; `...12`
+## • `` -&gt; `...13`
+## • `` -&gt; `...14`
+## • `` -&gt; `...15`
+## • `` -&gt; `...16`
+## • `` -&gt; `...17`
+## • `` -&gt; `...18`
+## • `` -&gt; `...19`
+## • `` -&gt; `...20`
+## • `` -&gt; `...21`
+## • `` -&gt; `...22`
+## • `` -&gt; `...23`
+## • `` -&gt; `...24`
+## • `` -&gt; `...25`
+## • `` -&gt; `...26`
+## • `` -&gt; `...27`
+## • `` -&gt; `...28`
+## • `` -&gt; `...29`
+## • `` -&gt; `...30`
+## • `` -&gt; `...31`
+## • `` -&gt; `...32`
+## • `` -&gt; `...33`
+## • `` -&gt; `...34`
+## • `` -&gt; `...35`
+## • `` -&gt; `...36`
+## • `` -&gt; `...37`</code></pre>
+<pre class="r"><code>male &lt;- BESS232[29, 1:4]
+colnames(male) = c(&quot;Anio&quot;, &quot;TotalJubilaciones&quot;, &quot;ConMoratoria&quot;, &quot;SinMoratoria&quot;)
+male$Sexo = &quot;Masculino&quot;
+male$Anio = 2024
+
+female &lt;- BESS232[29, c(1,8:10)]
+colnames(female) = c(&quot;Anio&quot;, &quot;TotalJubilaciones&quot;, &quot;ConMoratoria&quot;, &quot;SinMoratoria&quot;)
+female$Sexo = &quot;Femenino&quot;
+female$Anio = 2024
+
+BESS232 &lt;- rbind(male, female)
+
+#Cuadro 2.3.12
+
+BESS2312 &lt;- read_excel(&quot;data/estadisticas_de_seguridad_social_pasivos_03-2024.xlsx&quot;, sheet = &quot;2.3.11-12&quot;)</code></pre>
+<pre><code>## New names:
+## • `` -&gt; `...2`
+## • `` -&gt; `...3`
+## • `` -&gt; `...4`
+## • `` -&gt; `...5`
+## • `` -&gt; `...6`
+## • `` -&gt; `...7`
+## • `` -&gt; `...8`
+## • `` -&gt; `...9`
+## • `` -&gt; `...10`
+## • `` -&gt; `...11`
+## • `` -&gt; `...12`
+## • `` -&gt; `...13`
+## • `` -&gt; `...14`
+## • `` -&gt; `...15`
+## • `` -&gt; `...16`
+## • `` -&gt; `...17`
+## • `` -&gt; `...18`
+## • `` -&gt; `...19`
+## • `` -&gt; `...20`
+## • `` -&gt; `...21`
+## • `` -&gt; `...22`
+## • `volver al índice` -&gt; `volver al índice...23`
+## • `` -&gt; `...24`
+## • `` -&gt; `...26`
+## • `` -&gt; `...27`
+## • `` -&gt; `...28`
+## • `` -&gt; `...29`
+## • `` -&gt; `...30`
+## • `` -&gt; `...31`
+## • `` -&gt; `...32`
+## • `` -&gt; `...33`
+## • `` -&gt; `...34`
+## • `` -&gt; `...35`
+## • `` -&gt; `...36`
+## • `` -&gt; `...37`
+## • `` -&gt; `...38`
+## • `` -&gt; `...39`
+## • `` -&gt; `...40`
+## • `` -&gt; `...41`
+## • `` -&gt; `...42`
+## • `` -&gt; `...43`
+## • `` -&gt; `...44`
+## • `volver al índice` -&gt; `volver al índice...45`</code></pre>
+<pre class="r"><code>male &lt;- BESS2312[6, c(1,27:29)]
+colnames(male) = c(&quot;Jurisdiccion&quot;, &quot;TotalJubilaciones&quot;, &quot;ConMoratoria&quot;, &quot;SinMoratoria&quot;)
+male$Sexo = &quot;Masculino&quot;
+
+female &lt;- BESS2312[6, c(1,33:35)]
+colnames(female) = c(&quot;Jurisdiccion&quot;, &quot;TotalJubilaciones&quot;, &quot;ConMoratoria&quot;, &quot;SinMoratoria&quot;)
+female$Sexo = &quot;Femenino&quot;
+
+BESS2312 &lt;- rbind(male, female)</code></pre>
+</div>
+</div>
+<div id="qué-dicen-las-estadísiticas-oficiales-factores-que-influyen-en-la-seguridad-económica" class="section level2">
+<h2>Qué dicen las estadísiticas oficiales: factores que influyen en la seguridad económica</h2>
+<p>Los factores relacionados con el curso vital se refieren en primera instancia a la <em>biografía individual</em>, es decir a la trayectoria laboral de las personas mayores. Acompañado de <em>biografías generacionales</em>, en referencia al contexto generacional de vida en donde influyen factores propios de la historia social, económica y política de la sociedad de que es parte.</p>
+<p>Otro factor que componen la seguridad económia, es el <em>ciclo vital individual y familiar</em>, que da cuenta de las personas que rodean a las personas mayores, que alude directamente a la familia y que interrelaciona los ciclos de vida de los diferentes miembros de la familia determinan por una parte las cargas que deben sobrellevar las personas mayores, y por otra las posibilidades de ayuda a las que podrían optar.</p>
+<p>Y por último, las <em>características de los sistemas de protección social</em> que se reflejan en oportunidades o amenazas para lograr un ingreso sustituto digno en la edad avanzada y consecuentemente las posibilidad o no de acceder a atención en salud, entre otros servicios.</p>
+<p>Para dar cuenta de estos factores, se exponen cinco indicadores (que presentan desde el dosier estadístico de personas de edad publicado por el INDEC) en tres tópicos: Composición de los hogares, cobertura previsional e Ingresos.</p>
+<div id="composición-de-los-hogares" class="section level3">
+<h3>Composición de los hogares</h3>
+<p>Una de los factores a visualizar es el ciclo vital individual y familiar, que de cuenta a grandes rasgos del entorno en el que viven las personas mayores y su acompañamiento directo en el hogar que puede ser familiar o no, también se puede contemplar las biografías generacionales que le acompañan. Para esto se mide el estrato generacional del hogar que es el criterio que ordena a la población según el número de generaciones convivientes en el hogar. En este sentido, la población de personas mayores se clasifica en hogares:</p>
+<ul>
+<li>unipersonales: aquellos en los que reside una sola persona de 60 años y más.</li>
+<li>unigeneracionales: conformados por más de una persona y donde todos los miembros tienen 60 años y más.</li>
+<li>multigeneracionales: conformados por más de una persona y donde al menos convive una persona de 60 años y más, y una persona menor de 60 años.</li>
+</ul>
+<pre class="r"><code>#armado de variables previas para armar indicador, se dividen grandes grupos de edad y estrato generacional 
+
+estrato &lt;- EPHU2023 %&gt;% 
+    mutate(edad_categorica = case_when(CH06 &lt;= 59 ~ 1, #grupo de edad
+                           CH06 &gt;= 60 ~ 2)) %&gt;% 
+    count(CODUSU, NRO_HOGAR, edad_categorica) %&gt;% #conteo de CODUSU y edades categoricas en los hogares
+    count(CODUSU, NRO_HOGAR) %&gt;% 
+  mutate(Estrato0 = ifelse(n == 2, &quot;multigeneracional&quot;, &quot;unigeneracional&quot;)) %&gt;% 
+  select(-n)
+
+#cada componente de la base esta asignado a una edad categorica y condicion generacional del hogar que compone
+#unigeneracional: mismo grupo de edad categórica, o multigeneracional; al menos convive una persona de cada grupo de edad categórica
+
+
+Cuadro1 &lt;- EPHU2023 %&gt;% 
+    left_join(estrato, by = c(&quot;CODUSU&quot;, &quot;NRO_HOGAR&quot;)) %&gt;% 
+     mutate(edad_categorica = case_when(CH06 &lt;= 59 ~ 1, #grupo de edad
+                                        CH06 &gt;= 60 ~ 2),
+            TipoHogar = case_when(IX_TOT == 1 ~ &quot;unipersonal&quot;, # 1 sola persona
+                        IX_TOT &gt; 1 ~ &quot;compuesto&quot;)) %&gt;% #más de 1 personas en el hogar
+    select(CODUSU, NRO_HOGAR, IX_TOT, COMPONENTE, CH06, Estrato0, edad_categorica, TipoHogar, PONDERA, CH04) %&gt;% 
+    mutate(
+      Estrato = 
+        case_when(
+          TipoHogar == &quot;unipersonal&quot; &amp; edad_categorica == 2 ~ &quot;unipersonal&quot;,
+          TipoHogar == &quot;compuesto&quot; &amp; edad_categorica == 2 &amp; 
+            Estrato0 == &quot;unigeneracional&quot; ~ &quot;unigeneracional&quot;,
+          TipoHogar == &quot;compuesto&quot; &amp;  Estrato0 == &quot;multigeneracional&quot; ~ 
+            &quot;multigeneracional&quot;,
+          IX_TOT &gt;= 1 &amp; edad_categorica == 1 ~ &quot;sin PM&quot;)) %&gt;% #hogares sin personas mayores
+    select(CODUSU, NRO_HOGAR, IX_TOT, COMPONENTE, CH06, Estrato, Estrato0,edad_categorica, PONDERA,CH04) %&gt;%
+  mutate(Grupo = case_when(CH06 %in% c(60:74) ~ &quot;1&quot;, #grupos de edad
+                           CH06 &gt;= 75 ~ &quot;2&quot;,
+                           TRUE ~ &quot;3&quot;)) %&gt;%
+  filter(CH06 &gt;= 60) %&gt;% 
+  group_by(Grupo, CH04) %&gt;% 
+  summarise( #armado de categorias para la variable
+    Poblacion = sum(PONDERA),
+    Unipersonal = sum(PONDERA [Estrato == &quot;unipersonal&quot;]),
+    Unigeneracional = sum(PONDERA [Estrato == &quot;unigeneracional&quot;]),
+    Multigeneracional = sum(PONDERA [Estrato == &quot;multigeneracional&quot;]),
+    Sin_PM = sum(PONDERA [Estrato == &quot;sin PM&quot;]),
+    &quot;hogares unipersonales&quot; = round(Unipersonal/Poblacion*100,1),
+    &quot;hogares unigeneracionales&quot; = round(Unigeneracional/Poblacion*100,1),
+    &quot;hogares multigeneracionales&quot; = round(Multigeneracional/Poblacion*100,1)
+  ) %&gt;% 
+  rename(Sexo = CH04) %&gt;% 
+  mutate(Sexo = case_when(Sexo == 1 ~ &quot;Varones&quot;, Sexo == 2 ~ &quot;Mujeres&quot;),
+         Grupo = case_when(Grupo == &quot;1&quot; ~ &quot;60 a 74 años&quot; , 
+                           Grupo == &quot;2&quot; ~ &quot;75 años y más&quot;, 
+                           TRUE ~ &quot;&lt; 60 años&quot;)) %&gt;% 
+  select(1,2,8,9,10) %&gt;% 
+  pivot_longer(cols = c(3,4,5), names_to = &quot;Tipo_hogar&quot;, values_to = &quot;porcentaje&quot;)
+
+
+paleta3 &lt;- c(&quot;#f7b801&quot;, &quot;#7678ed&quot;, &quot;#3d348b&quot;) 
+
+ggplot(Cuadro1, 
+       aes(fill= Tipo_hogar, x=Grupo, y=as.numeric((porcentaje)) )) + 
+  geom_col() +
+  scale_fill_manual(values = paleta3)+
+  facet_grid(~Sexo) +
+  theme_light() +
+  labs(
+    title = &quot;Gráfico 1: Distribución de la población de 60 años y más por grupos de edad y sexo,\nsegún estrato generacional del hogar. Total nacional urbano. Año 2023&quot;,
+    y = &quot;porcentaje&quot;, x = &quot;Grupo de edad&quot;,
+    caption = &quot;Fuente: INDEC, Encuesta Permanente de Hogares total urbano.&quot;
+  ) +
+  geom_text(aes(label = porcentaje, group = Sexo),
+            position = position_stack(vjust = .5),size = 4, colour = &quot;white&quot;) +
+  theme(legend.position = &quot;bottom&quot;, legend.title = element_blank()) </code></pre>
+<p><img src="/proyectos/personasmayores/index_files/figure-html/indicador%201-1.png" width="672" /></p>
+<p>Casi más del 50% de personas entre los 60 y 74 años vive en hogares multigeneracionales, mientras que en el rango de los 75 años y más, del lado de los varones conviven más en hogares unigeneracionales y del lado de las mujeres se reparte entre valores similares vivir en hogares multigeneracionales y hogares unipersonales.</p>
+</div>
+<div id="cobertura-previsional" class="section level3">
+<h3>Cobertura previsional</h3>
+<p>Al momento de retiro del mercado laboral, se deriva la necesidad de contar con sistemas de protección social que garanticen la percepción de un ingreso.</p>
+<pre class="r"><code># total poblacion en edad jubilatoria
+cuadro2A &lt;- base_personas %&gt;% 
+  select(CH04, CH06, V2_M, V21_M, PONDII) %&gt;%
+  summarise(
+    Poblacion_mayor = sum(PONDII[CH06 &gt;= 60 &amp; CH04 == 2 | CH06 &gt;= 65 &amp; CH04 == 1 ]),
+    Poblacion_mayor_jp  = sum(PONDII[CH06 &gt;= 60 &amp; CH04 == 2 &amp; (V2_M &gt; 0| V21_M &gt;0) 
+                                     |CH06 &gt;= 65 &amp; CH04 == 1 &amp;  (V2_M &gt; 0|V21_M &gt;0)]),
+    porcentaje = round(Poblacion_mayor_jp/Poblacion_mayor*100,1)) %&gt;% 
+  cbind( &quot;CH04&quot; = &quot;Total&quot;) 
+
+
+#Por sexo
+cuadro2B &lt;- base_personas %&gt;% 
+  select(CH04, CH06, V2_M,V21_M, PONDII) %&gt;%
+   group_by(CH04) %&gt;% 
+   summarise(
+     Poblacion_mayor = sum(PONDII[CH06 &gt;= 60 &amp; CH04 == 2 | CH06 &gt;= 65 &amp; CH04 == 1 ]),
+     Poblacion_mayor_jp  = sum(PONDII[CH06 &gt;= 60 &amp; CH04 == 2 &amp; (V2_M &gt; 0) |
+                    CH06 &gt;= 65 &amp; CH04 == 1 &amp; (V2_M &gt; 0) ]),
+    porcentaje =  round(Poblacion_mayor_jp/Poblacion_mayor*100,1)) %&gt;% 
+    mutate(CH04 = case_when(CH04 == 1 ~ &quot;Varones&quot;, #Varones de 65 años y más
+                            CH04 == 2 ~ &quot;Mujeres&quot;)) #Mujeres de 60 años y más
+
+Cuadro2 &lt;- rbind(cuadro2A, cuadro2B) %&gt;% 
+  mutate(CH04 = fct_relevel(CH04, c(&quot;Total&quot;, &quot;Mujeres&quot;, &quot;Varones&quot;)),
+         cobertura = case_when(
+           CH04 == &quot;Total&quot; ~ &quot;Población en edad de jubilarse&quot;,
+           CH04 == &quot;Mujeres&quot; ~ &quot;Mujeres de 60 años y más&quot;,
+           CH04 == &quot;Varones&quot; ~ &quot;Varones de 65 años y más&quot;),
+         cobertura = fct_relevel(cobertura, c(&quot;Población en edad de jubilarse&quot;, 
+                                              &quot;Mujeres de 60 años y más&quot;, 
+                                              &quot;Varones de 65 años y más&quot;)))
+  
+
+paleta1 &lt;- c(&quot;#fb8b24&quot;, &quot;#d90368&quot;, &quot;#820263&quot;)
+
+ggplot(Cuadro2, aes(cobertura,porcentaje)) +
+           geom_col( aes(width = 0.5,fill = cobertura)) +
+           ylim(0,100) +
+           theme_classic() +
+           scale_fill_manual(values = paleta1) +
+           geom_text(aes(label = porcentaje), vjust = 2, colour = &quot;white&quot;) +
+           theme(legend.position = &quot;none&quot;) +
+           labs(title = &quot;Gráfico 2: Porcentaje de población en edad de jubilarse con cobertura previsional, \n por sexo. Total nacional urbano. Año 2023.&quot;,
+                x = &quot; &quot;,
+                y = &quot;porcentaje&quot;,
+                caption = &quot;Fuente: INDEC, Encuesta Permanente de Hogares total urbano.&quot;
+                )</code></pre>
+<p><img src="/proyectos/personasmayores/index_files/figure-html/indicador%202-1.png" width="672" /></p>
+<p>El <em>89,8%</em> de la población en edad jubilatoria del total nacional urbano, cuenta con cobertura previsional. Se puede decir que esta cobertura es casi universal en el país como resultado del sistema jubilatorio.</p>
+<p>Si bien la biografía individual da cuenta de la trayectoria laboral de las personas, esta trayectoria no es igual para todos a la hora de beneficiarse en el sistema de seguridad social, esta situación varia acorde al contexto (biografía generacional) y se intensifica desfavorablemente hacía las mujeres. Ya sea porque no cumple con los requisitos mínimos u otras desigualdades estructurales de género.</p>
+<pre class="r"><code>tabla3 &lt;- BESS232 %&gt;% 
+  mutate(
+    ConMoratoria = as.numeric(ConMoratoria),
+    SinMoratoria = as.numeric(SinMoratoria),
+    TotalJubilaciones = as.numeric(TotalJubilaciones),
+    porcentaje_con = round(ConMoratoria/TotalJubilaciones*100,1),
+    porcentaje_sin = round(SinMoratoria/TotalJubilaciones*100,1)) 
+    
+# gráfico 
+tabla3 %&gt;% 
+    pivot_longer(cols = c(6,7), names_to = &quot;regimen&quot;, values_to = &quot;porcentaje&quot;) %&gt;% 
+  mutate(regimen = case_when(regimen == &quot;porcentaje_con&quot; ~ &quot;con moratoria&quot;,
+                             regimen == &quot;porcentaje_sin&quot; ~ &quot;sin moratoria&quot;
+                             )) %&gt;% 
+  ggplot(aes(Sexo,porcentaje)) +
+  geom_col(aes(fill = regimen)) +
+  theme_classic() +
+  scale_fill_manual(values = c(&quot;#f7b801&quot;, &quot;#7678ed&quot;)) +
+    labs(title = &quot;Gráfico 3: Distribución porcentual de las jubilaciones del sistema integrado previsional,\npor sexo y adhesión a moratoria. Total del país. Marzo de 2024&quot;,
+         x = &quot;Sexo&quot;,
+         y = &quot;porcentaje&quot;,
+         caption = &quot;Fuente: ANSES, Boletín Estadísitico de la Seguridad Social.&quot;)</code></pre>
+<p><img src="/proyectos/personasmayores/index_files/figure-html/indicador%203-1.png" width="672" /></p>
+<pre class="r"><code>tabla3 %&gt;% 
+  select(5,2:4,6,7,-1) %&gt;% 
+  gt() %&gt;% 
+   tab_header(
+    title = md(&quot;Cuadro 1: Distribución porcentual de las jubilaciones del sistema integrado previsional,\npor sexo y adhesión a moratoria. Total del país. Marzo de 2024&quot;)) %&gt;%
+  tab_spanner(
+    label = &quot;Beneficios por jubilación&quot;,
+    columns = c(TotalJubilaciones,ConMoratoria, SinMoratoria)) %&gt;% 
+  tab_spanner(
+    label = &quot;% por jubilación&quot;,
+    columns = c(porcentaje_con, porcentaje_sin)) %&gt;%
+  cols_label(TotalJubilaciones = &#39;Total&#39;, 
+             ConMoratoria = &#39;con moratoria&#39;, 
+             SinMoratoria = &#39;sin moratoria&#39;, 
+             porcentaje_con = &#39;con moratoria&#39;, 
+             porcentaje_sin = &#39;sin moratoria&#39;) %&gt;%
+  tab_source_note(
+    source_note = md(&quot;**Fuente**: ANSES, Boletín Estadísitico de la Seguridad Social.&quot;)
+  )</code></pre>
+<div id="nclkquwkfr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#nclkquwkfr table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#nclkquwkfr thead, #nclkquwkfr tbody, #nclkquwkfr tfoot, #nclkquwkfr tr, #nclkquwkfr td, #nclkquwkfr th {
+  border-style: none;
+}
+
+#nclkquwkfr p {
+  margin: 0;
+  padding: 0;
+}
+
+#nclkquwkfr .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#nclkquwkfr .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#nclkquwkfr .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#nclkquwkfr .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#nclkquwkfr .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#nclkquwkfr .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nclkquwkfr .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#nclkquwkfr .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#nclkquwkfr .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#nclkquwkfr .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#nclkquwkfr .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#nclkquwkfr .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#nclkquwkfr .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#nclkquwkfr .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#nclkquwkfr .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#nclkquwkfr .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#nclkquwkfr .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#nclkquwkfr .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#nclkquwkfr .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nclkquwkfr .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#nclkquwkfr .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#nclkquwkfr .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#nclkquwkfr .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nclkquwkfr .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#nclkquwkfr .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#nclkquwkfr .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nclkquwkfr .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nclkquwkfr .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#nclkquwkfr .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nclkquwkfr .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#nclkquwkfr .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nclkquwkfr .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#nclkquwkfr .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nclkquwkfr .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#nclkquwkfr .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nclkquwkfr .gt_left {
+  text-align: left;
+}
+
+#nclkquwkfr .gt_center {
+  text-align: center;
+}
+
+#nclkquwkfr .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#nclkquwkfr .gt_font_normal {
+  font-weight: normal;
+}
+
+#nclkquwkfr .gt_font_bold {
+  font-weight: bold;
+}
+
+#nclkquwkfr .gt_font_italic {
+  font-style: italic;
+}
+
+#nclkquwkfr .gt_super {
+  font-size: 65%;
+}
+
+#nclkquwkfr .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#nclkquwkfr .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#nclkquwkfr .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#nclkquwkfr .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#nclkquwkfr .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#nclkquwkfr .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#nclkquwkfr .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_heading">
+      <td colspan="6" class="gt_heading gt_title gt_font_normal gt_bottom_border" style>Cuadro 1: Distribución porcentual de las jubilaciones del sistema integrado previsional,
+por sexo y adhesión a moratoria. Total del país. Marzo de 2024</td>
+    </tr>
+    
+    <tr class="gt_col_headings gt_spanner_row">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col" id="Sexo">Sexo</th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="3" scope="colgroup" id="Beneficios por jubilación">
+        <span class="gt_column_spanner">Beneficios por jubilación</span>
+      </th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="% por jubilación">
+        <span class="gt_column_spanner">% por jubilación</span>
+      </th>
+    </tr>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Total">Total</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="con moratoria">con moratoria</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="sin moratoria">sin moratoria</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="con moratoria">con moratoria</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="sin moratoria">sin moratoria</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="Sexo" class="gt_row gt_left">Masculino</td>
+<td headers="TotalJubilaciones" class="gt_row gt_right">2038172</td>
+<td headers="ConMoratoria" class="gt_row gt_right">945664</td>
+<td headers="SinMoratoria" class="gt_row gt_right">1092508</td>
+<td headers="porcentaje_con" class="gt_row gt_right">46.4</td>
+<td headers="porcentaje_sin" class="gt_row gt_right">53.6</td></tr>
+    <tr><td headers="Sexo" class="gt_row gt_left">Femenino</td>
+<td headers="TotalJubilaciones" class="gt_row gt_right">3540186</td>
+<td headers="ConMoratoria" class="gt_row gt_right">2798476</td>
+<td headers="SinMoratoria" class="gt_row gt_right">741710</td>
+<td headers="porcentaje_con" class="gt_row gt_right">79.0</td>
+<td headers="porcentaje_sin" class="gt_row gt_right">21.0</td></tr>
+  </tbody>
+  <tfoot class="gt_sourcenotes">
+    <tr>
+      <td class="gt_sourcenote" colspan="6"><strong>Fuente</strong>: ANSES, Boletín Estadísitico de la Seguridad Social.</td>
+    </tr>
+  </tfoot>
+  
+</table>
+</div>
+<p>Con la legislativos actual sobre el sistema previsional. A marzo de 2024, el <em>79%</em> de mujeres en edad jubilatoria percibe jubilición a través del régimen de adhesión con moratoria, a diferencia, no menor, de los varones en edad jubilatoria a un <em>46.4%</em>.</p>
+</div>
+<div id="ingresos" class="section level3">
+<h3>Ingresos</h3>
+<p>La situación económica de las personas mayores está determinada por su poder adquisitivo; que puede provenir de diversas fuentes: trabajo, ahorros, jubilaciones o pensiones, entre otros.</p>
+<p>Para este indicador se definieron como fuentes de ingresos:</p>
+<p>• Ingresos laborales: ingresos provenientes de la ocupación principal, de la ocupación secundaria y de otras ocupaciones que pudieran haber generado ingresos en el mes de referencia.</p>
+<p>• Ingresos por jubilaciones y pensiones: ingresos de la seguridad social por jubilación y pensión, y aguinaldo proveniente de estas prestaciones.</p>
+<p>• Otros ingresos: subsidios o ayuda social, rentas de la propiedad derivadas de la producción o de inversiones financieras y otras transferencias.</p>
+<pre class="r"><code>#Ingresos laborales: P21 y TOT_P12
+#Ingresos por jubilación o pensión: V2_M y V21_M
+#Ingresos no laborales; V5_M, V8_M, V9_M, V10_M, V11_M, V12_M, V18_M y V19_AM
+
+#Total
+Cuadro4A &lt;- EPHU2023 %&gt;% 
+  filter(CH06 &gt;= 60) %&gt;%
+  mutate(Ingresolaboral = case_when((P21 &gt; 0 | TOT_P12 &gt; 0) ~ 1,TRUE ~ 0), 
+         IngresoJP = case_when((V2_M &gt; 0 | V21_M &gt; 0) ~ 1, TRUE ~ 0), 
+         IngresoNoLaboral = case_when((V5_M &gt; 0 | V8_M &gt; 0 | V9_M &gt; 0 |
+                               V10_M &gt; 0 | V11_M &gt; 0 | V12_M &gt; 0 | 
+                               V18_M &gt; 0 | V19_AM &gt; 0) ~ 1,TRUE ~ 0)) %&gt;%
+  summarise(
+    poblacion60ymas = sum(PONDII), # total población 60 años y más
+    pobl60_IL = sum(PONDII[Ingresolaboral == 1]), #ingresos laborales
+    pobl60_JP = sum(PONDII[IngresoJP == 1]), #jubilación o pensión
+    pobl60_OI = sum(PONDII[IngresoNoLaboral == 1]), #no laborales
+    &quot;Ingresos laborales&quot; = 
+           round(pobl60_IL/poblacion60ymas*100,1),
+    &quot;Jubilación o pensión&quot; =
+           round(pobl60_JP/poblacion60ymas*100,1),
+    &quot;Otros ingresos no laborales&quot; =
+           round(pobl60_OI/poblacion60ymas*100,1)) %&gt;%
+  cbind(CH04 = &quot;Total&quot;)
+
+
+#Por sexo
+Cuadro4B &lt;- EPHU2023 %&gt;% 
+  filter(CH06 &gt;= 60) %&gt;%
+  mutate(Ingresolaboral = case_when((P21 &gt; 0 | TOT_P12 &gt; 0) ~ 1,TRUE ~ 0), 
+         IngresoJP = case_when((V2_M &gt; 0 | V21_M &gt; 0) ~ 1, TRUE ~ 0), 
+         IngresoNoLaboral = case_when((V5_M &gt; 0 | V8_M &gt; 0 | V9_M &gt; 0 |
+                               V10_M &gt; 0 | V11_M &gt; 0 | V12_M &gt; 0 | 
+                               V18_M &gt; 0 | V19_AM &gt; 0) ~ 1,TRUE ~ 0)) %&gt;% 
+  group_by(CH04) %&gt;% 
+  summarise(
+    poblacion60ymas = sum(PONDII), # total población 60 años y más
+    pobl60_IL = sum(PONDII[Ingresolaboral == 1]), #ingresos laborales
+    pobl60_JP = sum(PONDII[IngresoJP == 1]), #jubilación o pensión
+    pobl60_OI = sum(PONDII[IngresoNoLaboral == 1]), #no laborales
+    &quot;Ingresos laborales&quot; = 
+           round(pobl60_IL/poblacion60ymas*100,1),
+    &quot;Jubilación o pensión&quot; =
+           round(pobl60_JP/poblacion60ymas*100,1),
+    &quot;Otros ingresos no laborales&quot; =
+           round(pobl60_OI/poblacion60ymas*100, 1)) %&gt;% 
+    mutate(CH04 = case_when(CH04 == 1 ~ &quot;Varones&quot;, 
+                          CH04 == 2 ~ &quot;Mujeres&quot;))
+
+Cuadro4 &lt;- rbind(Cuadro4A, Cuadro4B) %&gt;% 
+  select(8, 5:7) %&gt;% 
+  pivot_longer(cols = c(2:4), names_to = &quot;Tipo_ingreso&quot;, values_to = &quot;porcentaje&quot;) %&gt;% 
+  mutate(CH04 = fct_relevel(CH04, c(&quot;Total&quot;, &quot;Mujeres&quot;, &quot;Varones&quot;)))
+
+
+
+ggplot(Cuadro4, aes(CH04, porcentaje, fill = CH04)) +
+  geom_col() +
+  #coord_flip() +
+  facet_wrap(~ Tipo_ingreso) +
+  #theme_classic() +
+  scale_fill_manual(values = paleta1) +
+  theme(legend.position = &quot;none&quot;) +
+  geom_text(aes(label = porcentaje), vjust = 1, colour = &quot;white&quot;) +
+  labs(title = &quot;Gráfico 4: Porcentaje de población en edad de jubilarse perceptora de ingresos, por fuente y sexo. \nTotal nacional urbano. Año 2023&quot;,
+                x = &quot; &quot;,
+                y = &quot;porcentaje&quot;,
+                caption = &quot;Fuente: INDEC, Encuesta Permanente de Hogares total urbano.&quot;
+                )</code></pre>
+<p><img src="/proyectos/personasmayores/index_files/figure-html/indicador%204-1.png" width="672" /></p>
+<p>La mayoria de los ingresos de las personas en edad de jubilarse corresponden a jubilación o pensión. La cobertura previsional garantiza un margen de derecho para la calidad de vida personas mayores. Las mujeres de 60 años y más perciben en su gran mayoría ingresos por jubilación o pensión, en cambio los varones de 65 años y más siguen con presencia en el mercado de trabajo con ingresos laborales de un 35%.</p>
+<p>Al ser el mayor ingreso de las personas mayores, es importante dar cuanta cuál es el haber jubilitario actual a marzo 2024 por tipo de régime adherido a moratoria:</p>
+<pre class="r"><code>tabla5 &lt;- BESS2312 %&gt;% 
+  mutate(
+    ConMoratoria = as.numeric(ConMoratoria),
+    SinMoratoria = as.numeric(SinMoratoria),
+    TotalJubilaciones = as.numeric(TotalJubilaciones))
+
+
+tabla5 %&gt;% 
+  pivot_longer(cols = c(3,4), names_to = &quot;regimen&quot;, values_to = &quot;haber_medio&quot;) %&gt;% 
+  mutate(regimen = case_when(regimen == &quot;ConMoratoria&quot; ~ &quot;con moratoria&quot;,
+                             regimen == &quot;SinMoratoria&quot; ~ &quot;sin moratoria&quot;
+                             )) %&gt;% 
+  ggplot(aes(regimen, haber_medio))+
+  geom_col(aes(fill = Sexo), position = &quot;dodge&quot;) +
+  scale_fill_manual(values = c( &quot;#d90368&quot;, &quot;#820263&quot;)) +
+  geom_text(aes(label = round(haber_medio,0), group = Sexo), position = position_dodge(0.9), vjust = 0, colour = &quot;black&quot;) +
+  labs(title = &quot;Gráfico 5: Haber jubilatorio medio, según sexo y adhesión a moratoria.\nTotal del país. Marzo de 2024&quot;,
+                y = &quot;En miles de pesos&quot;,
+                x = &quot;Régimen&quot;,
+                caption = &quot;Fuente: ANSES, Boletín Estadísitico de la Seguridad Social.&quot;
+                )</code></pre>
+<p><img src="/proyectos/personasmayores/index_files/figure-html/indicador%205-1.png" width="672" /></p>
+<p>Existe una gran diferencia de haber entre tipo de régimen (casi un 50%), y no deja de existir diferencias entre mujeres y varones dentro de los montos del misno régimen.</p>
+</div>
+</div>
+<div id="contexto-actual-argentina-2024" class="section level2">
+<h2>Contexto actual: Argentina 2024</h2>
+<p>Para las personas mayores pagar el alquiler, comida, salud y otros bienes y servicios dependen de sus ingresos y posición financiera. Esto puede aumentar o limitar su bienestar y calidad de vida, no hay opción de mejora en este bienestar que no sea a través de la cobertura previsional, que es su mayor fuente de ingreso. La pobreza es el mayor obstáculo para un envejecimiento decente y seguro.</p>
+<p>Del registro de haberes medios a marzo de 2024 con una inflación acumulada del 287.9% deja un escenario crítico para las personas mayores, se debilita la seguridad económica que garantiza plenitud en la calidad de vida. Al ser la mayor fuente de ingreso, para los haberes con moratoria su monto esta por debajo de la Canasta básica total que para el mismo mes fue de $250.286 (Línea de pobreza para un adulto equivalente). Lo haberes sin moratorias a duras penas superan el monto pero la difultad para adquirir bienes y servicios persiste.</p>
+<p>Hay ciertos factores de la seguridad económica en argentina que están cubiertas por las leyes actuales que garantiza a diferencia de otros países de la región un sistema jubilatorio casi universal pero estos no están siendo acompañados por políticas monetarias previsionalesque sobrelleven la alta inflación y el exacerbado aumento de los precios al consumidor. Lo que lleva a una perdida de la autonomía económica y deriva en restricciones que pueden afectar el bienestar físico y mental de las personas mayores. Se deben dar prioridades a condiciones ecónomica y no económicas para un envejecimiento con dignidad y seguridad.</p>
+</div>
+<div id="fuentes-bibliográficas" class="section level2">
+<h2>Fuentes bibliográficas</h2>
+<ul>
+<li><a href="https://www.cepal.org/sites/default/files/events/files/huenchuan_guzman.pdf">Huenchuan S. &amp; Guzmán, J.M. (2006) Seguridad Económica y Pobreza en la Vejez: Tensiones, Expresiones y Desafíos para Políticas</a> Reunión de Expertos sobre Población y Pobreza en América Latina y el Caribe.</li>
+<li><a href="https://repositorio.cepal.org/server/api/core/bitstreams/431e4d95-46d9-4de6-a0a6-d41b1cb7d0b9/content">S. Huenchuan (ed.), Envejecimiento, personas mayores y Agenda 2030 para el Desarrollo Sostenible: perspectiva regional y de derechos humanos, Libros de la CEPAL, N° 154 (LC/PUB.2018/24-P), Santiago, Comisión Económica para América Latina y el Caribe (CEPAL), 2018.</a></li>
+<li><a href="https://www.indec.gob.ar/ftp/cuadros/poblacion/dosier_personas_mayores_2023.pdf">INDEC, Dosier estadístico de personas mayores 2023</a></li>
+</ul>
+</div>
+</div>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/r/">R</a>
+  
+  <a class="badge badge-light" href="/tag/sociologia/">Sociología</a>
+  
+  <a class="badge badge-light" href="/tag/investigacion-social/">Investigación social</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/proyectos/personasmayores/&amp;text=Seguridad%20econ%c3%b3mica%20en%20las%20personas%20mayores%20en%20Argentina" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/proyectos/personasmayores/&amp;t=Seguridad%20econ%c3%b3mica%20en%20las%20personas%20mayores%20en%20Argentina" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Seguridad%20econ%c3%b3mica%20en%20las%20personas%20mayores%20en%20Argentina&amp;body=/proyectos/personasmayores/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/proyectos/personasmayores/&amp;title=Seguridad%20econ%c3%b3mica%20en%20las%20personas%20mayores%20en%20Argentina" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Seguridad%20econ%c3%b3mica%20en%20las%20personas%20mayores%20en%20Argentina%20/proyectos/personasmayores/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/proyectos/personasmayores/&amp;title=Seguridad%20econ%c3%b3mica%20en%20las%20personas%20mayores%20en%20Argentina" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="avatar mr-3 avatar-circle" src="/author/andrea-gomez-vargas/avatar_hu55bd6afbafa21ee2e44149c365740aa2_733477_270x270_fill_q75_lanczos_center.jpg" alt="Andrea Gomez Vargas">
+    
+
+    <div class="media-body">
+      <h5 class="card-title">Andrea Gomez Vargas</h5>
+      <h6 class="card-subtitle">Socióloga &amp; analista de datos</h6>
+      <p class="card-text">Socióloga &amp; analista de datos</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/SoyAndrea" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/andreasociologa/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://mastodon.social/@me_andre" target="_blank" rel="noopener">
+        <i class="fab fa-mastodon"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.rladies.org/directory/#andrea-gomez-vargas" target="_blank" rel="noopener">
+        <i class="fab fa-r-project"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="article-widget">
+  
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Anterior</div>
+    <a href="/proyectos/mujeres-it/" rel="prev">Mujeres &amp; Tecnología: una oportunidad para la empleabilidad</a>
+  </div>
+  
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+  
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by copyright-license-text">
+    Está web está bajo la licencia <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+    Published with
+    <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a>  —
+    the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">
+    open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Citar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copiar
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Descargar
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+        <div class="search-hit-content">
+          <div class="search-hit-name">
+            <a href="{{relpermalink}}">{{title}}</a>
+            <div class="article-metadata search-hit-type">{{type}}</div>
+            <p class="search-hit-description">{{snippet}}</p>
+          </div>
+        </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/es/js/wowchemy.min.be9246ec5b66d2da69a8ec3bc5a4536f.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>

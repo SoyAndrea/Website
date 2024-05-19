@@ -1,0 +1,1464 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sociología | Andrea</title>
+    <link>/tag/sociologia/</link>
+      <atom:link href="/tag/sociologia/index.xml" rel="self" type="application/rss+xml" />
+    <description>Sociología</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>es</language><lastBuildDate>Sun, 12 May 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu81060471e680bc591d9a375a50696ba4_27362_512x512_fill_lanczos_center_2.png</url>
+      <title>Sociología</title>
+      <link>/tag/sociologia/</link>
+    </image>
+    
+    <item>
+      <title>Seguridad económica en las personas mayores en Argentina</title>
+      <link>/proyectos/personasmayores/</link>
+      <pubDate>Sun, 12 May 2024 00:00:00 +0000</pubDate>
+      <guid>/proyectos/personasmayores/</guid>
+      <description>
+
+
+&lt;div id=&#34;qué-dicen-las-estadísticas-y-una-mirada-al-contexto-actual-en-r.&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Qué dicen las estadísticas y una mirada al contexto actual en R.&lt;/h1&gt;
+&lt;p&gt;La capacidad de las personas de disponer de bienes en general, económicos y no económicos, hacen de la calidad de vida un elemento clave para la subsistencia a lo largo del ciclo de vida. De esta manera, la seguridad económica de las personas mayores se define como la capacidad de disponer y usar de forma independiente y autónoma, una cierta cantidad de recursos económicos regulares y en montos suficientes para asegurar una buena calidad de vida. El cual permite a las personas mayores satisfacer las necesidades objetivas que agregan calidad a los años, y disponer de independencia en la toma de decisiones. Además, mejora su autoestima, al propiciar el desempeño de roles significativos y la participación en la vida cotidiana como ciudadanos con plenos derechos (Huenchuan y Guzmán, 2006).&lt;/p&gt;
+&lt;p&gt;A medida que las personas envejecen se retiran del mercado laboral y esto deriva a la necesidad de contar con sistemas de protección social que garanticen la percepción de un ingreso. Así, la seguridad económica permite generar las condiciones para un envejecimiento con dignidad y seguridad. De acuerdo con las Naciones Unidas, la seguridad económica constituye una legítima aspiración en la vejez, tanto en el caso de una
+persona que ha contribuido durante toda su vida a la seguridad social como en el de otra que, por su trayectoria laboral o por otras razones,
+no cumple con los requisitos suficientes para acceder a una pensión contributiva (Naciones Unidas, 1995).&lt;/p&gt;
+&lt;p&gt;En Argentina, el Sistema Integrado de Jubilaciones y Pensiones comprendidas en la &lt;a href=&#34;https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/639/texact.htm&#34;&gt;Ley 24.241&lt;/a&gt; establecen el marco normativo de cobertura, beneficios y requisitos para la prestación básica universal, entre otros. En este informe se utilizarán las fuentes de datos oficiales del INDEC y ANSES para relevar las estadísiticas nacionales con indicadores publicados que den cuenta del alcance de este sistema y su implicancia en la seguridad económica. Para este análisis se definirá a personas mayores a aquellas que se encuentran en la edad jubilatoria por ley definida para las mujeres a patir de 60 años y más, y en el caso de los varones a partir de los 65 años y más.&lt;/p&gt;
+&lt;div id=&#34;fuentes-de-datos&#34; class=&#34;section level2 tabset&#34;&gt;
+&lt;h2&gt;Fuentes de datos&lt;/h2&gt;
+&lt;p&gt;Para este informe, trabajaremos con la Encuesta Permanente de Hogares (EPH) total urbano, principal programa nacional de producción sistemática y permanente de indicadores sociales que lleva a cabo el Instituto Nacional de EstadÌstica y Censos (INDEC), que permite conocer las caracterÌsticas sociodemográficas y socioeconómicas de la población.&lt;/p&gt;
+&lt;p&gt;Y el Boletín Estadístico de la Seguridad Social (BESS) es una publicación trimestral del ANSES que brinda cuadros de series estadísticas consolidadas y actualizadas sobre las variables más relevantes de la seguridad social en la Argentina, entre ellas la del Sistema Integrado Previsional Argentino (SIPA).&lt;/p&gt;
+&lt;div id=&#34;indec---eph&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;INDEC - EPH&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos&#34;&gt;Encuesta Permanente de Hogares total nacional urbano 2023&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.indec.gob.ar/ftp/cuadros/menusuperior/eahu/EPH_tot_urbano_estructura_bases_2023.pdf&#34;&gt;Diseño de registro&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Con la encuesta se trabajará con las bases de hogar y personas para dar cuenta de indicadores de tipo socioeconómico. Su mayor cobertura geográfica se brinda se encuentran ya disponibles para trabajar en formato tidy.&lt;/p&gt;
+&lt;p&gt;Cobertura geográfica:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Total nacional de población urbana residente en hogares particulares.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Total 31 aglomerados urbanos.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Totales provinciales de población urbana residente en hogares particulares.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;base_personas &amp;lt;- get_total_urbano( year = 2023, type = &amp;quot;individual&amp;quot;, vars = &amp;quot;all&amp;quot;)
+base_hogares &amp;lt;-  get_total_urbano( year = 2023, type = &amp;quot;hogar&amp;quot;, vars = &amp;quot;all&amp;quot;)
+
+EPHU2023 &amp;lt;- base_personas %&amp;gt;% 
+  left_join(base_hogares %&amp;gt;% select(-PONDERA),
+            by = c(&amp;quot;CODUSU&amp;quot;, &amp;quot;NRO_HOGAR&amp;quot;, &amp;quot;ANO4&amp;quot;,&amp;quot;PROVINCIA&amp;quot;, &amp;quot;AGLOMERADO&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;anses---bess&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;ANSES - BESS&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.argentina.gob.ar/trabajo/seguridadsocial/bess&#34;&gt;Boletín Estadístico de la Seguridad Social&lt;/a&gt;: Sistema previsional Contributivo - Pasivos.&lt;/p&gt;
+&lt;p&gt;Estos registros administrativos cuentan con los datos únicamente por cuadros de excel, antes de usarlo vamos a transformarlo en tablas para que quede en formato &lt;em&gt;tidy&lt;/em&gt; y se puedan procesar sus respectivos indicadores. Esto solo se realizará para los cuadros 2.3.2 y 2.3.12.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;La cobertura geográfica: Total del país&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Cuadro 2.3.2
+BESS232 &amp;lt;- read_excel(&amp;quot;data/estadisticas_de_seguridad_social_pasivos_03-2024.xlsx&amp;quot;, sheet = &amp;quot;2.3.2&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## New names:
+## • `` -&amp;gt; `...2`
+## • `` -&amp;gt; `...3`
+## • `` -&amp;gt; `...4`
+## • `` -&amp;gt; `...5`
+## • `` -&amp;gt; `...6`
+## • `` -&amp;gt; `...7`
+## • `` -&amp;gt; `...8`
+## • `` -&amp;gt; `...9`
+## • `` -&amp;gt; `...10`
+## • `` -&amp;gt; `...11`
+## • `` -&amp;gt; `...12`
+## • `` -&amp;gt; `...13`
+## • `` -&amp;gt; `...14`
+## • `` -&amp;gt; `...15`
+## • `` -&amp;gt; `...16`
+## • `` -&amp;gt; `...17`
+## • `` -&amp;gt; `...18`
+## • `` -&amp;gt; `...19`
+## • `` -&amp;gt; `...20`
+## • `` -&amp;gt; `...21`
+## • `` -&amp;gt; `...22`
+## • `` -&amp;gt; `...23`
+## • `` -&amp;gt; `...24`
+## • `` -&amp;gt; `...25`
+## • `` -&amp;gt; `...26`
+## • `` -&amp;gt; `...27`
+## • `` -&amp;gt; `...28`
+## • `` -&amp;gt; `...29`
+## • `` -&amp;gt; `...30`
+## • `` -&amp;gt; `...31`
+## • `` -&amp;gt; `...32`
+## • `` -&amp;gt; `...33`
+## • `` -&amp;gt; `...34`
+## • `` -&amp;gt; `...35`
+## • `` -&amp;gt; `...36`
+## • `` -&amp;gt; `...37`&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;male &amp;lt;- BESS232[29, 1:4]
+colnames(male) = c(&amp;quot;Anio&amp;quot;, &amp;quot;TotalJubilaciones&amp;quot;, &amp;quot;ConMoratoria&amp;quot;, &amp;quot;SinMoratoria&amp;quot;)
+male$Sexo = &amp;quot;Masculino&amp;quot;
+male$Anio = 2024
+
+female &amp;lt;- BESS232[29, c(1,8:10)]
+colnames(female) = c(&amp;quot;Anio&amp;quot;, &amp;quot;TotalJubilaciones&amp;quot;, &amp;quot;ConMoratoria&amp;quot;, &amp;quot;SinMoratoria&amp;quot;)
+female$Sexo = &amp;quot;Femenino&amp;quot;
+female$Anio = 2024
+
+BESS232 &amp;lt;- rbind(male, female)
+
+#Cuadro 2.3.12
+
+BESS2312 &amp;lt;- read_excel(&amp;quot;data/estadisticas_de_seguridad_social_pasivos_03-2024.xlsx&amp;quot;, sheet = &amp;quot;2.3.11-12&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## New names:
+## • `` -&amp;gt; `...2`
+## • `` -&amp;gt; `...3`
+## • `` -&amp;gt; `...4`
+## • `` -&amp;gt; `...5`
+## • `` -&amp;gt; `...6`
+## • `` -&amp;gt; `...7`
+## • `` -&amp;gt; `...8`
+## • `` -&amp;gt; `...9`
+## • `` -&amp;gt; `...10`
+## • `` -&amp;gt; `...11`
+## • `` -&amp;gt; `...12`
+## • `` -&amp;gt; `...13`
+## • `` -&amp;gt; `...14`
+## • `` -&amp;gt; `...15`
+## • `` -&amp;gt; `...16`
+## • `` -&amp;gt; `...17`
+## • `` -&amp;gt; `...18`
+## • `` -&amp;gt; `...19`
+## • `` -&amp;gt; `...20`
+## • `` -&amp;gt; `...21`
+## • `` -&amp;gt; `...22`
+## • `volver al índice` -&amp;gt; `volver al índice...23`
+## • `` -&amp;gt; `...24`
+## • `` -&amp;gt; `...26`
+## • `` -&amp;gt; `...27`
+## • `` -&amp;gt; `...28`
+## • `` -&amp;gt; `...29`
+## • `` -&amp;gt; `...30`
+## • `` -&amp;gt; `...31`
+## • `` -&amp;gt; `...32`
+## • `` -&amp;gt; `...33`
+## • `` -&amp;gt; `...34`
+## • `` -&amp;gt; `...35`
+## • `` -&amp;gt; `...36`
+## • `` -&amp;gt; `...37`
+## • `` -&amp;gt; `...38`
+## • `` -&amp;gt; `...39`
+## • `` -&amp;gt; `...40`
+## • `` -&amp;gt; `...41`
+## • `` -&amp;gt; `...42`
+## • `` -&amp;gt; `...43`
+## • `` -&amp;gt; `...44`
+## • `volver al índice` -&amp;gt; `volver al índice...45`&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;male &amp;lt;- BESS2312[6, c(1,27:29)]
+colnames(male) = c(&amp;quot;Jurisdiccion&amp;quot;, &amp;quot;TotalJubilaciones&amp;quot;, &amp;quot;ConMoratoria&amp;quot;, &amp;quot;SinMoratoria&amp;quot;)
+male$Sexo = &amp;quot;Masculino&amp;quot;
+
+female &amp;lt;- BESS2312[6, c(1,33:35)]
+colnames(female) = c(&amp;quot;Jurisdiccion&amp;quot;, &amp;quot;TotalJubilaciones&amp;quot;, &amp;quot;ConMoratoria&amp;quot;, &amp;quot;SinMoratoria&amp;quot;)
+female$Sexo = &amp;quot;Femenino&amp;quot;
+
+BESS2312 &amp;lt;- rbind(male, female)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;qué-dicen-las-estadísiticas-oficiales-factores-que-influyen-en-la-seguridad-económica&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Qué dicen las estadísiticas oficiales: factores que influyen en la seguridad económica&lt;/h2&gt;
+&lt;p&gt;Los factores relacionados con el curso vital se refieren en primera instancia a la &lt;em&gt;biografía individual&lt;/em&gt;, es decir a la trayectoria laboral de las personas mayores. Acompañado de &lt;em&gt;biografías generacionales&lt;/em&gt;, en referencia al contexto generacional de vida en donde influyen factores propios de la historia social, económica y política de la sociedad de que es parte.&lt;/p&gt;
+&lt;p&gt;Otro factor que componen la seguridad económia, es el &lt;em&gt;ciclo vital individual y familiar&lt;/em&gt;, que da cuenta de las personas que rodean a las personas mayores, que alude directamente a la familia y que interrelaciona los ciclos de vida de los diferentes miembros de la familia determinan por una parte las cargas que deben sobrellevar las personas mayores, y por otra las posibilidades de ayuda a las que podrían optar.&lt;/p&gt;
+&lt;p&gt;Y por último, las &lt;em&gt;características de los sistemas de protección social&lt;/em&gt; que se reflejan en oportunidades o amenazas para lograr un ingreso sustituto digno en la edad avanzada y consecuentemente las posibilidad o no de acceder a atención en salud, entre otros servicios.&lt;/p&gt;
+&lt;p&gt;Para dar cuenta de estos factores, se exponen cinco indicadores (que presentan desde el dosier estadístico de personas de edad publicado por el INDEC) en tres tópicos: Composición de los hogares, cobertura previsional e Ingresos.&lt;/p&gt;
+&lt;div id=&#34;composición-de-los-hogares&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Composición de los hogares&lt;/h3&gt;
+&lt;p&gt;Una de los factores a visualizar es el ciclo vital individual y familiar, que de cuenta a grandes rasgos del entorno en el que viven las personas mayores y su acompañamiento directo en el hogar que puede ser familiar o no, también se puede contemplar las biografías generacionales que le acompañan. Para esto se mide el estrato generacional del hogar que es el criterio que ordena a la población según el número de generaciones convivientes en el hogar. En este sentido, la población de personas mayores se clasifica en hogares:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;unipersonales: aquellos en los que reside una sola persona de 60 años y más.&lt;/li&gt;
+&lt;li&gt;unigeneracionales: conformados por más de una persona y donde todos los miembros tienen 60 años y más.&lt;/li&gt;
+&lt;li&gt;multigeneracionales: conformados por más de una persona y donde al menos convive una persona de 60 años y más, y una persona menor de 60 años.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#armado de variables previas para armar indicador, se dividen grandes grupos de edad y estrato generacional 
+
+estrato &amp;lt;- EPHU2023 %&amp;gt;% 
+    mutate(edad_categorica = case_when(CH06 &amp;lt;= 59 ~ 1, #grupo de edad
+                           CH06 &amp;gt;= 60 ~ 2)) %&amp;gt;% 
+    count(CODUSU, NRO_HOGAR, edad_categorica) %&amp;gt;% #conteo de CODUSU y edades categoricas en los hogares
+    count(CODUSU, NRO_HOGAR) %&amp;gt;% 
+  mutate(Estrato0 = ifelse(n == 2, &amp;quot;multigeneracional&amp;quot;, &amp;quot;unigeneracional&amp;quot;)) %&amp;gt;% 
+  select(-n)
+
+#cada componente de la base esta asignado a una edad categorica y condicion generacional del hogar que compone
+#unigeneracional: mismo grupo de edad categórica, o multigeneracional; al menos convive una persona de cada grupo de edad categórica
+
+
+Cuadro1 &amp;lt;- EPHU2023 %&amp;gt;% 
+    left_join(estrato, by = c(&amp;quot;CODUSU&amp;quot;, &amp;quot;NRO_HOGAR&amp;quot;)) %&amp;gt;% 
+     mutate(edad_categorica = case_when(CH06 &amp;lt;= 59 ~ 1, #grupo de edad
+                                        CH06 &amp;gt;= 60 ~ 2),
+            TipoHogar = case_when(IX_TOT == 1 ~ &amp;quot;unipersonal&amp;quot;, # 1 sola persona
+                        IX_TOT &amp;gt; 1 ~ &amp;quot;compuesto&amp;quot;)) %&amp;gt;% #más de 1 personas en el hogar
+    select(CODUSU, NRO_HOGAR, IX_TOT, COMPONENTE, CH06, Estrato0, edad_categorica, TipoHogar, PONDERA, CH04) %&amp;gt;% 
+    mutate(
+      Estrato = 
+        case_when(
+          TipoHogar == &amp;quot;unipersonal&amp;quot; &amp;amp; edad_categorica == 2 ~ &amp;quot;unipersonal&amp;quot;,
+          TipoHogar == &amp;quot;compuesto&amp;quot; &amp;amp; edad_categorica == 2 &amp;amp; 
+            Estrato0 == &amp;quot;unigeneracional&amp;quot; ~ &amp;quot;unigeneracional&amp;quot;,
+          TipoHogar == &amp;quot;compuesto&amp;quot; &amp;amp;  Estrato0 == &amp;quot;multigeneracional&amp;quot; ~ 
+            &amp;quot;multigeneracional&amp;quot;,
+          IX_TOT &amp;gt;= 1 &amp;amp; edad_categorica == 1 ~ &amp;quot;sin PM&amp;quot;)) %&amp;gt;% #hogares sin personas mayores
+    select(CODUSU, NRO_HOGAR, IX_TOT, COMPONENTE, CH06, Estrato, Estrato0,edad_categorica, PONDERA,CH04) %&amp;gt;%
+  mutate(Grupo = case_when(CH06 %in% c(60:74) ~ &amp;quot;1&amp;quot;, #grupos de edad
+                           CH06 &amp;gt;= 75 ~ &amp;quot;2&amp;quot;,
+                           TRUE ~ &amp;quot;3&amp;quot;)) %&amp;gt;%
+  filter(CH06 &amp;gt;= 60) %&amp;gt;% 
+  group_by(Grupo, CH04) %&amp;gt;% 
+  summarise( #armado de categorias para la variable
+    Poblacion = sum(PONDERA),
+    Unipersonal = sum(PONDERA [Estrato == &amp;quot;unipersonal&amp;quot;]),
+    Unigeneracional = sum(PONDERA [Estrato == &amp;quot;unigeneracional&amp;quot;]),
+    Multigeneracional = sum(PONDERA [Estrato == &amp;quot;multigeneracional&amp;quot;]),
+    Sin_PM = sum(PONDERA [Estrato == &amp;quot;sin PM&amp;quot;]),
+    &amp;quot;hogares unipersonales&amp;quot; = round(Unipersonal/Poblacion*100,1),
+    &amp;quot;hogares unigeneracionales&amp;quot; = round(Unigeneracional/Poblacion*100,1),
+    &amp;quot;hogares multigeneracionales&amp;quot; = round(Multigeneracional/Poblacion*100,1)
+  ) %&amp;gt;% 
+  rename(Sexo = CH04) %&amp;gt;% 
+  mutate(Sexo = case_when(Sexo == 1 ~ &amp;quot;Varones&amp;quot;, Sexo == 2 ~ &amp;quot;Mujeres&amp;quot;),
+         Grupo = case_when(Grupo == &amp;quot;1&amp;quot; ~ &amp;quot;60 a 74 años&amp;quot; , 
+                           Grupo == &amp;quot;2&amp;quot; ~ &amp;quot;75 años y más&amp;quot;, 
+                           TRUE ~ &amp;quot;&amp;lt; 60 años&amp;quot;)) %&amp;gt;% 
+  select(1,2,8,9,10) %&amp;gt;% 
+  pivot_longer(cols = c(3,4,5), names_to = &amp;quot;Tipo_hogar&amp;quot;, values_to = &amp;quot;porcentaje&amp;quot;)
+
+
+paleta3 &amp;lt;- c(&amp;quot;#f7b801&amp;quot;, &amp;quot;#7678ed&amp;quot;, &amp;quot;#3d348b&amp;quot;) 
+
+ggplot(Cuadro1, 
+       aes(fill= Tipo_hogar, x=Grupo, y=as.numeric((porcentaje)) )) + 
+  geom_col() +
+  scale_fill_manual(values = paleta3)+
+  facet_grid(~Sexo) +
+  theme_light() +
+  labs(
+    title = &amp;quot;Gráfico 1: Distribución de la población de 60 años y más por grupos de edad y sexo,\nsegún estrato generacional del hogar. Total nacional urbano. Año 2023&amp;quot;,
+    y = &amp;quot;porcentaje&amp;quot;, x = &amp;quot;Grupo de edad&amp;quot;,
+    caption = &amp;quot;Fuente: INDEC, Encuesta Permanente de Hogares total urbano.&amp;quot;
+  ) +
+  geom_text(aes(label = porcentaje, group = Sexo),
+            position = position_stack(vjust = .5),size = 4, colour = &amp;quot;white&amp;quot;) +
+  theme(legend.position = &amp;quot;bottom&amp;quot;, legend.title = element_blank()) &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/proyectos/personasmayores/index_files/figure-html/indicador%201-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Casi más del 50% de personas entre los 60 y 74 años vive en hogares multigeneracionales, mientras que en el rango de los 75 años y más, del lado de los varones conviven más en hogares unigeneracionales y del lado de las mujeres se reparte entre valores similares vivir en hogares multigeneracionales y hogares unipersonales.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;cobertura-previsional&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Cobertura previsional&lt;/h3&gt;
+&lt;p&gt;Al momento de retiro del mercado laboral, se deriva la necesidad de contar con sistemas de protección social que garanticen la percepción de un ingreso.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# total poblacion en edad jubilatoria
+cuadro2A &amp;lt;- base_personas %&amp;gt;% 
+  select(CH04, CH06, V2_M, V21_M, PONDII) %&amp;gt;%
+  summarise(
+    Poblacion_mayor = sum(PONDII[CH06 &amp;gt;= 60 &amp;amp; CH04 == 2 | CH06 &amp;gt;= 65 &amp;amp; CH04 == 1 ]),
+    Poblacion_mayor_jp  = sum(PONDII[CH06 &amp;gt;= 60 &amp;amp; CH04 == 2 &amp;amp; (V2_M &amp;gt; 0| V21_M &amp;gt;0) 
+                                     |CH06 &amp;gt;= 65 &amp;amp; CH04 == 1 &amp;amp;  (V2_M &amp;gt; 0|V21_M &amp;gt;0)]),
+    porcentaje = round(Poblacion_mayor_jp/Poblacion_mayor*100,1)) %&amp;gt;% 
+  cbind( &amp;quot;CH04&amp;quot; = &amp;quot;Total&amp;quot;) 
+
+
+#Por sexo
+cuadro2B &amp;lt;- base_personas %&amp;gt;% 
+  select(CH04, CH06, V2_M,V21_M, PONDII) %&amp;gt;%
+   group_by(CH04) %&amp;gt;% 
+   summarise(
+     Poblacion_mayor = sum(PONDII[CH06 &amp;gt;= 60 &amp;amp; CH04 == 2 | CH06 &amp;gt;= 65 &amp;amp; CH04 == 1 ]),
+     Poblacion_mayor_jp  = sum(PONDII[CH06 &amp;gt;= 60 &amp;amp; CH04 == 2 &amp;amp; (V2_M &amp;gt; 0) |
+                    CH06 &amp;gt;= 65 &amp;amp; CH04 == 1 &amp;amp; (V2_M &amp;gt; 0) ]),
+    porcentaje =  round(Poblacion_mayor_jp/Poblacion_mayor*100,1)) %&amp;gt;% 
+    mutate(CH04 = case_when(CH04 == 1 ~ &amp;quot;Varones&amp;quot;, #Varones de 65 años y más
+                            CH04 == 2 ~ &amp;quot;Mujeres&amp;quot;)) #Mujeres de 60 años y más
+
+Cuadro2 &amp;lt;- rbind(cuadro2A, cuadro2B) %&amp;gt;% 
+  mutate(CH04 = fct_relevel(CH04, c(&amp;quot;Total&amp;quot;, &amp;quot;Mujeres&amp;quot;, &amp;quot;Varones&amp;quot;)),
+         cobertura = case_when(
+           CH04 == &amp;quot;Total&amp;quot; ~ &amp;quot;Población en edad de jubilarse&amp;quot;,
+           CH04 == &amp;quot;Mujeres&amp;quot; ~ &amp;quot;Mujeres de 60 años y más&amp;quot;,
+           CH04 == &amp;quot;Varones&amp;quot; ~ &amp;quot;Varones de 65 años y más&amp;quot;),
+         cobertura = fct_relevel(cobertura, c(&amp;quot;Población en edad de jubilarse&amp;quot;, 
+                                              &amp;quot;Mujeres de 60 años y más&amp;quot;, 
+                                              &amp;quot;Varones de 65 años y más&amp;quot;)))
+  
+
+paleta1 &amp;lt;- c(&amp;quot;#fb8b24&amp;quot;, &amp;quot;#d90368&amp;quot;, &amp;quot;#820263&amp;quot;)
+
+ggplot(Cuadro2, aes(cobertura,porcentaje)) +
+           geom_col( aes(width = 0.5,fill = cobertura)) +
+           ylim(0,100) +
+           theme_classic() +
+           scale_fill_manual(values = paleta1) +
+           geom_text(aes(label = porcentaje), vjust = 2, colour = &amp;quot;white&amp;quot;) +
+           theme(legend.position = &amp;quot;none&amp;quot;) +
+           labs(title = &amp;quot;Gráfico 2: Porcentaje de población en edad de jubilarse con cobertura previsional, \n por sexo. Total nacional urbano. Año 2023.&amp;quot;,
+                x = &amp;quot; &amp;quot;,
+                y = &amp;quot;porcentaje&amp;quot;,
+                caption = &amp;quot;Fuente: INDEC, Encuesta Permanente de Hogares total urbano.&amp;quot;
+                )&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/proyectos/personasmayores/index_files/figure-html/indicador%202-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;El &lt;em&gt;89,8%&lt;/em&gt; de la población en edad jubilatoria del total nacional urbano, cuenta con cobertura previsional. Se puede decir que esta cobertura es casi universal en el país como resultado del sistema jubilatorio.&lt;/p&gt;
+&lt;p&gt;Si bien la biografía individual da cuenta de la trayectoria laboral de las personas, esta trayectoria no es igual para todos a la hora de beneficiarse en el sistema de seguridad social, esta situación varia acorde al contexto (biografía generacional) y se intensifica desfavorablemente hacía las mujeres. Ya sea porque no cumple con los requisitos mínimos u otras desigualdades estructurales de género.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tabla3 &amp;lt;- BESS232 %&amp;gt;% 
+  mutate(
+    ConMoratoria = as.numeric(ConMoratoria),
+    SinMoratoria = as.numeric(SinMoratoria),
+    TotalJubilaciones = as.numeric(TotalJubilaciones),
+    porcentaje_con = round(ConMoratoria/TotalJubilaciones*100,1),
+    porcentaje_sin = round(SinMoratoria/TotalJubilaciones*100,1)) 
+    
+# gráfico 
+tabla3 %&amp;gt;% 
+    pivot_longer(cols = c(6,7), names_to = &amp;quot;regimen&amp;quot;, values_to = &amp;quot;porcentaje&amp;quot;) %&amp;gt;% 
+  mutate(regimen = case_when(regimen == &amp;quot;porcentaje_con&amp;quot; ~ &amp;quot;con moratoria&amp;quot;,
+                             regimen == &amp;quot;porcentaje_sin&amp;quot; ~ &amp;quot;sin moratoria&amp;quot;
+                             )) %&amp;gt;% 
+  ggplot(aes(Sexo,porcentaje)) +
+  geom_col(aes(fill = regimen)) +
+  theme_classic() +
+  scale_fill_manual(values = c(&amp;quot;#f7b801&amp;quot;, &amp;quot;#7678ed&amp;quot;)) +
+    labs(title = &amp;quot;Gráfico 3: Distribución porcentual de las jubilaciones del sistema integrado previsional,\npor sexo y adhesión a moratoria. Total del país. Marzo de 2024&amp;quot;,
+         x = &amp;quot;Sexo&amp;quot;,
+         y = &amp;quot;porcentaje&amp;quot;,
+         caption = &amp;quot;Fuente: ANSES, Boletín Estadísitico de la Seguridad Social.&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/proyectos/personasmayores/index_files/figure-html/indicador%203-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tabla3 %&amp;gt;% 
+  select(5,2:4,6,7,-1) %&amp;gt;% 
+  gt() %&amp;gt;% 
+   tab_header(
+    title = md(&amp;quot;Cuadro 1: Distribución porcentual de las jubilaciones del sistema integrado previsional,\npor sexo y adhesión a moratoria. Total del país. Marzo de 2024&amp;quot;)) %&amp;gt;%
+  tab_spanner(
+    label = &amp;quot;Beneficios por jubilación&amp;quot;,
+    columns = c(TotalJubilaciones,ConMoratoria, SinMoratoria)) %&amp;gt;% 
+  tab_spanner(
+    label = &amp;quot;% por jubilación&amp;quot;,
+    columns = c(porcentaje_con, porcentaje_sin)) %&amp;gt;%
+  cols_label(TotalJubilaciones = &amp;#39;Total&amp;#39;, 
+             ConMoratoria = &amp;#39;con moratoria&amp;#39;, 
+             SinMoratoria = &amp;#39;sin moratoria&amp;#39;, 
+             porcentaje_con = &amp;#39;con moratoria&amp;#39;, 
+             porcentaje_sin = &amp;#39;sin moratoria&amp;#39;) %&amp;gt;%
+  tab_source_note(
+    source_note = md(&amp;quot;**Fuente**: ANSES, Boletín Estadísitico de la Seguridad Social.&amp;quot;)
+  )&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;nclkquwkfr&#34; style=&#34;padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
+&lt;style&gt;#nclkquwkfr table {
+  font-family: system-ui, &#39;Segoe UI&#39;, Roboto, Helvetica, Arial, sans-serif, &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;, &#39;Noto Color Emoji&#39;;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#nclkquwkfr thead, #nclkquwkfr tbody, #nclkquwkfr tfoot, #nclkquwkfr tr, #nclkquwkfr td, #nclkquwkfr th {
+  border-style: none;
+}
+
+#nclkquwkfr p {
+  margin: 0;
+  padding: 0;
+}
+
+#nclkquwkfr .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#nclkquwkfr .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#nclkquwkfr .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#nclkquwkfr .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#nclkquwkfr .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#nclkquwkfr .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nclkquwkfr .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#nclkquwkfr .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#nclkquwkfr .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#nclkquwkfr .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#nclkquwkfr .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#nclkquwkfr .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#nclkquwkfr .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#nclkquwkfr .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#nclkquwkfr .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#nclkquwkfr .gt_from_md &gt; :first-child {
+  margin-top: 0;
+}
+
+#nclkquwkfr .gt_from_md &gt; :last-child {
+  margin-bottom: 0;
+}
+
+#nclkquwkfr .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#nclkquwkfr .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nclkquwkfr .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#nclkquwkfr .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#nclkquwkfr .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#nclkquwkfr .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nclkquwkfr .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#nclkquwkfr .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#nclkquwkfr .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nclkquwkfr .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nclkquwkfr .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#nclkquwkfr .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nclkquwkfr .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#nclkquwkfr .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nclkquwkfr .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#nclkquwkfr .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nclkquwkfr .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#nclkquwkfr .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nclkquwkfr .gt_left {
+  text-align: left;
+}
+
+#nclkquwkfr .gt_center {
+  text-align: center;
+}
+
+#nclkquwkfr .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#nclkquwkfr .gt_font_normal {
+  font-weight: normal;
+}
+
+#nclkquwkfr .gt_font_bold {
+  font-weight: bold;
+}
+
+#nclkquwkfr .gt_font_italic {
+  font-style: italic;
+}
+
+#nclkquwkfr .gt_super {
+  font-size: 65%;
+}
+
+#nclkquwkfr .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#nclkquwkfr .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#nclkquwkfr .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#nclkquwkfr .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#nclkquwkfr .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#nclkquwkfr .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#nclkquwkfr .gt_indent_5 {
+  text-indent: 25px;
+}
+&lt;/style&gt;
+&lt;table class=&#34;gt_table&#34; data-quarto-disable-processing=&#34;false&#34; data-quarto-bootstrap=&#34;false&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr class=&#34;gt_heading&#34;&gt;
+      &lt;td colspan=&#34;6&#34; class=&#34;gt_heading gt_title gt_font_normal gt_bottom_border&#34; style&gt;Cuadro 1: Distribución porcentual de las jubilaciones del sistema integrado previsional,
+por sexo y adhesión a moratoria. Total del país. Marzo de 2024&lt;/td&gt;
+    &lt;/tr&gt;
+    
+    &lt;tr class=&#34;gt_col_headings gt_spanner_row&#34;&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_left&#34; rowspan=&#34;2&#34; colspan=&#34;1&#34; scope=&#34;col&#34; id=&#34;Sexo&#34;&gt;Sexo&lt;/th&gt;
+      &lt;th class=&#34;gt_center gt_columns_top_border gt_column_spanner_outer&#34; rowspan=&#34;1&#34; colspan=&#34;3&#34; scope=&#34;colgroup&#34; id=&#34;Beneficios por jubilación&#34;&gt;
+        &lt;span class=&#34;gt_column_spanner&#34;&gt;Beneficios por jubilación&lt;/span&gt;
+      &lt;/th&gt;
+      &lt;th class=&#34;gt_center gt_columns_top_border gt_column_spanner_outer&#34; rowspan=&#34;1&#34; colspan=&#34;2&#34; scope=&#34;colgroup&#34; id=&#34;% por jubilación&#34;&gt;
+        &lt;span class=&#34;gt_column_spanner&#34;&gt;% por jubilación&lt;/span&gt;
+      &lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr class=&#34;gt_col_headings&#34;&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_right&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34; scope=&#34;col&#34; id=&#34;Total&#34;&gt;Total&lt;/th&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_right&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34; scope=&#34;col&#34; id=&#34;con moratoria&#34;&gt;con moratoria&lt;/th&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_right&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34; scope=&#34;col&#34; id=&#34;sin moratoria&#34;&gt;sin moratoria&lt;/th&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_right&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34; scope=&#34;col&#34; id=&#34;con moratoria&#34;&gt;con moratoria&lt;/th&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_right&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34; scope=&#34;col&#34; id=&#34;sin moratoria&#34;&gt;sin moratoria&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody class=&#34;gt_table_body&#34;&gt;
+    &lt;tr&gt;&lt;td headers=&#34;Sexo&#34; class=&#34;gt_row gt_left&#34;&gt;Masculino&lt;/td&gt;
+&lt;td headers=&#34;TotalJubilaciones&#34; class=&#34;gt_row gt_right&#34;&gt;2038172&lt;/td&gt;
+&lt;td headers=&#34;ConMoratoria&#34; class=&#34;gt_row gt_right&#34;&gt;945664&lt;/td&gt;
+&lt;td headers=&#34;SinMoratoria&#34; class=&#34;gt_row gt_right&#34;&gt;1092508&lt;/td&gt;
+&lt;td headers=&#34;porcentaje_con&#34; class=&#34;gt_row gt_right&#34;&gt;46.4&lt;/td&gt;
+&lt;td headers=&#34;porcentaje_sin&#34; class=&#34;gt_row gt_right&#34;&gt;53.6&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td headers=&#34;Sexo&#34; class=&#34;gt_row gt_left&#34;&gt;Femenino&lt;/td&gt;
+&lt;td headers=&#34;TotalJubilaciones&#34; class=&#34;gt_row gt_right&#34;&gt;3540186&lt;/td&gt;
+&lt;td headers=&#34;ConMoratoria&#34; class=&#34;gt_row gt_right&#34;&gt;2798476&lt;/td&gt;
+&lt;td headers=&#34;SinMoratoria&#34; class=&#34;gt_row gt_right&#34;&gt;741710&lt;/td&gt;
+&lt;td headers=&#34;porcentaje_con&#34; class=&#34;gt_row gt_right&#34;&gt;79.0&lt;/td&gt;
+&lt;td headers=&#34;porcentaje_sin&#34; class=&#34;gt_row gt_right&#34;&gt;21.0&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot class=&#34;gt_sourcenotes&#34;&gt;
+    &lt;tr&gt;
+      &lt;td class=&#34;gt_sourcenote&#34; colspan=&#34;6&#34;&gt;&lt;strong&gt;Fuente&lt;/strong&gt;: ANSES, Boletín Estadísitico de la Seguridad Social.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+  
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;Con la legislativos actual sobre el sistema previsional. A marzo de 2024, el &lt;em&gt;79%&lt;/em&gt; de mujeres en edad jubilatoria percibe jubilición a través del régimen de adhesión con moratoria, a diferencia, no menor, de los varones en edad jubilatoria a un &lt;em&gt;46.4%&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ingresos&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Ingresos&lt;/h3&gt;
+&lt;p&gt;La situación económica de las personas mayores está determinada por su poder adquisitivo; que puede provenir de diversas fuentes: trabajo, ahorros, jubilaciones o pensiones, entre otros.&lt;/p&gt;
+&lt;p&gt;Para este indicador se definieron como fuentes de ingresos:&lt;/p&gt;
+&lt;p&gt;• Ingresos laborales: ingresos provenientes de la ocupación principal, de la ocupación secundaria y de otras ocupaciones que pudieran haber generado ingresos en el mes de referencia.&lt;/p&gt;
+&lt;p&gt;• Ingresos por jubilaciones y pensiones: ingresos de la seguridad social por jubilación y pensión, y aguinaldo proveniente de estas prestaciones.&lt;/p&gt;
+&lt;p&gt;• Otros ingresos: subsidios o ayuda social, rentas de la propiedad derivadas de la producción o de inversiones financieras y otras transferencias.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Ingresos laborales: P21 y TOT_P12
+#Ingresos por jubilación o pensión: V2_M y V21_M
+#Ingresos no laborales; V5_M, V8_M, V9_M, V10_M, V11_M, V12_M, V18_M y V19_AM
+
+#Total
+Cuadro4A &amp;lt;- EPHU2023 %&amp;gt;% 
+  filter(CH06 &amp;gt;= 60) %&amp;gt;%
+  mutate(Ingresolaboral = case_when((P21 &amp;gt; 0 | TOT_P12 &amp;gt; 0) ~ 1,TRUE ~ 0), 
+         IngresoJP = case_when((V2_M &amp;gt; 0 | V21_M &amp;gt; 0) ~ 1, TRUE ~ 0), 
+         IngresoNoLaboral = case_when((V5_M &amp;gt; 0 | V8_M &amp;gt; 0 | V9_M &amp;gt; 0 |
+                               V10_M &amp;gt; 0 | V11_M &amp;gt; 0 | V12_M &amp;gt; 0 | 
+                               V18_M &amp;gt; 0 | V19_AM &amp;gt; 0) ~ 1,TRUE ~ 0)) %&amp;gt;%
+  summarise(
+    poblacion60ymas = sum(PONDII), # total población 60 años y más
+    pobl60_IL = sum(PONDII[Ingresolaboral == 1]), #ingresos laborales
+    pobl60_JP = sum(PONDII[IngresoJP == 1]), #jubilación o pensión
+    pobl60_OI = sum(PONDII[IngresoNoLaboral == 1]), #no laborales
+    &amp;quot;Ingresos laborales&amp;quot; = 
+           round(pobl60_IL/poblacion60ymas*100,1),
+    &amp;quot;Jubilación o pensión&amp;quot; =
+           round(pobl60_JP/poblacion60ymas*100,1),
+    &amp;quot;Otros ingresos no laborales&amp;quot; =
+           round(pobl60_OI/poblacion60ymas*100,1)) %&amp;gt;%
+  cbind(CH04 = &amp;quot;Total&amp;quot;)
+
+
+#Por sexo
+Cuadro4B &amp;lt;- EPHU2023 %&amp;gt;% 
+  filter(CH06 &amp;gt;= 60) %&amp;gt;%
+  mutate(Ingresolaboral = case_when((P21 &amp;gt; 0 | TOT_P12 &amp;gt; 0) ~ 1,TRUE ~ 0), 
+         IngresoJP = case_when((V2_M &amp;gt; 0 | V21_M &amp;gt; 0) ~ 1, TRUE ~ 0), 
+         IngresoNoLaboral = case_when((V5_M &amp;gt; 0 | V8_M &amp;gt; 0 | V9_M &amp;gt; 0 |
+                               V10_M &amp;gt; 0 | V11_M &amp;gt; 0 | V12_M &amp;gt; 0 | 
+                               V18_M &amp;gt; 0 | V19_AM &amp;gt; 0) ~ 1,TRUE ~ 0)) %&amp;gt;% 
+  group_by(CH04) %&amp;gt;% 
+  summarise(
+    poblacion60ymas = sum(PONDII), # total población 60 años y más
+    pobl60_IL = sum(PONDII[Ingresolaboral == 1]), #ingresos laborales
+    pobl60_JP = sum(PONDII[IngresoJP == 1]), #jubilación o pensión
+    pobl60_OI = sum(PONDII[IngresoNoLaboral == 1]), #no laborales
+    &amp;quot;Ingresos laborales&amp;quot; = 
+           round(pobl60_IL/poblacion60ymas*100,1),
+    &amp;quot;Jubilación o pensión&amp;quot; =
+           round(pobl60_JP/poblacion60ymas*100,1),
+    &amp;quot;Otros ingresos no laborales&amp;quot; =
+           round(pobl60_OI/poblacion60ymas*100, 1)) %&amp;gt;% 
+    mutate(CH04 = case_when(CH04 == 1 ~ &amp;quot;Varones&amp;quot;, 
+                          CH04 == 2 ~ &amp;quot;Mujeres&amp;quot;))
+
+Cuadro4 &amp;lt;- rbind(Cuadro4A, Cuadro4B) %&amp;gt;% 
+  select(8, 5:7) %&amp;gt;% 
+  pivot_longer(cols = c(2:4), names_to = &amp;quot;Tipo_ingreso&amp;quot;, values_to = &amp;quot;porcentaje&amp;quot;) %&amp;gt;% 
+  mutate(CH04 = fct_relevel(CH04, c(&amp;quot;Total&amp;quot;, &amp;quot;Mujeres&amp;quot;, &amp;quot;Varones&amp;quot;)))
+
+
+
+ggplot(Cuadro4, aes(CH04, porcentaje, fill = CH04)) +
+  geom_col() +
+  #coord_flip() +
+  facet_wrap(~ Tipo_ingreso) +
+  #theme_classic() +
+  scale_fill_manual(values = paleta1) +
+  theme(legend.position = &amp;quot;none&amp;quot;) +
+  geom_text(aes(label = porcentaje), vjust = 1, colour = &amp;quot;white&amp;quot;) +
+  labs(title = &amp;quot;Gráfico 4: Porcentaje de población en edad de jubilarse perceptora de ingresos, por fuente y sexo. \nTotal nacional urbano. Año 2023&amp;quot;,
+                x = &amp;quot; &amp;quot;,
+                y = &amp;quot;porcentaje&amp;quot;,
+                caption = &amp;quot;Fuente: INDEC, Encuesta Permanente de Hogares total urbano.&amp;quot;
+                )&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/proyectos/personasmayores/index_files/figure-html/indicador%204-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;La mayoria de los ingresos de las personas en edad de jubilarse corresponden a jubilación o pensión. La cobertura previsional garantiza un margen de derecho para la calidad de vida personas mayores. Las mujeres de 60 años y más perciben en su gran mayoría ingresos por jubilación o pensión, en cambio los varones de 65 años y más siguen con presencia en el mercado de trabajo con ingresos laborales de un 35%.&lt;/p&gt;
+&lt;p&gt;Al ser el mayor ingreso de las personas mayores, es importante dar cuanta cuál es el haber jubilitario actual a marzo 2024 por tipo de régime adherido a moratoria:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tabla5 &amp;lt;- BESS2312 %&amp;gt;% 
+  mutate(
+    ConMoratoria = as.numeric(ConMoratoria),
+    SinMoratoria = as.numeric(SinMoratoria),
+    TotalJubilaciones = as.numeric(TotalJubilaciones))
+
+
+tabla5 %&amp;gt;% 
+  pivot_longer(cols = c(3,4), names_to = &amp;quot;regimen&amp;quot;, values_to = &amp;quot;haber_medio&amp;quot;) %&amp;gt;% 
+  mutate(regimen = case_when(regimen == &amp;quot;ConMoratoria&amp;quot; ~ &amp;quot;con moratoria&amp;quot;,
+                             regimen == &amp;quot;SinMoratoria&amp;quot; ~ &amp;quot;sin moratoria&amp;quot;
+                             )) %&amp;gt;% 
+  ggplot(aes(regimen, haber_medio))+
+  geom_col(aes(fill = Sexo), position = &amp;quot;dodge&amp;quot;) +
+  scale_fill_manual(values = c( &amp;quot;#d90368&amp;quot;, &amp;quot;#820263&amp;quot;)) +
+  geom_text(aes(label = round(haber_medio,0), group = Sexo), position = position_dodge(0.9), vjust = 0, colour = &amp;quot;black&amp;quot;) +
+  labs(title = &amp;quot;Gráfico 5: Haber jubilatorio medio, según sexo y adhesión a moratoria.\nTotal del país. Marzo de 2024&amp;quot;,
+                y = &amp;quot;En miles de pesos&amp;quot;,
+                x = &amp;quot;Régimen&amp;quot;,
+                caption = &amp;quot;Fuente: ANSES, Boletín Estadísitico de la Seguridad Social.&amp;quot;
+                )&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/proyectos/personasmayores/index_files/figure-html/indicador%205-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Existe una gran diferencia de haber entre tipo de régimen (casi un 50%), y no deja de existir diferencias entre mujeres y varones dentro de los montos del misno régimen.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;contexto-actual-argentina-2024&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Contexto actual: Argentina 2024&lt;/h2&gt;
+&lt;p&gt;Para las personas mayores pagar el alquiler, comida, salud y otros bienes y servicios dependen de sus ingresos y posición financiera. Esto puede aumentar o limitar su bienestar y calidad de vida, no hay opción de mejora en este bienestar que no sea a través de la cobertura previsional, que es su mayor fuente de ingreso. La pobreza es el mayor obstáculo para un envejecimiento decente y seguro.&lt;/p&gt;
+&lt;p&gt;Del registro de haberes medios a marzo de 2024 con una inflación acumulada del 287.9% deja un escenario crítico para las personas mayores, se debilita la seguridad económica que garantiza plenitud en la calidad de vida. Al ser la mayor fuente de ingreso, para los haberes con moratoria su monto esta por debajo de la Canasta básica total que para el mismo mes fue de $250.286 (Línea de pobreza para un adulto equivalente). Lo haberes sin moratorias a duras penas superan el monto pero la difultad para adquirir bienes y servicios persiste.&lt;/p&gt;
+&lt;p&gt;Hay ciertos factores de la seguridad económica en argentina que están cubiertas por las leyes actuales que garantiza a diferencia de otros países de la región un sistema jubilatorio casi universal pero estos no están siendo acompañados por políticas monetarias previsionalesque sobrelleven la alta inflación y el exacerbado aumento de los precios al consumidor. Lo que lleva a una perdida de la autonomía económica y deriva en restricciones que pueden afectar el bienestar físico y mental de las personas mayores. Se deben dar prioridades a condiciones ecónomica y no económicas para un envejecimiento con dignidad y seguridad.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;fuentes-bibliográficas&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Fuentes bibliográficas&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cepal.org/sites/default/files/events/files/huenchuan_guzman.pdf&#34;&gt;Huenchuan S. &amp;amp; Guzmán, J.M. (2006) Seguridad Económica y Pobreza en la Vejez: Tensiones, Expresiones y Desafíos para Políticas&lt;/a&gt; Reunión de Expertos sobre Población y Pobreza en América Latina y el Caribe.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://repositorio.cepal.org/server/api/core/bitstreams/431e4d95-46d9-4de6-a0a6-d41b1cb7d0b9/content&#34;&gt;S. Huenchuan (ed.), Envejecimiento, personas mayores y Agenda 2030 para el Desarrollo Sostenible: perspectiva regional y de derechos humanos, Libros de la CEPAL, N° 154 (LC/PUB.2018/24-P), Santiago, Comisión Económica para América Latina y el Caribe (CEPAL), 2018.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.indec.gob.ar/ftp/cuadros/poblacion/dosier_personas_mayores_2023.pdf&#34;&gt;INDEC, Dosier estadístico de personas mayores 2023&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Introducción al Análisis de la Encuesta Permanente de Hogares {eph} con R</title>
+      <link>/publication/ephrladies/</link>
+      <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>/publication/ephrladies/</guid>
+      <description>
+
+
+&lt;div id=&#34;ciclo-de-formaciòn-complementaria-en-uba-sociales&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Ciclo de formaciòn complementaria en UBA sociales&lt;/h3&gt;
+&lt;div class=&#34;float&#34;&gt;
+&lt;img src=&#34;RladiesSociales.jpg&#34; alt=&#34;Fotografía del Taller en la facultad de Ciencias Sociales UBA&#34; /&gt;
+&lt;div class=&#34;figcaption&#34;&gt;&lt;em&gt;Fotografía del Taller en la facultad de Ciencias Sociales UBA&lt;/em&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br&gt;
+En colaboración con &lt;a href=&#34;https://github.com/BetsyCohen&#34;&gt;&lt;strong&gt;Betsy Cohen&lt;/strong&gt;&lt;/a&gt; desarrollamos y organizadmos el taller desde &lt;a href=&#34;https://rladiesba.netlify.app/&#34;&gt;R-Ladies Buenos Aires&lt;/a&gt; &amp;amp; el &lt;a href=&#34;https://www.nucleodeinnovacion.com/&#34;&gt;Núcleo de Innovaciòn Social&lt;/a&gt; para del ciclo de formación complementaria de la carrera de Sociologìa en la Facultad de Ciencias Sociales de la UBA.&lt;/p&gt;
+&lt;p&gt;En esta ocasión vamos a presentar la potencia de la encuesta y la librería de {tidyverse} para mostrarles cómo podemos obtener bases de datos directamente con el paquete {eph} y vamos a procesarla, traducirla y presentarla en indicadores para el análisis de ciencias sociales.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;queda-a-disposición-todo-el-material&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Queda a disposición todo el material:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/drive/folders/1lWlTc6u-uhUWE5VcuCQRysoSNDmV5HGi?usp=sharing&#34;&gt;Descarga la Práctica guiada en Rmd&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Repositorio &lt;a href=&#34;https://github.com/SoyAndrea/tallerEPH&#34;&gt;&lt;strong&gt;GitHub en Taller eph en R&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Web con toda la información del taller: &lt;a href=&#34;https://eph-ubasociales.netlify.app/&#34;&gt;&lt;strong&gt;eph-ubasociales.netlify.app&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;slides-generadas-con-quarto.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Slides generadas con {quarto}.&lt;/h3&gt;
+&lt;iframe src=&#34;https://eph-ubasociales.netlify.app/slides#/title-slide&#34; width=&#34;672&#34; height=&#34;400px&#34; data-external=&#34;1&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;div id=&#34;redes-sociales&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Redes sociales&lt;/h3&gt;
+&lt;div id=&#34;sociología-uba&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Sociología UBA&lt;/h4&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;
+&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;
+💻| Meetup sobre EPH en &lt;a href=&#34;https://twitter.com/hashtag/SociologiaUBA?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SociologiaUBA&lt;/a&gt; &lt;br&gt;&lt;br&gt;Llevamos adelante un taller junto al colectivo de mujeres programadoras &lt;a href=&#34;https://twitter.com/RLadiesBA?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@RLadiesBA&lt;/span&gt;&lt;/a&gt; para conocer cómo que es y cómo procesar los datos de la EPH con lenguajes de programación de código abierto (R y Python). &lt;a href=&#34;https://t.co/cvo6Y64hf5&#34;&gt;pic.twitter.com/cvo6Y64hf5&lt;/a&gt;
+&lt;/p&gt;
+— sociologia.uba (&lt;span class=&#34;citation&#34;&gt;@sociologia_uba&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/sociologia_uba/status/1699954034554044803?ref_src=twsrc%5Etfw&#34;&gt;September 8, 2023&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+&lt;div id=&#34;rladies-buenos-aires&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Rladies Buenos Aires&lt;/h4&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;
+&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;
+Que lindo volver a los eventos presenciales! &lt;a href=&#34;https://twitter.com/me_andre?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@me_andre&lt;/span&gt;&lt;/a&gt; y &lt;a href=&#34;https://twitter.com/betsy_ar?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@betsy_ar&lt;/span&gt;&lt;/a&gt; presentaron una intro al uso de la EPH en R con sala llena🤩&lt;a href=&#34;https://twitter.com/hashtag/RLadies?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#RLadies&lt;/a&gt; &lt;a href=&#34;https://t.co/FsEH0kAzEu&#34;&gt;pic.twitter.com/FsEH0kAzEu&lt;/a&gt;
+&lt;/p&gt;
+— R-Ladies BuenosAires (&lt;span class=&#34;citation&#34;&gt;@RLadiesBA&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/RLadiesBA/status/1699949471038062913?ref_src=twsrc%5Etfw&#34;&gt;September 8, 2023&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+&lt;div id=&#34;consejo-de-profesionales-en-sociología&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Consejo de Profesionales en Sociología&lt;/h4&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;
+&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;
+La Comisión de transformación digital invita a participar del Taller de introducción al Análisis de la Encuesta Permanente de Hogares con R organizado por &lt;a href=&#34;https://twitter.com/RLadiesBA?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@RLadiesBA&lt;/span&gt;&lt;/a&gt; en colaboración con &lt;a href=&#34;https://twitter.com/sociologia_uba?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@sociologia_uba&lt;/span&gt;&lt;/a&gt; y el Núcleo de Innovación Social (NIS). &lt;a href=&#34;https://t.co/hsywb9xDpP&#34;&gt;pic.twitter.com/hsywb9xDpP&lt;/a&gt;
+&lt;/p&gt;
+— Consejo de Profesionales en Sociología (&lt;span class=&#34;citation&#34;&gt;@CPSociologia&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/CPSociologia/status/1694049790185615512?ref_src=twsrc%5Etfw&#34;&gt;August 22, 2023&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Introducción al procesamiento de datos con R para Ciencias Sociales</title>
+      <link>/proyectos/aset/</link>
+      <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>/proyectos/aset/</guid>
+      <description>&lt;h3 id=&#34;edición-2022--2023&#34;&gt;Edición 2022 &amp;amp; 2023&lt;/h3&gt;
+&lt;h4 id=&#34;asociación-argentina-de-especialistas-en-estudios-del-trabajo-aset&#34;&gt;Asociación Argentina de Especialistas en Estudios del Trabajo (ASET)&lt;/h4&gt;
+&lt;p&gt;Junto a &lt;a href=&#34;https://r-intro-aset.netlify.app/about_pablotiscornia&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Pablo Tiscornia&lt;/a&gt;, desarrollamo el taller que tiene como principal objetivo introducir a los y las participantes en el mundo de R y la programación para producir información estadística. La idea es centrarse en cómo encarar un proyecto que involucre meter manos en los datos, desde cómo nombrar mis carpetas o archivos, importarlos para acceder a la información, limpiar los datos y procesarlos hasta como visualizar, analizar y comunicar los hallazgos.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/pablotis/intro_r_aset&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Repositorio del curso&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://r-intro-aset.netlify.app/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Website del curso&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe width=&#34;1000&#34; height=&#34;500&#34; src=&#34;https://r-intro-aset.netlify.app/&#34; title=&#34;Webpage del curso&#34;&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Posta Sociológica PASALAVOS(Z)</title>
+      <link>/proyectos/pasalavos/</link>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>/proyectos/pasalavos/</guid>
+      <description>&lt;h2 id=&#34;posta-sociológica-pasalavosz--celebración-y-socialización-del-conocimiento&#34;&gt;Posta sociológica PASALAVOS(Z) 📢 Celebración y socialización del conocimiento&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;El 1ro. de junio se conmemora el día del Sociólogx&lt;/em&gt; en homenaje a la primera Cátedra de Sociología en Argentina, dictada en el año 1899 por Antonio Dellepiane.&lt;/p&gt;
+&lt;p&gt;Desde la carrera de sociología de la UBA en conmemoración de la fecha, realizaron una nueva edición de sociología  en vivo a nivel interclaustros invitando a estudiantes, graduados y docentes a presentar un libro sobre el autor o autora que, dentro del campo de nuestra disciplina, hubiera interpelado nuestro paso por la carrera.&lt;/p&gt;
+&lt;h2 id=&#34;pan-y-afectos---elizabeth-jelin&#34;&gt;Pan y Afectos - Elizabeth Jelin&lt;/h2&gt;
+&lt;img style=&#34;float: right;&#34; src=&#34;images/IMG_20220602_142344.jpg&#34; alt=&#34;Portada del libro pan y afectos &#34; width=&#34;40%&#34;/&gt;
+&lt;p&gt;De las pocas autoras que leemos en la carrera, Elizabeth Jelin fue de mis favoritas. Primero conocí su obra y luego su trayectoria profesional. Fue de las primeras mujeres sociólogas en Argentina, trabajando con temáticas de derechos humanos, la ciudadanía, género, familia y movimientos sociales.&lt;/p&gt;
+&lt;p&gt;Su libro Pan y afectos llegó de manera desprevenida pero cautivadora cuando empecé a leer y a entender la estructura de la familia nuclear y de los mandatos sociales en una de las instituciones sociales más fuertes que tenemos como sociedad: la familia. En tiempos en los que estamos acostumbrados a hablar de Ni Una Menos, Jelin fue pionera en hablar estas temáticas ya en la decada del 90 cuando no hacía ruido la violencia hacía las mujeres, en donde todavía no se hablaba de violencia doméstica o de violencia en las infancias. Fueron las bases en la sociedad argentina para dar paso a la llegada de nuevos estudios y avances en temáticas de género, entre otros temas.&lt;/p&gt;
+&lt;p&gt;Su nombre y su legado no podían faltar en una jornada tan importante para la carrera de sociología. Pan y afectos es sólo una pequeña muestra de su gran labor sociológica.&lt;/p&gt;
+&lt;h2 id=&#34;sociología-en-vivo---participantes&#34;&gt;Sociología en vivo - participantes&lt;/h2&gt;
+&lt;img style=&#34;float: left;&#34; src=&#34;images/participantes.jpg&#34; alt=&#34;Listado de participantes en la jornada&#34; height=&#34;30%&#34;/&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Colombia a los votos: un podcast de migrantes x migrantes</title>
+      <link>/proyectos/alosvotoscolombia/</link>
+      <pubDate>Wed, 25 May 2022 00:00:00 +0000</pubDate>
+      <guid>/proyectos/alosvotoscolombia/</guid>
+      <description>&lt;h2 id=&#34;elecciones-presidenciales-en-colombia&#34;&gt;Elecciones presidenciales en Colombia&lt;/h2&gt;
+&lt;p&gt;A días de vivir una de las elecciones más importantes de su historia, desde migrantes x migrantes nos adentramos en el contexto político y social de estos comicios, cómo funciona su sistema electoral y los testimonios de colombianos y colombianas que ejercerán su derecho en Argentina.&lt;/p&gt;
+&lt;p&gt;Para lxs colombianx en el exterior, las elecciones comenzaron el pasado lunes 23 de mayo. ¿Cómo viven estos comicios lxs colombianxs migrantes?&lt;/p&gt;
+&lt;p&gt;🎤 Con la participación de:&lt;/p&gt;
+&lt;p&gt;🔸 Sandra Botero -Profesora de Ciencia Política @urosario&lt;/p&gt;
+&lt;p&gt;🔸 Laura Capote - Sec Continental @alba_movimientos y @marchacapituloarg&lt;/p&gt;
+&lt;p&gt;🔸 Facundo Cruz  - Politólogo UBA e investigador&lt;/p&gt;
+&lt;p&gt;🔸 Michael Armero  - Militante @colombiahumanabuenosaires&lt;/p&gt;
+&lt;p&gt;🔸 Verónica Jaramillo - Investigadora @unlaoficial&lt;/p&gt;
+&lt;p&gt;🔸 Andrea Gómez - Socióloga&lt;/p&gt;
+&lt;h2 id=&#34;escúchalo-en-spotify-y-en-youtube&#34;&gt;Escúchalo en Spotify y en Youtube&lt;/h2&gt;
+&lt;p&gt;Desde consulados y embajadas también vivimos #ALosVotos 🗳️&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/LW2sesfPbOA&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt; 
+</description>
+    </item>
+    
+    <item>
+      <title>Perfil.com - 8M: los videojuegos, otro terreno de lucha para las mujeres</title>
+      <link>/proyectos/mujeresvideojuegos/</link>
+      <pubDate>Tue, 08 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>/proyectos/mujeresvideojuegos/</guid>
+      <description>&lt;h2 id=&#34;el-papel-de-la-sociedad&#34;&gt;El papel de la sociedad&lt;/h2&gt;
+&lt;p&gt;El año pasado la periodista Ayelen Segovia se contacto comigo para sumar aportes sociólogicos y de género(s) sobre el rol de las mujeres en tecnología y en particular el rubro de los videojuegos.&lt;/p&gt;
+&lt;p&gt;Hoy una parte de la entrevista aparece en su última nota en diario Perfil donde hablamos sobre el rol de la sociedad para impulsar mayor participación de mujeres en tecnologia y acciones concretas para su efectiva realización.&lt;/p&gt;
+&lt;p&gt;Participaron en conjunto otras mujeres parte de comunidades de tecnologia enfocadas en videojuegos tales como Women in Games Argentina, entre otras.&lt;/p&gt;
+&lt;p&gt;Lee el artículo completo en &lt;a href=&#34;https://www.perfil.com/noticias/actualidad/8m-los-videojuegos-otro-terreno-de-lucha-para-las-mujeres.phtml&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Perfil.com&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;Nota de hoy porque el 8M no pasa desapercibido para ninguna mujer. En este caso, dejo mi pequeño aporte para visibilizar lo que a la gran mayoría nos pasa en todos los ámbitos, incluidos los videojuegos 💪🏻🎮&lt;a href=&#34;https://twitter.com/hashtag/8M2022?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#8M2022&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/DiaInternacionalDeLaMujer?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DiaInternacionalDeLaMujer&lt;/a&gt;&lt;a href=&#34;https://t.co/7ktjnTsl4Y&#34;&gt;https://t.co/7ktjnTsl4Y&lt;/a&gt;&lt;/p&gt;&amp;mdash; Ayelen (@AyelenSegovia99) &lt;a href=&#34;https://twitter.com/AyelenSegovia99/status/1501267963504062464?ref_src=twsrc%5Etfw&#34;&gt;March 8, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>LatinR 2021</title>
+      <link>/publication/latinr2021/</link>
+      <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/latinr2021/</guid>
+      <description>&lt;h2 id=&#34;conociendo-el-camino-para-aprender-a-usar-r-en-latinoamérica-desafíos-para-promover-la-inclusión-y-diversidad&#34;&gt;Conociendo el camino para aprender a usar R en Latinoamérica: desafíos para promover la inclusión y diversidad&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;sesión iniciativas de la Comunidad de R&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;de-que-se-trató-esta-iniciativa&#34;&gt;&lt;strong&gt;¿De que se trató esta iniciativa?&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;El entorno de R es una poderosa herramienta utilizada mundialmente para diversos fines. A pesar de la gran variedad de usos que se le da a esta herramienta, todas las personas que utilizan R tienen algo en común y es que en algún momento tuvieron que aprender dicho lenguaje. ¿Cuáles fueron los motivos por los cuales lo hicieron? ¿Dónde fue que aprendieron a usar R? ¿Qué desafíos enfrentan aquellas personas que utilizan R?&lt;/p&gt;
+&lt;p&gt;Estas son algunas de las preguntas incluidas en la primera encuesta Latinoamericana sobre el uso de R realizada en 2020. Creamos dicha encuesta para evaluar qué desafíos enfrentan los usuarios de R en una región donde el idioma, la infraestructura y las diferencias en acceso a recursos, información y capacitación pueden representar una barrera para el aprendizaje y uso de R. Solo conociendo cuáles son esas barreras y dificultades que enfrentaron (o no) al aprender y utilizar R es que se podrían implementar prácticas que mejoren la inclusión de les usuaries.&lt;/p&gt;
+&lt;p&gt;En esta charla presentaremos el análisis y los resultados de las preguntas antes mencionadas entre otras, e invitaremos a que más personas se sumen a esta iniciativa. La encuesta es abierta y reutilizable dado que buscamos inspirar a otras regiones desatendidas de todo el mundo a identificar sus fortalezas y desafíos y de dicha manera ayudar a aumentar la inclusión y la diversidad de la comunidad internacional de R.&lt;/p&gt;
+&lt;h3 id=&#34;equipo&#34;&gt;&lt;strong&gt;Equipo&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://paocorrales.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Paola Corrales&lt;/a&gt; (CIMA, FCEN, UBA),
+Claudia A. Huaylla (IRNAD-CONICET-UNRN),
+Virginia A. García Alonso (IBBEA-CONICET-UBA),
+Joselyn Chávez (IBt-UNAM),
+Denisse Fierro Arcos (IMAS-UTAS) y 
+Andrea Gómez Vargas (FSOC, UBA).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/equipo.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;reviví-la-presentación-en-youtube&#34;&gt;Reviví la presentación en Youtube&lt;/h3&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/O31-2LHZDoM&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;h3 id=&#34;sesión-en-vivo-10-de-noviembre&#34;&gt;Sesión en vivo 10 de noviembre&lt;/h3&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/4TCNocxRtwo?start=4670&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;Todas las presentaciones de &lt;strong&gt;LatinR 2021&lt;/strong&gt; &lt;a href=&#34;https://github.com/LatinR/presentaciones-LatinR2021&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;aquí&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cómo empezaR</title>
+      <link>/publication/comoempezar/</link>
+      <pubDate>Wed, 22 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/comoempezar/</guid>
+      <description>&lt;h2 id=&#34;cómo-empezar-desde-las-ciencias-sociales-hacia-las-ciencias-de-datos&#34;&gt;Cómo empezaR: desde las Ciencias Sociales hacia las Ciencias de Datos&lt;/h2&gt;
+&lt;p&gt;¡Si venís de las Ciencias Sociales y no sabés como empezar en el mundo de la ciencia de datos este meetup es para vos! Desde el Núcleo de Innovación Social (NIS) y RLadies Buenos Aires les traemos esta charla con 4 expositorxs egresadxs de carreras vinculadas a las Ciencias Sociales que trabajan en ciencia de datos.&lt;/p&gt;
+&lt;p&gt;Cada une contará su experiencia de primera mano sobre cómo arrancaron en este tipo de roles, qué trabas tuvieron, qué dificultades enfrentaron, y qué herramientas consideran que les sumaron y que pueden servirle a unx egresadx que quiera inciarse en mundo de la ciencia de datos.&lt;/p&gt;
+&lt;h3 id=&#34;exponen&#34;&gt;Exponen:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Andrea Gómez Vargas (@me_andre) - Socióloga&lt;/li&gt;
+&lt;li&gt;Pedro Orden (@pedroorden) - Sociólogo, investigador y científico de datos.&lt;/li&gt;
+&lt;li&gt;Ramiro Fernández (@ramaol) - Sociólogo y científico de datos&lt;/li&gt;
+&lt;li&gt;María Cristina Nanton (@bynans1) - Comunicadora social y analista de datos&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;coordina&#34;&gt;Coordina:&lt;/h3&gt;
+&lt;p&gt;Betsy Cohen (@betsy_ar) - Socióloga&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;Gracias a todes les que asistieron a Cómo empezaR de &lt;a href=&#34;https://twitter.com/hashtag/rladies?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rladies&lt;/a&gt; y el NIS! Son todes parte de esta comunidad &lt;a href=&#34;https://twitter.com/hashtag/RStats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#RStats&lt;/a&gt; &lt;br&gt;&lt;br&gt;Acá toda la alegría del team organizador :D&lt;a href=&#34;https://twitter.com/bynans1?ref_src=twsrc%5Etfw&#34;&gt;@bynans1&lt;/a&gt; &lt;a href=&#34;https://twitter.com/JesiFormoso?ref_src=twsrc%5Etfw&#34;&gt;@JesiFormoso&lt;/a&gt; &lt;a href=&#34;https://twitter.com/MonicaLA2000?ref_src=twsrc%5Etfw&#34;&gt;@MonicaLA2000&lt;/a&gt; &lt;a href=&#34;https://twitter.com/pmnatural?ref_src=twsrc%5Etfw&#34;&gt;@pmnatural&lt;/a&gt; &lt;a href=&#34;https://twitter.com/VA_GarciaAlonso?ref_src=twsrc%5Etfw&#34;&gt;@VA_GarciaAlonso&lt;/a&gt; &lt;a href=&#34;https://twitter.com/me_andre?ref_src=twsrc%5Etfw&#34;&gt;@me_andre&lt;/a&gt; &lt;a href=&#34;https://twitter.com/pedroorden?ref_src=twsrc%5Etfw&#34;&gt;@pedroorden&lt;/a&gt; &lt;a href=&#34;https://twitter.com/ramaol?ref_src=twsrc%5Etfw&#34;&gt;@ramaol&lt;/a&gt; &lt;a href=&#34;https://twitter.com/betsy_ar?ref_src=twsrc%5Etfw&#34;&gt;@betsy_ar&lt;/a&gt; &lt;a href=&#34;https://t.co/OFsqI8Ii5d&#34;&gt;pic.twitter.com/OFsqI8Ii5d&lt;/a&gt;&lt;/p&gt;&amp;mdash; R-Ladies BuenosAires (@RLadiesBA) &lt;a href=&#34;https://twitter.com/RLadiesBA/status/1440821762204127234?ref_src=twsrc%5Etfw&#34;&gt;September 22, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h3 id=&#34;revive-la-charla-en-el-canal-de-rladies-buenos-aires&#34;&gt;Revive la charla en el canal de Rladies Buenos Aires&lt;/h3&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/isoSCXA2gqo&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;Ahora &lt;a href=&#34;https://twitter.com/me_andre?ref_src=twsrc%5Etfw&#34;&gt;@me_andre&lt;/a&gt; contando que “no siempre se llega directamente a la carrera de datos...&amp;quot; y cuál fue su camino desde la sociología a trabajar en el INDEC! &lt;a href=&#34;https://t.co/wNcO92mou3&#34;&gt;pic.twitter.com/wNcO92mou3&lt;/a&gt;&lt;/p&gt;&amp;mdash; R-Ladies BuenosAires (@RLadiesBA) &lt;a href=&#34;https://twitter.com/RLadiesBA/status/1440795986222215170?ref_src=twsrc%5Etfw&#34;&gt;September 22, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>ReinventarTEC 2021</title>
+      <link>/publication/reinventartec2021/</link>
+      <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/reinventartec2021/</guid>
+      <description>&lt;h2 id=&#34;primeros-pasos-en-r-para-el-análisis-de-datos&#34;&gt;&lt;strong&gt;Primeros pasos en R para el análisis de datos&lt;/strong&gt;&lt;/h2&gt;
+&lt;h4 id=&#34;reinventartec-2021---taller&#34;&gt;ReinventarTEC 2021 - taller&lt;/h4&gt;
+&lt;p&gt;Taller organizado por los capítulos de Rladies Buenos Aires, Ushuaia y Resistencia-Corientes, dirigido por Patricia Loto y Andrea Gomez Vargas para la segunda edición de ReinventarTEC. Un ciclo de talleres con el fin de inspirar a mujeres de todas las edades y profesiones a reinventarse y crear un mejor futuro laboral en la era digital.&lt;/p&gt;
+&lt;p&gt;En esta ocasión quisimos brindar tips y materiales iniciales, gratuitos y accesibles para empezar a hacer análisis de datos con una pequeña introducción para aprender a usar R y tidyverse.&lt;/p&gt;
+&lt;img src=&#34;images/tidyverse.png&#34; alt=&#34;&#34; width=&#34;70%&#34;/&gt;
+&lt;p&gt;Para que no quedara solo conceptos, realizamos un ejercicio práctico con un dataset sobre LEGO. Te comparto los links con la presentación y ejercicio de práctica.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Práctica Rstudio desde la nube:&lt;/strong&gt;  &lt;a href=&#34;https://rstudio.cloud/project/2704255&#34;&gt;https://rstudio.cloud/project/2704255&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Presentación + Guía de instalación Rstudio:&lt;/strong&gt; &lt;a href=&#34;https://bit.ly/Taller9-ReinventarTEC&#34;&gt;https://bit.ly/Taller9-ReinventarTEC&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Repositorio en GitHub&lt;/strong&gt; &lt;a href=&#34;https://github.com/PatriLoto/reinventarTEC_2021&#34;&gt;https://github.com/PatriLoto/reinventarTEC_2021&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;info: &lt;a href=&#34;https://mincyt.cba.gov.ar/reinventartec/&#34;&gt;https://mincyt.cba.gov.ar/reinventartec/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;pt&#34; dir=&#34;ltr&#34;&gt;Terminando! &lt;a href=&#34;https://twitter.com/hashtag/ReinventarTEC?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ReinventarTEC&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rladies?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rladies&lt;/a&gt;&lt;a href=&#34;https://twitter.com/RLadies_rciacte?ref_src=twsrc%5Etfw&#34;&gt;@RLadies_rciacte&lt;/a&gt;&lt;br&gt; YouTube: &lt;a href=&#34;https://t.co/3Pk31zNKZK&#34;&gt;https://t.co/3Pk31zNKZK&lt;/a&gt; &lt;a href=&#34;https://t.co/csMK1Bj4Rc&#34;&gt;pic.twitter.com/csMK1Bj4Rc&lt;/a&gt;&lt;/p&gt;&amp;mdash; R-Ladies BuenosAires (@RLadiesBA) &lt;a href=&#34;https://twitter.com/RLadiesBA/status/1415446571676745728?ref_src=twsrc%5Etfw&#34;&gt;July 14, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; 
+&lt;p&gt;&lt;strong&gt;Míralo en el canal de Youtube del Ministerio&lt;/strong&gt;&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/Q8kKAnB3Xf8&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;strong&gt;Difusión&lt;/strong&gt;&lt;/p&gt;
+&lt;img src=&#34;images/Difusion.jpg&#34; alt=&#34;&#34; width=&#34;80%&#34;/&gt;
+&lt;p&gt;&lt;strong&gt;Prensa&lt;/strong&gt;
+&lt;a href=&#34;https://prensa.cba.gov.ar/ciencia-y-tecnologia/ciencia-con-perspectiva-de-genero-finaliza-la-2-edicion-del-programa-reinventartec/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Finalizó la 2° edición del programa ReinventarTEC&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>useR 2021: uso de R en latinoamérica</title>
+      <link>/publication/user2021/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/user2021/</guid>
+      <description>&lt;h2 id=&#34;uso-de-r-en-latinoamérica-fortalezas-desafíos-y-debilidades&#34;&gt;Uso de R en Latinoamérica: fortalezas, desafíos y debilidades&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Regular talk - Community and Outreach&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;de-que-se-trató-esta-iniciativa&#34;&gt;&lt;strong&gt;¿De que se trató esta iniciativa?&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Sabemos que el entorno de R es utilizado globalmente para diversos fines. Sin embargo, ¿qué tan ampliamente es utilizado en países periféricos como los Latinoamericanos donde el inglés no es el idioma oficial y donde la infraestructura y el  acceso a diversos recursos no están garantizados entre otros?&lt;/p&gt;
+&lt;p&gt;En agosto de 2020 un grupo de personas pertenecientes a comunidades de usuarios y usuarias de R en Latinoamérica, nos propusimos generar una encuesta para conocer a las personas que usan R en Latinoamérica, intentando resaltar cuáles son nuestras posibles fortalezas y a qué desafíos nos enfrentamos.&lt;/p&gt;
+&lt;p&gt;Con base en los objetivos propuestos, diseñamos una encuesta de 31 preguntas las cuales abordaban 5 ejes principales: su interés en R, información demográfica, su nivel académico, su relación con la comunidad de R y el área en que usan R.&lt;/p&gt;
+&lt;p&gt;Con la finalidad de fomentar la inclusividad, la encuesta fue confeccionada en tres idiomas español, portugués e inglés para que las personas contestaran en el idioma con el que se sintieran más cómodas.&lt;/p&gt;
+&lt;p&gt;La iniciativa fue difundida en numerosas redes como Twitter, Slack y Telegram de grupos que trabajan con R. Para esta encuesta se invitó a participar a quienes hayan nacido y/o sean residentes en Latinoamérica.&lt;/p&gt;
+&lt;p&gt;Este pequeño proyecto creció gracias al gran trabajo y colaboración de muchas personas que sumaron preguntas, ayudaron a corregir errores y generaron las distintas traducciones para que esté disponible en español, portugués e inglés y tenga en cuenta la diversidad de realidades en la región. 
+Pero además pasó a ser un proyecto de R-Forwards, el grupo de trabajo de la R Foundation que busca mejorar la inclusión y diversidad en el mundo de R.&lt;/p&gt;
+&lt;p&gt;Slides en &lt;a href=&#34;https://encuesta-user2021-es.netlify.app/#1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;español&lt;/strong&gt;&lt;/a&gt; e  &lt;a href=&#34;https://encuesta-user2021-en.netlify.app/#1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;inglés&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;equipo&#34;&gt;&lt;strong&gt;Equipo&lt;/strong&gt;:&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://paocorrales.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Paola Corrales&lt;/a&gt; (CIMA, FCEN, UBA), 
+Claudia A. Huaylla (IRNAD-CONICET-UNRN),
+Virginia A. García Alonso (IBBEA-CONICET-UBA),
+Joselyn Chávez (IBt-UNAM),
+Denisse Fierro Arcos (IMAS-UTAS),
+Andrea Gómez Vargas (FSOC, UBA).&lt;/p&gt;
+&lt;img src=&#34;images/equipo.jpg&#34; alt=&#34;&#34; width=&#34;80%&#34;/&gt;
+&lt;h3 id=&#34;accessibility-awards&#34;&gt;&lt;strong&gt;Accessibility Awards&lt;/strong&gt;&lt;/h3&gt;
+&lt;img src=&#34;images/awards.png&#34; alt=&#34;&#34; width=&#34;80%&#34;/&gt;
+&lt;p&gt;La presentación del trabajo fue reconocida  por useR! al ser elaborada en dos idiomas y con parámetros de accesibilidad.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Awards time 🏆&lt;br&gt;Our Accessibility Mentions: Natalia Morandeira, Virginia Alonso and colleagues, and Lluís Revilla. Great job, thank you for making your presentations accessible!&lt;/p&gt;&amp;mdash; useR! 2021 (@_useRconf) &lt;a href=&#34;https://twitter.com/_useRconf/status/1413617667500556291?ref_src=twsrc%5Etfw&#34;&gt;July 9, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; 
+&lt;h3 id=&#34;reviví-la-presentación-en-youtube&#34;&gt;Reviví la presentación en Youtube&lt;/h3&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/LyBLJlN6dqo&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Nido Informes - Colombia</title>
+      <link>/proyectos/nidocolombia/</link>
+      <pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate>
+      <guid>/proyectos/nidocolombia/</guid>
+      <description>&lt;h2 id=&#34;nido-informes-colombia&#34;&gt;NIDO INFORMES: COLOMBIA&lt;/h2&gt;
+&lt;p&gt;Participé en el informe de NIDO MEDIA, acá intentamos explicarte qué pasó y porqué en al Paro Nacional que sucede en Colombia desde el 28 de abril.&lt;/p&gt;
+&lt;p&gt;Escúchalo también en el canal de youtube de &lt;a href=&#34;https://www.youtube.com/channel/UC96_HTGS5JhAChVwMhFiRtw&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Nido MEDIA&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/IeRc-7Q4h0U&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;h3 id=&#34;otros-medio-alternativos&#34;&gt;Otros medio alternativos&lt;/h3&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;¡Un grito nacional! &lt;a href=&#34;https://twitter.com/hashtag/ParoNacional2M?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ParoNacional2M&lt;/a&gt; &lt;a href=&#34;https://twitter.com/laorejaroja?ref_src=twsrc%5Etfw&#34;&gt;@laorejaroja&lt;/a&gt; &lt;a href=&#34;https://t.co/TLs8TuMlsd&#34;&gt;pic.twitter.com/TLs8TuMlsd&lt;/a&gt;&lt;/p&gt;&amp;mdash; laorejaroja (@laorejaroja) &lt;a href=&#34;https://twitter.com/laorejaroja/status/1392560277942591492?ref_src=twsrc%5Etfw&#34;&gt;May 12, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>R en Buenos Aires</title>
+      <link>/publication/renbaires/</link>
+      <pubDate>Fri, 14 May 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/renbaires/</guid>
+      <description>&lt;h2 id=&#34;capítulo-2-una-presentación-a-toda-marcha-de-r&#34;&gt;Capítulo 2: Una presentación a toda marcha de R&lt;/h2&gt;
+&lt;p&gt;Siguiendo con el club de lectura de &lt;a href=&#34;https://bitsandbricks.github.io/ciencia_de_datos_gente_sociable/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Ciencia de Datos para Gente Sociable de Antonio Vazquez Brust&lt;/strong&gt;&lt;/a&gt; introducí el segundo capitulo donde ya comenzamos a conocer la interfaz de R studio y armamos nuestro primer proyecto.&lt;/p&gt;
+&lt;p&gt;Acá conté los primeros 5  pasos que el autor nos invita a conocer y navegar en R:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/RPRIMERO.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Quedan muchos capitulos por charlar, sumate a los próximos en &lt;a href=&#34;https://www.meetup.com/es/renbaires/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;R en Baires&lt;/strong&gt;&lt;/a&gt;. Si no puedes asistir, quedan grabados en el canal de youtube.&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/YZT2hX800yg&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>#BAenDatos ¿Qué sabemos de la línea 144 en CABA?</title>
+      <link>/proyectos/baendatos/</link>
+      <pubDate>Mon, 29 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>/proyectos/baendatos/</guid>
+      <description>
+&lt;script src=&#34;/proyectos/baendatos/index_files/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/proyectos/baendatos/index_files/plotly-binding/plotly.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/proyectos/baendatos/index_files/typedarray/typedarray.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/proyectos/baendatos/index_files/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/proyectos/baendatos/index_files/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/proyectos/baendatos/index_files/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/proyectos/baendatos/index_files/plotly-htmlwidgets-css/plotly-htmlwidgets.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/proyectos/baendatos/index_files/plotly-main/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;Me sume al &lt;a href=&#34;https://www.buenosaires.gob.ar/agendadetransparencia/datos-abiertos/baendatos&#34;&gt;&lt;strong&gt;desafío de #BAenDatos&lt;/strong&gt;&lt;/a&gt; con un serie de visualizaciones sobre género y encontré información interesante para compartir sobre la línea nacional para la atención, contención y asesoramiento en situaciones de violencia por razones de género&lt;/p&gt;
+&lt;p&gt;Para esto usé dos datasets: &lt;a href=&#34;https://data.buenosaires.gob.ar/dataset/llamadas-linea-144/archivo/72a45383-d48d-468a-a39b-051cc3ec239c&#34;&gt;&lt;strong&gt;Llamadas linea 144&lt;/strong&gt;&lt;/a&gt; y &lt;a href=&#34;https://data.buenosaires.gob.ar/dataset/servicios-asistencia-victimas-violencia-genero/archivo/598323e9-4df6-4465-9785-b9591bc32a77&#34;&gt;&lt;strong&gt;Conocimiento de dispositivos de asistencia&lt;/strong&gt;&lt;/a&gt;, ambos en formato CSV&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Las librerias a usar fueron tidyverse y plotly, acá te comparto el script usado para las visualizaciones.&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+library(plotly)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;La línea 144 es el segundo dispositivo de asistencia más conocido en CABA&lt;/strong&gt; por las mujeres al momento de buscar atención, contención y asesoramiento ante situaciones de violencia por razones de género. ¿Cómo es esto posible?&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;df_dispositivos &amp;lt;- read.csv(&amp;quot;lin_tel_ayu_annio__ser_asist_limpio.csv&amp;quot;, sep = &amp;quot;;&amp;quot;, encoding = &amp;quot;latin1&amp;quot;)
+df_dispositivos[,-1]&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   porc_mujeres                                   servicios_asistencia
+## 1         55.7                   Centros Integrales de la Mujer (CIM)
+## 2         59.0 Ley 26.485 sobre protección integral hacia las mujeres
+## 3         59.9              Servicios de Patrocinio Jurídico Gratuito
+## 4         63.9                               Organismos de la policía
+## 5         78.7                          Organismos del poder judicial
+## 6         81.9          Botones de pánico - dispositivo de emergencia
+## 7         84.0                            Líneas telefónicas de ayuda
+## 8         88.5                           Campañas contra la violencia
+## 9           NA&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;df_dispositivos &amp;lt;- df_dispositivos[order(df_dispositivos$porc_mujeres),]
+
+df_dispositivos$porc_fact &amp;lt;- factor(df_dispositivos$porc_mujeres, levels =df_dispositivos[[&amp;quot;porc_mujeres&amp;quot;]])
+
+yform &amp;lt;- list(categoryorder = &amp;quot;array&amp;quot;,
+              categoryarray = df_dispositivos$porc_fact,
+              title = &amp;quot;&amp;quot;)
+
+fig &amp;lt;- plot_ly(df_dispositivos, x = ~porc_fact, y = ~servicios_asistencia ,  type = &amp;#39;bar&amp;#39;, orientation = &amp;#39;h&amp;#39;, marker = list(color = c(
+                                &amp;#39;rgba(39,127,142,1)&amp;#39;,
+                                &amp;#39;rgba(39,127,142,1)&amp;#39;,
+                                &amp;#39;rgba(39,127,142,1)&amp;#39;, 
+                                &amp;#39;rgba(39,127,142,1)&amp;#39;,
+                                &amp;#39;rgba(39,127,142,1)&amp;#39;,
+                                &amp;#39;rgba(39,127,142,1)&amp;#39;,
+                                &amp;#39;rgba(70,51,126,1)&amp;#39;,
+                                &amp;#39;rgba(39,127,142,1)&amp;#39;))) %&amp;gt;% 
+  layout(xaxis = list(title = &amp;#39;Porcentaje de conocimiento&amp;#39;),
+         title = &amp;quot;Conocimiento de dispositivos de asistencia&amp;quot;,
+         yaxis = yform)
+
+fig&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:672px;height:480px;&#34; class=&#34;plotly html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;visdat&#34;:{&#34;11505bdd744a&#34;:[&#34;function () &#34;,&#34;plotlyVisDat&#34;]},&#34;cur_data&#34;:&#34;11505bdd744a&#34;,&#34;attrs&#34;:{&#34;11505bdd744a&#34;:{&#34;x&#34;:{},&#34;y&#34;:{},&#34;orientation&#34;:&#34;h&#34;,&#34;marker&#34;:{&#34;color&#34;:[&#34;rgba(39,127,142,1)&#34;,&#34;rgba(39,127,142,1)&#34;,&#34;rgba(39,127,142,1)&#34;,&#34;rgba(39,127,142,1)&#34;,&#34;rgba(39,127,142,1)&#34;,&#34;rgba(39,127,142,1)&#34;,&#34;rgba(70,51,126,1)&#34;,&#34;rgba(39,127,142,1)&#34;]},&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;bar&#34;}},&#34;layout&#34;:{&#34;margin&#34;:{&#34;b&#34;:40,&#34;l&#34;:60,&#34;t&#34;:25,&#34;r&#34;:10},&#34;xaxis&#34;:{&#34;domain&#34;:[0,1],&#34;automargin&#34;:true,&#34;title&#34;:&#34;Porcentaje de conocimiento&#34;,&#34;type&#34;:&#34;category&#34;,&#34;categoryorder&#34;:&#34;array&#34;,&#34;categoryarray&#34;:[&#34;55.7&#34;,&#34;59&#34;,&#34;59.9&#34;,&#34;63.9&#34;,&#34;78.7&#34;,&#34;81.9&#34;,&#34;84&#34;,&#34;88.5&#34;]},&#34;title&#34;:&#34;Conocimiento de dispositivos de asistencia&#34;,&#34;yaxis&#34;:{&#34;domain&#34;:[0,1],&#34;automargin&#34;:true,&#34;categoryorder&#34;:&#34;array&#34;,&#34;categoryarray&#34;:[&#34;55.7&#34;,&#34;59&#34;,&#34;59.9&#34;,&#34;63.9&#34;,&#34;78.7&#34;,&#34;81.9&#34;,&#34;84&#34;,&#34;88.5&#34;,null],&#34;title&#34;:&#34;&#34;,&#34;type&#34;:&#34;category&#34;},&#34;hovermode&#34;:&#34;closest&#34;,&#34;showlegend&#34;:false},&#34;source&#34;:&#34;A&#34;,&#34;config&#34;:{&#34;showSendToCloud&#34;:false},&#34;data&#34;:[{&#34;x&#34;:[&#34;55.7&#34;,&#34;59&#34;,&#34;59.9&#34;,&#34;63.9&#34;,&#34;78.7&#34;,&#34;81.9&#34;,&#34;84&#34;,&#34;88.5&#34;],&#34;y&#34;:[&#34;Centros Integrales de la Mujer (CIM)&#34;,&#34;Ley 26.485 sobre protección integral hacia las mujeres&#34;,&#34;Servicios de Patrocinio Jurídico Gratuito&#34;,&#34;Organismos de la policía&#34;,&#34;Organismos del poder judicial&#34;,&#34;Botones de pánico - dispositivo de emergencia&#34;,&#34;Líneas telefónicas de ayuda&#34;,&#34;Campañas contra la violencia&#34;],&#34;orientation&#34;:&#34;h&#34;,&#34;marker&#34;:{&#34;color&#34;:[&#34;rgba(39,127,142,1)&#34;,&#34;rgba(39,127,142,1)&#34;,&#34;rgba(39,127,142,1)&#34;,&#34;rgba(39,127,142,1)&#34;,&#34;rgba(39,127,142,1)&#34;,&#34;rgba(39,127,142,1)&#34;,&#34;rgba(70,51,126,1)&#34;,&#34;rgba(39,127,142,1)&#34;],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(31,119,180,1)&#34;}},&#34;type&#34;:&#34;bar&#34;,&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(31,119,180,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(31,119,180,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null}],&#34;highlight&#34;:{&#34;on&#34;:&#34;plotly_click&#34;,&#34;persistent&#34;:false,&#34;dynamic&#34;:false,&#34;selectize&#34;:false,&#34;opacityDim&#34;:0.2,&#34;selected&#34;:{&#34;opacity&#34;:1},&#34;debounce&#34;:0},&#34;shinyEvents&#34;:[&#34;plotly_hover&#34;,&#34;plotly_click&#34;,&#34;plotly_selected&#34;,&#34;plotly_relayout&#34;,&#34;plotly_brushed&#34;,&#34;plotly_brushing&#34;,&#34;plotly_clickannotation&#34;,&#34;plotly_doubleclick&#34;,&#34;plotly_deselect&#34;,&#34;plotly_afterplot&#34;,&#34;plotly_sunburstclick&#34;],&#34;base_url&#34;:&#34;https://plot.ly&#34;},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;p&gt;La &lt;a href=&#34;https://www.argentina.gob.ar/generos/linea-144&#34;&gt;&lt;strong&gt;línea 144&lt;/strong&gt;&lt;/a&gt; fue creada para cumplir los objetivos establecidos por la Ley 26.485 sobre protección integral para prevenir, sancionar y erradicar la violencia contra las mujeres en los ámbitos en que desarrollen sus relaciones interpersonales (artículo 9), sancionada en 2009 por el Congreso de la Nación Argentina.&lt;/p&gt;
+&lt;p&gt;Desde 2010 a la fecha, la línea 144 cumple la función de atender situaciones de violencia por razones de género las 24hrs, los 365 días en todo el país. En CABA hay un promedio de 12.900 llamadas anuales, aunque desde 2017 el total de llamadas recibidas ha incrementado un 100% de su promedio.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(readxl)
+linea144 &amp;lt;- read_excel(&amp;quot;llamadas_linea_144.xlsx&amp;quot;)
+
+df_llamadasanuales144 &amp;lt;- linea144 %&amp;gt;% select(año,total_llamadas_servicios_telefónicos)
+df_llamadasanuales144 = df_llamadasanuales144[-11,]
+df_llamadasanuales144$anio&amp;lt;-as.character(df_llamadasanuales144$año)
+
+#Promedio anual entre 2010 - 2019
+mean(df_llamadasanuales144$total_llamadas_servicios_telefónicos)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 12965.9&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;totalanual &amp;lt;- plot_ly(df_llamadasanuales144, x =~anio)%&amp;gt;%
+  add_lines(y = ~total_llamadas_servicios_telefónicos, fill = &amp;#39;tozeroy&amp;#39;, fillcolor = &amp;#39;rgba(68, 5, 83, 0.5)&amp;#39;, line = list(shape = &amp;quot;spline&amp;quot;, color = &amp;quot;#440553&amp;quot;)) %&amp;gt;%
+  layout(
+        yaxis = list(title = &amp;#39;Cantidad llamados&amp;#39;,
+                    rangemode = &amp;quot;tozero&amp;quot;,
+                    linecolor = &amp;quot;black&amp;quot;),
+        xaxis = list(title = &amp;#39;Año&amp;#39;),
+        title = &amp;quot;Cantidad de llamadas recibidas en CABA (2010 -2019)&amp;quot;
+  )
+totalanual&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:672px;height:480px;&#34; class=&#34;plotly html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;visdat&#34;:{&#34;1150556fc0d&#34;:[&#34;function () &#34;,&#34;plotlyVisDat&#34;]},&#34;cur_data&#34;:&#34;1150556fc0d&#34;,&#34;attrs&#34;:{&#34;1150556fc0d&#34;:{&#34;x&#34;:{},&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;y&#34;:{},&#34;type&#34;:&#34;scatter&#34;,&#34;mode&#34;:&#34;lines&#34;,&#34;fill&#34;:&#34;tozeroy&#34;,&#34;fillcolor&#34;:&#34;rgba(68, 5, 83, 0.5)&#34;,&#34;line&#34;:{&#34;shape&#34;:&#34;spline&#34;,&#34;color&#34;:&#34;#440553&#34;},&#34;inherit&#34;:true}},&#34;layout&#34;:{&#34;margin&#34;:{&#34;b&#34;:40,&#34;l&#34;:60,&#34;t&#34;:25,&#34;r&#34;:10},&#34;yaxis&#34;:{&#34;domain&#34;:[0,1],&#34;automargin&#34;:true,&#34;title&#34;:&#34;Cantidad llamados&#34;,&#34;rangemode&#34;:&#34;tozero&#34;,&#34;linecolor&#34;:&#34;black&#34;},&#34;xaxis&#34;:{&#34;domain&#34;:[0,1],&#34;automargin&#34;:true,&#34;title&#34;:&#34;Año&#34;,&#34;type&#34;:&#34;category&#34;,&#34;categoryorder&#34;:&#34;array&#34;,&#34;categoryarray&#34;:[&#34;2010&#34;,&#34;2011&#34;,&#34;2012&#34;,&#34;2013&#34;,&#34;2014&#34;,&#34;2015&#34;,&#34;2016&#34;,&#34;2017&#34;,&#34;2018&#34;,&#34;2019&#34;]},&#34;title&#34;:&#34;Cantidad de llamadas recibidas en CABA (2010 -2019)&#34;,&#34;hovermode&#34;:&#34;closest&#34;,&#34;showlegend&#34;:false},&#34;source&#34;:&#34;A&#34;,&#34;config&#34;:{&#34;showSendToCloud&#34;:false},&#34;data&#34;:[{&#34;fillcolor&#34;:&#34;rgba(68, 5, 83, 0.5)&#34;,&#34;x&#34;:[&#34;2010&#34;,&#34;2011&#34;,&#34;2012&#34;,&#34;2013&#34;,&#34;2014&#34;,&#34;2015&#34;,&#34;2016&#34;,&#34;2017&#34;,&#34;2018&#34;,&#34;2019&#34;],&#34;y&#34;:[13371,11806,9814,9298,9446,9263,6659,12828,25197,21977],&#34;type&#34;:&#34;scatter&#34;,&#34;mode&#34;:&#34;lines&#34;,&#34;fill&#34;:&#34;tozeroy&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;#440553&#34;,&#34;shape&#34;:&#34;spline&#34;},&#34;name&#34;:&#34;rgba(68, 5, 83, 0.5)&#34;,&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(31,119,180,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(31,119,180,1)&#34;}},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(31,119,180,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(31,119,180,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null}],&#34;highlight&#34;:{&#34;on&#34;:&#34;plotly_click&#34;,&#34;persistent&#34;:false,&#34;dynamic&#34;:false,&#34;selectize&#34;:false,&#34;opacityDim&#34;:0.2,&#34;selected&#34;:{&#34;opacity&#34;:1},&#34;debounce&#34;:0},&#34;shinyEvents&#34;:[&#34;plotly_hover&#34;,&#34;plotly_click&#34;,&#34;plotly_selected&#34;,&#34;plotly_relayout&#34;,&#34;plotly_brushed&#34;,&#34;plotly_brushing&#34;,&#34;plotly_clickannotation&#34;,&#34;plotly_doubleclick&#34;,&#34;plotly_deselect&#34;,&#34;plotly_afterplot&#34;,&#34;plotly_sunburstclick&#34;],&#34;base_url&#34;:&#34;https://plot.ly&#34;},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;div id=&#34;qué-pasó-en-esos-años&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;¿Qué pasó en esos años?&lt;/h3&gt;
+&lt;p&gt;De la mano del &lt;a href=&#34;http://niunamenos.org.ar/&#34;&gt;&lt;strong&gt;#NiUnaMenos&lt;/strong&gt;&lt;/a&gt;, la políticas públicas para la erradicación de la violencia hacia las mujeres fue ampliando el acceso a sus vías de comunicación.&lt;/p&gt;
+&lt;p&gt;Ya desde 2015 se impulsó una campaña para que los medios de comunicación informaran sobre la existencia de la línea 144, para 2016 se presenta el &lt;a href=&#34;https://www.argentina.gob.ar/noticias/el-presidente-macri-presento-el-plan-nacional-para-la-erradicacion-de-la-violencia-de&#34;&gt;&lt;strong&gt;Plan Nacional&lt;/strong&gt;&lt;/a&gt; de Acción para la Prevención, Asistencia y Erradicación de la Violencia contra las Mujeres 2017-2019 en el que se incluyeron campañas de difusión y concientización sobre la violencia de género.&lt;/p&gt;
+&lt;p&gt;Entre 2017 y 2018 el Ministerio de Desarrollo Social lanzó diversas campañas para el día de los enamorados para alertar sobre noviazgos violentos como “noviazgos sin violencia” y “¿Te Ama?”. Desde el GCBA lanzaron el test online para detectar noviazgos violentos. Entre tanto la línea 144 para 2017 fue habilitada por las empresas de telefonía celular como &lt;a href=&#34;https://www.lanacion.com.ar/tecnologia/llamar-a-la-linea-144-para-hacer-denuncias-por-violencia-de-genero-sera-gratis-nid2091409/&#34;&gt;&lt;strong&gt;línea gratuita&lt;/strong&gt;&lt;/a&gt; y para 2018 fue lanzada la &lt;a href=&#34;https://www.telam.com.ar/notas/201803/262749-presentaron-la-aplicacion-para-celulares-del-144-para-asistir-a-la-mujeres-las-24-horas.html&#34;&gt;&lt;strong&gt;aplicación móvil gratuita&lt;/strong&gt;&lt;/a&gt; de la misma línea para IOS y android. Esto implicó que para comunicarse con la línea 144 ya no fuera necesario contar con saldo o datos móviles.&lt;/p&gt;
+&lt;p&gt;Así mismo, no hay que dejar de lado los hechos sociales que acompañaron a la sociedad Argentina en 2018 que tuvieron gran repercusión a nivel nacional e internacional en los que se encuentran el debate por la interrupción voluntaria del embarazo y la &lt;a href=&#34;https://www.telam.com.ar/notas/201812/313986-tras-la-denuncia-aumentaron-las-consultas-en-la-linea-de-violencia-de-genero.html&#34;&gt;&lt;strong&gt;denuncia de Thelma Fardin&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;2018 ha sido el año con mayor cantidad de llamados a la línea llegando a un total de 25.197. Dentro de las estadísticas está contemplado que los hechos de público conocimiento o movilizaciones referidas a la misma temática intensifican la comunicación con la línea.&lt;/p&gt;
+&lt;p&gt;Las comunicaciones al 144 se han distribuido en 3 líneas de ayuda de CABA que permiten orientar el tipo de consultas o asistencias a realiziar. Cabe destacar que la línea que más volumen de llamadas ha tenido es la Línea de Información General y Salud Integral, es clara la &lt;strong&gt;demanda por información.&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;df_lineasdeayuda &amp;lt;- linea144 %&amp;gt;% select(año,total_linea_violencia_familiar, total_linea_te_ayudo, total_linea_de_informacion_general_y_salud_integral)
+df_lineasdeayuda = df_lineasdeayuda[-11,]
+df_lineasdeayuda$anio&amp;lt;-as.character(df_lineasdeayuda$año)
+df_lineasdeayuda$año&amp;lt;-NULL
+
+df_lineasdeayuda &amp;lt;- df_lineasdeayuda%&amp;gt;% pivot_longer(!anio,names_to = &amp;quot;linea&amp;quot;, values_to = &amp;quot;count&amp;quot;)
+df_lineasdeayuda&amp;lt;- df_lineasdeayuda%&amp;gt;%mutate(
+  linea=case_when(
+    linea==&amp;quot;total_linea_te_ayudo&amp;quot;~&amp;quot;Línea Te Ayudo&amp;quot;,
+    linea==&amp;quot;total_linea_de_informacion_general_y_salud_integral&amp;quot;~&amp;quot;Línea de Información \n General y Salud Integral&amp;quot;,
+    linea==&amp;quot;total_linea_violencia_familiar&amp;quot;~&amp;quot;Línea Violencia Familiar&amp;quot;
+  )
+)
+
+totallineas &amp;lt;- ggplot(df_lineasdeayuda, aes(fill=linea, y=count, x=anio)) + 
+    geom_bar(position=&amp;quot;stack&amp;quot;, stat=&amp;quot;identity&amp;quot;) + scale_fill_manual(values = c( &amp;quot;#FDE614&amp;quot;,&amp;quot;#277f91&amp;quot;,&amp;quot;#440154&amp;quot;)) +
+    ggtitle(&amp;quot;Porcentaje de llamados a las líneas de ayuda del 144 (CABA, 2010-1019)&amp;quot;) +
+    xlab(&amp;quot;Año&amp;quot;) +
+    ylab(&amp;quot;Porcentaje&amp;quot;)
+
+ggplotly(totallineas)&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:672px;height:480px;&#34; class=&#34;plotly html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;data&#34;:[{&#34;orientation&#34;:&#34;v&#34;,&#34;width&#34;:[0.9,0.9,0.9,0.9,0.9,0.9,0.9,0.899999999999999,0.899999999999999,0.899999999999999],&#34;base&#34;:[10818,10220,8078,6846,6429,6088,4000,7539,8316,6587],&#34;x&#34;:[1,2,3,4,5,6,7,8,9,10],&#34;y&#34;:[2553,1586,1736,2452,3017,3175,2659,5289,16881,15390],&#34;text&#34;:[&#34;anio: 2010&lt;br /&gt;count:  2553&lt;br /&gt;linea: Línea de Información &lt;br /&gt; General y Salud Integral&#34;,&#34;anio: 2011&lt;br /&gt;count:  1586&lt;br /&gt;linea: Línea de Información &lt;br /&gt; General y Salud Integral&#34;,&#34;anio: 2012&lt;br /&gt;count:  1736&lt;br /&gt;linea: Línea de Información &lt;br /&gt; General y Salud Integral&#34;,&#34;anio: 2013&lt;br /&gt;count:  2452&lt;br /&gt;linea: Línea de Información &lt;br /&gt; General y Salud Integral&#34;,&#34;anio: 2014&lt;br /&gt;count:  3017&lt;br /&gt;linea: Línea de Información &lt;br /&gt; General y Salud Integral&#34;,&#34;anio: 2015&lt;br /&gt;count:  3175&lt;br /&gt;linea: Línea de Información &lt;br /&gt; General y Salud Integral&#34;,&#34;anio: 2016&lt;br /&gt;count:  2659&lt;br /&gt;linea: Línea de Información &lt;br /&gt; General y Salud Integral&#34;,&#34;anio: 2017&lt;br /&gt;count:  5289&lt;br /&gt;linea: Línea de Información &lt;br /&gt; General y Salud Integral&#34;,&#34;anio: 2018&lt;br /&gt;count: 16881&lt;br /&gt;linea: Línea de Información &lt;br /&gt; General y Salud Integral&#34;,&#34;anio: 2019&lt;br /&gt;count: 15390&lt;br /&gt;linea: Línea de Información &lt;br /&gt; General y Salud Integral&#34;],&#34;type&#34;:&#34;bar&#34;,&#34;marker&#34;:{&#34;autocolorscale&#34;:false,&#34;color&#34;:&#34;rgba(253,230,20,1)&#34;,&#34;line&#34;:{&#34;width&#34;:1.88976377952756,&#34;color&#34;:&#34;transparent&#34;}},&#34;name&#34;:&#34;Línea de Información &lt;br /&gt; General y Salud Integral&#34;,&#34;legendgroup&#34;:&#34;Línea de Información &lt;br /&gt; General y Salud Integral&#34;,&#34;showlegend&#34;:true,&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;hoverinfo&#34;:&#34;text&#34;,&#34;frame&#34;:null},{&#34;orientation&#34;:&#34;v&#34;,&#34;width&#34;:[0.9,0.9,0.9,0.9,0.9,0.9,0.9,0.899999999999999,0.899999999999999,0.899999999999999],&#34;base&#34;:[8891,8566,6863,5709,5380,5003,3315,6916,7857,6060],&#34;x&#34;:[1,2,3,4,5,6,7,8,9,10],&#34;y&#34;:[1927,1654,1215,1137,1049,1085,685,623,459,527],&#34;text&#34;:[&#34;anio: 2010&lt;br /&gt;count:  1927&lt;br /&gt;linea: Línea Te Ayudo&#34;,&#34;anio: 2011&lt;br /&gt;count:  1654&lt;br /&gt;linea: Línea Te Ayudo&#34;,&#34;anio: 2012&lt;br /&gt;count:  1215&lt;br /&gt;linea: Línea Te Ayudo&#34;,&#34;anio: 2013&lt;br /&gt;count:  1137&lt;br /&gt;linea: Línea Te Ayudo&#34;,&#34;anio: 2014&lt;br /&gt;count:  1049&lt;br /&gt;linea: Línea Te Ayudo&#34;,&#34;anio: 2015&lt;br /&gt;count:  1085&lt;br /&gt;linea: Línea Te Ayudo&#34;,&#34;anio: 2016&lt;br /&gt;count:   685&lt;br /&gt;linea: Línea Te Ayudo&#34;,&#34;anio: 2017&lt;br /&gt;count:   623&lt;br /&gt;linea: Línea Te Ayudo&#34;,&#34;anio: 2018&lt;br /&gt;count:   459&lt;br /&gt;linea: Línea Te Ayudo&#34;,&#34;anio: 2019&lt;br /&gt;count:   527&lt;br /&gt;linea: Línea Te Ayudo&#34;],&#34;type&#34;:&#34;bar&#34;,&#34;marker&#34;:{&#34;autocolorscale&#34;:false,&#34;color&#34;:&#34;rgba(39,127,145,1)&#34;,&#34;line&#34;:{&#34;width&#34;:1.88976377952756,&#34;color&#34;:&#34;transparent&#34;}},&#34;name&#34;:&#34;Línea Te Ayudo&#34;,&#34;legendgroup&#34;:&#34;Línea Te Ayudo&#34;,&#34;showlegend&#34;:true,&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;hoverinfo&#34;:&#34;text&#34;,&#34;frame&#34;:null},{&#34;orientation&#34;:&#34;v&#34;,&#34;width&#34;:[0.9,0.9,0.9,0.9,0.9,0.9,0.9,0.899999999999999,0.899999999999999,0.899999999999999],&#34;base&#34;:[0,0,0,0,0,0,0,0,0,0],&#34;x&#34;:[1,2,3,4,5,6,7,8,9,10],&#34;y&#34;:[8891,8566,6863,5709,5380,5003,3315,6916,7857,6060],&#34;text&#34;:[&#34;anio: 2010&lt;br /&gt;count:  8891&lt;br /&gt;linea: Línea Violencia Familiar&#34;,&#34;anio: 2011&lt;br /&gt;count:  8566&lt;br /&gt;linea: Línea Violencia Familiar&#34;,&#34;anio: 2012&lt;br /&gt;count:  6863&lt;br /&gt;linea: Línea Violencia Familiar&#34;,&#34;anio: 2013&lt;br /&gt;count:  5709&lt;br /&gt;linea: Línea Violencia Familiar&#34;,&#34;anio: 2014&lt;br /&gt;count:  5380&lt;br /&gt;linea: Línea Violencia Familiar&#34;,&#34;anio: 2015&lt;br /&gt;count:  5003&lt;br /&gt;linea: Línea Violencia Familiar&#34;,&#34;anio: 2016&lt;br /&gt;count:  3315&lt;br /&gt;linea: Línea Violencia Familiar&#34;,&#34;anio: 2017&lt;br /&gt;count:  6916&lt;br /&gt;linea: Línea Violencia Familiar&#34;,&#34;anio: 2018&lt;br /&gt;count:  7857&lt;br /&gt;linea: Línea Violencia Familiar&#34;,&#34;anio: 2019&lt;br /&gt;count:  6060&lt;br /&gt;linea: Línea Violencia Familiar&#34;],&#34;type&#34;:&#34;bar&#34;,&#34;marker&#34;:{&#34;autocolorscale&#34;:false,&#34;color&#34;:&#34;rgba(68,1,84,1)&#34;,&#34;line&#34;:{&#34;width&#34;:1.88976377952756,&#34;color&#34;:&#34;transparent&#34;}},&#34;name&#34;:&#34;Línea Violencia Familiar&#34;,&#34;legendgroup&#34;:&#34;Línea Violencia Familiar&#34;,&#34;showlegend&#34;:true,&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;hoverinfo&#34;:&#34;text&#34;,&#34;frame&#34;:null}],&#34;layout&#34;:{&#34;margin&#34;:{&#34;t&#34;:43.7625570776256,&#34;r&#34;:7.30593607305936,&#34;b&#34;:40.1826484018265,&#34;l&#34;:54.7945205479452},&#34;plot_bgcolor&#34;:&#34;rgba(235,235,235,1)&#34;,&#34;paper_bgcolor&#34;:&#34;rgba(255,255,255,1)&#34;,&#34;font&#34;:{&#34;color&#34;:&#34;rgba(0,0,0,1)&#34;,&#34;family&#34;:&#34;&#34;,&#34;size&#34;:14.6118721461187},&#34;title&#34;:{&#34;text&#34;:&#34;Porcentaje de llamados a las líneas de ayuda del 144 (CABA, 2010-1019)&#34;,&#34;font&#34;:{&#34;color&#34;:&#34;rgba(0,0,0,1)&#34;,&#34;family&#34;:&#34;&#34;,&#34;size&#34;:17.5342465753425},&#34;x&#34;:0,&#34;xref&#34;:&#34;paper&#34;},&#34;xaxis&#34;:{&#34;domain&#34;:[0,1],&#34;automargin&#34;:true,&#34;type&#34;:&#34;linear&#34;,&#34;autorange&#34;:false,&#34;range&#34;:[0.4,10.6],&#34;tickmode&#34;:&#34;array&#34;,&#34;ticktext&#34;:[&#34;2010&#34;,&#34;2011&#34;,&#34;2012&#34;,&#34;2013&#34;,&#34;2014&#34;,&#34;2015&#34;,&#34;2016&#34;,&#34;2017&#34;,&#34;2018&#34;,&#34;2019&#34;],&#34;tickvals&#34;:[1,2,3,4,5,6,7,8,9,10],&#34;categoryorder&#34;:&#34;array&#34;,&#34;categoryarray&#34;:[&#34;2010&#34;,&#34;2011&#34;,&#34;2012&#34;,&#34;2013&#34;,&#34;2014&#34;,&#34;2015&#34;,&#34;2016&#34;,&#34;2017&#34;,&#34;2018&#34;,&#34;2019&#34;],&#34;nticks&#34;:null,&#34;ticks&#34;:&#34;outside&#34;,&#34;tickcolor&#34;:&#34;rgba(51,51,51,1)&#34;,&#34;ticklen&#34;:3.65296803652968,&#34;tickwidth&#34;:0.66417600664176,&#34;showticklabels&#34;:true,&#34;tickfont&#34;:{&#34;color&#34;:&#34;rgba(77,77,77,1)&#34;,&#34;family&#34;:&#34;&#34;,&#34;size&#34;:11.689497716895},&#34;tickangle&#34;:-0,&#34;showline&#34;:false,&#34;linecolor&#34;:null,&#34;linewidth&#34;:0,&#34;showgrid&#34;:true,&#34;gridcolor&#34;:&#34;rgba(255,255,255,1)&#34;,&#34;gridwidth&#34;:0.66417600664176,&#34;zeroline&#34;:false,&#34;anchor&#34;:&#34;y&#34;,&#34;title&#34;:{&#34;text&#34;:&#34;Año&#34;,&#34;font&#34;:{&#34;color&#34;:&#34;rgba(0,0,0,1)&#34;,&#34;family&#34;:&#34;&#34;,&#34;size&#34;:14.6118721461187}},&#34;hoverformat&#34;:&#34;.2f&#34;},&#34;yaxis&#34;:{&#34;domain&#34;:[0,1],&#34;automargin&#34;:true,&#34;type&#34;:&#34;linear&#34;,&#34;autorange&#34;:false,&#34;range&#34;:[-1259.85,26456.85],&#34;tickmode&#34;:&#34;array&#34;,&#34;ticktext&#34;:[&#34;0&#34;,&#34;5000&#34;,&#34;10000&#34;,&#34;15000&#34;,&#34;20000&#34;,&#34;25000&#34;],&#34;tickvals&#34;:[0,5000,10000,15000,20000,25000],&#34;categoryorder&#34;:&#34;array&#34;,&#34;categoryarray&#34;:[&#34;0&#34;,&#34;5000&#34;,&#34;10000&#34;,&#34;15000&#34;,&#34;20000&#34;,&#34;25000&#34;],&#34;nticks&#34;:null,&#34;ticks&#34;:&#34;outside&#34;,&#34;tickcolor&#34;:&#34;rgba(51,51,51,1)&#34;,&#34;ticklen&#34;:3.65296803652968,&#34;tickwidth&#34;:0.66417600664176,&#34;showticklabels&#34;:true,&#34;tickfont&#34;:{&#34;color&#34;:&#34;rgba(77,77,77,1)&#34;,&#34;family&#34;:&#34;&#34;,&#34;size&#34;:11.689497716895},&#34;tickangle&#34;:-0,&#34;showline&#34;:false,&#34;linecolor&#34;:null,&#34;linewidth&#34;:0,&#34;showgrid&#34;:true,&#34;gridcolor&#34;:&#34;rgba(255,255,255,1)&#34;,&#34;gridwidth&#34;:0.66417600664176,&#34;zeroline&#34;:false,&#34;anchor&#34;:&#34;x&#34;,&#34;title&#34;:{&#34;text&#34;:&#34;Porcentaje&#34;,&#34;font&#34;:{&#34;color&#34;:&#34;rgba(0,0,0,1)&#34;,&#34;family&#34;:&#34;&#34;,&#34;size&#34;:14.6118721461187}},&#34;hoverformat&#34;:&#34;.2f&#34;},&#34;shapes&#34;:[{&#34;type&#34;:&#34;rect&#34;,&#34;fillcolor&#34;:null,&#34;line&#34;:{&#34;color&#34;:null,&#34;width&#34;:0,&#34;linetype&#34;:[]},&#34;yref&#34;:&#34;paper&#34;,&#34;xref&#34;:&#34;paper&#34;,&#34;x0&#34;:0,&#34;x1&#34;:1,&#34;y0&#34;:0,&#34;y1&#34;:1}],&#34;showlegend&#34;:true,&#34;legend&#34;:{&#34;bgcolor&#34;:&#34;rgba(255,255,255,1)&#34;,&#34;bordercolor&#34;:&#34;transparent&#34;,&#34;borderwidth&#34;:1.88976377952756,&#34;font&#34;:{&#34;color&#34;:&#34;rgba(0,0,0,1)&#34;,&#34;family&#34;:&#34;&#34;,&#34;size&#34;:11.689497716895},&#34;y&#34;:0.96751968503937},&#34;annotations&#34;:[{&#34;text&#34;:&#34;linea&#34;,&#34;x&#34;:1.02,&#34;y&#34;:1,&#34;showarrow&#34;:false,&#34;ax&#34;:0,&#34;ay&#34;:0,&#34;font&#34;:{&#34;color&#34;:&#34;rgba(0,0,0,1)&#34;,&#34;family&#34;:&#34;&#34;,&#34;size&#34;:14.6118721461187},&#34;xref&#34;:&#34;paper&#34;,&#34;yref&#34;:&#34;paper&#34;,&#34;textangle&#34;:-0,&#34;xanchor&#34;:&#34;left&#34;,&#34;yanchor&#34;:&#34;bottom&#34;,&#34;legendTitle&#34;:true}],&#34;hovermode&#34;:&#34;closest&#34;,&#34;barmode&#34;:&#34;relative&#34;},&#34;config&#34;:{&#34;doubleClick&#34;:&#34;reset&#34;,&#34;showSendToCloud&#34;:false},&#34;source&#34;:&#34;A&#34;,&#34;attrs&#34;:{&#34;115033506bfc&#34;:{&#34;x&#34;:{},&#34;y&#34;:{},&#34;fill&#34;:{},&#34;type&#34;:&#34;bar&#34;}},&#34;cur_data&#34;:&#34;115033506bfc&#34;,&#34;visdat&#34;:{&#34;115033506bfc&#34;:[&#34;function (y) &#34;,&#34;x&#34;]},&#34;highlight&#34;:{&#34;on&#34;:&#34;plotly_click&#34;,&#34;persistent&#34;:false,&#34;dynamic&#34;:false,&#34;selectize&#34;:false,&#34;opacityDim&#34;:0.2,&#34;selected&#34;:{&#34;opacity&#34;:1},&#34;debounce&#34;:0},&#34;shinyEvents&#34;:[&#34;plotly_hover&#34;,&#34;plotly_click&#34;,&#34;plotly_selected&#34;,&#34;plotly_relayout&#34;,&#34;plotly_brushed&#34;,&#34;plotly_brushing&#34;,&#34;plotly_clickannotation&#34;,&#34;plotly_doubleclick&#34;,&#34;plotly_deselect&#34;,&#34;plotly_afterplot&#34;,&#34;plotly_sunburstclick&#34;],&#34;base_url&#34;:&#34;https://plot.ly&#34;},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;totalporcentual &amp;lt;- ggplot(df_lineasdeayuda, aes(fill=linea, y=count, x=anio)) + 
+    geom_bar(position=&amp;quot;fill&amp;quot;, stat=&amp;quot;identity&amp;quot;) +
+    scale_fill_manual(values = c( &amp;quot;#FDE614&amp;quot;,&amp;quot;#277f91&amp;quot;,&amp;quot;#440154&amp;quot;)) +
+    ggtitle(&amp;quot;Porcentaje de llamados a las líneas de ayuda del 144 (CABA, 2010-1019)&amp;quot;) +
+    xlab(&amp;quot;Año&amp;quot;) +
+    ylab(&amp;quot;Porcentaje&amp;quot;)
+    
+ggplotly(totalporcentual)&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;htmlwidget-4&#34; style=&#34;width:672px;height:480px;&#34; class=&#34;plotly html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-4&#34;&gt;{&#34;x&#34;:{&#34;data&#34;:[{&#34;orientation&#34;:&#34;v&#34;,&#34;width&#34;:[0.9,0.9,0.9,0.9,0.9,0.9,0.9,0.899999999999999,0.899999999999999,0.899999999999999],&#34;base&#34;:[0.809064393089522,0.865661528036592,0.823109843081312,0.736287373628737,0.680605547321618,0.657238475655835,0.600690794413576,0.587698783910196,0.330039290391713,0.299722437093325],&#34;x&#34;:[1,2,3,4,5,6,7,8,9,10],&#34;y&#34;:[0.190935606910478,0.134338471963408,0.176890156918688,0.263712626371263,0.319394452678382,0.342761524344165,0.399309205586424,0.412301216089804,0.669960709608287,0.700277562906675],&#34;text&#34;:[&#34;anio: 2010&lt;br /&gt;count: 0.19093561&lt;br /&gt;linea: Línea de Información &lt;br /&gt; General y Salud Integral&#34;,&#34;anio: 2011&lt;br /&gt;count: 0.13433847&lt;br /&gt;linea: Línea de Información &lt;br /&gt; General y Salud Integral&#34;,&#34;anio: 2012&lt;br /&gt;count: 0.17689016&lt;br /&gt;linea: Línea de Información &lt;br /&gt; General y Salud Integral&#34;,&#34;anio: 2013&lt;br /&gt;count: 0.26371263&lt;br /&gt;linea: Línea de Información &lt;br /&gt; General y Salud Integral&#34;,&#34;anio: 2014&lt;br /&gt;count: 0.31939445&lt;br /&gt;linea: Línea de Información &lt;br /&gt; General y Salud Integral&#34;,&#34;anio: 2015&lt;br /&gt;count: 0.34276152&lt;br /&gt;linea: Línea de Información &lt;br /&gt; General y Salud Integral&#34;,&#34;anio: 2016&lt;br /&gt;count: 0.39930921&lt;br /&gt;linea: Línea de Información &lt;br /&gt; General y Salud Integral&#34;,&#34;anio: 2017&lt;br /&gt;count: 0.41230122&lt;br /&gt;linea: Línea de Información &lt;br /&gt; General y Salud Integral&#34;,&#34;anio: 2018&lt;br /&gt;count: 0.66996071&lt;br /&gt;linea: Línea de Información &lt;br /&gt; General y Salud Integral&#34;,&#34;anio: 2019&lt;br /&gt;count: 0.70027756&lt;br /&gt;linea: Línea de Información &lt;br /&gt; General y Salud Integral&#34;],&#34;type&#34;:&#34;bar&#34;,&#34;marker&#34;:{&#34;autocolorscale&#34;:false,&#34;color&#34;:&#34;rgba(253,230,20,1)&#34;,&#34;line&#34;:{&#34;width&#34;:1.88976377952756,&#34;color&#34;:&#34;transparent&#34;}},&#34;name&#34;:&#34;Línea de Información &lt;br /&gt; General y Salud Integral&#34;,&#34;legendgroup&#34;:&#34;Línea de Información &lt;br /&gt; General y Salud Integral&#34;,&#34;showlegend&#34;:true,&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;hoverinfo&#34;:&#34;text&#34;,&#34;frame&#34;:null},{&#34;orientation&#34;:&#34;v&#34;,&#34;width&#34;:[0.9,0.9,0.9,0.9,0.9,0.9,0.9,0.899999999999999,0.899999999999999,0.899999999999999],&#34;base&#34;:[0.66494652606387,0.725563272912079,0.699307112288567,0.614003011400301,0.569553250052932,0.540105797257908,0.497822495870251,0.539133146242594,0.311822836051911,0.275742822041225],&#34;x&#34;:[1,2,3,4,5,6,7,8,9,10],&#34;y&#34;:[0.144117867025652,0.140098255124513,0.123802730792745,0.122284362228436,0.111052297268685,0.117132678397927,0.102868298543325,0.0485656376676021,0.0182164543398023,0.0239796150520999],&#34;text&#34;:[&#34;anio: 2010&lt;br /&gt;count: 0.14411787&lt;br /&gt;linea: Línea Te Ayudo&#34;,&#34;anio: 2011&lt;br /&gt;count: 0.14009826&lt;br /&gt;linea: Línea Te Ayudo&#34;,&#34;anio: 2012&lt;br /&gt;count: 0.12380273&lt;br /&gt;linea: Línea Te Ayudo&#34;,&#34;anio: 2013&lt;br /&gt;count: 0.12228436&lt;br /&gt;linea: Línea Te Ayudo&#34;,&#34;anio: 2014&lt;br /&gt;count: 0.11105230&lt;br /&gt;linea: Línea Te Ayudo&#34;,&#34;anio: 2015&lt;br /&gt;count: 0.11713268&lt;br /&gt;linea: Línea Te Ayudo&#34;,&#34;anio: 2016&lt;br /&gt;count: 0.10286830&lt;br /&gt;linea: Línea Te Ayudo&#34;,&#34;anio: 2017&lt;br /&gt;count: 0.04856564&lt;br /&gt;linea: Línea Te Ayudo&#34;,&#34;anio: 2018&lt;br /&gt;count: 0.01821645&lt;br /&gt;linea: Línea Te Ayudo&#34;,&#34;anio: 2019&lt;br /&gt;count: 0.02397962&lt;br /&gt;linea: Línea Te Ayudo&#34;],&#34;type&#34;:&#34;bar&#34;,&#34;marker&#34;:{&#34;autocolorscale&#34;:false,&#34;color&#34;:&#34;rgba(39,127,145,1)&#34;,&#34;line&#34;:{&#34;width&#34;:1.88976377952756,&#34;color&#34;:&#34;transparent&#34;}},&#34;name&#34;:&#34;Línea Te Ayudo&#34;,&#34;legendgroup&#34;:&#34;Línea Te Ayudo&#34;,&#34;showlegend&#34;:true,&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;hoverinfo&#34;:&#34;text&#34;,&#34;frame&#34;:null},{&#34;orientation&#34;:&#34;v&#34;,&#34;width&#34;:[0.9,0.9,0.9,0.9,0.9,0.9,0.9,0.899999999999999,0.899999999999999,0.899999999999999],&#34;base&#34;:[0,0,0,0,0,0,0,0,0,0],&#34;x&#34;:[1,2,3,4,5,6,7,8,9,10],&#34;y&#34;:[0.66494652606387,0.725563272912079,0.699307112288567,0.614003011400301,0.569553250052932,0.540105797257908,0.497822495870251,0.539133146242594,0.311822836051911,0.275742822041225],&#34;text&#34;:[&#34;anio: 2010&lt;br /&gt;count: 0.66494653&lt;br /&gt;linea: Línea Violencia Familiar&#34;,&#34;anio: 2011&lt;br /&gt;count: 0.72556327&lt;br /&gt;linea: Línea Violencia Familiar&#34;,&#34;anio: 2012&lt;br /&gt;count: 0.69930711&lt;br /&gt;linea: Línea Violencia Familiar&#34;,&#34;anio: 2013&lt;br /&gt;count: 0.61400301&lt;br /&gt;linea: Línea Violencia Familiar&#34;,&#34;anio: 2014&lt;br /&gt;count: 0.56955325&lt;br /&gt;linea: Línea Violencia Familiar&#34;,&#34;anio: 2015&lt;br /&gt;count: 0.54010580&lt;br /&gt;linea: Línea Violencia Familiar&#34;,&#34;anio: 2016&lt;br /&gt;count: 0.49782250&lt;br /&gt;linea: Línea Violencia Familiar&#34;,&#34;anio: 2017&lt;br /&gt;count: 0.53913315&lt;br /&gt;linea: Línea Violencia Familiar&#34;,&#34;anio: 2018&lt;br /&gt;count: 0.31182284&lt;br /&gt;linea: Línea Violencia Familiar&#34;,&#34;anio: 2019&lt;br /&gt;count: 0.27574282&lt;br /&gt;linea: Línea Violencia Familiar&#34;],&#34;type&#34;:&#34;bar&#34;,&#34;marker&#34;:{&#34;autocolorscale&#34;:false,&#34;color&#34;:&#34;rgba(68,1,84,1)&#34;,&#34;line&#34;:{&#34;width&#34;:1.88976377952756,&#34;color&#34;:&#34;transparent&#34;}},&#34;name&#34;:&#34;Línea Violencia Familiar&#34;,&#34;legendgroup&#34;:&#34;Línea Violencia Familiar&#34;,&#34;showlegend&#34;:true,&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;hoverinfo&#34;:&#34;text&#34;,&#34;frame&#34;:null}],&#34;layout&#34;:{&#34;margin&#34;:{&#34;t&#34;:43.7625570776256,&#34;r&#34;:7.30593607305936,&#34;b&#34;:40.1826484018265,&#34;l&#34;:48.9497716894977},&#34;plot_bgcolor&#34;:&#34;rgba(235,235,235,1)&#34;,&#34;paper_bgcolor&#34;:&#34;rgba(255,255,255,1)&#34;,&#34;font&#34;:{&#34;color&#34;:&#34;rgba(0,0,0,1)&#34;,&#34;family&#34;:&#34;&#34;,&#34;size&#34;:14.6118721461187},&#34;title&#34;:{&#34;text&#34;:&#34;Porcentaje de llamados a las líneas de ayuda del 144 (CABA, 2010-1019)&#34;,&#34;font&#34;:{&#34;color&#34;:&#34;rgba(0,0,0,1)&#34;,&#34;family&#34;:&#34;&#34;,&#34;size&#34;:17.5342465753425},&#34;x&#34;:0,&#34;xref&#34;:&#34;paper&#34;},&#34;xaxis&#34;:{&#34;domain&#34;:[0,1],&#34;automargin&#34;:true,&#34;type&#34;:&#34;linear&#34;,&#34;autorange&#34;:false,&#34;range&#34;:[0.4,10.6],&#34;tickmode&#34;:&#34;array&#34;,&#34;ticktext&#34;:[&#34;2010&#34;,&#34;2011&#34;,&#34;2012&#34;,&#34;2013&#34;,&#34;2014&#34;,&#34;2015&#34;,&#34;2016&#34;,&#34;2017&#34;,&#34;2018&#34;,&#34;2019&#34;],&#34;tickvals&#34;:[1,2,3,4,5,6,7,8,9,10],&#34;categoryorder&#34;:&#34;array&#34;,&#34;categoryarray&#34;:[&#34;2010&#34;,&#34;2011&#34;,&#34;2012&#34;,&#34;2013&#34;,&#34;2014&#34;,&#34;2015&#34;,&#34;2016&#34;,&#34;2017&#34;,&#34;2018&#34;,&#34;2019&#34;],&#34;nticks&#34;:null,&#34;ticks&#34;:&#34;outside&#34;,&#34;tickcolor&#34;:&#34;rgba(51,51,51,1)&#34;,&#34;ticklen&#34;:3.65296803652968,&#34;tickwidth&#34;:0.66417600664176,&#34;showticklabels&#34;:true,&#34;tickfont&#34;:{&#34;color&#34;:&#34;rgba(77,77,77,1)&#34;,&#34;family&#34;:&#34;&#34;,&#34;size&#34;:11.689497716895},&#34;tickangle&#34;:-0,&#34;showline&#34;:false,&#34;linecolor&#34;:null,&#34;linewidth&#34;:0,&#34;showgrid&#34;:true,&#34;gridcolor&#34;:&#34;rgba(255,255,255,1)&#34;,&#34;gridwidth&#34;:0.66417600664176,&#34;zeroline&#34;:false,&#34;anchor&#34;:&#34;y&#34;,&#34;title&#34;:{&#34;text&#34;:&#34;Año&#34;,&#34;font&#34;:{&#34;color&#34;:&#34;rgba(0,0,0,1)&#34;,&#34;family&#34;:&#34;&#34;,&#34;size&#34;:14.6118721461187}},&#34;hoverformat&#34;:&#34;.2f&#34;},&#34;yaxis&#34;:{&#34;domain&#34;:[0,1],&#34;automargin&#34;:true,&#34;type&#34;:&#34;linear&#34;,&#34;autorange&#34;:false,&#34;range&#34;:[-0.05,1.05],&#34;tickmode&#34;:&#34;array&#34;,&#34;ticktext&#34;:[&#34;0.00&#34;,&#34;0.25&#34;,&#34;0.50&#34;,&#34;0.75&#34;,&#34;1.00&#34;],&#34;tickvals&#34;:[0,0.25,0.5,0.75,1],&#34;categoryorder&#34;:&#34;array&#34;,&#34;categoryarray&#34;:[&#34;0.00&#34;,&#34;0.25&#34;,&#34;0.50&#34;,&#34;0.75&#34;,&#34;1.00&#34;],&#34;nticks&#34;:null,&#34;ticks&#34;:&#34;outside&#34;,&#34;tickcolor&#34;:&#34;rgba(51,51,51,1)&#34;,&#34;ticklen&#34;:3.65296803652968,&#34;tickwidth&#34;:0.66417600664176,&#34;showticklabels&#34;:true,&#34;tickfont&#34;:{&#34;color&#34;:&#34;rgba(77,77,77,1)&#34;,&#34;family&#34;:&#34;&#34;,&#34;size&#34;:11.689497716895},&#34;tickangle&#34;:-0,&#34;showline&#34;:false,&#34;linecolor&#34;:null,&#34;linewidth&#34;:0,&#34;showgrid&#34;:true,&#34;gridcolor&#34;:&#34;rgba(255,255,255,1)&#34;,&#34;gridwidth&#34;:0.66417600664176,&#34;zeroline&#34;:false,&#34;anchor&#34;:&#34;x&#34;,&#34;title&#34;:{&#34;text&#34;:&#34;Porcentaje&#34;,&#34;font&#34;:{&#34;color&#34;:&#34;rgba(0,0,0,1)&#34;,&#34;family&#34;:&#34;&#34;,&#34;size&#34;:14.6118721461187}},&#34;hoverformat&#34;:&#34;.2f&#34;},&#34;shapes&#34;:[{&#34;type&#34;:&#34;rect&#34;,&#34;fillcolor&#34;:null,&#34;line&#34;:{&#34;color&#34;:null,&#34;width&#34;:0,&#34;linetype&#34;:[]},&#34;yref&#34;:&#34;paper&#34;,&#34;xref&#34;:&#34;paper&#34;,&#34;x0&#34;:0,&#34;x1&#34;:1,&#34;y0&#34;:0,&#34;y1&#34;:1}],&#34;showlegend&#34;:true,&#34;legend&#34;:{&#34;bgcolor&#34;:&#34;rgba(255,255,255,1)&#34;,&#34;bordercolor&#34;:&#34;transparent&#34;,&#34;borderwidth&#34;:1.88976377952756,&#34;font&#34;:{&#34;color&#34;:&#34;rgba(0,0,0,1)&#34;,&#34;family&#34;:&#34;&#34;,&#34;size&#34;:11.689497716895},&#34;y&#34;:0.96751968503937},&#34;annotations&#34;:[{&#34;text&#34;:&#34;linea&#34;,&#34;x&#34;:1.02,&#34;y&#34;:1,&#34;showarrow&#34;:false,&#34;ax&#34;:0,&#34;ay&#34;:0,&#34;font&#34;:{&#34;color&#34;:&#34;rgba(0,0,0,1)&#34;,&#34;family&#34;:&#34;&#34;,&#34;size&#34;:14.6118721461187},&#34;xref&#34;:&#34;paper&#34;,&#34;yref&#34;:&#34;paper&#34;,&#34;textangle&#34;:-0,&#34;xanchor&#34;:&#34;left&#34;,&#34;yanchor&#34;:&#34;bottom&#34;,&#34;legendTitle&#34;:true}],&#34;hovermode&#34;:&#34;closest&#34;,&#34;barmode&#34;:&#34;relative&#34;},&#34;config&#34;:{&#34;doubleClick&#34;:&#34;reset&#34;,&#34;showSendToCloud&#34;:false},&#34;source&#34;:&#34;A&#34;,&#34;attrs&#34;:{&#34;11501e79170e&#34;:{&#34;x&#34;:{},&#34;y&#34;:{},&#34;fill&#34;:{},&#34;type&#34;:&#34;bar&#34;}},&#34;cur_data&#34;:&#34;11501e79170e&#34;,&#34;visdat&#34;:{&#34;11501e79170e&#34;:[&#34;function (y) &#34;,&#34;x&#34;]},&#34;highlight&#34;:{&#34;on&#34;:&#34;plotly_click&#34;,&#34;persistent&#34;:false,&#34;dynamic&#34;:false,&#34;selectize&#34;:false,&#34;opacityDim&#34;:0.2,&#34;selected&#34;:{&#34;opacity&#34;:1},&#34;debounce&#34;:0},&#34;shinyEvents&#34;:[&#34;plotly_hover&#34;,&#34;plotly_click&#34;,&#34;plotly_selected&#34;,&#34;plotly_relayout&#34;,&#34;plotly_brushed&#34;,&#34;plotly_brushing&#34;,&#34;plotly_clickannotation&#34;,&#34;plotly_doubleclick&#34;,&#34;plotly_deselect&#34;,&#34;plotly_afterplot&#34;,&#34;plotly_sunburstclick&#34;],&#34;base_url&#34;:&#34;https://plot.ly&#34;},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;p&gt;Cada línea cuenta con un &lt;strong&gt;enfoque de atención: salud, vida familiar y adolescencia.&lt;/strong&gt; En términos generales en cada ámbito se comunican para solicitar información y para buscar asesoría y contención en situaciones de violencia. Es importante recordar que la línea 144 no se trata de una línea de emergencia.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;fig &amp;lt;- plot_ly(
+    labels = c(&amp;quot;Linea 144&amp;quot;,&amp;quot;Linea Violencia Familiar&amp;quot;,&amp;quot;Informacion General \ny Violencia Familiar&amp;quot;,&amp;quot;Casos Maltrato \nFisico Emocional&amp;quot;,&amp;quot;Emergencia \nViolencia Familiar&amp;quot;,&amp;quot;Linea Te Ayudo&amp;quot;,&amp;quot;Asesoramiento&amp;quot;,&amp;quot;Casos Maltrato \nJuvenil y Abuso Sexual&amp;quot;,&amp;quot;Adolescente Violento&amp;quot;,&amp;quot;Noviazgo Violento&amp;quot;,&amp;quot;Emergencia Te Ayudo&amp;quot;,&amp;quot;Linea de Informacion General \ny Salud Integral&amp;quot;, &amp;quot;Informacion \nSalud&amp;quot;, &amp;quot;PAP&amp;quot;, &amp;quot;Otros&amp;quot;),
+    parents = c(&amp;quot;&amp;quot;,&amp;quot;Linea 144&amp;quot;,&amp;quot;Linea Violencia Familiar&amp;quot;,&amp;quot;Linea Violencia Familiar&amp;quot;,&amp;quot;Linea Violencia Familiar&amp;quot;,&amp;quot;Linea 144&amp;quot;,&amp;quot;Linea Te Ayudo&amp;quot;,&amp;quot;Linea Te Ayudo&amp;quot;,&amp;quot;Linea Te Ayudo&amp;quot;,&amp;quot;Linea Te Ayudo&amp;quot;,&amp;quot;Linea Te Ayudo&amp;quot;,&amp;quot;Linea 144&amp;quot;,&amp;quot;Linea de Informacion General \ny Salud Integral&amp;quot;,&amp;quot;Linea de Informacion General \ny Salud Integral&amp;quot;,&amp;quot;Linea de Informacion General \ny Salud Integral&amp;quot;),
+    values = c(129659, 64560, 16302, 47567, 601,10361, 2162, 7014, 576,571, 38,54738, 10752, 6890, 37096),
+    type = &amp;#39;sunburst&amp;#39;,
+    branchvalues = &amp;#39;total&amp;#39;,
+    insidetextorientation=&amp;#39;tangencial&amp;#39;
+    ) %&amp;gt;%
+  
+      layout(
+      title=&amp;quot;Llamadas a línea de asistencia 2010-2019&amp;quot;,
+      colorway = c(
+        &amp;quot;#277f91&amp;quot;,&amp;#39;rgb(253, 231, 37)&amp;#39;,&amp;#39;rgb(68, 1, 84)&amp;#39;
+      )
+    )
+
+fig&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;htmlwidget-5&#34; style=&#34;width:672px;height:480px;&#34; class=&#34;plotly html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-5&#34;&gt;{&#34;x&#34;:{&#34;visdat&#34;:{&#34;11507f974a03&#34;:[&#34;function () &#34;,&#34;plotlyVisDat&#34;]},&#34;cur_data&#34;:&#34;11507f974a03&#34;,&#34;attrs&#34;:{&#34;11507f974a03&#34;:{&#34;labels&#34;:[&#34;Linea 144&#34;,&#34;Linea Violencia Familiar&#34;,&#34;Informacion General &lt;br /&gt;y Violencia Familiar&#34;,&#34;Casos Maltrato &lt;br /&gt;Fisico Emocional&#34;,&#34;Emergencia &lt;br /&gt;Violencia Familiar&#34;,&#34;Linea Te Ayudo&#34;,&#34;Asesoramiento&#34;,&#34;Casos Maltrato &lt;br /&gt;Juvenil y Abuso Sexual&#34;,&#34;Adolescente Violento&#34;,&#34;Noviazgo Violento&#34;,&#34;Emergencia Te Ayudo&#34;,&#34;Linea de Informacion General &lt;br /&gt;y Salud Integral&#34;,&#34;Informacion &lt;br /&gt;Salud&#34;,&#34;PAP&#34;,&#34;Otros&#34;],&#34;parents&#34;:[&#34;&#34;,&#34;Linea 144&#34;,&#34;Linea Violencia Familiar&#34;,&#34;Linea Violencia Familiar&#34;,&#34;Linea Violencia Familiar&#34;,&#34;Linea 144&#34;,&#34;Linea Te Ayudo&#34;,&#34;Linea Te Ayudo&#34;,&#34;Linea Te Ayudo&#34;,&#34;Linea Te Ayudo&#34;,&#34;Linea Te Ayudo&#34;,&#34;Linea 144&#34;,&#34;Linea de Informacion General &lt;br /&gt;y Salud Integral&#34;,&#34;Linea de Informacion General &lt;br /&gt;y Salud Integral&#34;,&#34;Linea de Informacion General &lt;br /&gt;y Salud Integral&#34;],&#34;values&#34;:[129659,64560,16302,47567,601,10361,2162,7014,576,571,38,54738,10752,6890,37096],&#34;branchvalues&#34;:&#34;total&#34;,&#34;insidetextorientation&#34;:&#34;tangencial&#34;,&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;sunburst&#34;}},&#34;layout&#34;:{&#34;margin&#34;:{&#34;b&#34;:40,&#34;l&#34;:60,&#34;t&#34;:25,&#34;r&#34;:10},&#34;title&#34;:&#34;Llamadas a línea de asistencia 2010-2019&#34;,&#34;colorway&#34;:[&#34;#277f91&#34;,&#34;rgb(253, 231, 37)&#34;,&#34;rgb(68, 1, 84)&#34;],&#34;hovermode&#34;:&#34;closest&#34;,&#34;showlegend&#34;:false},&#34;source&#34;:&#34;A&#34;,&#34;config&#34;:{&#34;showSendToCloud&#34;:false},&#34;data&#34;:[{&#34;labels&#34;:[&#34;Linea 144&#34;,&#34;Linea Violencia Familiar&#34;,&#34;Informacion General &lt;br /&gt;y Violencia Familiar&#34;,&#34;Casos Maltrato &lt;br /&gt;Fisico Emocional&#34;,&#34;Emergencia &lt;br /&gt;Violencia Familiar&#34;,&#34;Linea Te Ayudo&#34;,&#34;Asesoramiento&#34;,&#34;Casos Maltrato &lt;br /&gt;Juvenil y Abuso Sexual&#34;,&#34;Adolescente Violento&#34;,&#34;Noviazgo Violento&#34;,&#34;Emergencia Te Ayudo&#34;,&#34;Linea de Informacion General &lt;br /&gt;y Salud Integral&#34;,&#34;Informacion &lt;br /&gt;Salud&#34;,&#34;PAP&#34;,&#34;Otros&#34;],&#34;parents&#34;:[&#34;&#34;,&#34;Linea 144&#34;,&#34;Linea Violencia Familiar&#34;,&#34;Linea Violencia Familiar&#34;,&#34;Linea Violencia Familiar&#34;,&#34;Linea 144&#34;,&#34;Linea Te Ayudo&#34;,&#34;Linea Te Ayudo&#34;,&#34;Linea Te Ayudo&#34;,&#34;Linea Te Ayudo&#34;,&#34;Linea Te Ayudo&#34;,&#34;Linea 144&#34;,&#34;Linea de Informacion General &lt;br /&gt;y Salud Integral&#34;,&#34;Linea de Informacion General &lt;br /&gt;y Salud Integral&#34;,&#34;Linea de Informacion General &lt;br /&gt;y Salud Integral&#34;],&#34;values&#34;:[129659,64560,16302,47567,601,10361,2162,7014,576,571,38,54738,10752,6890,37096],&#34;branchvalues&#34;:&#34;total&#34;,&#34;insidetextorientation&#34;:&#34;tangencial&#34;,&#34;type&#34;:&#34;sunburst&#34;,&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(39,127,145,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(255,255,255,1)&#34;}},&#34;frame&#34;:null}],&#34;highlight&#34;:{&#34;on&#34;:&#34;plotly_click&#34;,&#34;persistent&#34;:false,&#34;dynamic&#34;:false,&#34;selectize&#34;:false,&#34;opacityDim&#34;:0.2,&#34;selected&#34;:{&#34;opacity&#34;:1},&#34;debounce&#34;:0},&#34;shinyEvents&#34;:[&#34;plotly_hover&#34;,&#34;plotly_click&#34;,&#34;plotly_selected&#34;,&#34;plotly_relayout&#34;,&#34;plotly_brushed&#34;,&#34;plotly_brushing&#34;,&#34;plotly_clickannotation&#34;,&#34;plotly_doubleclick&#34;,&#34;plotly_deselect&#34;,&#34;plotly_afterplot&#34;,&#34;plotly_sunburstclick&#34;],&#34;base_url&#34;:&#34;https://plot.ly&#34;},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;p&gt;Para 2020 la atención de la línea 144 se extendió a whatsapp y mail, vale destacar que todavía no contamos con datos abiertos para poder analizar la información de la línea y su impacto con el COVID-19 y el ASPO.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Recuerda que podés comunicarte de manera gratuita las 24 hs., los 365 días, a través de un llamado al 144, por WhatsApp al 1127716463, por mail a &lt;a href=&#34;mailto:linea144@mingeneros.gob.ar&#34; class=&#34;email&#34;&gt;linea144@mingeneros.gob.ar&lt;/a&gt; y descargando la app.&lt;/strong&gt;&lt;/p&gt;
+&lt;div id=&#34;participación-en-concurso&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Participación en concurso&lt;/h4&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;
+&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;
+&lt;a href=&#34;https://twitter.com/hashtag/BAenDatos?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#BAenDatos&lt;/a&gt; ¿Qué sabemos de la Línea 144 en CABA?&lt;br&gt;Me sumé al desafío de &lt;a href=&#34;https://twitter.com/BAGobAbierto?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@BAGobAbierto&lt;/span&gt;&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://twitter.com/BAinnovacion?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@BAinnovacion&lt;/span&gt;&lt;/a&gt;, y encontré información interesante sobre la línea 144 para compartir.&lt;br&gt;&lt;br&gt;Mirá el análisis completo en &lt;a href=&#34;https://t.co/9wEvCQHDlT&#34;&gt;https://t.co/9wEvCQHDlT&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/rladies?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rladies&lt;/a&gt; &lt;a href=&#34;https://t.co/eAnJZFO8Ls&#34;&gt;pic.twitter.com/eAnJZFO8Ls&lt;/a&gt;
+&lt;/p&gt;
+— andrea (&lt;span class=&#34;citation&#34;&gt;@me_andre&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/me_andre/status/1376404024342278144?ref_src=twsrc%5Etfw&#34;&gt;March 29, 2021&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+&lt;div id=&#34;presentación-elaborada&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Presentación elaborada&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;images/3.png&#34; /&gt;
+&lt;img src=&#34;images/4.png&#34; /&gt;
+&lt;img src=&#34;images/5.png&#34; /&gt;
+&lt;img src=&#34;images/6.png&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Taller anual de investigación sobre cambio social</title>
+      <link>/proyectos/cambio-social/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/proyectos/cambio-social/</guid>
+      <description>&lt;h2 id=&#34;posición-frente-al-derecho-al-aborto-y-sus-condicionante-en-la-argentina-actual-un-análisis-de-quienes-se-movilizan&#34;&gt;Posición frente al Derecho al aborto y sus condicionante en la Argentina actual: un análisis de quienes se movilizan&lt;/h2&gt;
+&lt;h5 id=&#34;taller-de-investigación-sobre-cambio-social&#34;&gt;TALLER DE INVESTIGACIÓN SOBRE CAMBIO SOCIAL&lt;/h5&gt;
+&lt;h5 id=&#34;cátedra-rebón&#34;&gt;CÁTEDRA REBÓN&lt;/h5&gt;
+&lt;h5 id=&#34;2019&#34;&gt;2019&lt;/h5&gt;
+&lt;p&gt;&lt;em&gt;CHÁVEZ, DANIELA | ECHAVE, JOAQUÍN | GÓMEZ VARGAS, ANDREA&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;El proyecto está realizado en el marco del Taller de Investigación sobre Cambio Social de la cátedra Rebón de la carrera de Sociología en la Facultad de Ciencias Sociales de la Universidad de Buenos Aires durante el año 2019, con la finalidad de contribuir al tema de estudio propuesto por la cátedra: los procesos de movilización y protesta social que se desarrollaron y desarrollan a favor y en contra del Derecho al aborto. Dicho proyecto tiene como propósito general explorar mediante la aplicación de encuestas, los elementos que influyen en la posición de los movilizados (de la ‘‘Marcha por la vida’’ y de la ‘‘Presentación del Proyecto Interrupción Voluntaria del Embarazo”) en la Argentina actual frente a la problemática sobre el derecho al aborto.&lt;/p&gt;
+&lt;p&gt;En este marco, nos interesa ahondar sobre el posicionamiento de los movilizados tanto a favor como en contra del derecho al aborto, debido a que lo consideramos como el eje articulador y movilizante del conflicto que abordamos. Dentro de las múltiples variables que influyen en la toma de posición frente al derecho al aborto, decidimos centrarnos en tres dimensiones que consideramos relevantes para cualquier análisis sociológico: religión, política y estructura social.&lt;/p&gt;
+&lt;p&gt;En esta misma línea, nos preguntamos sobre los vínculos existentes entre las posiciones políticas, sociales y religiosas de los manifestantes, y sus posturas individuales y colectivas a favor y en contra del derecho al aborto. Nuestros esfuerzos se centrarán entonces en esbozar –a partir del análisis conjunto de ambas experiencias– una caracterización de los manifestantes que tenga en cuenta la adscripción religiosa, el posicionamiento político y la posición en la estructura social, con el objetivo de indagar cómo cada una de estas dimensiones incide en las posturas que adoptan frente a la temática del aborto. En otras palabras, nos interesa indagar la incidencia que posee cada una de estas variables, tanto a favor como en contra del derecho al aborto en la Argentina actual.&lt;/p&gt;
+&lt;p&gt;En definitiva, el cuestionamiento que resulta pertinente y a la que el presente estudio puede aportar es a contribuir a una caracterización- teniendo en cuenta que los resultados del estudio de ambas muestras de población no podrán extrapolarse al conjunto de la sociedad- que pueda brindar lineamientos generales de algunas de las múltiples variables que pueden influenciar al posicionamiento con respecto al derecho al aborto de los movilizados en torno a esta temática.&lt;/p&gt;
+&lt;p&gt;En este marco nos surgen los siguientes interrogantes:&lt;/p&gt;
+&lt;p&gt;¿Qué variables inciden en los posicionamientos en torno al derecho al aborto? ¿Cuáles son los condicionantes de las perspectivas adoptadas con respecto al derecho al aborto de los movilizados en la Argentina? ¿Qué rasgos o características de los movilizados determinan en última instancia su postura frente con respecto al derecho al aborto?&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cátedra libre en UBA sociales</title>
+      <link>/proyectos/catedra-libe/</link>
+      <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>/proyectos/catedra-libe/</guid>
+      <description>&lt;h2 id=&#34;catedra-libre-virtual-de-la-campaña-nacional-por-el-derecho-al-aborto-legal-seguro-y-gratuito&#34;&gt;CATEDRA LIBRE VIRTUAL DE LA CAMPAÑA NACIONAL POR EL DERECHO AL ABORTO LEGAL, SEGURO Y GRATUITO&lt;/h2&gt;
+&lt;h5 id=&#34;facultad-de-ciencias-sociales---uba&#34;&gt;FACULTAD DE CIENCIAS SOCIALES - UBA&lt;/h5&gt;
+&lt;h5 id=&#34;cohorte-2019--2020&#34;&gt;COHORTE 2019 -2020&lt;/h5&gt;
+&lt;p&gt;La propuesta se encuadra en la necesidad de que lxs futurxs profesionales en ciencias sociales y lxs asistentes a este seminario adquieran herramientas teóricas y prácticas y un conocimiento inicial pero abarcativo sobre la necesidad de despenalizar y legalizar el aborto para solucionar los problemas que crea la clandestinidad de su práctica.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Encuentro 1&lt;/strong&gt; De las luchas por el aborto a la Campaña Nacional por el Derecho al Aborto Legal Seguro y Gratuito.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Encuentro 2&lt;/strong&gt; Interpelaciones y diálogos de la Campaña Nacional
+por el Derecho al Aborto Legal Seguro y Gratuito en el campo de la salud.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Encuentro 3&lt;/strong&gt; Subjetividades en la lucha por el derecho al aborto legal, seguro y gratuito.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Encuentro 4&lt;/strong&gt; La Comunicación en la lucha por el derecho al aborto legal&lt;/p&gt;
+&lt;h5 id=&#34;equipo-docente&#34;&gt;EQUIPO DOCENTE&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;images/equipo2020.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;cohorte-2020&#34;&gt;COHORTE 2020&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;images/cohorte2020.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;cohorte-2019&#34;&gt;COHORTE 2019&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;images/cohorte2019.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Seminario de investigación maltrato infantil y violencia de género</title>
+      <link>/proyectos/infancias-y-violencias/</link>
+      <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>/proyectos/infancias-y-violencias/</guid>
+      <description>&lt;h3 id=&#34;organizaciones-de-la-sociedad-civil-y-la-violencia-hacia-niños-niñas-y-adolescentes-un-estudio-de-casos&#34;&gt;Organizaciones de la sociedad civil y la violencia hacia niños, niñas y adolescentes: Un estudio de casos&lt;/h3&gt;
+&lt;h5 id=&#34;seminario-de-investigación-maltrato-infantil-y-violencia-de-género&#34;&gt;Seminario de investigación maltrato infantil y violencia de género&lt;/h5&gt;
+&lt;h5 id=&#34;cátedra-biagini---sanchez&#34;&gt;Cátedra Biagini - Sanchez&lt;/h5&gt;
+&lt;h5 id=&#34;2018&#34;&gt;2018&lt;/h5&gt;
+&lt;p&gt;&lt;em&gt;Autoria de Sofia Isola (UBA Sociales) y Andrea Gomez Vargas (UBA Sociales)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;El presente análisis se inscribe en el marco del proyecto de investigación de violencia contra niños/niñas en el ámbito familiar: políticas y dispositivos de atención y orientación (2012 - 2019), que integra la línea de investigación sociedad civil y salud a cargo de la Dra. Graciela Biagini con la finalidad de generar información relevante para el diseño e implementación de protocolos de detección precoz y atención de la violencia contra los niños/as en el ámbito de las organizaciones familiares que contribuya a mejorar el proceso de salud-enfermedad-atención de la infancia desde un abordaje de derechos según lo establecen normativas en vigencia.&lt;/p&gt;
+&lt;p&gt;Nuestro problema de estudio, en particular, se centra en explorar las percepciones y conceptualizaciones sobre la problemática de la violencia contra los niños y los dispositivos implementados para atenderla por parte de integrantes de OSC seleccionadas. Dentro de este marco lo que aquí se propone es un recorte específico de cuatro (4) organizaciones de la sociedad civil (OSC en adelante) que trabajan en problemáticas de maltrato infantil (MI) y/o violencia de género (VG): ONG Amor en Acción (A.A), Aldeas Infantiles SOS Argentina (A.I), Dignos de Ser (D.S) y Aralma (AR), ubicados en la Ciudad de Buenos Aires.&lt;/p&gt;
+&lt;p&gt;El objetivo general del trabajo consiste en caracterizar la forma de abordaje y conceptualización sobre la violencia contra los niños, niñas y adolescentes (NNyA en adelante) en el ámbito de las cuatro OSC con trabajo en infancia seleccionadas y, a su vez, indagar la percepción que la mismas tienen sobre el rol de Estado en lo referente a la problemática de MI/VG.&lt;/p&gt;
+&lt;p&gt;En este sentido nos resulta pertinente preguntarnos: ¿Qué indicadores las OSC seleccionadas tienen en cuenta a la hora de abordar la problemática de MI? ¿De qué modo la concepción que las mismas poseen de MI/VG enmarca los parámetros de su accionar y moldea sus objetivos respectivos? ¿Qué relación existe entre las OSC y el Estado para articular la problemática de MI?&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

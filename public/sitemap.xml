@@ -3,58 +3,328 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/courses/example/python/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/courses/example/visualization/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/courses/example/stats/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    <lastmod>2024-05-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/talk/example-talk/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    <loc>/tag/investigacion-social/</loc>
+    <lastmod>2024-05-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/event/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/andrea/</loc>
-    <lastmod>2021-05-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/</loc>
-    <lastmod>2021-05-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/ciencia-de-datos/</loc>
-    <lastmod>2021-05-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/</loc>
-    <lastmod>2021-05-14T00:00:00+00:00</lastmod>
+    <loc>/proyectos/</loc>
+    <lastmod>2024-05-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/tag/r/</loc>
-    <lastmod>2021-05-14T00:00:00+00:00</lastmod>
+    <lastmod>2024-05-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/proyectos/personasmayores/</loc>
+    <lastmod>2024-05-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/sociologia/</loc>
+    <lastmod>2024-05-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2024-05-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/andrea-gomez-vargas/</loc>
+    <lastmod>2023-10-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/</loc>
+    <lastmod>2023-10-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/charlas/</loc>
+    <lastmod>2023-10-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/estadisticas-oficiales/</loc>
+    <lastmod>2023-10-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/estadisticas-sociales/</loc>
+    <lastmod>2023-10-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/latinr/</loc>
+    <lastmod>2023-10-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/</loc>
+    <lastmod>2023-10-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/shiny/</loc>
+    <lastmod>2023-10-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/latinr2023/</loc>
+    <lastmod>2023-10-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/eph/</loc>
+    <lastmod>2023-09-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/gt/</loc>
+    <lastmod>2023-09-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/ephrladies/</loc>
+    <lastmod>2023-09-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/taller/</loc>
+    <lastmod>2023-09-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/tidyverse/</loc>
+    <lastmod>2023-09-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/uba-sociales/</loc>
+    <lastmod>2023-09-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/git/</loc>
+    <lastmod>2023-06-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/renagro/</loc>
+    <lastmod>2023-06-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/github/</loc>
+    <lastmod>2023-06-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/andrea/</loc>
+    <lastmod>2023-05-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/argentina/</loc>
+    <lastmod>2023-05-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/feminismos/</loc>
+    <lastmod>2023-05-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/generos/</loc>
+    <lastmod>2023-05-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/proyectos/mujeres-it/</loc>
+    <lastmod>2023-05-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/tecnologia/</loc>
+    <lastmod>2023-05-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2023-04-25T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/proyectos/tidytuesday/</loc>
+    <lastmod>2023-04-25T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/category/r/</loc>
+    <lastmod>2023-04-25T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/tidytuesday/</loc>
+    <lastmod>2023-04-25T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/csvconf7/</loc>
+    <lastmod>2023-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/gt_badbunny/</loc>
+    <lastmod>2022-11-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/cambio-social/</loc>
+    <lastmod>2022-11-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/conferencias/</loc>
+    <lastmod>2022-11-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/proyectos/femitconf2022/</loc>
+    <lastmod>2022-11-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/docencia/</loc>
+    <lastmod>2022-10-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/proyectos/aset/</loc>
+    <lastmod>2022-10-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/proyectos/pasalavos/</loc>
+    <lastmod>2022-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/proyectos/alosvotoscolombia/</loc>
+    <lastmod>2022-05-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/migrantes-x-migrantes/</loc>
+    <lastmod>2022-05-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/prensa/</loc>
+    <lastmod>2022-05-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/degenerandocp/</loc>
+    <lastmod>2022-04-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/accessibility/</loc>
+    <lastmod>2022-03-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/global/</loc>
+    <lastmod>2022-03-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/werladies/</loc>
+    <lastmod>2022-03-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/twitter/</loc>
+    <lastmod>2022-03-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/ayelen-segovia/</loc>
+    <lastmod>2022-03-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/proyectos/mujeresvideojuegos/</loc>
+    <lastmod>2022-03-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/accesibilidad-e-inclusion/</loc>
+    <lastmod>2022-01-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/accessibilitydatavis/</loc>
+    <lastmod>2022-01-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/dataviz/</loc>
+    <lastmod>2022-01-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/latinr2021/</loc>
+    <lastmod>2021-11-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/ciencia-de-datos/</loc>
+    <lastmod>2021-09-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/comoempezar/</loc>
+    <lastmod>2021-09-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/reinventartec2021/</loc>
+    <lastmod>2021-07-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/user2021/</loc>
+    <lastmod>2021-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/colombia/</loc>
+    <lastmod>2021-05-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/laura-rothberg/</loc>
+    <lastmod>2021-05-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/proyectos/nidocolombia/</loc>
+    <lastmod>2021-05-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/radio/</loc>
+    <lastmod>2021-05-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -63,37 +333,7 @@
   </url>
   
   <url>
-    <loc>/tag/sociologia/</loc>
-    <lastmod>2021-05-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2021-05-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/baendatos/</loc>
-    <lastmod>2021-03-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/feminismos/</loc>
-    <lastmod>2021-03-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/generos/</loc>
-    <lastmod>2021-03-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/investigacion-social/</loc>
-    <lastmod>2021-03-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
+    <loc>/proyectos/baendatos/</loc>
     <lastmod>2021-03-29T00:00:00+00:00</lastmod>
   </url>
   
@@ -108,32 +348,12 @@
   </url>
   
   <url>
-    <loc>/courses/</loc>
-    <lastmod>2021-01-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/courses/example/</loc>
-    <lastmod>2021-01-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/category/r/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tag/seo/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/seo-r/</loc>
+    <loc>/proyectos/seo-r/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url>
   
@@ -143,27 +363,7 @@
   </url>
   
   <url>
-    <loc>/tag/accesibilidad-e-inclusion/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/andrea/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/charlas/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/author/latin-r/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/latinr-2020/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
   </url>
   
@@ -173,37 +373,17 @@
   </url>
   
   <url>
-    <loc>/author/lala-rothberg/</loc>
-    <lastmod>2020-09-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tag/migracion/</loc>
     <lastmod>2020-09-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/modoglitter-migracion/</loc>
+    <loc>/proyectos/modoglitter-migracion/</loc>
     <lastmod>2020-09-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/radio/</loc>
-    <lastmod>2020-09-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/docencia/</loc>
-    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/proyectos/materia-optativa/</loc>
-    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/proyectos/</loc>
     <lastmod>2020-02-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -215,16 +395,6 @@
   <url>
     <loc>/tag/trabajo-social/</loc>
     <lastmod>2020-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/uba-sociales/</loc>
-    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/cambio-social/</loc>
-    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -250,16 +420,6 @@
   <url>
     <loc>/tag/ponencias/</loc>
     <lastmod>2019-08-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/slides/</loc>
-    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/slides/example/</loc>
-    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>

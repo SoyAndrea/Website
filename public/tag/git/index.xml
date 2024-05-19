@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git | Andrea</title>
+    <link>/tag/git/</link>
+      <atom:link href="/tag/git/index.xml" rel="self" type="application/rss+xml" />
+    <description>git</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>es</language><lastBuildDate>Fri, 09 Jun 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu81060471e680bc591d9a375a50696ba4_27362_512x512_fill_lanczos_center_2.png</url>
+      <title>git</title>
+      <link>/tag/git/</link>
+    </image>
+    
+    <item>
+      <title>Git &amp; Github para proyectos colaborativos en R</title>
+      <link>/publication/renagro/</link>
+      <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>/publication/renagro/</guid>
+      <description>&lt;h2 id=&#34;r-en-agronomia&#34;&gt;R en Agronomia&lt;/h2&gt;
+&lt;p&gt;Inicia el ciclo de webinars de R en Agronomía del INTA con esta charla virtual sobre proyectos colaborativos en Rstudio con Git &amp;amp; GItHub. Una herramienta indispensable para el trabajo en ciencia de datos, la reproducibilidad y automatización de procesos.&lt;/p&gt;
+&lt;p&gt;En esta charla se abarcan conceptos y comandos básicos, incluyendo ejemplos en vivo de repositorios remotos y control de cambios.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/SoyAndrea/Porfinviernes/blob/main/Git%20y%20Github%20-%209%20de%20junio/9.06.2023%20Github%20para%20proyectos%20colaborativos%20en%20R%20.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Slides&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Las ilustraciones son de Allison Horst y Julia Lowndes, tomadas del blog &lt;a href=&#34;https://www.openscapes.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Openscapes&lt;/a&gt;, nota: &lt;a href=&#34;https://www.openscapes.org/blog/2022/05/27/github-illustrated-series/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt; GitHub for supporting, contributing, and failing safely&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/68739659-fb6f-41e8-9813-32e1de3d82c0_rw_1920.png?h=4b046efe7664ab833358c241b10bd8e6&#34; alt=&#34;Ilustraciones de Allison Horst&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Introducción a Git y GitHub desde RStudio</title>
+      <link>/publication/csvconf7/</link>
+      <pubDate>Mon, 17 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>/publication/csvconf7/</guid>
+      <description>
+
+
+&lt;div style=&#34;display: grid; grid-template-columns: 1fr 2fr; grid-column-gap: 30px;&#34;&gt;
+&lt;div&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://carpentries.org/assets/img/TheCarpentries.svg&#34; alt=&#34;&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;The Carpentries logo&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;workshop-de-the-carpentries-en-la-csvconfv7&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;strong&gt;Workshop de The Carpentries en la &lt;a href=&#34;https://csvconf.com/&#34;&gt;csv,conf,v7&lt;/a&gt;&lt;/strong&gt; 🦙&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Novotel Buenos Aires&lt;/em&gt;
+&lt;em&gt;17 de Abril, 2023&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;En el marco de la CSV Conference, una conferencia sobre ciencia de datos aplicada a la ciencia, al periodismo, a las organizaciones gubernamentales y al mundo open source. Realizamos como instructores de the carpentries dos talleres presenciales y gratuitos como parte de las actividades previas e incentivando el uso de R como lenguaje de programación Open Source con las lecciones de &lt;strong&gt;R para Análisis Científicos Reproducibles&lt;/strong&gt; &amp;amp; &lt;strong&gt;Introducción a Git y Github desde RStudio&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:unnamed-chunk-1&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;instructoras.jpg&#34; alt=&#34;instructoras workshop&#34; width=&#34;100%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: instructoras workshop
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;instructoras&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Instructoras:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/iramosp/&#34;&gt;Irene Ramos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/SoyAndrea&#34;&gt;Andrea Gómez Vargas&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ayudantes&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Ayudantes:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/virginiagarciaalonso&#34;&gt;Virginia García Alonso&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/nmorandeira&#34;&gt;Natalia Morandeira&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/PamelaPairo&#34;&gt;Pamela Pairo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lección-aplicada&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Lección aplicada&lt;/h3&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://user-images.githubusercontent.com/45582182/235040725-5cba4e16-b6d6-4003-984c-992707ff017a.png&#34; alt=&#34;&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;software carpentry&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Conoce el sitio web del &lt;a href=&#34;https://virginiagarciaalonso.github.io/2023-04-17-csvconf-r-git/&#34;&gt;&lt;strong&gt;Workshop&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Repositorio GitHub &lt;a href=&#34;https://github.com/SoyAndrea/csvconfv7&#34;&gt;Workshop Git y Github desde RStudio en la csv,conf,v7 🦙&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Lección The Carpentries aplicada en español: &lt;a href=&#34;https://swcarpentry.github.io/git-novice-es/&#34;&gt;El Control de Versiones con Git&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Software Carpentry pretende ayudar a las y los investigadores a realizar su trabajo en menos tiempo y con menos esfuerzo enseñándoles técnicas informáticas básicas para la investigación. Este taller práctico cubrirá conceptos y herramientas básicas, incluyendo control de versiones, gestión de datos, y automatización de tareas. Se animará a los participantes a ayudarse y a aplicar lo aprendido a sus propios problemas de investigación.&lt;/p&gt;
+&lt;p&gt;Más información sobre Software Carpentry: Teaching basic lab skills for research computing en &lt;a href=&#34;https://software-carpentry.org/&#34; class=&#34;uri&#34;&gt;https://software-carpentry.org/&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;redes-sociales&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Redes sociales&lt;/h3&gt;
+&lt;div style=&#34;display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 50px;&#34;&gt;
+&lt;div&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;
+&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
+Say👋🏾👋🏽to our Instructors in Buenos Aires! The pre-conference workshop with &lt;a href=&#34;https://twitter.com/dataverseorg?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@dataverseorg&lt;/span&gt;&lt;/a&gt; at &lt;a href=&#34;https://twitter.com/hashtag/csvconf?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#csvconf&lt;/a&gt; was a success! &lt;a href=&#34;https://twitter.com/hashtag/commallama?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#commallama&lt;/a&gt; &lt;a href=&#34;https://t.co/6AQ5xVQAC1&#34;&gt;pic.twitter.com/6AQ5xVQAC1&lt;/a&gt;
+&lt;/p&gt;
+— The Carpentries (&lt;span class=&#34;citation&#34;&gt;@thecarpentries&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/thecarpentries/status/1649050567145299969?ref_src=twsrc%5Etfw&#34;&gt;April 20, 2023&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;
+&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;
+En la previa de &lt;a href=&#34;https://twitter.com/CSVConference?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@CSVConference&lt;/span&gt;&lt;/a&gt; un gran taller de &lt;a href=&#34;https://twitter.com/thecarpentries?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@thecarpentries&lt;/span&gt;&lt;/a&gt; sobre Git desde RStudio, con las genias de &lt;a href=&#34;https://twitter.com/me_andre?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@me_andre&lt;/span&gt;&lt;/a&gt; e Irene Ramos!! Ayudando junto a &lt;a href=&#34;https://twitter.com/pamepairo?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@pamepairo&lt;/span&gt;&lt;/a&gt; 💜💜 &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rstats_es?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats_es&lt;/a&gt; &lt;a href=&#34;https://t.co/hXTfeGm6Y7&#34;&gt;pic.twitter.com/hXTfeGm6Y7&lt;/a&gt;
+&lt;/p&gt;
+— Natalia Morandeira (&lt;span class=&#34;citation&#34;&gt;@Nat_Mora_&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/Nat_Mora_/status/1648054772358959119?ref_src=twsrc%5Etfw&#34;&gt;April 17, 2023&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;
+&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
+Thank you all for an amazing csv,conf,v7 conference! 🦙🇦🇷❤️&lt;a href=&#34;https://twitter.com/hashtag/commallama?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#commallama&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/csvconf?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#csvconf&lt;/a&gt; &lt;a href=&#34;https://t.co/EPEQZLYUYW&#34;&gt;pic.twitter.com/EPEQZLYUYW&lt;/a&gt;
+&lt;/p&gt;
+— CSVConf (&lt;span class=&#34;citation&#34;&gt;@CSVConference&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/CSVConference/status/1650167368012759043?ref_src=twsrc%5Etfw&#34;&gt;April 23, 2023&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

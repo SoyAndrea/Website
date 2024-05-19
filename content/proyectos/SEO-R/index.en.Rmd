@@ -39,7 +39,10 @@ Ahora, queremos ver en detalle la URL de los sitios que nos detalla el listado d
 
 ```{r}
 #PARA SCRAPEAR LAS URLS QUE QUEREMOS
-listasitioscolombiaurl <- sitioscolombia %>% html_nodes("li") %>% html_nodes('a') %>% html_attr('href')
+listasitioscolombiaurl <- sitioscolombia %>% 
+  html_nodes("li") %>% 
+  html_nodes('a') %>% 
+  html_attr('href')
 ```
 
 Con esta opción lograremos ver el primer listado
@@ -55,7 +58,13 @@ Ahora queremos sumarle el nombre del sitio donde estaba anclada la URL del sitio
 
 ```{r}
 #PARA SCRAPEAR LOS NOMBRES DE LOS SITIOS
-listasitiosnombre <- sitioscolombia %>% html_nodes("li") %>% html_nodes('a') %>% html_text() %>% str_remove_all('\\n') %>% str_remove_all('\\r') %>% str_replace_all("\\s*", " ")
+listasitiosnombre <- sitioscolombia %>% 
+  html_nodes("li") %>% 
+  html_nodes('a') %>% 
+  html_text() %>% 
+  str_remove_all('\\n') %>% 
+  str_remove_all('\\r') %>% 
+  str_replace_all("\\s*", " ")
 
 ```
 

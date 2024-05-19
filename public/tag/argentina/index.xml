@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Argentina | Andrea</title>
+    <link>/tag/argentina/</link>
+      <atom:link href="/tag/argentina/index.xml" rel="self" type="application/rss+xml" />
+    <description>Argentina</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>es</language><lastBuildDate>Fri, 12 May 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu81060471e680bc591d9a375a50696ba4_27362_512x512_fill_lanczos_center_2.png</url>
+      <title>Argentina</title>
+      <link>/tag/argentina/</link>
+    </image>
+    
+    <item>
+      <title>Mujeres &amp; Tecnología: una oportunidad para la empleabilidad</title>
+      <link>/proyectos/mujeres-it/</link>
+      <pubDate>Fri, 12 May 2023 00:00:00 +0000</pubDate>
+      <guid>/proyectos/mujeres-it/</guid>
+      <description>&lt;h4 id=&#34;_un-proyecto-desde-la-dirección-general-de-inserción-laboral-de-la-mujer-del-gobierno-de-la-ciudad-de-buenos-aires-en-conjunto-con-la-uba_&#34;&gt;&lt;em&gt;Un proyecto desde la Dirección General de Inserción Laboral de la Mujer del Gobierno de la Ciudad de Buenos Aires en conjunto con la UBA&lt;/em&gt;&lt;/h4&gt;
+&lt;p&gt;Elaborado junto a la dirección, se desarrolla la capacitación Mujeres &amp;amp; IT para el Programa de habilidades para la empleabilidad.&lt;/p&gt;
+&lt;p&gt;En esta charla se abordan las temáticas de Economía del Conocimiento y Tecnologías de la Información (IT) como una oportunidad de empleo para las mujeres en especial, dada su gran rol en la actividad económica en estos tiempos, es el espacio para contarles  qué significa que cada vez seamos más mujeres en IT, que ventajas y beneficios se pueden obtener con este tipo de empleos, los diferentes puestos y las diferentes modalidades para empezar a aprender un nuevo oficio en tecnología y cuáles son las opciones gratuitas y pagas con las que pueden iniciar su carrera en IT, y sin dejar de lado las comunidades de práctica que pueden acompañar este proceso.&lt;/p&gt;
+&lt;img src=&#34;images/frase_final.png&#34; alt=&#34;frase final de capacitación&#34; width=&#34;100%&#34;/&gt;
+&lt;h3 id=&#34;algunas-de-las-participaciones&#34;&gt;Algunas de las participaciones&lt;/h3&gt;
+&lt;img src=&#34;images/taller2610.jpg&#34; alt=&#34;participación de preguntas&#34; width=&#34;100%&#34;/&gt;
+&lt;h3 id=&#34;cartilla-elaborada-para-entregar-a-participantes-de-mundo-it&#34;&gt;Cartilla elaborada para entregar a participantes de MUNDO IT&lt;/h3&gt;
+&lt;img src=&#34;images/cartilla1.jpeg&#34; alt=&#34;fotografia del primer cuadernillo impreso de capacitación&#34; width=&#34;100%&#34;/&gt;
+&lt;p&gt;Se participaron en diferentes jornadas de expo empleo como expo empleo joven, expo empleo barrial UBA-FCE, expo empleo barrial en comunas y expo mujeres productivas. Acá dejo algunos registros de la jornada.&lt;/p&gt;
+&lt;h3 id=&#34;ciclo-de-charlas-en-expo-empleo-barrial&#34;&gt;Ciclo de charlas en expo empleo barrial&lt;/h3&gt;
+&lt;img src=&#34;images/expo1.png&#34; alt=&#34;fotografia primera charla en expo empleo&#34; width=&#34;100%&#34;/&gt;
+&lt;h3 id=&#34;charla-en-expo-mujeres-productivas&#34;&gt;Charla en expo mujeres productivas&lt;/h3&gt;
+&lt;img src=&#34;images/expo2.png&#34; alt=&#34;fotografia charla en expo empleo&#34; width=&#34;100%&#34;/&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ReinventarTEC 2021</title>
+      <link>/publication/reinventartec2021/</link>
+      <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/reinventartec2021/</guid>
+      <description>&lt;h2 id=&#34;primeros-pasos-en-r-para-el-análisis-de-datos&#34;&gt;&lt;strong&gt;Primeros pasos en R para el análisis de datos&lt;/strong&gt;&lt;/h2&gt;
+&lt;h4 id=&#34;reinventartec-2021---taller&#34;&gt;ReinventarTEC 2021 - taller&lt;/h4&gt;
+&lt;p&gt;Taller organizado por los capítulos de Rladies Buenos Aires, Ushuaia y Resistencia-Corientes, dirigido por Patricia Loto y Andrea Gomez Vargas para la segunda edición de ReinventarTEC. Un ciclo de talleres con el fin de inspirar a mujeres de todas las edades y profesiones a reinventarse y crear un mejor futuro laboral en la era digital.&lt;/p&gt;
+&lt;p&gt;En esta ocasión quisimos brindar tips y materiales iniciales, gratuitos y accesibles para empezar a hacer análisis de datos con una pequeña introducción para aprender a usar R y tidyverse.&lt;/p&gt;
+&lt;img src=&#34;images/tidyverse.png&#34; alt=&#34;&#34; width=&#34;70%&#34;/&gt;
+&lt;p&gt;Para que no quedara solo conceptos, realizamos un ejercicio práctico con un dataset sobre LEGO. Te comparto los links con la presentación y ejercicio de práctica.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Práctica Rstudio desde la nube:&lt;/strong&gt;  &lt;a href=&#34;https://rstudio.cloud/project/2704255&#34;&gt;https://rstudio.cloud/project/2704255&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Presentación + Guía de instalación Rstudio:&lt;/strong&gt; &lt;a href=&#34;https://bit.ly/Taller9-ReinventarTEC&#34;&gt;https://bit.ly/Taller9-ReinventarTEC&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Repositorio en GitHub&lt;/strong&gt; &lt;a href=&#34;https://github.com/PatriLoto/reinventarTEC_2021&#34;&gt;https://github.com/PatriLoto/reinventarTEC_2021&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;info: &lt;a href=&#34;https://mincyt.cba.gov.ar/reinventartec/&#34;&gt;https://mincyt.cba.gov.ar/reinventartec/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;pt&#34; dir=&#34;ltr&#34;&gt;Terminando! &lt;a href=&#34;https://twitter.com/hashtag/ReinventarTEC?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ReinventarTEC&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rladies?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rladies&lt;/a&gt;&lt;a href=&#34;https://twitter.com/RLadies_rciacte?ref_src=twsrc%5Etfw&#34;&gt;@RLadies_rciacte&lt;/a&gt;&lt;br&gt; YouTube: &lt;a href=&#34;https://t.co/3Pk31zNKZK&#34;&gt;https://t.co/3Pk31zNKZK&lt;/a&gt; &lt;a href=&#34;https://t.co/csMK1Bj4Rc&#34;&gt;pic.twitter.com/csMK1Bj4Rc&lt;/a&gt;&lt;/p&gt;&amp;mdash; R-Ladies BuenosAires (@RLadiesBA) &lt;a href=&#34;https://twitter.com/RLadiesBA/status/1415446571676745728?ref_src=twsrc%5Etfw&#34;&gt;July 14, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; 
+&lt;p&gt;&lt;strong&gt;Míralo en el canal de Youtube del Ministerio&lt;/strong&gt;&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/Q8kKAnB3Xf8&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;strong&gt;Difusión&lt;/strong&gt;&lt;/p&gt;
+&lt;img src=&#34;images/Difusion.jpg&#34; alt=&#34;&#34; width=&#34;80%&#34;/&gt;
+&lt;p&gt;&lt;strong&gt;Prensa&lt;/strong&gt;
+&lt;a href=&#34;https://prensa.cba.gov.ar/ciencia-y-tecnologia/ciencia-con-perspectiva-de-genero-finaliza-la-2-edicion-del-programa-reinventartec/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Finalizó la 2° edición del programa ReinventarTEC&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>R en Buenos Aires</title>
+      <link>/publication/renbaires/</link>
+      <pubDate>Fri, 14 May 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/renbaires/</guid>
+      <description>&lt;h2 id=&#34;capítulo-2-una-presentación-a-toda-marcha-de-r&#34;&gt;Capítulo 2: Una presentación a toda marcha de R&lt;/h2&gt;
+&lt;p&gt;Siguiendo con el club de lectura de &lt;a href=&#34;https://bitsandbricks.github.io/ciencia_de_datos_gente_sociable/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Ciencia de Datos para Gente Sociable de Antonio Vazquez Brust&lt;/strong&gt;&lt;/a&gt; introducí el segundo capitulo donde ya comenzamos a conocer la interfaz de R studio y armamos nuestro primer proyecto.&lt;/p&gt;
+&lt;p&gt;Acá conté los primeros 5  pasos que el autor nos invita a conocer y navegar en R:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/RPRIMERO.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Quedan muchos capitulos por charlar, sumate a los próximos en &lt;a href=&#34;https://www.meetup.com/es/renbaires/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;R en Baires&lt;/strong&gt;&lt;/a&gt;. Si no puedes asistir, quedan grabados en el canal de youtube.&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/YZT2hX800yg&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>RLadies Buenos Aires</title>
+      <link>/publication/rladiesbuenosaires/</link>
+      <pubDate>Sun, 31 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/rladiesbuenosaires/</guid>
+      <description>&lt;h2 id=&#34;capítulo-buenos-aires&#34;&gt;Capítulo Buenos Aires&lt;/h2&gt;
+&lt;p&gt;Desde 2019 me sumé como colaboradora y en 2020 como co-organizadora del capítulo en Buenos Aires, entre la presencialidad y la virtualidad hermos organizando variados encuentros con diferentes temáticas y participantes de distintas profesiones. Siendo un espacio interdisciplinario, horizontal y colectivo.&lt;/p&gt;
+&lt;p&gt;No importa si nunca usaste R o si tenés R como herramienta principal de trabajo. El objetivo es promover R, intercambiar conocimiento y crear una red de contactos a nivel local y global.&lt;/p&gt;
+&lt;p&gt;Encuentra en nuestro canal de youtube los encuentros virtuales que realizamos en 2020 desde Buenos Aires. Y conoce lo realizado a nivel nacional en &lt;a href=&#34;https://rladiesenargentina.github.io/Resumen_meetups_2020/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;RLadies en Argentina durante 2020&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;En 2022 cumplimos 5 años, festejamos con un (Re)encuentro presencial y con el lanzamiento de la página web &lt;a href=&#34;https://rladiesba.netlify.app/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;rladiesba.netlify.app&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;Hay comunidad &lt;a href=&#34;https://twitter.com/hashtag/Rladies?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Rladies&lt;/a&gt; 🥳💜💜💜 &lt;a href=&#34;https://t.co/DCtqAeqsD6&#34;&gt;pic.twitter.com/DCtqAeqsD6&lt;/a&gt;&lt;/p&gt;&amp;mdash; R-Ladies BuenosAires (@RLadiesBA) &lt;a href=&#34;https://twitter.com/RLadiesBA/status/1502763807000735759?ref_src=twsrc%5Etfw&#34;&gt;March 12, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

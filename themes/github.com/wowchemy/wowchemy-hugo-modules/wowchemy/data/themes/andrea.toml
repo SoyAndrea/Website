@@ -5,12 +5,12 @@ name = "andrea"
 light = true
 
 # Primary
-primary = "#5d5d9a"
+primary = "#003049"
 
 # Menu
-menu_primary = "#5d5d9a"
+menu_primary = "#003049"
 menu_text = "#ffffff"
-menu_text_active = "#c5c5c5"
+menu_text_active = "#003049"
 menu_title = "#ffffff"
 
 # Home sections

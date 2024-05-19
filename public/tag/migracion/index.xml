@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Migración | Andrea</title>
+    <link>/tag/migracion/</link>
+      <atom:link href="/tag/migracion/index.xml" rel="self" type="application/rss+xml" />
+    <description>Migración</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>es</language><lastBuildDate>Wed, 16 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu81060471e680bc591d9a375a50696ba4_27362_512x512_fill_lanczos_center_2.png</url>
+      <title>Migración</title>
+      <link>/tag/migracion/</link>
+    </image>
+    
+    <item>
+      <title>Modo Glitter - Género y migración</title>
+      <link>/proyectos/modoglitter-migracion/</link>
+      <pubDate>Wed, 16 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/proyectos/modoglitter-migracion/</guid>
+      <description>&lt;h2 id=&#34;género-y-migración-por-la-periodista-laura-rothberg&#34;&gt;Género y migración, por la periodista Laura Rothberg&lt;/h2&gt;
+&lt;p&gt;Migración: un proceso complejo y estigmatizado. Se estima que en el año 2019 migraron 272 millones de personas en todo el mundo. Pero ¿qué significa migrar? ¿migran de la misma forma los hombres y las mujeres?&lt;/p&gt;
+&lt;p&gt;En este espacio radial charlamos sobre que significa ser migrante, cómo se construye un sujeto político desde ese rol y que implicancias conlleva ser mujer y ser migrante en Argentina y qué representa la política migratoria en los Estados.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Escúchalo en el canal de youtube de Modo Glitter&lt;/em&gt;&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/rB-KFkpzXkE&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

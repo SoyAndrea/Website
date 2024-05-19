@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>UBA sociales | Andrea</title>
+    <link>/tag/uba-sociales/</link>
+      <atom:link href="/tag/uba-sociales/index.xml" rel="self" type="application/rss+xml" />
+    <description>UBA sociales</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>es</language><lastBuildDate>Thu, 07 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu81060471e680bc591d9a375a50696ba4_27362_512x512_fill_lanczos_center_2.png</url>
+      <title>UBA sociales</title>
+      <link>/tag/uba-sociales/</link>
+    </image>
+    
+    <item>
+      <title>Introducción al Análisis de la Encuesta Permanente de Hogares {eph} con R</title>
+      <link>/publication/ephrladies/</link>
+      <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>/publication/ephrladies/</guid>
+      <description>
+
+
+&lt;div id=&#34;ciclo-de-formaciòn-complementaria-en-uba-sociales&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Ciclo de formaciòn complementaria en UBA sociales&lt;/h3&gt;
+&lt;div class=&#34;float&#34;&gt;
+&lt;img src=&#34;RladiesSociales.jpg&#34; alt=&#34;Fotografía del Taller en la facultad de Ciencias Sociales UBA&#34; /&gt;
+&lt;div class=&#34;figcaption&#34;&gt;&lt;em&gt;Fotografía del Taller en la facultad de Ciencias Sociales UBA&lt;/em&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br&gt;
+En colaboración con &lt;a href=&#34;https://github.com/BetsyCohen&#34;&gt;&lt;strong&gt;Betsy Cohen&lt;/strong&gt;&lt;/a&gt; desarrollamos y organizadmos el taller desde &lt;a href=&#34;https://rladiesba.netlify.app/&#34;&gt;R-Ladies Buenos Aires&lt;/a&gt; &amp;amp; el &lt;a href=&#34;https://www.nucleodeinnovacion.com/&#34;&gt;Núcleo de Innovaciòn Social&lt;/a&gt; para del ciclo de formación complementaria de la carrera de Sociologìa en la Facultad de Ciencias Sociales de la UBA.&lt;/p&gt;
+&lt;p&gt;En esta ocasión vamos a presentar la potencia de la encuesta y la librería de {tidyverse} para mostrarles cómo podemos obtener bases de datos directamente con el paquete {eph} y vamos a procesarla, traducirla y presentarla en indicadores para el análisis de ciencias sociales.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;queda-a-disposición-todo-el-material&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Queda a disposición todo el material:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/drive/folders/1lWlTc6u-uhUWE5VcuCQRysoSNDmV5HGi?usp=sharing&#34;&gt;Descarga la Práctica guiada en Rmd&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Repositorio &lt;a href=&#34;https://github.com/SoyAndrea/tallerEPH&#34;&gt;&lt;strong&gt;GitHub en Taller eph en R&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Web con toda la información del taller: &lt;a href=&#34;https://eph-ubasociales.netlify.app/&#34;&gt;&lt;strong&gt;eph-ubasociales.netlify.app&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;slides-generadas-con-quarto.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Slides generadas con {quarto}.&lt;/h3&gt;
+&lt;iframe src=&#34;https://eph-ubasociales.netlify.app/slides#/title-slide&#34; width=&#34;672&#34; height=&#34;400px&#34; data-external=&#34;1&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;div id=&#34;redes-sociales&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Redes sociales&lt;/h3&gt;
+&lt;div id=&#34;sociología-uba&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Sociología UBA&lt;/h4&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;
+&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;
+💻| Meetup sobre EPH en &lt;a href=&#34;https://twitter.com/hashtag/SociologiaUBA?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SociologiaUBA&lt;/a&gt; &lt;br&gt;&lt;br&gt;Llevamos adelante un taller junto al colectivo de mujeres programadoras &lt;a href=&#34;https://twitter.com/RLadiesBA?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@RLadiesBA&lt;/span&gt;&lt;/a&gt; para conocer cómo que es y cómo procesar los datos de la EPH con lenguajes de programación de código abierto (R y Python). &lt;a href=&#34;https://t.co/cvo6Y64hf5&#34;&gt;pic.twitter.com/cvo6Y64hf5&lt;/a&gt;
+&lt;/p&gt;
+— sociologia.uba (&lt;span class=&#34;citation&#34;&gt;@sociologia_uba&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/sociologia_uba/status/1699954034554044803?ref_src=twsrc%5Etfw&#34;&gt;September 8, 2023&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+&lt;div id=&#34;rladies-buenos-aires&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Rladies Buenos Aires&lt;/h4&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;
+&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;
+Que lindo volver a los eventos presenciales! &lt;a href=&#34;https://twitter.com/me_andre?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@me_andre&lt;/span&gt;&lt;/a&gt; y &lt;a href=&#34;https://twitter.com/betsy_ar?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@betsy_ar&lt;/span&gt;&lt;/a&gt; presentaron una intro al uso de la EPH en R con sala llena🤩&lt;a href=&#34;https://twitter.com/hashtag/RLadies?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#RLadies&lt;/a&gt; &lt;a href=&#34;https://t.co/FsEH0kAzEu&#34;&gt;pic.twitter.com/FsEH0kAzEu&lt;/a&gt;
+&lt;/p&gt;
+— R-Ladies BuenosAires (&lt;span class=&#34;citation&#34;&gt;@RLadiesBA&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/RLadiesBA/status/1699949471038062913?ref_src=twsrc%5Etfw&#34;&gt;September 8, 2023&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+&lt;div id=&#34;consejo-de-profesionales-en-sociología&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Consejo de Profesionales en Sociología&lt;/h4&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;
+&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;
+La Comisión de transformación digital invita a participar del Taller de introducción al Análisis de la Encuesta Permanente de Hogares con R organizado por &lt;a href=&#34;https://twitter.com/RLadiesBA?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@RLadiesBA&lt;/span&gt;&lt;/a&gt; en colaboración con &lt;a href=&#34;https://twitter.com/sociologia_uba?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@sociologia_uba&lt;/span&gt;&lt;/a&gt; y el Núcleo de Innovación Social (NIS). &lt;a href=&#34;https://t.co/hsywb9xDpP&#34;&gt;pic.twitter.com/hsywb9xDpP&lt;/a&gt;
+&lt;/p&gt;
+— Consejo de Profesionales en Sociología (&lt;span class=&#34;citation&#34;&gt;@CPSociologia&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/CPSociologia/status/1694049790185615512?ref_src=twsrc%5Etfw&#34;&gt;August 22, 2023&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Posta Sociológica PASALAVOS(Z)</title>
+      <link>/proyectos/pasalavos/</link>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>/proyectos/pasalavos/</guid>
+      <description>&lt;h2 id=&#34;posta-sociológica-pasalavosz--celebración-y-socialización-del-conocimiento&#34;&gt;Posta sociológica PASALAVOS(Z) 📢 Celebración y socialización del conocimiento&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;El 1ro. de junio se conmemora el día del Sociólogx&lt;/em&gt; en homenaje a la primera Cátedra de Sociología en Argentina, dictada en el año 1899 por Antonio Dellepiane.&lt;/p&gt;
+&lt;p&gt;Desde la carrera de sociología de la UBA en conmemoración de la fecha, realizaron una nueva edición de sociología  en vivo a nivel interclaustros invitando a estudiantes, graduados y docentes a presentar un libro sobre el autor o autora que, dentro del campo de nuestra disciplina, hubiera interpelado nuestro paso por la carrera.&lt;/p&gt;
+&lt;h2 id=&#34;pan-y-afectos---elizabeth-jelin&#34;&gt;Pan y Afectos - Elizabeth Jelin&lt;/h2&gt;
+&lt;img style=&#34;float: right;&#34; src=&#34;images/IMG_20220602_142344.jpg&#34; alt=&#34;Portada del libro pan y afectos &#34; width=&#34;40%&#34;/&gt;
+&lt;p&gt;De las pocas autoras que leemos en la carrera, Elizabeth Jelin fue de mis favoritas. Primero conocí su obra y luego su trayectoria profesional. Fue de las primeras mujeres sociólogas en Argentina, trabajando con temáticas de derechos humanos, la ciudadanía, género, familia y movimientos sociales.&lt;/p&gt;
+&lt;p&gt;Su libro Pan y afectos llegó de manera desprevenida pero cautivadora cuando empecé a leer y a entender la estructura de la familia nuclear y de los mandatos sociales en una de las instituciones sociales más fuertes que tenemos como sociedad: la familia. En tiempos en los que estamos acostumbrados a hablar de Ni Una Menos, Jelin fue pionera en hablar estas temáticas ya en la decada del 90 cuando no hacía ruido la violencia hacía las mujeres, en donde todavía no se hablaba de violencia doméstica o de violencia en las infancias. Fueron las bases en la sociedad argentina para dar paso a la llegada de nuevos estudios y avances en temáticas de género, entre otros temas.&lt;/p&gt;
+&lt;p&gt;Su nombre y su legado no podían faltar en una jornada tan importante para la carrera de sociología. Pan y afectos es sólo una pequeña muestra de su gran labor sociológica.&lt;/p&gt;
+&lt;h2 id=&#34;sociología-en-vivo---participantes&#34;&gt;Sociología en vivo - participantes&lt;/h2&gt;
+&lt;img style=&#34;float: left;&#34; src=&#34;images/participantes.jpg&#34; alt=&#34;Listado de participantes en la jornada&#34; height=&#34;30%&#34;/&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>(de)Generando la Ciencia Política</title>
+      <link>/publication/degenerandocp/</link>
+      <pubDate>Tue, 12 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>/publication/degenerandocp/</guid>
+      <description>&lt;h2 id=&#34;el-acceso-de-las-mujeres-al-mundo-de-la-tecnología-y-la-big-data&#34;&gt;El acceso de las mujeres al mundo de la tecnología y la big data&lt;/h2&gt;
+&lt;h4 id=&#34;opinión-pública---comunicación-política&#34;&gt;OPINIÓN PÚBLICA - COMUNICACIÓN POLÍTICA&lt;/h4&gt;
+&lt;p&gt;Participación desde Rladies Buenos Aires en el primer encuentro del seminario para hablar sobre las brechas y desigualdades que enfrentan las mujeres y disidencias para integrarse al rubro de ciencia de datos en general y desde la ciencias sociales en particular.&lt;/p&gt;
+&lt;p&gt;Algunos items a destacar&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;El mercado laboral de las nuevas tecnologías y el big data.&lt;/li&gt;
+&lt;li&gt;El acceso de las mujeres a la formación en nuevas tecnologías.&lt;/li&gt;
+&lt;li&gt;La brecha salarial, de tiempo y de trabajo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;images/charla&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;Tuvimos el gusto de escuchar a &lt;a href=&#34;https://twitter.com/Celeste_Box?ref_src=twsrc%5Etfw&#34;&gt;@Celeste_Box&lt;/a&gt; y a &lt;a href=&#34;https://twitter.com/me_andre?ref_src=twsrc%5Etfw&#34;&gt;@me_andre&lt;/a&gt; (&lt;a href=&#34;https://twitter.com/RLadiesBA?ref_src=twsrc%5Etfw&#34;&gt;@RLadiesBA&lt;/a&gt;) sobre &amp;quot;el acceso de las mujeres al mundo de la tecnología y la &lt;a href=&#34;https://twitter.com/hashtag/BigData?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#BigData&lt;/a&gt;&amp;quot;, en el marco del primer encuentro de (de)Generando la Ciencia Política. &lt;br&gt;&lt;br&gt;👉 Conocé más sobre el seminario en &lt;a href=&#34;https://t.co/ztmysLHCwE&#34;&gt;https://t.co/ztmysLHCwE&lt;/a&gt; &lt;a href=&#34;https://t.co/lmbnTQzNy4&#34;&gt;pic.twitter.com/lmbnTQzNy4&lt;/a&gt;&lt;/p&gt;&amp;mdash; Ciencia Política - UBA (@CpoliticaUBA) &lt;a href=&#34;https://twitter.com/CpoliticaUBA/status/1516522382961295365?ref_src=twsrc%5Etfw&#34;&gt;April 19, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; 
+&lt;h5 id=&#34;registro-fotográfico-de-la-jornada&#34;&gt;Registro fotográfico de la jornada&lt;/h5&gt;
+&lt;blockquote class=&#34;instagram-media&#34; data-instgrm-captioned data-instgrm-permalink=&#34;https://www.instagram.com/p/CcTJv6pOJcy/?utm_source=ig_embed&amp;amp;utm_campaign=loading&#34; data-instgrm-version=&#34;14&#34; style=&#34; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&#34;&gt;&lt;div style=&#34;padding:16px;&#34;&gt; &lt;a href=&#34;https://www.instagram.com/p/CcTJv6pOJcy/?utm_source=ig_embed&amp;amp;utm_campaign=loading&#34; style=&#34; background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;&#34; target=&#34;_blank&#34;&gt; &lt;div style=&#34; display: flex; flex-direction: row; align-items: center;&#34;&gt; &lt;div style=&#34;background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;&#34;&gt;&lt;/div&gt; &lt;div style=&#34;display: flex; flex-direction: column; flex-grow: 1; justify-content: center;&#34;&gt; &lt;div style=&#34; background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;&#34;&gt;&lt;/div&gt; &lt;div style=&#34; background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;&#34;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&#34;padding: 19% 0;&#34;&gt;&lt;/div&gt; &lt;div style=&#34;display:block; height:50px; margin:0 auto 12px; width:50px;&#34;&gt;&lt;svg width=&#34;50px&#34; height=&#34;50px&#34; viewBox=&#34;0 0 60 60&#34; version=&#34;1.1&#34; xmlns=&#34;https://www.w3.org/2000/svg&#34; xmlns:xlink=&#34;https://www.w3.org/1999/xlink&#34;&gt;&lt;g stroke=&#34;none&#34; stroke-width=&#34;1&#34; fill=&#34;none&#34; fill-rule=&#34;evenodd&#34;&gt;&lt;g transform=&#34;translate(-511.000000, -20.000000)&#34; fill=&#34;#000000&#34;&gt;&lt;g&gt;&lt;path d=&#34;M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631&#34;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/div&gt;&lt;div style=&#34;padding-top: 8px;&#34;&gt; &lt;div style=&#34; color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;&#34;&gt;Ver esta publicación en Instagram&lt;/div&gt;&lt;/div&gt;&lt;div style=&#34;padding: 12.5% 0;&#34;&gt;&lt;/div&gt; &lt;div style=&#34;display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;&#34;&gt;&lt;div&gt; &lt;div style=&#34;background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);&#34;&gt;&lt;/div&gt; &lt;div style=&#34;background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;&#34;&gt;&lt;/div&gt; &lt;div style=&#34;background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);&#34;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&#34;margin-left: 8px;&#34;&gt; &lt;div style=&#34; background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;&#34;&gt;&lt;/div&gt; &lt;div style=&#34; width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)&#34;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&#34;margin-left: auto;&#34;&gt; &lt;div style=&#34; width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);&#34;&gt;&lt;/div&gt; &lt;div style=&#34; background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);&#34;&gt;&lt;/div&gt; &lt;div style=&#34; width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);&#34;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt; &lt;div style=&#34;display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;&#34;&gt; &lt;div style=&#34; background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;&#34;&gt;&lt;/div&gt; &lt;div style=&#34; background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;&#34;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;&lt;p style=&#34; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&#34;&gt;&lt;a href=&#34;https://www.instagram.com/p/CcTJv6pOJcy/?utm_source=ig_embed&amp;amp;utm_campaign=loading&#34; style=&#34; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;&#34; target=&#34;_blank&#34;&gt;Una publicación compartida por (de)GenerandoLaCienciaPolítica (@degenerandocp)&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt; &lt;script async src=&#34;//www.instagram.com/embed.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Materia optativa en UBA sociales - Carrera de Trabajo Social</title>
+      <link>/proyectos/materia-optativa/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/proyectos/materia-optativa/</guid>
+      <description>&lt;h2 id=&#34;acceso-a-la-interrupción-voluntaria-del-embarazo-en-argentina-aportes-e-las-ciencias-sociales-y-el-activismo-feminista&#34;&gt;Acceso a la interrupción voluntaria del embarazo en Argentina: aportes e las ciencias sociales y el activismo feminista&lt;/h2&gt;
+&lt;h5 id=&#34;facultad-de-ciencias-sociales---uba&#34;&gt;FACULTAD DE CIENCIAS SOCIALES - UBA&lt;/h5&gt;
+&lt;h5 id=&#34;cátedra-delvile&#34;&gt;CÁTEDRA DELVILE&lt;/h5&gt;
+&lt;p&gt;Nos proponemos con esta materia dar respuesta a la necesidad de formación en el tema de las futuras profesionales de las Ciencias Sociales, aportando herramientas teórico metodológicas para el abordaje de la problemática del aborto en Argentina desde una perspectiva de género y de derechos humanos, de los que los derechos sexuales y los derechos reproductivos son parte.&lt;/p&gt;
+&lt;p&gt;Cabe destacar que respecto de las/os estudiantes de Trabajo Social, muchas se insertarán posteriormente, como profesionales, en el sistema de salud y como refiere la Ley Federal de Trabajo Social (nº 27.072), el ejercicio de nuestra profesión debe fundarse en la defensa, reivindicación y promoción del ejercicio efectivo de los derechos humanos y sociales, asimismo reconoce la necesidad de capacitarse y actualizarse en el campo disciplinario del trabajo social y de las ciencias sociales. Por otro lado, muchas/os trabajadores/as sociales y sociólogos/as trabajan en el sistema educativo, tanto como docentes como en equipos socio educativos. Y profesionales de todas las disciplinas se desempeñan en áreas de gestión y de investigación.&lt;/p&gt;
+&lt;p&gt;Por tal motivo, que las estudiantes puedan adentrarse en el análisis de la problemática del aborto, su contexto socio-histórico, su aspecto legal y epidemiológico, resulta central para avanzar hacia la apropiación de herramientas que les permitan no solo reflexionar acerca del rol profesional sino también fundar sólidamente sus acciones a fin de desarrollar un ejercicio profesional que cotidianamente se pronuncie a través de sus prácticas en la defensa de los derechos de las personas gestantes. Esto permitirá encarar en mejores condiciones las tensiones y confrontaciones que se dan en los espacios institucionales en los que nos insertamos, así como los procesos de intervención con las personas en situación de aborto.&lt;/p&gt;
+&lt;h4 id=&#34;participación-en-jornadas-de-debate-sobre-formación-profesional-del-trabajo-social&#34;&gt;Participación en Jornadas de debate sobre Formación Profesional del Trabajo Social&lt;/h4&gt;
+&lt;p&gt;Activismo desde el aula: propuesta político-pedagógica de la materia Acceso a la interrupción voluntaria del embarazo en Argentina: aportes e las ciencias sociales y el activismo feminista&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/rWaSIIYTiwU&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Taller anual de investigación sobre cambio social</title>
+      <link>/proyectos/cambio-social/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/proyectos/cambio-social/</guid>
+      <description>&lt;h2 id=&#34;posición-frente-al-derecho-al-aborto-y-sus-condicionante-en-la-argentina-actual-un-análisis-de-quienes-se-movilizan&#34;&gt;Posición frente al Derecho al aborto y sus condicionante en la Argentina actual: un análisis de quienes se movilizan&lt;/h2&gt;
+&lt;h5 id=&#34;taller-de-investigación-sobre-cambio-social&#34;&gt;TALLER DE INVESTIGACIÓN SOBRE CAMBIO SOCIAL&lt;/h5&gt;
+&lt;h5 id=&#34;cátedra-rebón&#34;&gt;CÁTEDRA REBÓN&lt;/h5&gt;
+&lt;h5 id=&#34;2019&#34;&gt;2019&lt;/h5&gt;
+&lt;p&gt;&lt;em&gt;CHÁVEZ, DANIELA | ECHAVE, JOAQUÍN | GÓMEZ VARGAS, ANDREA&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;El proyecto está realizado en el marco del Taller de Investigación sobre Cambio Social de la cátedra Rebón de la carrera de Sociología en la Facultad de Ciencias Sociales de la Universidad de Buenos Aires durante el año 2019, con la finalidad de contribuir al tema de estudio propuesto por la cátedra: los procesos de movilización y protesta social que se desarrollaron y desarrollan a favor y en contra del Derecho al aborto. Dicho proyecto tiene como propósito general explorar mediante la aplicación de encuestas, los elementos que influyen en la posición de los movilizados (de la ‘‘Marcha por la vida’’ y de la ‘‘Presentación del Proyecto Interrupción Voluntaria del Embarazo”) en la Argentina actual frente a la problemática sobre el derecho al aborto.&lt;/p&gt;
+&lt;p&gt;En este marco, nos interesa ahondar sobre el posicionamiento de los movilizados tanto a favor como en contra del derecho al aborto, debido a que lo consideramos como el eje articulador y movilizante del conflicto que abordamos. Dentro de las múltiples variables que influyen en la toma de posición frente al derecho al aborto, decidimos centrarnos en tres dimensiones que consideramos relevantes para cualquier análisis sociológico: religión, política y estructura social.&lt;/p&gt;
+&lt;p&gt;En esta misma línea, nos preguntamos sobre los vínculos existentes entre las posiciones políticas, sociales y religiosas de los manifestantes, y sus posturas individuales y colectivas a favor y en contra del derecho al aborto. Nuestros esfuerzos se centrarán entonces en esbozar –a partir del análisis conjunto de ambas experiencias– una caracterización de los manifestantes que tenga en cuenta la adscripción religiosa, el posicionamiento político y la posición en la estructura social, con el objetivo de indagar cómo cada una de estas dimensiones incide en las posturas que adoptan frente a la temática del aborto. En otras palabras, nos interesa indagar la incidencia que posee cada una de estas variables, tanto a favor como en contra del derecho al aborto en la Argentina actual.&lt;/p&gt;
+&lt;p&gt;En definitiva, el cuestionamiento que resulta pertinente y a la que el presente estudio puede aportar es a contribuir a una caracterización- teniendo en cuenta que los resultados del estudio de ambas muestras de población no podrán extrapolarse al conjunto de la sociedad- que pueda brindar lineamientos generales de algunas de las múltiples variables que pueden influenciar al posicionamiento con respecto al derecho al aborto de los movilizados en torno a esta temática.&lt;/p&gt;
+&lt;p&gt;En este marco nos surgen los siguientes interrogantes:&lt;/p&gt;
+&lt;p&gt;¿Qué variables inciden en los posicionamientos en torno al derecho al aborto? ¿Cuáles son los condicionantes de las perspectivas adoptadas con respecto al derecho al aborto de los movilizados en la Argentina? ¿Qué rasgos o características de los movilizados determinan en última instancia su postura frente con respecto al derecho al aborto?&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cátedra libre en UBA sociales</title>
+      <link>/proyectos/catedra-libe/</link>
+      <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>/proyectos/catedra-libe/</guid>
+      <description>&lt;h2 id=&#34;catedra-libre-virtual-de-la-campaña-nacional-por-el-derecho-al-aborto-legal-seguro-y-gratuito&#34;&gt;CATEDRA LIBRE VIRTUAL DE LA CAMPAÑA NACIONAL POR EL DERECHO AL ABORTO LEGAL, SEGURO Y GRATUITO&lt;/h2&gt;
+&lt;h5 id=&#34;facultad-de-ciencias-sociales---uba&#34;&gt;FACULTAD DE CIENCIAS SOCIALES - UBA&lt;/h5&gt;
+&lt;h5 id=&#34;cohorte-2019--2020&#34;&gt;COHORTE 2019 -2020&lt;/h5&gt;
+&lt;p&gt;La propuesta se encuadra en la necesidad de que lxs futurxs profesionales en ciencias sociales y lxs asistentes a este seminario adquieran herramientas teóricas y prácticas y un conocimiento inicial pero abarcativo sobre la necesidad de despenalizar y legalizar el aborto para solucionar los problemas que crea la clandestinidad de su práctica.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Encuentro 1&lt;/strong&gt; De las luchas por el aborto a la Campaña Nacional por el Derecho al Aborto Legal Seguro y Gratuito.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Encuentro 2&lt;/strong&gt; Interpelaciones y diálogos de la Campaña Nacional
+por el Derecho al Aborto Legal Seguro y Gratuito en el campo de la salud.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Encuentro 3&lt;/strong&gt; Subjetividades en la lucha por el derecho al aborto legal, seguro y gratuito.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Encuentro 4&lt;/strong&gt; La Comunicación en la lucha por el derecho al aborto legal&lt;/p&gt;
+&lt;h5 id=&#34;equipo-docente&#34;&gt;EQUIPO DOCENTE&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;images/equipo2020.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;cohorte-2020&#34;&gt;COHORTE 2020&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;images/cohorte2020.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;cohorte-2019&#34;&gt;COHORTE 2019&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;images/cohorte2019.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Seminario de investigación maltrato infantil y violencia de género</title>
+      <link>/proyectos/infancias-y-violencias/</link>
+      <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>/proyectos/infancias-y-violencias/</guid>
+      <description>&lt;h3 id=&#34;organizaciones-de-la-sociedad-civil-y-la-violencia-hacia-niños-niñas-y-adolescentes-un-estudio-de-casos&#34;&gt;Organizaciones de la sociedad civil y la violencia hacia niños, niñas y adolescentes: Un estudio de casos&lt;/h3&gt;
+&lt;h5 id=&#34;seminario-de-investigación-maltrato-infantil-y-violencia-de-género&#34;&gt;Seminario de investigación maltrato infantil y violencia de género&lt;/h5&gt;
+&lt;h5 id=&#34;cátedra-biagini---sanchez&#34;&gt;Cátedra Biagini - Sanchez&lt;/h5&gt;
+&lt;h5 id=&#34;2018&#34;&gt;2018&lt;/h5&gt;
+&lt;p&gt;&lt;em&gt;Autoria de Sofia Isola (UBA Sociales) y Andrea Gomez Vargas (UBA Sociales)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;El presente análisis se inscribe en el marco del proyecto de investigación de violencia contra niños/niñas en el ámbito familiar: políticas y dispositivos de atención y orientación (2012 - 2019), que integra la línea de investigación sociedad civil y salud a cargo de la Dra. Graciela Biagini con la finalidad de generar información relevante para el diseño e implementación de protocolos de detección precoz y atención de la violencia contra los niños/as en el ámbito de las organizaciones familiares que contribuya a mejorar el proceso de salud-enfermedad-atención de la infancia desde un abordaje de derechos según lo establecen normativas en vigencia.&lt;/p&gt;
+&lt;p&gt;Nuestro problema de estudio, en particular, se centra en explorar las percepciones y conceptualizaciones sobre la problemática de la violencia contra los niños y los dispositivos implementados para atenderla por parte de integrantes de OSC seleccionadas. Dentro de este marco lo que aquí se propone es un recorte específico de cuatro (4) organizaciones de la sociedad civil (OSC en adelante) que trabajan en problemáticas de maltrato infantil (MI) y/o violencia de género (VG): ONG Amor en Acción (A.A), Aldeas Infantiles SOS Argentina (A.I), Dignos de Ser (D.S) y Aralma (AR), ubicados en la Ciudad de Buenos Aires.&lt;/p&gt;
+&lt;p&gt;El objetivo general del trabajo consiste en caracterizar la forma de abordaje y conceptualización sobre la violencia contra los niños, niñas y adolescentes (NNyA en adelante) en el ámbito de las cuatro OSC con trabajo en infancia seleccionadas y, a su vez, indagar la percepción que la mismas tienen sobre el rol de Estado en lo referente a la problemática de MI/VG.&lt;/p&gt;
+&lt;p&gt;En este sentido nos resulta pertinente preguntarnos: ¿Qué indicadores las OSC seleccionadas tienen en cuenta a la hora de abordar la problemática de MI? ¿De qué modo la concepción que las mismas poseen de MI/VG enmarca los parámetros de su accionar y moldea sus objetivos respectivos? ¿Qué relación existe entre las OSC y el Estado para articular la problemática de MI?&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
