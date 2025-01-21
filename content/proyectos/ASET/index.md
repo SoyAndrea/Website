@@ -29,7 +29,3 @@ Junto a [Pablo Tiscornia](https://r-intro-aset.netlify.app/about_pablotiscornia)
 
 
 - [Repositorio del curso](https://github.com/pablotis/intro_r_aset)
-- [Website del curso](https://r-intro-aset.netlify.app/)
-
-
-<iframe width="1000" height="500" src="https://r-intro-aset.netlify.app/" title="Webpage del curso"></iframe>
